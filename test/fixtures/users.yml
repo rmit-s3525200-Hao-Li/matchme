@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-natalie:
-  first_name: Natalie
-  last_name: Doe
-  email: natalie@example.com
-  date_of_birth: Date.new(1990, 9, 4)
-  gender: female
-  orientation: straight
-  occupation: school teacher
-  religion: agnostic
-  city: Melbourne
-  post_code: 3000
+matt:
+  first_name: Matt
+  last_name: Smith
+  email: mark@example.com
+  gender: man
+  occupation: salesman
+  orientation: gay
+  preferred_gender: a man
+  religion: other
+  city: Sydney
+  post_code: 2000
   country: Australia
-  self_summary: blah blah blah
-  preferred_gender: male
+  self_summary: blah
+  date_of_birth: Date.new(1991, 12, 3)
   min_age: 21
-  max_age: 31
-  image_url: http://i.imgur.com/zIohTgi.jpg
+  max_age: 35
+  password_digest: <%= User.digest('password1') %>

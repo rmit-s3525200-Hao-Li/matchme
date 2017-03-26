@@ -32,4 +32,10 @@ class User < ApplicationRecord
       now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
     end
     
+    def User.digest(string)
+      cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                  BCrypt::Engine.cost
+      BCrypt::Password.create(string, cost: cost)
+    end
+    
 end
