@@ -14,7 +14,7 @@ class User < ApplicationRecord
     validates(:city, presence: true, length: {maximum: 60})
     validates(:post_code, presence: true, length: {maximum: 20})
     validates(:country, presence: true)
-    validates(:self_summary, presence: true, length: {maximum: 500})
+    validates(:self_summary, length: {maximum: 500})
     validates(:preferred_gender, presence: true)
     validates(:min_age, presence: true)
     validates(:max_age, presence: true)
