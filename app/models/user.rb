@@ -16,9 +16,10 @@ class User < ApplicationRecord
     validates(:country, presence: true)
     validates(:self_summary, length: {maximum: 500})
     validates(:preferred_gender, presence: true)
-    validates(:min_age, presence: true)
-    validates(:max_age, presence: true)
+    validates(:min_age, presence: true, numericality: { greater_than_or_equal_to: 18 })
+    validates(:max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age })
     validates(:date_of_birth, presence: true)
+    validates(:looking_for, presence: true)
     
     #mount_uploader :image, ImageUploader
     

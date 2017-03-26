@@ -6,32 +6,50 @@
     <%= form_for(@user, url: signup_path) do |f| %>
       <%= render 'shared/error_messages' %>
     
-      <%= f.label :gender, "I am a" %>
-      <%= f.select :gender, ["Man", "Woman"], class: 'form-control' %>
+      <%= f.label :orientation, "I am a" %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.select :orientation, ["straight", "gay", "bisexual", "asexual"], class: 'form-control' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.select :gender, ["man", "woman"], class: 'form-control' %>
+        </div>
+      </div>
       
-      <%= f.label :preferred_gender, "Looking for" %>
-      <%= f.select :preferred_gender, ["A man", "a woman", "Both"], class: 'form-control' %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :preferred_gender, "Looking for" %>
+          <%= f.select :preferred_gender, ["a man", "a woman", "both"], class: 'form-control' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :looking_for, "for" %>
+          <%= f.select :looking_for, ["new friends", "long-term dating", "short-term dating", "casual sex"], class: 'form-control' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <%= f.label :min_age, "Age between..." %>
+          <%= f.select :min_age, (18...120).to_a, class: 'form-control' %>
+        </div>
+        <div class="col-md-3">
+          <%= f.label :max_age, "to" %>
+          <%= f.select :max_age, (18...120).to_a, class: 'form-control' %>
+        </div>
+      </div>
       
-      <%= f.label :min_age, "Ages..." %>
-      <%= f.number_field :min_age, class: 'form-control' %>
-      
-      <%= f.label :max_age, "to" %>
-      <%= f.number_field :max_age, class: 'form-control' %>
-      
-      <%= f.label :first_name %>
-      <%= f.text_field :first_name, class: 'form-control' %>
-      
-      <%= f.label :last_name %>
-      <%= f.text_field :last_name, class: 'form-control' %>
-      
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, class: 'form-control' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, class: 'form-control' %>
+        </div>
+      </div>
       
       <%= f.label :date_of_birth %>
       <%= f.date_field :date_of_birth, class: 'form-control' %>
-      
-      <%= f.label :orientation %>
-      <%= f.select :orientation, ["Straight", "Gay", "Bisexual", "Other"], class: 'form-control' %>
       
       <%= f.label :occupation %>
       <%= f.text_field :occupation %>
@@ -39,17 +57,25 @@
       <%= f.label :religion %>
       <%= f.select :religion, ["Agnosticism", "Atheism", "Christianity", "Judaism", "Catholicism", "Islam", "Buddhism", "Hinduism", "Sikh", "Other"], class: 'form-control' %>
       
-      <%= f.label :city %>
-      <%= f.text_field :city, class: 'form-control' %>
-      
-      <%= f.label :post_code %>
-      <%= f.text_field :post_code, class: 'form-control' %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :city %>
+          <%= f.text_field :city, class: 'form-control' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :post_code, "Zip / Postal code" %>
+          <%= f.text_field :post_code, class: 'form-control' %>
+        </div>
+      </div>
       
       <%= f.label :country %>
       <%= f.country_select :country, priority_countries: ["AU", "US", "GB", "CA", "NZ"], class: 'form-control' %>
       
       <%= f.label :self_summary %>
       <%= f.text_area :self_summary, class: 'form-control' %>
+      
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
 
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
