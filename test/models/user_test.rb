@@ -3,14 +3,14 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
   
   def setup
-    @user = User.new(first_name: "Natalie", last_name: "Klein", email: "natalie@example.com", gender: "female", orientation: "straight", occupation: "student", religion: "agnostic", city: "Melbourne", post_code: "3000", country: "Australia", self_summary: "Blah blah whatever whatever", preferred_gender: "male", min_age: 20, max_age: 28, date_of_birth: Date.new(1994,5,7), password: "foobar1", password_confirmation: "foobar1")
+    @user = users(:matt)
   end
 
   test "should be valid" do
     assert @user.valid?
   end
   
-    test "first and last names should be present" do
+  test "first and last names should be present" do
     @user.first_name = "     "
     @user.last_name = "     "
     assert_not @user.valid?
@@ -36,8 +36,8 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
   
-  test "email validation should accept valid addresses" do
-    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org first.last@foo.jp alice+bob@baz.cn]
+  test "email validation should accept valid email addresses" do
+    valid_addresses = %w[foobar@example.com USER@foo.COM A_US-ER@foo.bar.org first.last@foo.jp alice+bob@baz.cn]
     valid_addresses.each do |valid_address|
       @user.email = valid_address
       assert @user.valid?, "#{valid_address.inspect} should be valid"
@@ -60,7 +60,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email addresses should be saved as lower-case" do
-    mixed_case_email = "Foo@ExAMPle.CoM"
+    mixed_case_email = "MatT@ExAMPle.CoM"
     @user.email = mixed_case_email
     @user.save
     assert_equal mixed_case_email.downcase, @user.reload.email
@@ -87,4 +87,7 @@ class UserTest < ActiveSupport::TestCase
   #   assert_not @user.valid?
   # end
 
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
 end

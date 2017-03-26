@@ -3,17 +3,18 @@
 matt:
   first_name: Matt
   last_name: Smith
-  email: mark@example.com
+  email: matt@example.com
   gender: man
   occupation: salesman
   orientation: gay
   preferred_gender: a man
   religion: other
   city: Sydney
-  post_code: 2000
+  post_code: <%= '2000' %>
   country: Australia
   self_summary: blah
   date_of_birth: Date.new(1991, 12, 3)
   min_age: 21
   max_age: 35
+  looking_for: long-term dating
   password_digest: <%= User.digest('password1') %>
