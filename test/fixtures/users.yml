@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+natalie:
+  first_name: Natalie
+  last_name: Doe
+  email: natalie@example.com
+  date_of_birth: Date.new(1990, 9, 4)
+  gender: female
+  orientation: straight
+  occupation: school teacher
+  religion: agnostic
+  city: Melbourne
+  post_code: 3000
+  country: Australia
+  self_summary: blah blah blah
+  preferred_gender: male
+  min_age: 21
+  max_age: 31
+  image_url: http://i.imgur.com/zIohTgi.jpg
