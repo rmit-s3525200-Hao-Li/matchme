@@ -27,7 +27,7 @@ class User < ApplicationRecord
   validates(:min_age, presence: true, numericality: { greater_than_or_equal_to: 18 })
   validates(:max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age })
   validates(:date_of_birth, presence: true)
-  validates(:looking_for, presence: true)
+  # validates(:looking_for, presence: true)
   
   #mount_uploader :image, ImageUploader
   

@@ -16,7 +16,7 @@ $ bundle install --without production
 $ rails db:migrate
 ```
 
-3. Run the test suite to verify that everything is working correctly:
+3. Run the test suite:
 
 ```
 $ rails test
