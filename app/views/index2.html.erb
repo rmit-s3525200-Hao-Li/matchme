@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+	<!--Site charset-->
+  <meta charset="utf-8">
+  <!--Site title-->
+  <title>MatchMe, online </title>
+  <!--Meta-->
+  <meta name="description"  content="Premium landing page for Lovers">
+  <meta name="author"  content="Seventh Queen">
+  <!--Set the viewport width to device width for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Foundation Framework-->
+  <link rel="stylesheet" href="assets/styles/foundation.min.css">
+  <!--Plugins-->
+  <link rel="stylesheet" href="assets/styles/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/styles/prettyPhoto.css">
+
+
+	<!--Main Stylesheet (change this to modify template)-->
+  <link rel="stylesheet" href="assets/styles/app.css">
+  <link rel="stylesheet" href="assets/styles/updates.css">
+  <link rel="stylesheet" href="assets/styles/custom.css">
+
+
+  <!--Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="assets/styles/font-awesome-ie7.min.css">
+  <script src="assets/scripts/ie6/warning.js"></script>
+  <script>window.onload=function(){e("assets/scripts/ie6/")}</script>
+  <![endif]-->
+
+
+	<!--Favicons-->
+  <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-touch-icon-144x144.png">
+
+
+  <!-- jQuery & Foundation Framework -->
+  <script type="text/javascript" src="assets/scripts/modernizr.foundation.js"></script>
+</head>
+<body>
+
+
+
+
+
+<!-- Page
+================================================ -->
+<!--Attributes-->
+<!--class = page wide-style / boxed-style-->
+<div class="page wide-style">
+
+
+
+
+
+<!-- HEADER SECTION
+================================================ -->
+<header>
+<div class="header-bg">
+
+<div id="header">
+	<div class="row">
+
+    <!-- Main Navigation -->
+    <div class="five columns push-four">
+    	<div class="space-b-20 hide-for-small">&nbsp;</div>
+      <nav class="top-bar">
+        <ul>
+          <!-- Toggle Button Mobile -->
+          <li class="name">
+            <h1><a href="#">Please select your page</a></h1>
+          </li>
+          <li class="toggle-topbar"><a href="#"><i class="icon-reorder"></i></a></li>
+          <!-- End Toggle Button Mobile -->
+        </ul>
+
+        <section><!-- Nav Section -->
+          <ul class="left">
+            <li><%= link_to "HOME", root_path %><i class="icon-home"></i></li>
+            <!--<li class="has-dropdown">-->
+            <!--  <a href="#">Dropdown menu</a>-->
+            <!--  <ul class="dropdown">-->
+            <!--    <li><a href="search-listing.html">Search Listing</a></li>-->
+            <!--    <li><a href="profile.html">Profile Page</a></li>-->
+            <!--    <li class="has-dropdown"><a href="#" class="sub-menu-link">Third level menu</a>-->
+            <!--      <ul class="dropdown">-->
+            <!--        <li><a href="#" class="sub-menu-link">Sample</a></li>-->
+            <!--        <li><a href="#" class="sub-menu-link">Sample link</a></li>-->
+            <!--      </ul>-->
+            <!--    </li>-->
+            <!--  </ul>-->
+            <!--</li>-->
+          </ul>
+        </section><!-- End Nav Section -->
+      </nav>
+    </div>
+		<!-- end Main Navigation -->
+
+    <!-- Logo -->
+    <div class="four columns pull-five">
+      <h1 id="logo">Very serious dating match making site
+      	<a href="index.html"><img src="assets/images/logo_black.png" width="294" height="108" alt="Landing Page HTML Template"></a>
+      </h1>
+    </div>
+    <!--end logo-->
+
+  	<!-- Login/Register/Forgot username/password Modal forms
+    	-  Hidded by default to be opened through modal
+      -  For faster loading we put all forms at the bottom of page -->
+
+    <!--Login buttons-->
+    <div class="three columns login-buttons">
+    	<div class="space-b-20 hide-for-small">&nbsp;</div>
+      <ul class="button-group radius right">
+        <% if logged_in? %>
+          <!-- DROPDOWN  WITH VIEW PROFILE AND LOGOUT LINK GOES HERE -->
+        <% else %>
+          <li><%= link_to "LOG IN", login_path %><i class="icon-user hide-for-medium-down"></i></li>
+          <li><%= link_to "SIGN UP", signup_path %><i class="icon-group hide-for-medium-down"></i></li>
+        <% end %>
+      </ul>
+    </div>
+    <!--end login buttons-->
+</header>
+<!--END HEADER SECTION-->
+
+
+
+
+
+<!-- CALL TO ACTION SECTION
+================================================ -->
+<% provide(:title, "Home") %>
+<section>
+  <div id="call-to-actions" class="silver-bg">
+    <div class="row map-bg">
+
+      <div class="twelve columns">
+        <h1 class="section-title">It all starts with a Date</h1>
+        <p class="lead"> Welcome to MatchMe, More than <strong>12345</strong> members around the world already shared the same experience in our system. <strong>Joining us today just match you!</strong></p>
+
+        <!--Video - Hidden by default-->
+        <div id="markerPoint"></div>
+        <div id="video">
+          <div class="central">
+            <a href="#" id="videoClose"><i class="icon-off icon-2x"></i></a>
+            <div id="videoLoad" class="flex-video widescreen">
+
+            	<!--YOUTUBE EXAMPLE-->
+              <!--<iframe id="tours" src="http://www.youtube.com/embed/FtquI061bag"></iframe>-->
+
+              <embed id="tours" flashvars='file=http%3A%2F%2F1.s3.envato.com%2Ffiles%2F27626529%2FMVI_6215-18.flv&amp;image=http%3A%2F%2F1.s3.envato.com%2Ffiles%2F27626530%2FMVI_6215-18.jpg&amp;skin=http%3A%2F%2Fvideohive.net%2Fvideo_player%2Fmodieus.zip&amp;autostart=true' wmode='transparent' src='http://videohive.net/video_player/player.swf' />
+            </div>
+          </div>
+        </div>
+        <!--end video-->
+
+        <% if !logged_in? %>
+          <!--Take action-->
+          <div class="take-action">
+            <ul class="button-group radius expand left">
+              <li><%= link_to "Sign up now!", signup_path, class: "button large expand alert" %></li>
+            </ul>
+          </div>
+          <!--end take-action-->
+        <% end %>
+      </div><!--end twelve-->
+
+        <!--Status Icons-->
+        <div class="status three columns mobile-one">
+          <div class="icon" data-animation="pulse">
+            <img src="assets/images/icons/steps/status_01.png" width="213" height="149" alt="">
+          </div>
+          <ul class="block-grid">
+            <li class="title">1234</li>
+            <li class="subtitle">Matched couples</li>
+          </ul>
+        </div>
+
+        <div class="status three columns mobile-one">
+          <div class="icon" data-animation="pulse">
+            <img src="assets/images/icons/steps/status_02.png" width="213" height="149" alt="">
+          </div>
+          <ul class="block-grid">
+            <li class="title">2394</li>
+            <li class="subtitle">Members</li>
+          </ul>
+        </div>
+
+        <div class="status three columns mobile-one">
+          <div class="icon" data-animation="pulse">
+            <img src="assets/images/icons/steps/status_03.png" width="213" height="149" alt="">
+          </div>
+          <ul class="block-grid">
+            <li class="title">1200</li>
+            <li class="subtitle">Women</li>
+          </ul>
+        </div>
+
+        <div class="status three columns mobile-one">
+          <div class="icon" data-animation="pulse">
+            <img src="assets/images/icons/steps/status_04.png" width="213" height="149" alt="">
+          </div>
+          <ul class="block-grid">
+            <li class="title">1200</li>
+            <li class="subtitle">Men</li>
+          </ul>
+        </div>
+        <!--end status icons-->
+
+    </div><!--end row map-bg-->
+  </div><!--end call-to-actions-->
+</section>
+<!--END CALL TO ACTION SECTION-->
+
+
+
+
+
+<!-- FEATURED TEXT SECTION
+================================================ -->
+<section>
+  <div id="feature-text" class="text-center">
+    <div class="row">
+      <div class="twelve columns">
+        <h2><span class="no-bg">Why Choose To <span class="pink-text">Become a Member?</span></span></h2>
+        <p class="lead">Here you have some reasons and some features. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div><!--end twelve-->
+
+      <ul class="no-bullet">
+        <li class="four columns">
+          <div class="circle">
+            <a href="assets/images/small_thumb_01.png" class="imagelink" data-rel="prettyPhoto[gallery1]">
+              <span class="overlay"></span>
+              <span class="read"><i class="icon-heart"></i></span>
+              <img src="assets/images/small_thumb_01.png" alt="">
+            </a>
+          </div>
+          <h4>100% for FREE</h4>
+          <p>You can register and create your profile for FREE! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+          <p><a href="#" class="small button radius secondary"><i class="icon-angle-right"></i> READ MORE</a></p>
+        </li>
+
+        <li class="four columns">
+          <div class="circle">
+            <a href="assets/images/small_thumb_02.png" class="imagelink" data-rel="prettyPhoto[gallery1]">
+              <span class="overlay"></span>
+              <span class="read"><i class="icon-heart"></i></span>
+              <img src="assets/images/small_thumb_02.png" alt="">
+            </a>
+          </div>
+          <h4>Matching compatible partner</h4>
+          <p>Invite friends to help you find your perfect match. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p><a href="#" class="small button radius secondary"><i class="icon-angle-right"></i> READ MORE</a></p>
+        </li>
+
+        <li class="four columns">
+          <div class="circle">
+            <a href="assets/images/small_thumb_03.png" class="imagelink" data-rel="prettyPhoto[gallery1]">
+              <span class="overlay"></span>
+              <span class="read"><i class="icon-heart"></i></span>
+              <img src="assets/images/small_thumb_03.png" alt="">
+            </a>
+          </div>
+          <h4>Share experiences</h4>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p><a href="#" class="small button radius secondary"><i class="icon-angle-right"></i> READ MORE</a></p>
+        </li>
+      </ul>
+    </div><!--end row-->
+  </div><!--end feature-text-->
+</section>
+<!--END FEATURED TEXT SECTION-->
+
+
+
+
+
+<!-- TESTIMONIALS SECTION
+================================================ -->
+<section>
+	<div id="testimonials">
+  	<div class="row">
+    	<div class="twelve columns"><hr>
+      	<ul class="testimonials-carousel">
+        	<li>
+          	<div class="quote-content">
+              Absolutely amazing! I am married with my girlfriend now, thanks a lot!
+            </div>
+          	<div class="quote-author">
+            	<strong>John Doe</strong>
+              <span class="author-description"> - Taxi Driver, Melbourne</span>
+            </div>
+
+          </li>
+
+        	<li class="hide-on-mobile">
+            <div class="quote-content">
+              Love this website！Absolutely Fantastic!
+            </div>
+            <div class="quote-author">
+            	<strong>Haotian Xu</strong>
+              <span class="author-description"> - Developer, Melbourne</span>
+            </div>
+          </li>
+
+          <li class="hide-on-mobile">
+            <div class="quote-content">
+              Great website.
+            </div>
+            <div class="quote-author">
+            	<strong>John Smith</strong>
+              <span class="author-description"> - Doctor, Sydney</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!--END TESTIMONIALS SECTION-->
+
+
+
+<!-- FOOTER SECTION
+================================================ -->
+<footer>
+  <div id="footer">
+    <div class="row">
+
+    	<!--About us-->
+      <div class="three columns section">
+        <h5><i class="icon-heart"></i> About us</h5>
+        <p>Lorem ipsum dolor sit amet, has an nullam sadipscing ullamcorper, nisl graeci minimum usu no, ne est erat deseruisse vituperata.</p>
+        <p><i class="icon-envelope"></i> &nbsp;<a href="tel:1234567890">info@sweetdate4u.com</a><br>&nbsp;<i class="icon-mobile-phone icon-large"></i> &nbsp;&nbsp;(123) 456-7890</p>
+        <p class="footer-social-icons">Stay in touch:<br>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Follow us on Twitter"><i class="icon-twitter-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on Facebook"><i class="icon-facebook-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on Google+"><i class="icon-google-plus-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Pin us on Pinterest"><i class="icon-pinterest-sign icon-2x"></i></a>
+          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a>
+        </p>
+      </div>
+      <!--end about us-->
+
+      <!--Useful links-->
+      <div class="three columns section">
+        <h5>Useful links</h5>
+        <ul class="no-bullet">
+          <li><i class="icon-angle-right"></i> <a href="#">Terms and Conditions</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">About</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">Support</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">FAQ</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">Safety</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">Match Questions</a></li>
+          <li><i class="icon-angle-right"></i> <a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <!--end useful links-->
+
+      <!--Twitter feed-->
+      <div class="three columns section">
+        <h5><i class="icon-twitter"></i> Latest twitt's 1.1 API</h5>
+        <!-- IMPORTANT see docs on how to create your feed -->
+        <div id="twitter-feed"></div>
+      </div>
+      <!--end twitter feed-->
+
+      <!--Latest from blog-->
+      <div class="three columns section">
+        <h5>Latest from blog</h5>
+        <ul class="latest-blog">
+        	<li>
+          	<span class="avatar"><a href="#"><img src="assets/images/quote/user_quote_02.jpg" alt=""></a></span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. <a href="#">read more</a></p>
+          </li>
+          <li>
+          	<span class="avatar"><a href="#"><img src="assets/images/quote/user_quote_01.jpg" alt=""></a></span>
+            <p>Ut enim ad minim veniam, quis nostrud. <a href="#">read more</a></p>
+          </li>
+          <li>
+          	<span class="avatar"><a href="#"><img src="assets/images/quote/user_quote_03.jpg" alt=""></a></span>
+            <p>Duis aute irure dolor in reprehenderit in voluptate. <a href="#">read more</a></p>
+          </li>
+        </ul>
+      </div>
+      <!--end latest from blog-->
+
+      <div class="twelve columns">
+        <hr>
+        <p>Programming Project 1, Dating site matchmaking, RMIT University</p>
+      </div>
+    </div>
+  </div><!--end footer-->
+</footer>
+<!--END FOOTER SECTION-->
+
+
+
+
+
+<!-- POP-UP MODAL FORMS
+================================================ -->
+<!--Login panel-->
+<div id="login_panel" class="reveal-modal">
+  <div class="row">
+    <div class="twelve columns">
+      <h5 class="pink-text"><i class="icon-user icon-large"></i> SIGN IN YOUR ACCOUNT <span class="subheader right small-link"><a href="#" data-reveal-id="register_panel" class="radius secondary small button">CREATE NEW ACCOUNT</a></span></h5>
+    </div>
+    <form id="login_form" name="login_form" method="post" class="clearfix">
+      <div class="six columns">
+        <input type="text" id="username" name="username" class="inputbox" placeholder="Username" required>
+      </div>
+      <div class="six columns">
+        <input type="password" id="password" name="password" class="inputbox" placeholder="Password" required>
+      </div>
+
+      <div class="twelve columns">
+        <button type="submit" id="login" name="submit" class="radius secondary button"><i class="icon-unlock"></i> &nbsp;LOG IN</button> &nbsp;
+      </div>
+    </form>
+
+  </div><!--end row-->
+  <a href="#" class="close-reveal-modal">×</a>
+</div><!--end login panel-->
+
+<!-- Register panel -->
+<div id="register_panel" class="reveal-modal">
+  <div class="row">
+    <div class="twelve columns">
+      <h5 class="pink-text"><i class="icon-magic icon-large"></i> CREATE ACCOUNT <span class="subheader right small-link"><a href="#" data-reveal-id="login_panel" class="radius secondary small button">ALREADY HAVE AN ACCOUNT?</a></span></h5>
+    </div>
+    <form id="register_form" name="register_form" method="post">
+      <div class="six columns">
+        <input type="text" id="reg-username" name="username" class="inputbox" placeholder="First Name">
+      </div>
+      <div class="six columns">
+        <input type="text" id="fullname" name="fullname" class="inputbox" placeholder="Last Name">
+      </div>
+      <div class="twelve columns">
+        <input type="text" id="reg-email" name="email" class="inputbox" placeholder="Your email">
+      </div>
+      <div class="six columns">
+        <input type="password" id="reg-password" name="password" class="inputbox" placeholder="Password">
+      </div>
+      <div class="six columns">
+        <input type="password" id="confirm_password" name="confirm_password" class="inputbox" placeholder="Confirm password">
+      </div>
+      <div class="twelve columns">
+        <p><small>Check our <a href="#"><strong>Terms and conditions</strong></a>.</small></p>
+        <button type="submit" id="signup" name="submit" class="radius alert button"><i class="icon-heart"></i> &nbsp;Start Match Me</button>
+      </div>
+    </form>
+  </div><!--end row-->
+  <a href="#" class="close-reveal-modal">×</a>
+</div><!-- end register panel -->
+
+<!-- Forgot panel -->
+<div id="forgot_panel" class="reveal-modal">
+  <div class="row">
+    <div class="twelve columns">
+      <h5 class="pink-text"><i class="icon-lightbulb icon-large"></i> FORGOT YOUR DETAILS?</h5>
+    </div>
+    <form id="forgot_form" name="forgot_form" method="post" class="clearfix">
+    <div class="twelve columns">
+      <input type="text" id="forgot-email" name="email" class="inputbox" placeholder="Email Address">
+      <button type="submit" id="recover" name="submit" class="radius secondary button">SEND MY DETAILS! &nbsp;<i class="icon-envelope"></i></button>
+    </div>
+    </form>
+    <div class="twelve columns"><hr>
+      <small><a href="#" data-reveal-id="login_panel" class="radius secondary label">AAH, WAIT, I REMEMBER NOW!</a></small>
+    </div>
+  </div><!--end row-->
+  <a href="#" class="close-reveal-modal">×</a>
+</div><!-- end register panel -->
+<!-- end login register stuff -->
+
+<p id="btnGoUp">Go up</p>
+</div><!--end page-->
+
+<!--END POP-UP MODAL FORMS-->
+
+
+
+
+
+<!-- JAVASCRIPTS
+================================================ -->
+
+	<!-- jQuery & Foundation Framework -->
+  <script type="text/javascript" src="assets/scripts/jquery.js"></script>
+  <script type="text/javascript" src="assets/scripts/foundation.min.js"></script>
+
+
+
+  <!-- 3rd Plugins -->
+
+	<!-- include carouFredSel plugin -->
+  <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/jquery.carouFredSel-6.2.0-packed.js"></script>
+  <!-- optionally include helper for carouFredSel plugins -->
+  <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.touchSwipe.min.js"></script>
+  <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.transit.min.js"></script>
+  <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+  <script type="text/javascript" src="assets/scripts/plugins/retina/retina.js"></script>
+  <script type="text/javascript" src="assets/scripts/plugins/knob/jquery.knob.js"></script>
+  <script type="text/javascript" src="assets/scripts/plugins/twitterfeed-ap-1.1/twitterfeed-ap.js"></script>
+  <script type="text/javascript" src="assets/scripts/plugins/fittext/jquery.fittext.js"></script>
+  <script type="text/javascript" src="assets/scripts/plugins/quovolver/jquery.quovolver.js"></script><!--Quote rotator-->
+  <script type="text/javascript" src="assets/scripts/plugins/backgroundSize/jquery.backgroundSize.js"></script><!--BackgroundSize for IE8-->
+  <script type="text/javascript" src="assets/scripts/plugins/prettyPhoto/jquery.prettyPhoto.js"></script>
+
+  <!-- Custom JS effects, tweaks and inits -->
+  <script type="text/javascript" src="assets/scripts/app.js"></script>
+
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+		var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+		s.parentNode.insertBefore(g,s)}(document,"script"));
+	</script>
+
+</body>
+</html>

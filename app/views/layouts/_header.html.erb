@@ -1,28 +1,75 @@
-<header class="navbar navbar-fixed-top">
-  <div class="container">
-    <%= link_to "MatchMe", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
-        <% if logged_in? %>
-          <li><%= link_to "Users", '#' %></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", '#' %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to "Log out", logout_path, method: "delete" %>
+<header>
+<div class="header-bg">
+
+<div id="header">
+	<div class="row">
+
+    <!-- Main Navigation -->
+    <div class="five columns push-four">
+    	<div class="space-b-20 hide-for-small">&nbsp;</div>
+      <nav class="top-bar">
+        <ul>
+          <!-- Toggle Button Mobile -->
+          <li class="name">
+            <h1><a href="#">Please select your page</a></h1>
+          </li>
+          <li class="toggle-topbar"><a href="#"><i class="icon-reorder"></i></a></li>
+          <!-- End Toggle Button Mobile -->
+        </ul>
+
+        <section><!-- Nav Section -->
+          <ul class="left">
+            <li>
+              <%= link_to(root_path) do %>
+                <i class="icon-home"></i> HOME
+              <% end %>
+            </li>
+            </ul>
+            <% if logged_in? %>
+            <ul class="right">
+              <li class="has-dropdown">
+                <a href="#">ACCOUNT</a>
+                <ul class="dropdown">
+                  <li><%= link_to "Profile", current_user %></li>
+                  <li><%= link_to "Settings", "#" %></li>
+                  <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+                </ul>
               </li>
             </ul>
+            <% end %>
+        </section><!-- End Nav Section -->
+      </nav>
+    </div>
+		<!-- end Main Navigation -->
+
+    <!-- Logo -->
+    <div class="four columns pull-five">
+      <h1 id="logo">Very serious dating match making site
+      	<a href="index.html"><img src="assets/images/logo_black.png" width="294" height="108" alt="Landing Page HTML Template"></a>
+      </h1>
+    </div>
+    <!--end logo-->
+
+  	<!-- Login/Register/Forgot username/password Modal forms
+    	-  Hidded by default to be opened through modal
+      -  For faster loading we put all forms at the bottom of page -->
+
+    <!--Login buttons-->
+    <div class="three columns login-buttons">
+    	<div class="space-b-20 hide-for-small">&nbsp;</div>
+      <ul class="button-group radius right">
+        <% if !logged_in? %>
+          <li>
+            <a href="#" data-reveal-id="login_panel" class="small secondary button radius"><i class="icon-user hide-for-medium-down"></i> LOG IN</a>
           </li>
-        <% else %>
-          <li><%= link_to "Log in", login_path %></li>
+          <li>
+            <%= link_to signup_path, class: "small button radius" do %>
+              <!--<a href="#" data-reveal-id="register_panel" class="small button radius">-->
+              <i class="icon-group hide-for-medium-down"></i> SIGN UP
+            <% end %>
+          </li>
         <% end %>
       </ul>
-    </nav>
-  </div>
+    </div>
+    <!--end login buttons-->
 </header>
