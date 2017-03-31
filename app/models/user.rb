@@ -13,7 +13,7 @@ class User < ApplicationRecord
   # Validates password
   VALID_PASSWORD_REGEX = /(?=.*[a-zA-Z])(?=.*[0-9]).{6,}/
   has_secure_password
-  validates(:password, presence: true, format: { with: VALID_PASSWORD_REGEX })
+  validates(:password, presence: true, format: { with: VALID_PASSWORD_REGEX }, allow_nil: true)
   
   validates(:gender, presence: true)
   validates(:orientation, presence: true, length: {maximum: 50})
@@ -27,7 +27,7 @@ class User < ApplicationRecord
   validates(:min_age, presence: true, numericality: { greater_than_or_equal_to: 18 })
   validates(:max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age })
   validates(:date_of_birth, presence: true)
-  # validates(:looking_for, presence: true)
+  validates(:looking_for, presence: true)
   
   #mount_uploader :image, ImageUploader
   

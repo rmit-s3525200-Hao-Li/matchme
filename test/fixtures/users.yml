@@ -4,16 +4,16 @@ matt:
   first_name: Matt
   last_name: Smith
   email: matt@example.com
-  gender: man
+  gender: male
   occupation: salesman
   orientation: gay
-  preferred_gender: a man
+  preferred_gender: male
   religion: other
   city: Sydney
   post_code: <%= '2000' %>
   country: Australia
   self_summary: blah
-  date_of_birth: Date.new(1991, 12, 3)
+  date_of_birth: <%= Date.new(1991, 12, 3) %>
   min_age: 21
   max_age: 35
   looking_for: long-term dating
