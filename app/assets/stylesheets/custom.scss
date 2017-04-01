@@ -40,19 +40,11 @@
 /* Users index */
 
 .user {
+  display: inline-block;
+  vertical-align: top;
   border: 1px solid #BFBFBF;
   width: 25%;
   margin: 5% 2%;
   padding: 5%;
   text-align: center;
-}
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid #EEE;
-  }
 }
