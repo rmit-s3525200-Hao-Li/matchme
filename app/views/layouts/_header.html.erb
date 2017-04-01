@@ -26,12 +26,13 @@
             </li>
             </ul>
             <% if logged_in? %>
-            <ul class="right">
+            <ul class="button-ground radius right">
+              <li><%= link_to "USERS", users_path %></li>
               <li class="has-dropdown">
-                <a href="#">ACCOUNT</a>
+                <a href="#"></i>ACCOUNT</a>
                 <ul class="dropdown">
                   <li><%= link_to "Profile", current_user %></li>
-                  <li><%= link_to "Settings", "#" %></li>
+                  <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
                   <li><%= link_to "Log out", logout_path, method: "delete" %></li>
                 </ul>
               </li>
