@@ -20,6 +20,7 @@ gem 'country_select',          '3.0.0'
 gem 'sprockets'
 gem 'font-awesome-rails'
 gem 'pg',                      '0.20.0'
+gem 'geocoder',                '1.4.3'
 
 group :development, :test do
   gem 'byebug',  '9.0.0', platform: :mri

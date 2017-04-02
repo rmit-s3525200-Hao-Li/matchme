@@ -16,7 +16,6 @@ class User < ApplicationRecord
   validates(:password, presence: true, format: { with: VALID_PASSWORD_REGEX }, allow_nil: true)
   
   validates(:gender, presence: true)
-  validates(:orientation, presence: true, length: {maximum: 50})
   validates(:occupation, presence: true, length: {maximum: 50})
   validates(:religion, presence: true)
   validates(:city, presence: true, length: {maximum: 60})
@@ -70,6 +69,14 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
+  
+  def address
+    "#{city}, #{post_code}, #{country}"
+  end
+  
+  # Geocoding to produce latitude and longitude
+  geocoded_by :address
+  after_validation :geocode
   
   private
   
