@@ -42,3 +42,9 @@ $ rails test
 ```
 $ rails server
 ```
+
+Or if on Cloud9:
+
+```
+$ rails server -b $IP -p $PORT
+```
