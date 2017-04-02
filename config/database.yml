@@ -3,8 +3,8 @@ default: &default
   adapter: postgresql
   encoding: SQL_ASCII
   pool: 5
-  username: <%= ENV['USERNAME'] %>
-  password: <%= ENV['PASSWORD'] %>
+  username: ubuntu
+  password: password
   host:     <%= ENV['IP'] %>
 
 development:
