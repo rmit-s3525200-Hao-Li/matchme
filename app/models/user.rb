@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
-  
   before_save :downcase_email
   
   validates(:first_name, presence: true, length: { maximum: 25 })
@@ -27,6 +26,10 @@ class User < ApplicationRecord
   validates(:max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age })
   validates(:date_of_birth, presence: true)
   validates(:looking_for, presence: true)
+  
+  # Geocoding to produce latitude and longitude
+  geocoded_by :address
+  after_validation :geocode
   
   #mount_uploader :image, ImageUploader
   
@@ -73,10 +76,6 @@ class User < ApplicationRecord
   def address
     "#{city}, #{post_code}, #{country}"
   end
-  
-  # Geocoding to produce latitude and longitude
-  geocoded_by :address
-  after_validation :geocode
   
   private
   

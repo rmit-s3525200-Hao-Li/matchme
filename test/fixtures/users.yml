@@ -7,13 +7,13 @@ matt:
   gender: male
   occupation: salesman
   preferred_gender: male
-  religion: other
+  religion: Other
   city: Sydney
   post_code: <%= '2000' %>
   country: Australia
-  self_summary: blah
+  self_summary: blah blah blah
   date_of_birth: <%= Date.new(1991, 12, 3) %>
-  min_age: 21
+  min_age: 23
   max_age: 35
-  looking_for: long-term dating
-  password_digest: <%= User.digest('password1') %>
+  looking_for: dating
+  password_digest: <%= User.digest('foobar1') %>

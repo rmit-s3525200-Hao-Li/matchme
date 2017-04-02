@@ -1,5 +1,8 @@
 require_relative 'boot'
 require 'rails/all'
+require 'geocoder'
+require "geocoder/railtie"
+Geocoder::Railtie.insert
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
