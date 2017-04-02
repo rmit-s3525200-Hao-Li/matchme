@@ -50,7 +50,7 @@
               <%= f.select :preferred_gender, ["male", "female", "both"], class: 'form-control' %>
               
               <%= f.label :looking_for, "Match type" %>
-              <%= f.select :looking_for, ["new friends", "long-term dating", "short-term dating", "casual sex"], class: 'form-control' %>
+              <%= f.select :looking_for, ["new friends", "dating", "casual sex"], class: 'form-control' %>
               
               <%= f.label :min_age, "Age between..." %>
               <%= f.select :min_age, (18...120).to_a, class: 'form-control' %>
