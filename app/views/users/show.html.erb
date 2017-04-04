@@ -1,8 +1,26 @@
 <%= provide(:title, @user.name) %>
-<div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-          <h1><%= @user.name %></h1>
-      </section>
-    </aside>
+<h1><%= @user.name %></h1>
+<h5><%= "#{@user.age} • #{@user.city}, #{@user.country}" %></h5>
+<div>
+  <h4>User Info</h4>
+  <p><%= @user.gender %></p>
+  <p><%= @user.religion %></p>
+  <p><%= @user.occupation %></p>
+</div>
+<% if !@user.self_summary.nil? %>
+  <div>
+    <h4>My self-summary</h4>
+    <p><%= @user.self_summary %></p>
+  </div>
+<% end %>
+<div>
+  <h4>Looking for</h4>
+  <p>
+    <% if @user.preferred_gender == "both" %>
+      <%= "Both men and women "%>
+    <% else %>
+      <%= "A #{@user.preferred_gender} " %>
+    <% end %>
+    <%= "aged #{@user.min_age} to #{@user.max_age} for #{@user.looking_for}." %>
+    </p>
 </div>
