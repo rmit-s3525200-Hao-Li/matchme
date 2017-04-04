@@ -5,10 +5,10 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   
   # Ensures users cannot access 'Edit Profile' page of other users
-  before_action :correct_user,   only: [:edit, :update]
+  before_action :correct_user,   only: [:edit, :update, :destroy]
   
   # Ensures only admin can delete users
-  before_action :admin_user,     only: :destroy
+  #before_action :admin_user,     only: :destroy
   
   # Corresponds to view/users/index.html.erb
   def index
@@ -59,7 +59,7 @@ class UsersController < ApplicationController
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
-    redirect_to users_url
+    redirect_to login_url
   end
   
   private
@@ -89,4 +89,5 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
+    
 end
