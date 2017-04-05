@@ -25,9 +25,3 @@
     <%= "aged #{@user.min_age} to #{@user.max_age} for #{@user.looking_for}." %>
     </p>
 </div>
-<div class="take-action">
-            <ul class="button-group radius expand left">
-           <li><%= link_to "Delete Account", current_user, method: :delete,
-                                    data: { confirm: "Are you sure?" }, class: "button large expand alert"%></li>
-            </ul>
-          </div>
