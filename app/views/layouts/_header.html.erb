@@ -46,7 +46,10 @@
     <!-- Logo -->
     <div class="four columns pull-five">
       <h1 id="logo">Very serious dating match making site
-      	<a href="index.html"><img src="assets/images/logo_black.png" width="294" height="108" alt="Landing Page HTML Template"></a>
+      	 
+      	 <%= link_to(root_path) do %>
+      	   <%= image_tag("logo.png", alt: "Logo") %>
+      	 <% end %>
       </h1>
     </div>
     <!--end logo-->
@@ -64,10 +67,9 @@
             <a href="#" data-reveal-id="login_panel" class="small secondary button radius"><i class="icon-user hide-for-medium-down"></i> LOG IN</a>
           </li>
           <li>
-            <%= link_to signup_path, class: "small button radius" do %>
-              <!--<a href="#" data-reveal-id="register_panel" class="small button radius">-->
-              <i class="icon-group hide-for-medium-down"></i> SIGN UP
-            <% end %>
+              <!--register buttons-->
+              <a href="#" data-reveal-id="register_panel" class="small button radius"><i class="icon-group hide-for-medium-down"></i> SIGN UP</a>
+            <!--  <i class="icon-group hide-for-medium-down"></i> SIGN UP-->
           </li>
         <% end %>
       </ul>

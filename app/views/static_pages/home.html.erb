@@ -204,3 +204,70 @@
   </div><!--end row-->
   <a href="#" class="close-reveal-modal">×</a>
 </div><!--end login panel-->
+
+
+<!--register_panel -->
+<div id="register_panel" class="reveal-modal">
+  <div class="row">
+      <div class="row">
+      <div class="twelve columns">
+        <h3 class="pink-text"><i class="icon-magic icon-large"></i> CREATE ACCOUNT</h3>
+          <%= form_for(@user, url: signup_path) do |f| %>
+          <%= render 'shared/error_messages' %>
+          <div class="six columns">
+              <%= f.label :orientation, "I am a" %>
+              <%= f.select :gender, ["male", "female"], class: 'form-control' %>
+              
+              <%= f.label :preferred_gender, "Looking for a" %>
+              <%= f.select :preferred_gender, ["male", "female", "both"], class: 'form-control' %>
+              <%= f.label :looking_for, "for" %>
+              <%= f.select :looking_for, ["new friends", "dating", "casual sex"], class: 'form-control' %>
+              
+              <%= f.label :min_age, "Age between..." %>
+              <%= f.select :min_age, (18...100).to_a, class: 'form-control' %>
+              <%= f.label :max_age, "to" %>
+              <%= f.select :max_age, (18...100).to_a, class: 'form-control' %>
+              
+              </div>
+              <div class="six columns">
+              
+              <%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %>
+              <%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %>
+          
+              <%= f.label :date_of_birth %>
+              <%= f.date_field :date_of_birth, class: 'form-control' %>
+              
+              <%= f.text_field :occupation, class: 'form-control', placeholder: "Occupation" %>
+              
+              <%= f.label :religion %>
+              <%= f.select :religion, ["Agnosticism", "Atheism", "Christianity", "Judaism", "Catholicism", "Islam", "Buddhism", "Hinduism", "Sikh", "Other"], class: 'form-control' %>
+              
+              <%= f.text_area :self_summary, class: 'form-control', placeholder: "Self-summary" %>
+            
+            </div>
+            <div class="six columns">
+    
+              <%= f.text_field :city, class: 'form-control', placeholder: "City" %>
+              <%= f.text_field :post_code, class: 'form-control', placeholder: "Zip code" %>
+    
+              <%= f.label :country %>
+              <%= f.country_select :country, priority_countries: ["AU", "US", "GB", "CA", "NZ"], class: 'form-control' %>
+          </div>
+          
+          <div class="six columns">
+  
+            <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
+      
+            <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
+      
+            <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
+      
+            <%= f.submit "Create my account", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+  </div>
+
+  </div><!--end row-->
+  <a href="#" class="close-reveal-modal">×</a>
+</div><!--end register_panel-->
