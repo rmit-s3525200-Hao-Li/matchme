@@ -5,25 +5,14 @@
 	<div class="row">
 
     <!-- Main Navigation -->
-    <div class="five columns push-four">
+    <div class="five columns push-two">
     	<div class="space-b-20 hide-for-small">&nbsp;</div>
-      <nav class="top-bar">
-        <ul>
-          <!-- Toggle Button Mobile -->
-          <li class="name">
-            <h1><a href="#">Please select your page</a></h1>
-          </li>
-          <li class="toggle-topbar"><a href="#"><i class="icon-reorder"></i></a></li>
-          <!-- End Toggle Button Mobile -->
-        </ul>
 
+          
         <section><!-- Nav Section -->
           <ul class="left">
-            <li>
-              <%= link_to(root_path) do %>
-                <i class="icon-home"></i> HOME
-              <% end %>
-            </li>
+            <!-- Replaced nav Home to title -->
+             <h3>MatchMe</h3>
             </ul>
             <% if logged_in? %>
             <ul class="button-ground radius right">
@@ -51,6 +40,7 @@
       	   <%= image_tag("logo.png", alt: "Logo") %>
       	 <% end %>
       </h1>
+    
     </div>
     <!--end logo-->
 
