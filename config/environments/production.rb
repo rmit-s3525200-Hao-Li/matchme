@@ -4,6 +4,9 @@ Rails.application.configure do
   config.force_ssl = true
   config.cache_classes = true
   config.eager_load = true
+  
+  config.assets.compress = true
+
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
