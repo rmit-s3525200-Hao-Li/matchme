@@ -1,4 +1,41 @@
-# ### Ignore for now. Will seed database when geocoding is complete.
+# Non-admin user
+User.create!(first_name: "John", 
+              last_name: "Doe",
+              email: "joedoe@example.com",
+              gender: "male",
+              religion: "Other",
+              occupation: "Salesman",
+              date_of_birth: Date.new(1990,1,1),
+              city: "Fitzroy",
+              post_code: "3065",
+              country: "Australia",
+              looking_for: "dating",
+              preferred_gender: "female",
+              min_age: 20,
+              max_age: 32,
+              password: "foobar1",
+              password_confirmation: "foobar1")
+              
+# Admin user
+User.create!(first_name: "Admin", 
+              last_name: "User",
+              email: "admin@example.com",
+              gender: "male",
+              religion: "Other",
+              occupation: "Salesman",
+              date_of_birth: Date.new(1990,1,1),
+              city: "Fitzroy",
+              post_code: "3065",
+              country: "Australia",
+              looking_for: "new friends",
+              preferred_gender: "female",
+              min_age: 20,
+              max_age: 32,
+              admin: true,
+              password: "foobar1",
+              password_confirmation: "foobar1")
+
+# ### Ignore for now:
 
 # genders = ["male", "female"]
 # preferred_genders = genders.push("both")
