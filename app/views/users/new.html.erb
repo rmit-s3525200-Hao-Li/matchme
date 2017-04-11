@@ -4,71 +4,87 @@
     <div class="main">
     <div class="container">
       <div class="navigation">
-      <div class="twelve columns">
+      <div class="twelve columns push-one">
+        <br><br><br>
         <h3 class="pink-text"><i class="icon-magic icon-large"></i> CREATE ACCOUNT</h3>
           <%= form_for(@user, url: signup_path, id: "register_form") do |f| %>
           <%= render 'shared/error_messages' %>
           
-            <div class="twelve columns">
-              <div class="four columns">
-  
-            <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
-      
-            <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
-      
+            <div class="six columns push-one">
+              <div class="six columns push-two">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control', placeholder: "john@example.com" %>
+            
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control', placeholder: "A-Z,a-z,0-9" %>
+            
+            <%= f.label :password_confirmation %>
             <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Confirm password" %>
       
               </div>
             </div>
-            <div class="twelve columns">
-              <div class="four columns">
-              <%= f.label :orientation, "I am a" %>
-              <%= f.select :gender, ["male", "female"], class: 'form-control' %>
-              
-              <%= f.label :preferred_gender, "Looking for a" %>
-              <%= f.select :preferred_gender, ["male", "female", "both"], class: 'form-control' %>
-              <%= f.label :looking_for, "for" %>
-              <%= f.select :looking_for, ["new friends", "dating", "casual sex"], class: 'form-control' %>
-              
-              <%= f.label :min_age, "Age between..." %>
-              <%= f.select :min_age, (18...100).to_a, class: 'form-control' %>
-              <%= f.label :max_age, "to" %>
-              <%= f.select :max_age, (18...100).to_a, class: 'form-control' %>
-              <br><br>
-              </div>
-            </div>
-              <div class="six columns">
-              
+            <div class="six columns push-one">
+              <div class="six columns push-two">
+              <%= f.label :first_name %>
               <%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %>
+              <%= f.label :last_name %>
               <%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %>
           
               <%= f.label :date_of_birth %>
               <%= f.date_field :date_of_birth, class: 'form-control' %>
-              
-              <%= f.text_field :occupation, class: 'form-control', placeholder: "Occupation" %>
-              
-              <%= f.label :religion %>
-              <%= f.select :religion, ["Agnosticism", "Atheism", "Christianity", "Judaism", "Catholicism", "Islam", "Buddhism", "Hinduism", "Sikh", "Other"], class: 'form-control' %>
-              
-              <%= f.text_area :self_summary, class: 'form-control', placeholder: "Self-summary" %>
-            
+              </div>
             </div>
-            <div class="six columns">
-    
+            
+            
+              <div class="six columns push-one">
+                <div class="six columns push-two">
+
+              <%= f.label :orientation, "I am a" %>
+              <%= f.select :gender, ["Male", "Female"], class: 'form-control' %>
+              
+              <%= f.label :preferred_gender, "Looking for a" %>
+              <%= f.select :preferred_gender, ["Male", "Female", "Both"], class: 'form-control' %>
+              <%= f.label :looking_for, "for" %>
+              <%= f.select :looking_for, ["New friends", "Dating", "Casual sex"], class: 'form-control' %>
+              
+              <%= f.label :min_age, "Age between..." %>
+              <%= f.select :min_age, (18...100).to_a, class: 'form-control' %><br>
+              <%= f.label :max_age, "to" %>
+              <%= f.select :max_age, (18...100).to_a, class: 'form-control' %>
+              
+        
+                </div>
+              </div>
+            
+            <div class="six columns push-one">
+              <div class="six columns push-two">
+              <%= f.label :city %>
               <%= f.text_field :city, class: 'form-control', placeholder: "City" %>
+              <%= f.label :post_code %>
               <%= f.text_field :post_code, class: 'form-control', placeholder: "Zip code" %>
     
               <%= f.label :country %>
               <%= f.country_select :country, priority_countries: ["AU", "US", "GB", "CA", "NZ"], class: 'form-control' %>
-                         
-                 
-          </div>
-                      <div class="twelve columns">
-           <%= f.submit "Create my account", class: "btn btn-primary" %>
-            <% end %>
+              <br />
+              <%= f.label :occupation %>
+              <%= f.text_field :occupation, class: 'form-control', placeholder: "Occupation" %>
+              
+              <%= f.label :religion %>
+              <%= f.select :religion, ["Agnosticism", "Atheism", "Christianity", "Judaism", "Catholicism", "Islam", "Buddhism", "Hinduism", "Sikh", "Other"], class: 'form-control' %>
+              <br><br>
+              </div>
+            </div>
           
+          <div class="twelve columns">
+          <div class="six columns push-three">
+            <%= f.text_area :self_summary, class: 'form-control', placeholder: "Self-summary" %>
+            </div></div>
+          <div class="seven columns ">
+            <%= f.submit "Create my account", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
-  </div>  </div> </div>
 </section>
