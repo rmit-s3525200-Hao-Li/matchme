@@ -1,11 +1,52 @@
-<% provide(:title, 'All users') %>
-<h1>All users</h1>
+<% provide(:title, 'Matched profile') %>
+	<div id="main" class="search-result text-center">
+  	<div class="row">
+      <div class="twelve columns">
+        <h2>Matched<span class="pink-text">results</span></h2>
+        <p class="lead">Your have 24 matches:</p>
+    </div>
+    </div>
+    </div>
 
 <!-- Adds pagination to page -->
-<%= will_paginate %>
+<!-- MAIN SECTION
+================================================ -->
+
+	<div id="main" class="search-result text-center">
+	 
+  	<div class="row">
+     
+     <div class="twelve columns">   
+     
+
+            <%= render @users %>
+       
+     </div>   
+  
+      
+  	</div><!--end row-->
+  </div><!--end #main-->
+
+
+          <!-- Pagination -->
+          <div class="row">
+            <div class="twelve columns pagination-centered">
+              <ul class="pagination">
+                <li class="arrow unavailable"><a href=""><i class="icon-chevron-left"></i></a></li>
+                <li class="current"><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li class="unavailable"><a href="">&hellip;</a></li>
+                <li><a href="">12</a></li>
+                <li><a href="">13</a></li>
+                <li class="arrow"><a href=""><i class="icon-chevron-right"></i></a></li>
+              </ul>
+            </div><!--end twelve-->
+          </div><!--end row-->
+          <!--end  Pagination-->
 
 <!-- Loop through and displays all users -->
 <!-- See: _user.html.erb -->
-<%= render @users %>
 
-<%= will_paginate %>
+
