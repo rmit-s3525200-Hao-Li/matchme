@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
   before_save :downcase_email
+  before_save :titleize_occupation
   
   # CarrierWave method for image uploading
   mount_uploader :picture, PictureUploader
@@ -38,7 +39,7 @@ class User < ApplicationRecord
   
   # return string of first and last name
   def name
-    "#{first_name} #{last_name}"
+    "#{first_name} #{last_name}".titleize
   end
 
   # return age
@@ -85,6 +86,10 @@ class User < ApplicationRecord
     # Converts email to all lower-caes
     def downcase_email
       self.email.downcase!
+    end
+    
+    def titleize_occupation
+      self.occupation.titleize
     end
     
     # Ensures the uploaded image isn't too big
