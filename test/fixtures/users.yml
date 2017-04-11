@@ -11,7 +11,7 @@ matt:
   city: Sydney
   post_code: <%= '2000' %>
   country: Australia
-  self_summary: blah blah blah
+  self_summary: blah
   date_of_birth: <%= Date.new(1991, 12, 3) %>
   min_age: 23
   max_age: 35

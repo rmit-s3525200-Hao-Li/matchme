@@ -1,85 +1,6 @@
 <%= provide(:title, @user.name) %>
-<!DOCTYPE html>
-
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
-
-
-<html class="no-js" lang="en">
-<!--<![endif]-->
-
-<head>
-	<!--Site charset-->
-  <meta charset="utf-8">
-  <!--Site title-->
-  <title>Sweet Date - Landing Page Theme</title>
-  <!--Meta-->
-  <meta name="description"  content="Premium landing page for Lovers">
-  <meta name="author"  content="Seventh Queen">
-  <!--Set the viewport width to device width for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Foundation Framework-->
-  <link rel="stylesheet" href="assets/styles/foundation.min.css">
-  <!--Plugins-->
-  <link rel="stylesheet" href="assets/styles/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/styles/prettyPhoto.css">
-
-
-	<!--Main Stylesheet (change this to modify template)-->
-  <link rel="stylesheet" href="assets/styles/app.css">
-  <link rel="stylesheet" href="assets/styles/updates.css">
-  <link rel="stylesheet" href="assets/styles/custom.css">
-
-
-  <!--Google Fonts-->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
-
-  <!--[if IE 7]>
-  <link rel="stylesheet" href="assets/styles/font-awesome-ie7.min.css">
-  <script src="assets/scripts/ie6/warning.js"></script>
-  <script>window.onload=function(){e("assets/scripts/ie6/")}</script>
-  <![endif]-->
-
-
-	<!--Favicons-->
-  <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
-  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-touch-icon-144x144.png">
-
-
-  <!-- jQuery & Foundation Framework -->
-  <script type="text/javascript" src="assets/scripts/modernizr.foundation.js"></script>
-</head>
-<body>
-
-
-
-
-
-<!-- Page
-================================================ -->
-<!--Attributes-->
-<!--class = page wide-style / boxed-style-->
 <div class="inner page wide-style">
 
-
-
-
-
-
-
-
-
-
-
-<!-- PROFILE SECTION
-================================================ -->
 <section>
   <div id="profile">
     <div class="row">
@@ -87,161 +8,18 @@
         <h2 class="sweetfont left"><%=@user.name %> </h2>
         <hr>
         <h6 class="subheader"><%= "#{@user.age} • #{@user.city}, #{@user.country}" %></h6>
-
-        <div class="row">
-        	<div class="five columns">
-          	<!--
-        		<div class="profile-slider-wrapp">
-              <div class="circular-item" title="Compatibility match">
-                <small class="icon strong">match</small>
-                <input type="text" value="74" class="greenCircle">
-              </div>
-              <div id="profile-slider">
-                <div class="big-profile-image" data-thumb="assets/images/gallery-carousel/big_image_profile_00.jpg">
-                  <img src="assets/images/gallery-carousel/big_image_profile_00.jpg" alt="">
-                </div>
-
-                <div class="big-profile-image" data-thumb="assets/images/gallery-carousel/big_image_profile_08.jpg">
-                  <img src="assets/images/gallery-carousel/big_image_profile_08.jpg" alt="">
-                </div>
-              </div>
-						</div> end profile-slider-wrapp--> 
-        	</div><!--end five--> 
-
-
-        	<div class="seven columns">
-          	<!--
-            <dl class="tabs pill custom">
-              <dd class="active"><a href="#looking-for">Looking for</a><!--<span class="notch"></span></dd>
-              <dd class="sliderEvent"><a href="#my-photos">My photos <span class="radius label alert">9</span></a></dd>
-              <dd class=""><a href="#third">Third tab</a></dd>
-              <dd class=""><a href="#fourth">Fourth tab</a></dd>
-            </dl>
-						<div class="clearfix"></div>
-
-            <ul class="tabs-content custom"> -->
-
-              <!--First Tab Content
-              <li class="active" id="looking-forTab">
-                <div class="callout-speech-wrapp six columns">
-                  <div class="callout-speech">
-                    The one think I most passionate about:
-                  </div>
-                  <cite>life :)</cite>
-                </div>
-
-                <div class="callout-speech-wrapp six columns">
-                  <div class="callout-speech">
-                    The most think I am looking for in a persion is:
-                  </div>
-                  <cite>good energy and a positive outlook on life</cite>
-                </div>
-              </li>
-              <!--end First Tab Content-->
-
-              <!--Second Tab Content
-              <li class="mySlider" id="my-photosTab">
-                <div id="gallery-carousel">
-                  <span class="circle">
-                    <a href="assets/images/gallery-carousel/big_image_profile_00.jpg" class="imagelink" data-rel="prettyPhoto[gallery2]">
-                      <span class="overlay"></span>
-                      <span class="read"><i class="icon-heart"></i></span>
-                      <img src="assets/images/gallery-carousel/gallery_profile_00.jpg" alt="">
-                    </a>
-                  </span>
-                  <span class="circle">
-                    <a href="assets/images/gallery-carousel/big_image_profile_08.jpg" class="imagelink" data-rel="prettyPhoto[gallery2]">
-                      <span class="overlay"></span>
-                      <span class="read"><i class="icon-heart"></i></span>
-                      <img src="assets/images/gallery-carousel/gallery_profile_08.jpg" alt="">
-                    </a>
-                  </span>
-                  <span class="circle">
-                    <a href="#" class="imagelink" data-reveal-id="login_panel">
-                      <span class="overlay"></span>
-                      <span class="read"><i class="icon-lock"></i></span>
-                      <img src="assets/images/gallery-carousel/gallery_profile_07.jpg" alt="">
-                    </a>
-                  </span>
-                  <span class="circle">
-                    <a href="#" class="imagelink" data-reveal-id="login_panel">
-                      <span class="overlay"></span>
-                      <span class="read"><i class="icon-lock"></i></span>
-                      <img src="assets/images/gallery-carousel/gallery_profile_04.jpg" alt="">
-                    </a>
-                  </span>
-                  <span class="circle">
-                    <a href="#" class="imagelink" data-reveal-id="login_panel">
-                      <span class="overlay"></span>
-                      <span class="read"><i class="icon-lock"></i></span>
-                      <img src="assets/images/gallery-carousel/gallery_profile_06.jpg" alt="">
-                    </a>
-                  </span>
-                  <span class="circle">
-                    <a href="#" class="imagelink" data-reveal-id="login_panel">
-                      <span class="overlay"></span>
-                      <span class="read"><i class="icon-lock"></i></span>
-                      <img src="assets/images/gallery-carousel/gallery_profile_01.jpg" alt="">
-                    </a>
-                  </span>
-                  <span class="circle">
-                    <a href="#" class="imagelink" data-reveal-id="login_panel">
-                      <span class="overlay"></span>
-                      <span class="read"><i class="icon-lock"></i></span>
-                      <img src="assets/images/gallery-carousel/gallery_profile_02.jpg" alt="">
-                    </a>
-                  </span>
-                  <span class="circle">
-                    <a href="#" class="imagelink" data-reveal-id="login_panel">
-                      <span class="overlay"></span>
-                      <span class="read"><i class="icon-lock"></i></span>
-                      <img src="assets/images/gallery-carousel/gallery_profile_03.jpg" alt="">
-                    </a>
-                  </span>
-                  <span class="circle">
-                    <a href="#" class="imagelink" data-reveal-id="login_panel">
-                      <span class="overlay"></span>
-                      <span class="read"><i class="icon-lock"></i></span>
-                      <img src="assets/images/gallery-carousel/gallery_profile_05.jpg" alt="">
-                    </a>
-                  </span>
-                </div><!--end #gallery-carousel-->
-
-                
-
-              </li>
-              <!--End Second Tab Content-->
-
-              <!--Third Tab Content-->
-              <li id="thirdTab">
-                
-                <br/>
-                <br/>
-              </li>
-              <!--end Third Tab Content-->
-
-              <!--Fourth Tab Content-->
-              <li id="fourthTab">
-               
-                </br>
-                </br>
-              
-              </li>
-              <!--end Fourth Tab Content-->
-
-            </ul>
-            <!--end tabs-content-->
-          </div><!--end seven-->
-        </div><!--end row-->
+        <% if @user.picture? %>
+          <%= link_to '#', data: { toggle: "modal", target: ".bs-example-modal-lg" } do %>
+            <%= display_thumbnail(@user) %>
+          <% end %>
+        <% else %>
+          <%= display_thumbnail(@user) %>
+        <% end %>
       </div><!--end twelve-->
     </div><!--end row-->
   </div><!--end profile-->
 </section>
 <!--END PROFILE SECTION-->
-
-
-
-
 
 <!-- MAIN SECTION
 ================================================ -->
@@ -264,44 +42,44 @@
                 <dl class="dl-horizontal">
                   <dt>Gender</dt>
                   <dd><%= @user.gender %></dd>
-                  <dt>Age</dt>
-                  <dd><%= @user.age %></dd>
                   <dt>Religion</dt>
                   <dd><%= @user.religion %></dd>
                  
-                  <dt>Orientation</dt>
+                  <dt>Occupation</dt>
                   <dd><%= @user.occupation %></dd>
-                  <dt>City</dt>
-                  <dd><%= @user.city %></dd>
-                  <dt>Country</dt>
-                  <dd><%= @user.country %></dd>
-                  <dt>Looking for:</dt>
-                  <dd> <% if @user.preferred_gender == "both" %>
-                      <%= "Both men and women "%>
-                      <% else %>
-                      <%= "A #{@user.preferred_gender} " %>
-                      <% end %></dd>
-                  <dt>Age:</dt>
-                  <dd><%= "aged #{@user.min_age} to #{@user.max_age} for #{@user.looking_for}." %></dd>
                 </dl>
                
               </div>
             </li>
             <li>
-              <h5 class="accordion-title">My self-summary</h5>
-              <div class="accordion-content">
-                <p><% if !@user.self_summary.nil? %>
-                  <div>
-                    <h4>My self-summary</h4>
-                      <p><%= @user.self_summary %></p>
-                      </div>
-                      <% end %></p>
+              <h5 class="accordion-title">Looking for</h5>
+              <div>
+                <dl class="dl-horizontal">
+                   <p>
+                    <% if @user.preferred_gender == "both" %>
+                      <%= "Both men and women "%>
+                      <% else %>
+                      <%= "A #{@user.preferred_gender} " %>
+                      <% end %>
+                      <%= "ages #{@user.min_age} to #{@user.max_age} for #{@user.looking_for}." %>
+                  </p>
+                </dl>
               </div>
             </li>
-
-            
-
-          
+            <li>
+              <h5 class="accordion-title">My self-summary</h5>
+              <div class="accordion-content">
+                <p>
+                  <div>
+                    <% if @user.self_summary.blank? %>
+                      <p><%= @user.name %> has not written a self-summary yet.</p>
+                    <% else %>
+                      <p><%= @user.self_summary %></p>
+                    <% end %>
+                  </div>
+                </p>
+              </div>
+            </li>
         	</ul>
         </li>
 
@@ -311,123 +89,28 @@
         </li>
       </ul><!--end Content Info Tabs-->
     </div><!--end seven-->
-
-
-
-
-
-    
   </div><!--end main-->
 
-
-
-
-
-
-<!-- Button
+<!-- Edit Profile Button
 ================================================ -->
 <div class="center">
     <div>
-     <%= link_to(edit_user_path(current_user)) do %>
-                <button class="btn btn-lg btn-primary">Edit profile</button>
-              <% end %>
+       <%= link_to(edit_user_path(current_user)) do %>
+        <button class="btn btn-lg btn-primary">Edit profile</button>
+       <% end %>
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- JAVASCRIPTS
-================================================ -->
-
-	<!-- jQuery & Foundation Framework -->
-  <script type="text/javascript" src="assets/scripts/jquery.js"></script>
-  <script type="text/javascript" src="assets/scripts/foundation.min.js"></script>
-
-
-  <!-- 3rd Plugins -->
-
-	<!-- include carouFredSel plugin -->
-  <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/jquery.carouFredSel-6.2.0-packed.js"></script>
-  <!-- optionally include helper for carouFredSel plugins -->
-  <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.mousewheel.min.js"></script>
-  <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.touchSwipe.min.js"></script>
-  <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.transit.min.js"></script>
-  <script type="text/javascript" src="assets/scripts/plugins/carouFredSel/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
-  <script type="text/javascript" src="assets/scripts/plugins/retina/retina.js"></script>
-  <script type="text/javascript" src="assets/scripts/plugins/knob/jquery.knob.js"></script>
-  <script type="text/javascript" src="assets/scripts/plugins/twitterfeed-ap-1.1/twitterfeed-ap.js"></script>
-  <script type="text/javascript" src="assets/scripts/plugins/fittext/jquery.fittext.js"></script>
-  <script type="text/javascript" src="assets/scripts/plugins/quovolver/jquery.quovolver.js"></script><!--Quote rotator-->
-  <script type="text/javascript" src="assets/scripts/plugins/backgroundSize/jquery.backgroundSize.js"></script><!--BackgroundSize for IE8-->
-  <script type="text/javascript" src="assets/scripts/plugins/prettyPhoto/jquery.prettyPhoto.js"></script>
-
-  <!-- Custom JS effects, tweaks and inits -->
-  <script type="text/javascript" src="assets/scripts/app.js"></script>
-
-	<script type="text/javascript">
-		<!-- Load slider gallery into tabs -->
-		function loadSlider(sliderId)
-		{
-			// Gallery carousel
-			$("#"+sliderId).carouFredSel({
-				width	: "100%",
-				auto    : false,
-				scroll	: 1,
-				swipe: {
-					onMouse: true,
-					onTouch: true
-				},
-				prev	: {
-					button	: "#stanga-prev",
-					key		: "left"
-				},
-				next	: {
-					button	: "#dreapta-next",
-					key		: "right"
-				}
-			});
-		}
-
-    $(window).ready(function(){
-			// put here your slider ID
-			var sliderID = "gallery-carousel";
-
-			//load the slider on page load
-			loadSlider(sliderID);
-
-		//when someone calls the tab with the slider update the slider sizes
-		$(".sliderEvent").live("click", function() {
-			$(".mySlider").show();
-				loadSlider(sliderID);
-			});
-    });
-    </script>
-
-
-
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-	<script>
-		var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-		g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-		s.parentNode.insertBefore(g,s)}(document,"script"));
-	</script>
-
-</body>
-</html>
+<!-- Profile Picture Modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <%= image_tag @user.picture.url if @user.picture? %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
