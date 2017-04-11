@@ -30,6 +30,7 @@ class User < ApplicationRecord
   validates(:date_of_birth, presence: true)
   validates(:looking_for, presence: true)
   validate(:picture_size)
+  validate(:minimum_age)
   
   # Geocoding to produce latitude and longitude
   geocoded_by :address
@@ -90,6 +91,12 @@ class User < ApplicationRecord
     def picture_size
       if picture.size > 5.megabytes
         errors.add(:picture, "should be less than 5MB")
+      end
+    end
+    
+    def minimum_age
+      if age < 18
+        errors.add(:date_of_birth, "- You must be at least 18 to register")
       end
     end
 end

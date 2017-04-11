@@ -67,7 +67,7 @@
               <div class="accordion-content">
                 <p>
                   <div>
-                    <% if @user.self_summary.empty? %>
+                    <% if @user.self_summary.blank? %>
                       <p><%= @user.name %> has not written a self-summary yet.</p>
                     <% else %>
                       <p><%= @user.self_summary %></p>
