@@ -8,8 +8,12 @@
         <h2 class="sweetfont left"><%=@user.name %> </h2>
         <hr>
         <h6 class="subheader"><%= "#{@user.age} • #{@user.city}, #{@user.country}" %></h6>
-        <%= link_to '#', data: { toggle: "modal", target: "#myModal" } do %>
-          <%= image_tag @user.picture.thumb.url if @user.picture? %>
+        <% if @user.picture? %>
+          <%= link_to '#', data: { toggle: "modal", target: "#myModal" } do %>
+            <%= display_thumbnail(@user) %>
+          <% end %>
+        <% else %>
+          <%= display_thumbnail(@user) %>
         <% end %>
       </div><!--end twelve-->
     </div><!--end row-->
