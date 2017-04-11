@@ -17,3 +17,6 @@ matt:
   max_age: 35
   looking_for: dating
   password_digest: <%= User.digest('foobar1') %>
+  
+
+              

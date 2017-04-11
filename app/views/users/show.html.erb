@@ -7,7 +7,9 @@
       <div class="twelve columns">
         <h2 class="sweetfont left"><%=@user.name %> </h2>
         <hr>
-        <h6 class="subheader"><%= "#{@user.age} • #{@user.city}, #{@user.country}" %></h6>
+        <% unless @user.admin? %>
+          <h6 class="subheader"><%= "#{@user.age} • #{@user.city}, #{@user.country}" %></h6>
+        <% end %>
         <% if @user.picture? %>
           <%= link_to '#', data: { toggle: "modal", target: ".bs-example-modal-lg" } do %>
             <%= display_thumbnail(@user) %>
@@ -23,83 +25,87 @@
 
 <!-- MAIN SECTION
 ================================================ -->
-<section>
-	<div id="main">
-  	<div class="row">
-
-    <div class="twelve columns">
-
-
-      <!--Content Info Tabs-->
-      <ul class="tabs-content">
-      	<!--First Info Tab Content-->
-        <li class="active" id="simple1Tab">
-        	<ul class="accordion">
-        	    <li>
-              <h5 class="accordion-title">Information</h5>
-              <div>
+<% unless @user.admin? %>
+  <section>
+  	<div id="main">
+    	<div class="row">
+  
+      <div class="twelve columns">
+  
+  
+        <!--Content Info Tabs-->
+        <ul class="tabs-content">
+        	<!--First Info Tab Content-->
+          <li class="active" id="simple1Tab">
+          	<ul class="accordion">
+          	    <li>
+                <h5 class="accordion-title">Information</h5>
+                <div>
+                   
+                  <dl class="dl-horizontal">
+                    <dt>Gender</dt>
+                    <dd><%= @user.gender %></dd>
+                    <dt>Religion</dt>
+                    <dd><%= @user.religion %></dd>
+                   
+                    <dt>Occupation</dt>
+                    <dd><%= @user.occupation %></dd>
+                  </dl>
                  
-                <dl class="dl-horizontal">
-                  <dt>Gender</dt>
-                  <dd><%= @user.gender %></dd>
-                  <dt>Religion</dt>
-                  <dd><%= @user.religion %></dd>
-                 
-                  <dt>Occupation</dt>
-                  <dd><%= @user.occupation %></dd>
-                </dl>
-               
-              </div>
-            </li>
-            <li>
-              <h5 class="accordion-title">Looking for</h5>
-              <div>
-                <dl class="dl-horizontal">
-                   <p>
-                    <% if @user.preferred_gender == "both" %>
-                      <%= "Both men and women "%>
+                </div>
+              </li>
+              <li>
+                <h5 class="accordion-title">Looking for</h5>
+                <div>
+                  <dl class="dl-horizontal">
+                     <p>
+                      <% if @user.preferred_gender == "both" %>
+                        <%= "Both men and women "%>
+                        <% else %>
+                        <%= "A #{@user.preferred_gender} " %>
+                        <% end %>
+                        <%= "ages #{@user.min_age} to #{@user.max_age} for #{@user.looking_for}." %>
+                    </p>
+                  </dl>
+                </div>
+              </li>
+              <li>
+                <h5 class="accordion-title">My self-summary</h5>
+                <div class="accordion-content">
+                  <p>
+                    <div>
+                      <% if @user.self_summary.blank? %>
+                        <p><%= @user.name %> has not written a self-summary yet.</p>
                       <% else %>
-                      <%= "A #{@user.preferred_gender} " %>
+                        <p><%= @user.self_summary %></p>
                       <% end %>
-                      <%= "ages #{@user.min_age} to #{@user.max_age} for #{@user.looking_for}." %>
+                    </div>
                   </p>
-                </dl>
-              </div>
-            </li>
-            <li>
-              <h5 class="accordion-title">My self-summary</h5>
-              <div class="accordion-content">
-                <p>
-                  <div>
-                    <% if @user.self_summary.blank? %>
-                      <p><%= @user.name %> has not written a self-summary yet.</p>
-                    <% else %>
-                      <p><%= @user.self_summary %></p>
-                    <% end %>
-                  </div>
-                </p>
-              </div>
-            </li>
-        	</ul>
-        </li>
-
-        <!-- Info Tab Content-->
-        <li id="simple3Tab">
-
-        </li>
-      </ul><!--end Content Info Tabs-->
-    </div><!--end seven-->
-  </div><!--end main-->
-
-<!-- Edit Profile Button
-================================================ -->
-<div class="center">
-    <div>
-       <%= link_to(edit_user_path(current_user)) do %>
-        <button class="btn btn-lg btn-primary">Edit profile</button>
-       <% end %>
+                </div>
+              </li>
+          	</ul>
+          </li>
+  
+          <!-- Info Tab Content-->
+          <li id="simple3Tab">
+  
+          </li>
+        </ul><!--end Content Info Tabs-->
+      </div><!--end seven-->
+    </div><!--end main-->
+  
+  <!-- Edit Profile Button
+  ================================================ -->
+  <% if current_user?(@user) %>
+    <div class="center">
+        <div>
+           <%= link_to(edit_user_path(current_user)) do %>
+            <button class="btn btn-lg btn-primary">Edit profile</button>
+           <% end %>
+        </div>
     </div>
-</div>
+  <% end%>
+<% end %>
 
 <!-- Profile Picture Modal -->
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
