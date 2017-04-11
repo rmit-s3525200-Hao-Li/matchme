@@ -2,6 +2,9 @@ class User < ApplicationRecord
   attr_accessor :remember_token
   before_save :downcase_email
   
+  # CarrierWave method for image uploading
+  mount_uploader :picture, PictureUploader
+  
   validates(:first_name, presence: true, length: { maximum: 25 })
   validates(:last_name, presence: true, length: { maximum: 25 })
   
@@ -26,12 +29,11 @@ class User < ApplicationRecord
   validates(:max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age })
   validates(:date_of_birth, presence: true)
   validates(:looking_for, presence: true)
+  validate(:picture_size)
   
   # Geocoding to produce latitude and longitude
   geocoded_by :address
   after_validation :geocode
-  
-  #mount_uploader :image, ImageUploader
   
   # return string of first and last name
   def name
@@ -82,5 +84,12 @@ class User < ApplicationRecord
     # Converts email to all lower-caes
     def downcase_email
       self.email.downcase!
+    end
+    
+    # Ensures the uploaded image isn't too big
+    def picture_size
+      if picture.size > 5.megabytes
+        errors.add(:picture, "should be less than 5MB")
+      end
     end
 end
