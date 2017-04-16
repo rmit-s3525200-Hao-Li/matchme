@@ -1,16 +1,22 @@
 <% provide(:title, 'Edit profile') %>
 <section>
   <div id="feature-text" class="text-center">
-    <div class="row">
+    <div class="container">
+      <div class="navigation">
       <div class="twelve columns">
         <h3 class="pink-text"><i class="fa fa-pencil"></i> EDIT PROFILE</h3>
           <%= form_for(@user) do |f| %>
             <%= render 'shared/error_messages' %>
-            
+            <div class="six columns">
             <div class="form-section">
               <h4>Profile Information</h4>
               <%= f.label :first_name, "First name" %>
               <%= f.text_field :first_name, class: 'form-control' %>
+              
+              <%= f.label :first_name, "First name" %>
+              <%= f.text_field :first_name, class: 'form-control' %>
+              
+              
               
               <%= f.label :last_name, "Last name" %>
               <%= f.text_field :last_name, class: 'form-control' %>
@@ -33,7 +39,8 @@
               <%= f.label :picture, "Change photo", accept: 'image/jpeg,image/png' %>
               <%= f.file_field :picture %>
             </div>
-            
+            </div>
+            <div class="six columns">
             <div class="form-section">
               <h4>Location</h4>
               
@@ -60,7 +67,9 @@
               <%= f.label :max_age, "to" %>
               <%= f.select :max_age, (18...120).to_a, class: 'form-control' %>
             </div>
+            </div>
             
+            <div class="six columns">
             <div class="form-section">
               <h4>Account Information</h4>
               
@@ -73,7 +82,7 @@
               <%= f.label :password_confirmation, "Confirm password" %> 
               <%= f.password_field :password_confirmation %>
             </div>
-      
+            </div>
             <%= f.submit "Save changes", class: "btn btn-primary" %>
         <% end %>
       </div>
