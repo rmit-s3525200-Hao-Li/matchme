@@ -48,21 +48,28 @@
     	-  Hidded by default to be opened through modal
       -  For faster loading we put all forms at the bottom of page -->
 
-    <!--Login buttons-->
+
+      <!--Login buttons-->
     <div class="three columns login-buttons">
     	<div class="space-b-20 hide-for-small">&nbsp;</div>
       <ul class="button-group radius right">
         <% if !logged_in? %>
+        
           <li>
-            <a href="#" data-reveal-id="login_panel" class="small secondary button radius"><i class="icon-user hide-for-medium-down"></i> LOG IN</a>
+            <%= link_to login_path, class: "small secondary button radius" do %>
+              <i class="icon-group hide-for-medium-down"></i> LOG IN
+            <% end %>
           </li>
+      <!--end login buttons-->
+      <!--Sign up buttons-->
           <li>
-              <!--register buttons-->
-              <a href="#" data-reveal-id="register_panel" class="small button radius"><i class="icon-group hide-for-medium-down"></i> SIGN UP</a>
-            <!--  <i class="icon-group hide-for-medium-down"></i> SIGN UP-->
+            <%= link_to signup_path, class: "small button radius" do %>
+              <i class="icon-group hide-for-medium-down"></i> SIGN UP
+            <% end %>
           </li>
+      <!--end signup buttons-->
         <% end %>
       </ul>
     </div>
-    <!--end login buttons-->
+
 </header>
