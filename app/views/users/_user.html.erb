@@ -7,10 +7,17 @@
     <h4><%= link_to user.name, user %></h4>
     <p><%= "#{user.age} - #{user.gender}" %></p>
     <p><%= "#{user.city}, #{user.country}" %></p>
+<<<<<<< HEAD
           <% if current_user.admin? && !current_user?(user) %>
             <%= link_to "delete user", user, method: :delete,
                                     data: { confirm: "Are you sure?" } %>
           <% end %>
       </div>
+=======
+    <% if current_user.admin? && !current_user?(user) %>
+      <%= link_to "delete user", user, method: :delete,
+      data: { confirm: "Are you sure?" } %>
+    <% end %>
+>>>>>>> origin/layout2
     </div>
 <% end %>

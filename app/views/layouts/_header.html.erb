@@ -17,14 +17,10 @@
           <!-- End Toggle Button Mobile -->
         </ul>
 
-        <section><!-- Nav Section -->
-          <ul class="left">
-            <li>
-              <%= link_to(root_path) do %>
-                <i class="icon-home"></i>HOME
-              <% end %>
-            </li>
-            </ul>
+        <section>
+          
+          
+          <!-- Nav Section -->
             <% if logged_in? %>
             <ul class="button-ground radius right">
               <li><%= link_to "USERS", users_path %></li>
@@ -38,7 +34,8 @@
               </li>
             </ul>
             <% end %>
-        </section><!-- End Nav Section -->
+        </section>
+          <!-- End Nav Section -->
       </nav>
     </div>
 		<!-- end Main Navigation -->
@@ -46,8 +43,15 @@
     <!-- Logo -->
     <div class="four columns pull-five">
       <h1 id="logo">Very serious dating match making site
-      	<a href="index.html"><img src="assets/images/logo_black.png" width="294" height="108" alt="Landing Page HTML Template"></a>
+      	 
+      	 <%= link_to(root_path) do %>
+      	   <%= image_tag("logo.png", alt: "Logo") %>
+      	 <% end %>
       </h1>
+    <h4>
+      Match Me
+    </h4>
+    
     </div>
     <!--end logo-->
 
@@ -55,22 +59,28 @@
     	-  Hidded by default to be opened through modal
       -  For faster loading we put all forms at the bottom of page -->
 
-    <!--Login buttons-->
+
+      <!--Login buttons-->
     <div class="three columns login-buttons">
     	<div class="space-b-20 hide-for-small">&nbsp;</div>
       <ul class="button-group radius right">
         <% if !logged_in? %>
+        
           <li>
-            <a href="#" data-reveal-id="login_panel" class="small secondary button radius"><i class="icon-user hide-for-medium-down"></i> LOG IN</a>
+            <%= link_to login_path, class: "small secondary button radius" do %>
+              <i class="icon-group hide-for-medium-down"></i> LOG IN
+            <% end %>
           </li>
+      <!--end login buttons-->
+      <!--Sign up buttons-->
           <li>
             <%= link_to signup_path, class: "small button radius" do %>
-              <!--<a href="#" data-reveal-id="register_panel" class="small button radius">-->
               <i class="icon-group hide-for-medium-down"></i> SIGN UP
             <% end %>
           </li>
+      <!--end signup buttons-->
         <% end %>
       </ul>
     </div>
-    <!--end login buttons-->
+
 </header>
