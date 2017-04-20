@@ -10,36 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170411031231) do
+ActiveRecord::Schema.define(version: 20170420052103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: :cascade do |t|
+  create_table "profiles", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "email"
     t.string   "gender"
     t.string   "occupation"
     t.string   "religion"
+    t.date     "date_of_birth"
+    t.string   "picture"
+    t.string   "smoke"
+    t.string   "drink"
+    t.text     "self_summary"
     t.string   "city"
     t.string   "post_code"
     t.string   "country"
-    t.text     "self_summary"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "looking_for"
     t.string   "preferred_gender"
     t.integer  "min_age"
     t.integer  "max_age"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.text     "movies",           default: [],              array: true
+    t.text     "tv_shows",         default: [],              array: true
+    t.text     "books",            default: [],              array: true
+    t.text     "games",            default: [],              array: true
+    t.text     "sports",           default: [],              array: true
+    t.integer  "user_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.boolean  "nearby"
+    t.string   "education"
+    t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "password_digest"
-    t.date     "date_of_birth"
-    t.string   "looking_for"
     t.string   "remember_digest"
-    t.boolean  "admin",            default: false
-    t.float    "latitude"
-    t.float    "longitude"
-    t.string   "picture"
+    t.boolean  "admin",           default: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "profiles", "users"
 end

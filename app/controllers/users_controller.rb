@@ -19,6 +19,7 @@ class UsersController < ApplicationController
   # User profile page
   def show
     @user = User.find(params[:id])
+    @profile = @user.profile
   end
   
   # Corresponds to view/users/new.html.erb
@@ -65,19 +66,10 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :gender, :occupation,:self_summary, :religion, :city, :post_code, :country, :preferred_gender, :min_age, :max_age, :looking_for, :date_of_birth, :email, :password, :password_confirmation, :picture)
+      params.require(:user).permit(:email, :password, :password_confirmation)
     end
     
     ### Before filters
-
-    # Confirms user is logged in
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
-    end
     
     # Confirms the correct user.
     def correct_user

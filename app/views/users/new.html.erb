@@ -4,60 +4,21 @@
     <div class="row">
       <div class="twelve columns">
         <h3 class="pink-text"><i class="icon-magic icon-large"></i> CREATE ACCOUNT</h3>
-          <%= form_for(@user, url: signup_path, id: "register_form") do |f| %>
+          <%= form_for(@user, url: signup_path, id: "register_form") do |u| %>
           <%= render 'shared/error_messages' %>
-          <div class="six columns">
-              <%= f.label :orientation, "I am a" %>
-              <%= f.select :gender, ["Male", "Female"], class: 'form-control' %>
-              
-              <%= f.label :preferred_gender, "Looking for a" %>
-              <%= f.select :preferred_gender, ["male", "female", "both"], class: 'form-control' %>
-              <%= f.label :looking_for, "for" %>
-              <%= f.select :looking_for, ["new friends", "dating", "casual sex"], class: 'form-control' %>
-              
-              <%= f.label :min_age, "Age between..." %>
-              <%= f.select :min_age, (18...100).to_a, class: 'form-control' %>
-              <%= f.label :max_age, "to" %>
-              <%= f.select :max_age, (18...100).to_a, class: 'form-control' %>
-              
-              </div>
-              <div class="six columns">
-                
-              <%= f.label :picture, "Add a photo", accept: 'image/jpeg,image/png' %>
-              <%= f.file_field :picture %>
-              
-              <%= f.text_field :first_name, class: 'form-control', placeholder: "First Name" %>
-              <%= f.text_field :last_name, class: 'form-control', placeholder: "Last Name" %>
-          
-              <%= f.label :date_of_birth %>
-              <%= f.date_field :date_of_birth, class: 'form-control' %>
-              
-              <%= f.text_field :occupation, class: 'form-control', placeholder: "Occupation" %>
-              
-              <%= f.label :religion %>
-              <%= f.select :religion, ["Agnosticism", "Atheism", "Christianity", "Judaism", "Catholicism", "Islam", "Buddhism", "Hinduism", "Sikh", "Other"], class: 'form-control' %>
-              
-              <%= f.text_area :self_summary, class: 'form-control', placeholder: "Self-summary" %>
-            
-            </div>
-            <div class="six columns">
-    
-              <%= f.text_field :city, class: 'form-control', placeholder: "City" %>
-              <%= f.text_field :post_code, class: 'form-control', placeholder: "Zip code" %>
-    
-              <%= f.label :country %>
-              <%= f.country_select :country, priority_countries: ["AU", "US", "GB", "CA", "NZ"], class: 'form-control' %>
-          </div>
-          
+          <%= fields_for @user.profile do |p| %>
+            <%= p.text_field :first_name %>
+          <% end %>
+
           <div class="six columns">
   
-            <%= f.email_field :email, class: 'form-control', placeholder: "Email" %>
+            <%= u.email_field :email, class: 'form-control', placeholder: "Email" %>
       
-            <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
+            <%= u.password_field :password, class: 'form-control', placeholder: "Password" %>
       
-            <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
+            <%= u.password_field :password_confirmation, placeholder: "Confirm password" %>
       
-            <%= f.submit "Create my account", class: "btn btn-primary" %>
+            <%= u.submit "Create my account", class: "btn btn-primary" %>
 
         <% end %>
       </div>
@@ -65,11 +26,10 @@
   </div>
 </section>
 
-<script type="text/javascript">
-  $('#user_picture').bind('change', function() {
-    var size_in_megabytes = this.files[0].size/1024/1024;
-    if (size_in_megabytes > 5) {
-      alert('Please upload an image that is smaller (less than 5MB).');
-    }
-  });
-</script>
+
+<%= form_for @person, url: {action: "create"} do |person_form| %>
+  <%= person_form.text_field :name %>
+  <%= fields_for @person.contact_detail do |contact_detail_form| %>
+    <%= contact_detail_form.text_field :phone_number %>
+  <% end %>
+<% end %>

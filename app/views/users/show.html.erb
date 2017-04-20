@@ -1,25 +1,24 @@
-<%= provide(:title, @user.name) %>
+<%= provide(:title, @profile.name) %>
 <div class="inner page wide-style">
 
 <section>
   <div id="profile">
     <div class="row">
       <div class="four columns">
-      <% if @user.picture? %>
+      <% if @profile.picture? %>
           <%= link_to '#', data: { toggle: "modal", target: ".bs-example-modal-lg" } do %>
-            <%= display_thumbnail(@user) %>
+            <%= display_thumbnail(@profile) %>
           <% end %>
         <% else %>
-          <%= display_thumbnail(@user) %>
+          <%= display_thumbnail(@profile) %>
         <% end %>
       </div>
       <div class="eight columns">
-        <h2 class="sweetfont left"><%=@user.name %> </h2>
+        <h2 class="sweetfont left"><%=@profile.name %> </h2>
         <hr>
         <% unless @user.admin? %>
-          <h6 class="subheader"><%= "#{@user.age} • #{@user.city}, #{@user.country}" %></h6>
+          <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>
         <% end %>
-        
       </div>
     </div>
   </div>
@@ -29,78 +28,58 @@
   <section>
   	<div id="main">
     	<div class="row">
-      <div class="eight columns">
-         
-                <h5 class="accordion-title">My self-summary</h5>
-                <div class="accordion-content">
-                  <p>
-                    <div>
-                      <% if @user.self_summary.blank? %>
-                        <p><%= @user.name %> has not written a self-summary yet.</p>
-                      <% else %>
-                        <p><%= @user.self_summary %></p>
-                      <% end %>
-                    </div>
-                  </p>
-                </div>
-           
-        
-        
-        
-      </div>
-      <div class="four columns">
-        
-        
-          
-          	   
-                <h5 class="accordion-title">Profile</h5>
-                
-                <div>
-                   
-                  <dl class="text-align:left">
-                    <dt>Gender</dt>
-                    <dd><%= @user.gender %></dd>
-                    <dt>Religion</dt>
-                    <dd><%= @user.religion %></dd>
-                   
-                    <dt>Occupation</dt>
-                    <dd><%= @user.occupation %></dd>
-                  </dl>
-                 
-                </div>
-             
-              
-                    
-                  
-                      
-                      <div class="panel panel-default">
-                        <div class="panel-body none-padding">
-                      Looking for
-                      <% if @user.preferred_gender == "both" %>
-                        <%= "Both men and women "%>
-                        <% else %>
-                        <%= "A #{@user.preferred_gender} " %>
-                        <% end %>
-                        <%= "ages #{@user.min_age} to #{@user.max_age} for #{@user.looking_for}." %>
-                        
-                    </div>
-              
-            
-               
-                
-                 </div>
-                  <% if current_user?(@user) %>
-            <div class="left">
-                <div>
-                   <%= link_to(edit_user_path(current_user)) do %>
-                  <button class="btn btn-lg btn-primary">Edit profile</button>
-                   <% end %>
-                  </div>
-                </div>
-                <% end%>
+        <div class="eight columns">
+          <h5 class="accordion-title">My self-summary</h5>
+          <div class="accordion-content">
+            <p>
+              <div>
+                <% if @profile.self_summary.blank? %>
+                  <p><%= @profile.name %> has not written a self-summary yet.</p>
+                <% else %>
+                  <p><%= @profile.self_summary %></p>
                 <% end %>
-            </div>
+              </div>
+            </p>
           </div>
+        </div>
+        <div class="four columns">
+          <h5 class="accordion-title">Profile</h5>
+            <div>
+              <dl class="text-align:left">
+                <dt>Gender</dt>
+                <dd><%= @profile.gender %></dd>
+                <dt>Religion</dt>
+                <dd><%= @profile.religion %></dd>
+                <dt>Occupation</dt>
+                <dd><%= @profile.occupation %></dd>
+              </dl>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-body none-padding">
+                <p>Looking for
+                <% if @profile.preferred_gender == "both" %>
+                  Both men and women
+                <% else %>
+                  <%= "a #{@profile.preferred_gender}" %>
+                <% end %>
+                <% if @profile.nearby == true %>near me,<% end %>
+                <%= " ages #{@profile.min_age} to #{@profile.max_age} for #{@profile.looking_for}." %></p>
+              </div>
+            </div>
+            <% if current_user?(@user) %>
+              <div class="left">
+                <div>
+                  <%= link_to(edit_user_path(current_user)) do %>
+                    <button class="btn btn-lg btn-primary">Edit profile</button>
+                  <% end %>
+                </div>
+              </div> <!-- left -->
+            <% end%>
+        </div> <!-- four columns -->
+      </div> <!-- row -->
+    </div> <!-- main -->
+  </section>
+<% end %> <!-- unless @user.admin? -->
   
  
 
@@ -108,7 +87,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        <%= image_tag @user.picture.url if @user.picture? %>
+        <%= image_tag @profile.picture.url if @profile.picture? %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
