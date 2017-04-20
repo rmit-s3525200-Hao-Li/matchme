@@ -20,7 +20,8 @@ john.create_profile!(first_name: "John",
                     nearby: true,
                     smoke: "no",
                     drink: "socially",
-                    education: "Completed high school")
+                    edu_status: "Completed",
+                    edu_type: "high school")
 
               
 # Admin user

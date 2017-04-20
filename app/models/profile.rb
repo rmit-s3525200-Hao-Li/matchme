@@ -7,13 +7,12 @@ class Profile < ApplicationRecord
   mount_uploader :picture, PictureUploader
   
   # Validations for required fields
-  validates :user_id, presence: true
+  validates(:user_id, presence: true)
   validates(:first_name, presence: true, length: { maximum: 25 })
   validates(:last_name, presence: true, length: { maximum: 25 })
   
   validates(:gender, presence: true)
-  validates(:occupation, presence: true, length: {maximum: 50})
-  validates(:religion, presence: true)
+  validates(:occupation, length: {maximum: 50})
   validates(:city, presence: true, length: {maximum: 60})
   validates(:post_code, presence: true, length: {maximum: 20})
   validates(:country, presence: true)
@@ -33,6 +32,10 @@ class Profile < ApplicationRecord
   # return string of first and last name
   def name
     "#{first_name} #{last_name}".titleize
+  end
+  
+  def education
+    "#{edu_status} #{edu_type}"
   end
 
   # return age
