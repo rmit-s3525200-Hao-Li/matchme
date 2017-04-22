@@ -26,6 +26,7 @@ class UsersController < ApplicationController
   # User signup page
   def new
     @user = User.new
+    @profile = @user.build_profile
   end
   
   # Post method for creating a user
@@ -33,8 +34,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to MatchMe!"
-      redirect_to @user
+      redirect_to new_user_profile_path(@user)
     else
       render 'new'
     end
@@ -44,6 +44,8 @@ class UsersController < ApplicationController
   # Edit profile page
   def edit
     @user = User.find(params[:id])
+    @profile = @user.profile
+    # @selected = user_params[:profile][:gender]
   end
   
   # Patch method for updating profile
@@ -66,16 +68,13 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(
+        :email, :password, :password_confirmation,
+        profile_attributes: [:user_id, :first_name, :last_name, :gender, :date_of_birth, :occupation, :religion, :smoke, :drink, :self_summary, :movies, :tv_shows, :books, :games, :sports, :picture, :city, :post_code, :country, :looking_for, :preferred_gender, :nearby, :min_age, :max_age, :edu_status, :edu_type]
+        )
     end
     
     ### Before filters
-    
-    # Confirms the correct user.
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
-    end
     
     # Confirms an admin user.
     def admin_user

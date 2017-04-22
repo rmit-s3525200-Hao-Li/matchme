@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_one :profile, dependent: :destroy
-  
+  #accepts_nested_attributes_for :profile, reject_if: :all_blank, allow_destroy: true
   attr_accessor :remember_token
   before_save :downcase_email
   

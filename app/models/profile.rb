@@ -3,11 +3,17 @@ class Profile < ApplicationRecord
   
   before_save :titleize_occupation
   
+  serialize :movies
+  serialize :tv_shows
+  serialize :books
+  serialize :games
+  serialize :sports
+  
   # CarrierWave method for image uploading
   mount_uploader :picture, PictureUploader
   
   # Validations for required fields
-  validates(:user_id, presence: true)
+  # validates(:user_id, presence: true)
   validates(:first_name, presence: true, length: { maximum: 25 })
   validates(:last_name, presence: true, length: { maximum: 25 })
   
@@ -16,12 +22,16 @@ class Profile < ApplicationRecord
   validates(:city, presence: true, length: {maximum: 60})
   validates(:post_code, presence: true, length: {maximum: 20})
   validates(:country, presence: true)
-  validates(:self_summary, length: {maximum: 500})
+  validates(:self_summary, length: {maximum: 800})
   validates(:preferred_gender, presence: true)
   validates(:min_age, presence: true, numericality: { greater_than_or_equal_to: 18 })
   validates(:max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age })
   validates(:date_of_birth, presence: true)
   validates(:looking_for, presence: true)
+  validates(:edu_status, presence: true)
+  validates(:edu_type, presence: true)
+  
+  # Custom validation methods
   validate(:picture_size)
   validate(:minimum_age)
   
