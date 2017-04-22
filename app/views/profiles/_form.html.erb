@@ -1,4 +1,18 @@
 <%= simple_form_for([user, profile]) do |f| %>
+  <h4>What You're Looking For</h4>
+  <%= f.input :preferred_gender, collection: Choices['preferred_gender'], as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false, label: false %>
+    <div class = "row">
+    <div class="col-md-2">
+      <%= f.input :min_age, collection: 18..120 %>
+    </div>
+    <div class="col-md-2">
+      <%= f.input :max_age, collection: 18..120 %>
+    </div>
+    <div class="col-md-8">
+      <%= f.input :looking_for, collection: Choices['looking_for'], label: "For" %>
+    </div>
+  </div>
+  <%= f.input :nearby, hint: "Leave unchecked to be matched to users anywhere" %>
   <h4>About You</h4>
   <div class = "row">
     <div class="col-md-6">
@@ -44,11 +58,11 @@
   </div>
   <%= f.input :self_summary %>
   <h4>Interests</h4>
-  <%= f.input :movies %>
-  <%= f.input :tv_shows %>
-  <%= f.input :books %>
-  <%= f.input :games %>
-  <%= f.input :sports %>
+  <%= f.input :movies, placeholder: "Pulp Fiction, The Godfather, Star Wars" %>
+  <%= f.input :tv_shows, placeholder: "Breaking Bad, The Wire, Rick and Morty, Game of Thrones" %>
+  <%= f.input :books, placeholder: "Rails Tutorial, The Great Gatsby, To Kill a Mockingbird" %>
+  <%= f.input :games, placeholder: "Legend of Zelda, World of Warcraft" %>
+  <%= f.input :sports, placeholder: "Football, baseball, cricket" %>
   <h4>Location</h4>
   <div class = "row">
     <div class="col-md-8">
@@ -59,19 +73,5 @@
     </div>
   </div>
   <%= f.input :country, priority: [ "Australia", "United States", "United Kingdom", "Canada", "New Zealand"], include_blank: true %>
-  <h4>What You're Looking For</h4>
-  <%= f.input :preferred_gender, collection: Choices['preferred_gender'], as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false, label: false %>
-    <div class = "row">
-    <div class="col-md-2">
-      <%= f.input :min_age, collection: 18..120 %>
-    </div>
-    <div class="col-md-2">
-      <%= f.input :max_age, collection: 18..120 %>
-    </div>
-    <div class="col-md-8">
-      <%= f.input :looking_for, collection: Choices['looking_for'], label: "For" %>
-    </div>
-  </div>
-  <%= f.input :nearby, hint: "Leave unchecked to be matched to users anywhere" %>
   <%= f.button :submit, class: "btn-primary" %>
 <% end %>

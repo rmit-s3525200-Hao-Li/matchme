@@ -29,7 +29,7 @@
   	<div id="main">
     	<div class="row">
         <div class="eight columns">
-          <h5 class="accordion-title">My self-summary</h5>
+          <h5 class="accordion-title">Self-summary</h5>
           <div class="accordion-content">
             <p>
               <div>
@@ -40,6 +40,29 @@
                 <% end %>
               </div>
             </p>
+          </div>
+          <h5 class="accordion-title">Interests</h5>
+          <div class="accordion-content">
+            <% unless @profile.movies.blank? %>
+              <h6>Movies</h6>
+              <p><%= @profile.movies %></p>
+            <% end %>
+            <% unless @profile.tv_shows.blank? %>
+              <h6>TV Shows</h6>
+              <p><%= @profile.tv_shows %></p>
+            <% end %>
+            <% unless @profile.books.blank? %>
+              <h6>Books</h6>
+              <p><%= @profile.books %></p>
+            <% end %>
+            <% unless @profile.games.blank? %>
+              <h6>Games</h6>
+              <p><%= @profile.games %></p>
+            <% end %>
+            <% unless @profile.sports.blank? %>
+              <h6>Sports</h6>
+              <p><%= @profile.sports %></p>
+            <% end %>
           </div>
         </div>
         <div class="four columns">

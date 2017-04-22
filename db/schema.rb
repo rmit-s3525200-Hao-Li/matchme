@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420134658) do
+ActiveRecord::Schema.define(version: 20170422125449) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,14 +35,14 @@ ActiveRecord::Schema.define(version: 20170420134658) do
     t.string   "preferred_gender"
     t.integer  "min_age"
     t.integer  "max_age"
-    t.text     "movies",           default: [],              array: true
-    t.text     "tv_shows",         default: [],              array: true
-    t.text     "books",            default: [],              array: true
-    t.text     "games",            default: [],              array: true
-    t.text     "sports",           default: [],              array: true
+    t.text     "movies"
+    t.text     "tv_shows"
+    t.text     "books"
+    t.text     "games"
+    t.text     "sports"
     t.integer  "user_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.boolean  "nearby"
     t.string   "edu_status"
     t.string   "edu_type"

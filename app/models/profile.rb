@@ -3,12 +3,6 @@ class Profile < ApplicationRecord
   
   before_save :titleize_occupation
   
-  serialize :movies
-  serialize :tv_shows
-  serialize :books
-  serialize :games
-  serialize :sports
-  
   # CarrierWave method for image uploading
   mount_uploader :picture, PictureUploader
   
@@ -56,6 +50,17 @@ class Profile < ApplicationRecord
   
   def address
     "#{city}, #{post_code}, #{country}"
+  end
+  
+  def interests_array
+    attributes = [movies, tv_shows, books, games, sports]
+    interests = []
+    attributes.each do |a|
+      if !a.blank?
+        interests.push(a.split(/\s*,\s*/))
+      end
+    end
+    interests
   end
   
   private 
