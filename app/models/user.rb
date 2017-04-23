@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   has_one :profile, dependent: :destroy
-  #accepts_nested_attributes_for :profile, reject_if: :all_blank, allow_destroy: true
   attr_accessor :remember_token
   before_save :downcase_email
   
@@ -11,7 +10,7 @@ class User < ApplicationRecord
   # Validates password
   VALID_PASSWORD_REGEX = /(?=.*[a-zA-Z])(?=.*[0-9]).{6,}/
   has_secure_password
-  validates(:password, presence: true, format: { with: VALID_PASSWORD_REGEX }, allow_nil: true)
+  validates :password, presence: true, format: { with: VALID_PASSWORD_REGEX }, allow_nil: true
   
   # Returns the hash digest of the given string.
   def User.digest(string)

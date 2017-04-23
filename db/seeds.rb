@@ -18,10 +18,13 @@ john.create_profile!(first_name: "John",
                     min_age: 22,
                     max_age: 32,
                     nearby: true,
-                    smoke: "no",
+                    smoke: "not at all",
                     drink: "socially",
-                    edu_status: "Completed",
-                    edu_type: "high school")
+                    edu_status: "completed",
+                    edu_type: "high school",
+                    movies: "The Avengers, The Dark Knight, Lord of the Rings",
+                    tv_shows: "Firefly, Battlestar Galactica, The Expanse",
+                    books: "The Hobbit, 1984, Dune, Ender's Game")
 
               
 # Admin user
