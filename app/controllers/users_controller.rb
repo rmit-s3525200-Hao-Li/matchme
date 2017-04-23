@@ -10,6 +10,9 @@ class UsersController < ApplicationController
   # Ensures only admin can delete users
   before_action :admin_user,     only: :destroy
   
+  # Admin doesn't have a profile
+  before_action :non_admin_user, only: [:show]
+  
   # Corresponds to view/users/index.html.erb
   def index
     @users = User.paginate(page: params[:page])

@@ -3,6 +3,9 @@ class ProfilesController < ApplicationController
   before_action :correct_user,   only: [:new, :create, :edit, :update]
   before_action :get_user
   
+  # Admin doesn't have a profile
+  before_action :non_admin_user, only: [:new, :create, :edit, :update]
+  
   def new
     @profile = @user.build_profile
   end
