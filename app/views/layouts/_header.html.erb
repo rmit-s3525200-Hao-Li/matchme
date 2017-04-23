@@ -11,7 +11,7 @@
         <ul>
           <!-- Toggle Button Mobile -->
           <li class="name">
-            <h1><a href="#">Please select your page</a></h1>
+            <h1><a href="#">MENU</a></h1>
           </li>
           <li class="toggle-topbar"><a href="#"><i class="icon-reorder"></i></a></li>
           <!-- End Toggle Button Mobile -->
@@ -32,7 +32,8 @@
                 <a href="#"></i>ACCOUNT</a>
                 <ul class="dropdown">
                   <li><%= link_to "Profile", current_user %></li>
-                  <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
+                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                  <li><%= link_to "Edit Profile", edit_user_profiles_path(current_user) %></li>
                   <li><%= link_to "Log out", logout_path, method: "delete" %></li>
                 </ul>
               </li>

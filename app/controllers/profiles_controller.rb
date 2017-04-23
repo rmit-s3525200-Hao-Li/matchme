@@ -21,12 +21,12 @@ class ProfilesController < ApplicationController
   end
   
   def edit
-    @profile = Profile.find(params[:id])
+    @profile = @user.profile
   end
   
   # Patch method for updating profile
   def update
-    @profile = User.find(params[:id])
+    @profile = @user.profile
     if @profile.update_attributes(profile_params)
       flash[:success] = "Profile updated"
       redirect_to @user

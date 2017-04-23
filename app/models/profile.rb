@@ -54,13 +54,21 @@ class Profile < ApplicationRecord
   
   def interests_array
     attributes = [movies, tv_shows, books, games, sports]
-    interests = []
+    interests = Array.new
     attributes.each do |a|
       if !a.blank?
         interests.push(a.split(/\s*,\s*/))
       end
     end
     interests
+  end
+  
+  def count_interests
+    count = 0
+    interests_array.each do |a|
+      count += a.count
+    end
+    count
   end
   
   private 

@@ -102,7 +102,7 @@
             <% if current_user?(@user) %>
               <div class="left">
                 <div>
-                  <%= link_to(edit_user_path(current_user)) do %>
+                  <%= link_to(edit_user_profiles_path(current_user)) do %>
                     <button class="btn btn-lg btn-primary">Edit profile</button>
                   <% end %>
                 </div>
