@@ -44,5 +44,11 @@ class ProfilesController < ApplicationController
     def profile_params
       params.require(:profile).permit(:first_name, :last_name, :gender, :date_of_birth, :occupation, :religion, :smoke, :drink, :education, :self_summary, :movies, :tv_shows, :books, :games, :sports, :picture, :city, :post_code, :country, :looking_for, :preferred_gender, :nearby, :min_age, :max_age, :edu_status, :edu_type)
     end
+    
+    # Confirms the correct user.
+    def correct_user
+      @user = User.find(params[:user_id])
+      redirect_to(root_url) unless current_user?(@user)
+    end
   
 end
