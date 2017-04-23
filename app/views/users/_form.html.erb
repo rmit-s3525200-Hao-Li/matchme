@@ -1,23 +1,13 @@
-<%= form_for(@user) do |f| %>
+<%= simple_form_for @user, defaults: { input_html: { class: 'form-control' } } do |f| %>
   <%= render 'shared/error_messages' %>
     <div class="form-group">
       <h4>Account information</h4>
-      <%= f.label :email, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
-        <%= f.email_field :email, class: 'form-control', placeholder: "john@example.com" %>
-      </div>
-      <%= f.label :password, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
-        <%= f.password_field :password, class: 'form-control', placeholder: "A-Z,a-z,0-9" %>
-      </div>
-      <%= f.label :password_confirmation, "Confirm password", class: 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
-        <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Confirm password" %>
-      </div>
+      <%= f.input :email %>
+      <%= f.input :password, hint: "Must contain numbers and letters." %>
+      <%= f.input :password_confirmation, label: "Confirm password" %>
     </div>
-    
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %> <!-- form_for @user -->
+  <%= f.button :submit, input_html: { class: 'btn-primary' } %>
+<% end %>
 
 <script type="text/javascript">
   $('#user_picture').bind('change', function() {
