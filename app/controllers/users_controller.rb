@@ -4,6 +4,9 @@ class UsersController < ApplicationController
   # and users index page
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   
+  # Checks that user has created profile
+  before_action :user_has_profile, only: [:index, :show, :edit, :update]
+  
   # Ensures users cannot access 'Edit Profile' page of other users
   before_action :correct_user,   only: [:edit, :update]
   
@@ -11,7 +14,7 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
   
   # Admin doesn't have a profile
-  before_action :non_admin_user, only: [:show]
+  before_action :non_admin_user, only: :show
   
   # Corresponds to view/users/index.html.erb
   def index
@@ -96,4 +99,11 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless !@user.admin?
     end
 
+    #Confirms profile has been created
+    def user_has_profile
+      if !current_user.admin?
+        @profile = current_user.profile
+        redirect_to new_user_profiles_path(current_user) unless Profile.exists?(@profile)
+      end
+    end
 end
