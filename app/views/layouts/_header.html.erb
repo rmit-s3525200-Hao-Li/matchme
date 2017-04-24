@@ -21,7 +21,7 @@
           
           
           <!-- Nav Section -->
-            <% if logged_in? %>
+            <% if logged_in? && has_profile? %>
             <ul class="button-ground radius right">
               <li><%= link_to "USERS", users_path %></li>
               <li class="has-dropdown">
