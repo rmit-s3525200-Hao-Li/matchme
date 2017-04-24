@@ -2,11 +2,7 @@ require_relative 'boot'
 require 'rails/all'
 require 'geocoder'
 require "geocoder/railtie"
-<<<<<<< HEAD
 require 'font-awesome-sass'
-=======
-
->>>>>>> cce9b6b2282a62ac6583be1acefb9d2bb4265ff2
 Geocoder::Railtie.insert
 
 # Require the gems listed in Gemfile, including any gems
