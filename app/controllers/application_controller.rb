@@ -14,10 +14,4 @@ class ApplicationController < ActionController::Base
         redirect_to login_url
       end
     end
-    
-    # Confirms non admin user.
-    def non_admin_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless !@user.admin?
-    end
 end

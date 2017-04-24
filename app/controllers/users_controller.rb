@@ -90,4 +90,9 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user?(@user)
     end
     
+    # Confirms non admin user.
+    def non_admin_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless !@user.admin?
+    end
 end
