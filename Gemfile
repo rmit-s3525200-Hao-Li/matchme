@@ -21,7 +21,6 @@ gem 'sprockets'
 gem 'font-awesome-sass',       '~> 4.7.0'
 gem 'pg',                      '0.20.0'
 gem 'geocoder',                '1.4.3'
-gem 'cocoon'
 gem 'simple_form'
 
 group :development, :test do
