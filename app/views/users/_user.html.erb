@@ -1,8 +1,5 @@
 <% if !user.admin? %>
   <div class="user">
-     <!--<div class="avatar">-->
-          
-     <!-- </div>-->
       <div class="search-meta">
     <h4><%= link_to user.profile.name, user %></h4>
     <p><%= "#{user.profile.age} • #{user.profile.gender}" %></p>
