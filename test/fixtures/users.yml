@@ -4,13 +4,7 @@ matt:
   email: matt@example.com
   password_digest: <%= User.digest('foobar1') %>
   
-<<<<<<< HEAD
-  
-=======
 admin:
   email: admin@example.com
   password_digest: <%= User.digest('foobar1') %>
   admin: true
-
->>>>>>> 2ea465e0191a7419571cb057ae53a747d07c5030
-              
