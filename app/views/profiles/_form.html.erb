@@ -1,4 +1,5 @@
-<%= simple_form_for(@profile, url: user_profiles_url) do |f| %>
+<%= simple_form_for @profile, url: user_profiles_url, defaults: { error: false } do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
   <h4>What You're Looking For</h4>
   <%= f.input :preferred_gender, collection: Choices['preferred_gender'], as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false, label: false %>
     <div class = "row">
