@@ -1,0 +1,38 @@
+gender:
+  - male
+  - female
+preferred_gender:
+  - male
+  - female
+  - both
+smoke:
+  - not at all
+  - sometimes
+  - often
+drink:
+  - not at all
+  - socially
+  - often
+religion:
+  - agnostic
+  - atheist
+  - christian
+  - jewish
+  - catholic
+  - muslim
+  - buddhism
+  - hindu
+  - sikh
+looking_for:
+  - new friends
+  - dating
+  - casual sex
+edu_status:
+  - completed
+  - working on
+  - dropped out of
+edu_type:
+  - high school
+  - two-year college
+  - university
+  - post grad

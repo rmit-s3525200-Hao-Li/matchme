@@ -1,0 +1,77 @@
+<%= simple_form_for(@profile, url: user_profiles_url) do |f| %>
+  <h4>What You're Looking For</h4>
+  <%= f.input :preferred_gender, collection: Choices['preferred_gender'], as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false, label: false %>
+    <div class = "row">
+    <div class="col-md-2">
+      <%= f.input :min_age, collection: 18..120 %>
+    </div>
+    <div class="col-md-2">
+      <%= f.input :max_age, collection: 18..120 %>
+    </div>
+    <div class="col-md-8">
+      <%= f.input :looking_for, collection: Choices['looking_for'], label: "For" %>
+    </div>
+  </div>
+  <%= f.input :nearby, hint: "Leave unchecked to be matched to users anywhere" %>
+  <h4>About You</h4>
+  <div class = "row">
+    <div class="col-md-6">
+      <%= f.input :first_name %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :last_name %>
+    </div>
+  </div>
+    <div class = "row">
+    <div class="col-md-6">
+      <%= f.input :date_of_birth, start_year: Date.today.year - 120, end_year: Date.today.year - 17, default: Date.today %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :gender, collection: Choices['gender'], as: :radio_buttons,  item_label_class: "radio-inline", item_wrapper_tag: false %>
+    </div>
+  </div>
+  <%= f.input :picture, label: 'Upload an image of yourself' %>
+  <h4>Details</h4>
+  <div class = "row">
+    <div class="col-md-6">
+      <%= f.input :occupation %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :religion, collection: Choices['religion'] %>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="col-md-6">
+      <%= f.input :smoke, collection: Choices['smoke'] %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :drink, collection: Choices['drink'] %>
+    </div>
+  </div>
+    <div class = "row">
+    <div class="col-md-6">
+      <%= f.input :edu_status, label: 'Education', collection: Choices['edu_status'] %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :edu_type, label: ' ', collection: Choices['edu_type'] %>
+    </div>
+  </div>
+  <%= f.input :self_summary %>
+  <h4>Interests</h4>
+  <%= f.input :movies, placeholder: "Pulp Fiction, The Godfather, Star Wars" %>
+  <%= f.input :tv_shows, placeholder: "Breaking Bad, The Wire, Rick and Morty, Game of Thrones" %>
+  <%= f.input :books, placeholder: "Rails Tutorial, The Great Gatsby, To Kill a Mockingbird" %>
+  <%= f.input :games, placeholder: "Legend of Zelda, World of Warcraft" %>
+  <%= f.input :sports, placeholder: "Football, baseball, cricket" %>
+  <h4>Location</h4>
+  <div class = "row">
+    <div class="col-md-8">
+      <%= f.input :city %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :post_code %>
+    </div>
+  </div>
+  <%= f.input :country, priority: [ "Australia", "United States", "United Kingdom", "Canada", "New Zealand"], include_blank: true %>
+  <%= f.button :submit, class: "btn-primary" %>
+<% end %>

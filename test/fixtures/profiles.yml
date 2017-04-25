@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+matt_profile:
+  first_name: Matt
+  last_name: Smith
+  gender: male
+  occupation: salesman
+  preferred_gender: male
+  religion: Other
+  city: Sydney
+  post_code: <%= '2000' %>
+  country: Australia
+  self_summary: blah
+  date_of_birth: 1991-12-3
+  min_age: 23
+  max_age: 35
+  looking_for: dating
+  smoke: never
+  drink: weekly
+  nearby: true
+  user: one

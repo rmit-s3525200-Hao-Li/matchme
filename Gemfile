@@ -18,9 +18,10 @@ gem 'turbolinks',              '5.0.1'
 gem 'jbuilder',                '2.4.1'
 gem 'country_select',          '3.0.0'
 gem 'sprockets'
-gem 'font-awesome-rails'
+gem 'font-awesome-sass',       '~> 4.7.0'
 gem 'pg',                      '0.20.0'
 gem 'geocoder',                '1.4.3'
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug',  '9.0.0', platform: :mri

@@ -1,39 +1,37 @@
 # Non-admin user
-User.create!(first_name: "John", 
-              last_name: "Doe",
-              email: "joedoe@example.com",
-              gender: "male",
-              religion: "Other",
-              occupation: "Salesman",
-              date_of_birth: Date.new(1990,1,1),
-              city: "Fitzroy",
-              post_code: "3065",
-              country: "Australia",
-              looking_for: "dating",
-              preferred_gender: "female",
-              min_age: 20,
-              max_age: 32,
-              password: "foobar1",
-              password_confirmation: "foobar1")
+john = User.create!(email: "joedoe@example.com",
+                    password: "foobar1",
+                    password_confirmation: "foobar1")
+              
+# Non-admin profile
+john.create_profile!(first_name: "John", 
+                    last_name: "Doe",
+                    gender: "male",
+                    religion: "Other",
+                    occupation: "Salesman",
+                    date_of_birth: Date.new(1990,1,1),
+                    city: "Fitzroy",
+                    post_code: "3065",
+                    country: "Australia",
+                    looking_for: "dating",
+                    preferred_gender: "female",
+                    min_age: 22,
+                    max_age: 32,
+                    nearby: true,
+                    smoke: "not at all",
+                    drink: "socially",
+                    edu_status: "completed",
+                    edu_type: "high school",
+                    movies: "The Avengers, The Dark Knight, Lord of the Rings",
+                    tv_shows: "Firefly, Battlestar Galactica, The Expanse",
+                    books: "The Hobbit, 1984, Dune, Ender's Game")
+
               
 # Admin user
-User.create!(first_name: "Admin", 
-              last_name: "User",
-              email: "admin@example.com",
-              gender: "male",
-              religion: "Other",
-              occupation: "Salesman",
-              date_of_birth: Date.new(1990,1,1),
-              city: "Fitzroy",
-              post_code: "3065",
-              country: "Australia",
-              looking_for: "new friends",
-              preferred_gender: "female",
-              min_age: 20,
-              max_age: 32,
-              admin: true,
-              password: "foobar1",
-              password_confirmation: "foobar1")
+User.create!(email: "admin@example.com",
+            admin: true,
+            password: "foobar1",
+            password_confirmation: "foobar1")
 
 # ### Ignore for now:
 

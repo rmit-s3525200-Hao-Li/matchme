@@ -1,23 +1,20 @@
 <% if !user.admin? %>
   <div class="user">
-    
-      
-     <div class="avatar">
-          <img src="assets/images/profile-carousel/thumb_01.jpg" alt="Avatar">
-      </div>
-       <div class="search-meta">
-    <h4><%= link_to user.name, user %></h4>
-    <p><%= "#{user.age} - #{user.gender}" %></p>
-    <p><%= "#{user.city}, #{user.country}" %></p>
-    <% if current_user.admin? && !current_user?(user) %>
-      <%= link_to "delete user", user, method: :delete,
+      <div class="search-meta">
+        <% if user.profile.picture? %>
+          <%= link_to '#', data: { toggle: "modal", target: ".bs-example-modal-lg" } do %>
+            <%= display_thumbnail(user.profile) %>
+          <% end %>
+        <% else %>
+          <%= display_thumbnail(user.profile) %>
+        <% end %>
+    <h4><%= link_to user.profile.name, user %></h4>
+    <p><%= "#{user.profile.age} • #{user.profile.gender}" %></p>
+    <p><%= "#{user.profile.city}, #{user.profile.country}" %></p>
+          <% if current_user.admin? && !current_user?(user) %>
+            <%= link_to "delete user", user, method: :delete,
                                     data: { confirm: "Are you sure?" } %>
-    <% end %>
+          <% end %>
+      </div>
     </div>
-    <div class="text-center">
-      <p class="date">Match
-      70%</p>
-   </div>
-  
-  </div>
 <% end %>

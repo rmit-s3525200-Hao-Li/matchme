@@ -1,22 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 matt:
-  first_name: Matt
-  last_name: Smith
   email: matt@example.com
-  gender: male
-  occupation: salesman
-  preferred_gender: male
-  religion: Other
-  city: Sydney
-  post_code: <%= '2000' %>
-  country: Australia
-  self_summary: blah
-  date_of_birth: <%= Date.new(1991, 12, 3) %>
-  min_age: 23
-  max_age: 35
-  looking_for: dating
   password_digest: <%= User.digest('foobar1') %>
   
+<<<<<<< HEAD
   
+=======
+admin:
+  email: admin@example.com
+  password_digest: <%= User.digest('foobar1') %>
+  admin: true
+
+>>>>>>> 2ea465e0191a7419571cb057ae53a747d07c5030
               

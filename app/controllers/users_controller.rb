@@ -4,11 +4,17 @@ class UsersController < ApplicationController
   # and users index page
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   
+  # Checks that user has created profile
+  before_action :user_has_profile, only: [:index, :show, :edit, :update]
+  
   # Ensures users cannot access 'Edit Profile' page of other users
   before_action :correct_user,   only: [:edit, :update]
   
   # Ensures only admin can delete users
   before_action :admin_user,     only: :destroy
+  
+  # Admin doesn't have a profile
+  before_action :non_admin_user, only: :show
   
   # Corresponds to view/users/index.html.erb
   def index
@@ -19,12 +25,14 @@ class UsersController < ApplicationController
   # User profile page
   def show
     @user = User.find(params[:id])
+    @profile = @user.profile
   end
   
   # Corresponds to view/users/new.html.erb
   # User signup page
   def new
     @user = User.new
+    @profile = @user.build_profile
   end
   
   # Post method for creating a user
@@ -32,8 +40,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to MatchMe!"
-      redirect_to @user
+      redirect_to new_user_profiles_path(@user)
     else
       render 'new'
     end
@@ -43,6 +50,8 @@ class UsersController < ApplicationController
   # Edit profile page
   def edit
     @user = User.find(params[:id])
+    @profile = @user.profile
+    # @selected = user_params[:profile][:gender]
   end
   
   # Patch method for updating profile
@@ -65,18 +74,17 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :gender, :occupation,:self_summary, :religion, :city, :post_code, :country, :preferred_gender, :min_age, :max_age, :looking_for, :date_of_birth, :email, :password, :password_confirmation, :picture)
+      params.require(:user).permit(
+        :email, :password, :password_confirmation,
+        profile_attributes: [:user_id, :first_name, :last_name, :gender, :date_of_birth, :occupation, :religion, :smoke, :drink, :self_summary, :movies, :tv_shows, :books, :games, :sports, :picture, :city, :post_code, :country, :looking_for, :preferred_gender, :nearby, :min_age, :max_age, :edu_status, :edu_type]
+        )
     end
     
     ### Before filters
-
-    # Confirms user is logged in
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
+    
+    # Confirms an admin user.
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
     end
     
     # Confirms the correct user.
@@ -85,9 +93,17 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user?(@user)
     end
     
-    # Confirms an admin user.
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
+    # Confirms non admin user.
+    def non_admin_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless !@user.admin?
     end
-    
+
+    #Confirms profile has been created
+    def user_has_profile
+      if !current_user.admin?
+        @profile = current_user.profile
+        redirect_to new_user_profiles_path(current_user) unless Profile.exists?(@profile)
+      end
+    end
 end

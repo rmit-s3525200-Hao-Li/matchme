@@ -1,0 +1,19 @@
+<%= simple_form_for @user, defaults: { input_html: { class: 'form-control' } } do |f| %>
+  <%= render 'shared/error_messages' %>
+    <div class="form-group">
+      <h4>Account information</h4>
+      <%= f.input :email %>
+      <%= f.input :password, hint: "Must contain numbers and letters." %>
+      <%= f.input :password_confirmation, label: "Confirm password" %>
+    </div>
+  <%= f.button :submit, input_html: { class: 'btn-primary' } %>
+<% end %>
+
+<script type="text/javascript">
+  $('#user_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Please upload an image that is smaller (less than 5MB).');
+    }
+  });
+</script>

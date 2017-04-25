@@ -61,4 +61,10 @@ module SessionsHelper
     session[:forwarding_url] = request.original_url if request.get?
   end
   
+  # Checks if user has a profile
+  def has_profile?
+    profile = current_user.profile
+    Profile.exists?(profile)
+  end
+  
 end
