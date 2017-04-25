@@ -21,21 +21,23 @@
           
           
           <!-- Nav Section -->
-            <% if logged_in? && has_profile? %>
-            <ul class="button-ground radius right">
-              <li><%= link_to "USERS", users_path %></li>
-              <li class="has-dropdown">
-                <a href="#"></i>ACCOUNT</a>
-                <ul class="dropdown">
-                  <% unless current_user.admin? %>
-                    <li><%= link_to "Profile", current_user %></li>
-                    <li><%= link_to "Edit Profile", edit_user_profiles_path(current_user) %></li>
-                  <% end %>
-                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                  <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+            <% if logged_in? %>
+              <% if has_profile? || current_user.admin? %>
+                <ul class="button-ground radius right">
+                  <li><%= link_to "USERS", users_path %></li>
+                  <li class="has-dropdown">
+                    <a href="#"></i>ACCOUNT</a>
+                    <ul class="dropdown">
+                      <% unless current_user.admin? %>
+                        <li><%= link_to "Profile", current_user %></li>
+                        <li><%= link_to "Edit Profile", edit_user_profiles_path(current_user) %></li>
+                      <% end %>
+                      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                      <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+                    </ul>
+                  </li>
                 </ul>
-              </li>
-            </ul>
+              <% end %>  
             <% end %>
         </section>
           <!-- End Nav Section -->
