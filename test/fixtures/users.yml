@@ -18,5 +18,5 @@ matt:
   looking_for: dating
   password_digest: <%= User.digest('foobar1') %>
   
-
+  
               
