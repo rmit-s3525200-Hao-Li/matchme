@@ -11,6 +11,8 @@ class Profile < ApplicationRecord
   validates(:first_name, presence: true, length: { maximum: 25 })
   validates(:last_name, presence: true, length: { maximum: 25 })
   
+  validates :user_id, presence: true
+  
   validates(:gender, presence: true)
   validates(:occupation, length: {maximum: 50})
   validates(:city, presence: true, length: {maximum: 60})

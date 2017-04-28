@@ -16,6 +16,13 @@ matt_profile:
   max_age: 35
   looking_for: dating
   smoke: never
-  drink: weekly
+  drink: socially
+  edu_status: completed
+  edu_type: high school
+  movies: Pulp Fiction, Titanic, Oldboy
+  tv_shows: Breaking Bad, Silicon Valley, Rick and Morty
+  books: The Great Gatsby, Catcher in the Rye
+  games: League of Legends, Minecraft, Legend of Zelda
+  sports: cricket, baseball
   nearby: true
-  user: one
+  user: matt
