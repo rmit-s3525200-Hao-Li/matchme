@@ -5,13 +5,13 @@ class AdminDeleteTest < ActionDispatch::IntegrationTest
     @admin       = users(:admin)
     @non_admin = users(:matt)
   end
- test " admin delete links" do
+ test "users index as admin and delete user" do
     log_in_as(@admin)
     get users_path
     assert_template 'users/index'
-    assert_select 'div.pagination'
-    first_page_of_users = User.paginate(page: 1)
-    first_page_of_users.each do |user|
+    #assert_select 'div.pagination'
+    #first_page_of_users = User.paginate(page: 1)
+    users.each do |user|
       assert_select 'a[href=?]', user_path(user), text: user.name
       unless user == @admin
         assert_select 'a[href=?]', user_path(user), text: 'delete'
