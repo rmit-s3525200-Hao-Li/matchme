@@ -22,6 +22,7 @@ john.create_profile!(first_name: "John",
                     drink: "socially",
                     edu_status: "completed",
                     edu_type: "high school",
+                    hobbies: "Hiking, fishing, photography",
                     movies: "The Avengers, The Dark Knight, Lord of the Rings",
                     tv_shows: "Firefly, Battlestar Galactica, The Expanse",
                     books: "The Hobbit, 1984, Dune, Ender's Game")

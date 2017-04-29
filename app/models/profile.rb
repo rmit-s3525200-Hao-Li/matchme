@@ -13,19 +13,19 @@ class Profile < ApplicationRecord
   
   validates :user_id, presence: true
   
-  validates(:gender, presence: true)
-  validates(:occupation, length: {maximum: 50})
-  validates(:city, presence: true, length: {maximum: 60})
-  validates(:post_code, presence: true, length: {maximum: 20})
-  validates(:country, presence: true)
-  validates(:self_summary, length: {maximum: 800})
-  validates(:preferred_gender, presence: true)
-  validates(:min_age, presence: true, numericality: { greater_than_or_equal_to: 18 })
-  validates(:max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age })
-  validates(:date_of_birth, presence: true)
-  validates(:looking_for, presence: true)
-  validates(:edu_status, presence: true)
-  validates(:edu_type, presence: true)
+  validates :gender, presence: true
+  validates :occupation, length: {maximum: 50}
+  validates :city, presence: true, length: {maximum: 60}
+  validates :post_code, presence: true, length: {maximum: 20}
+  validates :country, presence: true
+  validates :self_summary, length: {maximum: 800}
+  validates :preferred_gender, presence: true
+  validates :min_age, presence: true, numericality: { greater_than_or_equal_to: 18 }
+  validates :max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age }
+  validates :date_of_birth, presence: true
+  validates :looking_for, presence: true
+  validates :edu_status, presence: true
+  validates :edu_type, presence: true
   
   # Custom validation methods
   validate(:picture_size)
@@ -55,7 +55,7 @@ class Profile < ApplicationRecord
   end
   
   def interests_array
-    attributes = [movies, tv_shows, books, games, sports]
+    attributes = [hobbies, movies, tv_shows, books, games, sports]
     interests = Array.new
     attributes.each do |a|
       if !a.blank?
