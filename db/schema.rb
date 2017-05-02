@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170501082626) do
+ActiveRecord::Schema.define(version: 20170502105501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 20170501082626) do
     t.string   "edu_status"
     t.string   "edu_type"
     t.text     "hobbies"
+    t.string   "diet"
+    t.string   "drugs"
     t.index ["user_id"], name: "index_profiles_on_user_id", using: :btree
   end
 

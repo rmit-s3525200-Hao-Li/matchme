@@ -13,6 +13,10 @@ drink:
   - not at all
   - socially
   - often
+drugs:
+  - never
+  - sometimes
+  - often
 religion:
   - agnostic
   - atheist
@@ -37,3 +41,9 @@ edu_type:
   - two-year college
   - university
   - post grad
+diet:
+  - omnivore
+  - vegetarian
+  - vegan
+  - kosher
+  - halal
