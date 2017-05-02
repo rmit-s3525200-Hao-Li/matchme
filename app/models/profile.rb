@@ -1,15 +1,18 @@
 class Profile < ApplicationRecord
   belongs_to :user
   
-  before_save :titleize_occupation
+  before_save :downcase_occupation
+  
+  # Create matches for this user
+  after_create :create_matches
   
   # CarrierWave method for image uploading
   mount_uploader :picture, PictureUploader
   
   # Validations for required fields
   # validates(:user_id, presence: true)
-  validates(:first_name, presence: true, length: { maximum: 25 })
-  validates(:last_name, presence: true, length: { maximum: 25 })
+  validates :first_name, presence: true, length: { maximum: 25 }
+  validates :last_name, presence: true, length:  { maximum: 25 }
   
   validates :user_id, presence: true
   
@@ -43,6 +46,31 @@ class Profile < ApplicationRecord
   def education
     "#{edu_status} #{edu_type}"
   end
+  
+  # convert education level into numeric form
+  def edu_num
+    num = 0
+    
+    # check status
+    case edu_status
+    when "working on"
+      num += 5
+    when "completed"
+      num += 10
+    end
+      
+    # check institution
+    case edu_type
+    when "two-year college"
+      num += 5
+    when "university"
+      num += 10
+    when "post grad"
+      num += 15
+    end
+    
+    num
+  end
 
   # return age
   def age(dob=self.date_of_birth)
@@ -59,23 +87,23 @@ class Profile < ApplicationRecord
     interests = Array.new
     attributes.each do |a|
       if !a.blank?
+        a.titleize
         interests.push(a.split(/\s*,\s*/))
+      else
+        interests.push([])
       end
     end
     interests
   end
   
   def count_interests
-    count = 0
-    interests_array.each do |a|
-      count += a.count
-    end
-    count
+    interests_array.flatten.size
   end
   
-  private 
-    def titleize_occupation
-      self.occupation.titleize
+  private
+  
+    def downcase_occupation
+      self.occupation.downcase!
     end
     
     # Ensures the uploaded image isn't too big
@@ -88,6 +116,16 @@ class Profile < ApplicationRecord
     def minimum_age
       if age < 18
         errors.add(:date_of_birth, "- You must be at least 18 to register")
+      end
+    end
+    
+    def create_matches
+      users = User.all
+      users.each do |u|
+        # Check that user is not an admin or current user
+        unless u.id == self.user_id || u.admin?
+          Match.create!(user_one_id: self.user_id, user_two_id: u.id)
+        end
       end
     end
     

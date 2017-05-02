@@ -11,16 +11,13 @@ class ProfilesController < ApplicationController
   end
   
   def create
-    
     @profile = current_user.create_profile(profile_params)
-    
     if @profile.save
       flash[:success] = "Welcome to MatchMe!"
       redirect_to @user
     else
       render 'new'
     end
-    
   end
   
   def edit

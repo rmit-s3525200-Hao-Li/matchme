@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :users do
     resource :profiles, except: :show, path_names: { edit: "" }
   end
+  resources :matches
 end
