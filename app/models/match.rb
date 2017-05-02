@@ -2,21 +2,24 @@ class Match < ApplicationRecord
   validates :user_one_id, presence: true
   validates :user_two_id, presence: true
   
+  # Profile of first user
   def profile_one
     User.find(user_one_id).profile
   end
   
+  # Profile of second user
   def profile_two
     User.find(user_two_id).profile
   end
   
+  # Match percent based on interest and non-interest profile data
   def percent
     (match_interests.to_f + match_profile / 2).round
   end
   
   private
   
-    # match percent based interests attributes
+    # Match percent based interests attributes
     def match_interests
       interests_one = profile_one.interests_array
       interests_two = profile_two.interests_array
