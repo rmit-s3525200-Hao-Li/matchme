@@ -4,11 +4,6 @@ class MatchesController < ApplicationController
   before_action :logged_in_user, only: [:index, :new, :create, :update, :destroy]
   
   def index
-    @matches = Match.will_paginate(page: params[:page])
-    # @matches.each do |m|
-    #   if m.user_one_id == current_user.id || m.user_two_id == current_user.id
-      
-    # end
   end
   
   def new

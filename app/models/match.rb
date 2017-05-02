@@ -11,39 +11,54 @@ class Match < ApplicationRecord
   end
   
   def percent
-    match_percent = 0
-    if profile_one.preferred_gender != "both" || profile_one.preferred_gender != profile_two.gender
-      if profile_two.preferred_gender == "both" || profile_two.preferred_gender == profile_one.gender
-        match_percent = match_interests
-      end
-    end    
-    match_percent
+    (match_interests.to_f + match_profile / 2).round
   end
   
   private
   
+    # match percent based interests attributes
     def match_interests
-      interests_one = profile_one.interests_array.map{|i| i.downcase}
-      interests_two = profile_two.interests_array.map{|i| i.downcase}
+      interests_one = profile_one.interests_array
+      interests_two = profile_two.interests_array
       total_interests = profile_one.count_interests + profile_two.count_interests
       common_interests = interests_one.zip(interests_two).flat_map { |f, s| f & s }.count
       ((common_interests.to_f / total_interests) * 100).round
     end
     
+    # match percent based non-interests attributes
     def match_profile
       points = 0
-      if profile_one.occupation == profile_two.occupation
-        points += 5
+      points += 5 if profile_one.occupation == profile_two.occupation
+      points +=10 if profile_one.religion == profile_two.religion
+      points +=10 if profile_one.smoke == profile_two.smoke
+      points +=10 if profile_one.drink == profile_two.drink
+      points +=10 if profile_one.drugs == profile_two.drugs
+      points +=10 if profile_one.diet == profile_two.diet
+      points +=25 if profile_one.looking_for == profile_two.looking_for
+      points += match_age
+      points -= match_education
+      if points < 0
+        return 0
+      else
+        return points
       end
-      if profile_one.religion == profile_two.religion
-        points += 15
+    end
+    
+    # Gets difference in education level
+    def match_education
+      if profile_one.edu_num >= profile_two.edu_num
+        profile_one.edu_num - profile_two.edu_num
+      else
+        profile_two.edu_num - profile_one.edu_num
       end
-      if profile_one.smoke == profile_two.smoke
-        points += 15
-      end
-      if profile_one.religion == profile_two.religion
-        points += 15
-      end
+    end
+    
+    # Matches based on age preferences of both users
+    def match_age
+      points = 0
+      points += 10 if profile_one.age_range.include? profile_two.age
+      points += 10 if profile_two.age_range.include? profile_one.age
+      points
     end
   
 end

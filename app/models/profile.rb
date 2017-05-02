@@ -17,7 +17,7 @@ class Profile < ApplicationRecord
   validates :user_id, presence: true
   
   validates :gender, presence: true
-  validates :occupation, length: {maximum: 50}
+  validates :occupation, presence: true, length: {maximum: 50}
   validates :city, presence: true, length: {maximum: 60}
   validates :post_code, presence: true, length: {maximum: 20}
   validates :country, presence: true
@@ -29,10 +29,15 @@ class Profile < ApplicationRecord
   validates :looking_for, presence: true
   validates :edu_status, presence: true
   validates :edu_type, presence: true
+  validates :religion, presence: true
+  validates :smoke, presence: true
+  validates :drink, presence: true
+  validates :drugs, presence: true
+  validates :diet, presence: true
   
   # Custom validation methods
-  validate(:picture_size)
-  validate(:minimum_age)
+  validate :picture_size
+  validate :minimum_age
   
   # Geocoding to produce latitude and longitude
   geocoded_by :address
@@ -43,6 +48,7 @@ class Profile < ApplicationRecord
     "#{first_name} #{last_name}".titleize
   end
   
+  # turns education fields into single string
   def education
     "#{edu_status} #{edu_type}"
   end
@@ -50,7 +56,6 @@ class Profile < ApplicationRecord
   # convert education level into numeric form
   def edu_num
     num = 0
-    
     # check status
     case edu_status
     when "working on"
@@ -58,7 +63,6 @@ class Profile < ApplicationRecord
     when "completed"
       num += 10
     end
-      
     # check institution
     case edu_type
     when "two-year college"
@@ -68,7 +72,6 @@ class Profile < ApplicationRecord
     when "post grad"
       num += 15
     end
-    
     num
   end
 
@@ -78,10 +81,12 @@ class Profile < ApplicationRecord
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
   end
   
+  # turns location inputs into single string
   def address
     "#{city}, #{post_code}, #{country}"
   end
   
+  # takes all interests and creates a nested array
   def interests_array
     attributes = [hobbies, movies, tv_shows, books, games, sports]
     interests = Array.new
@@ -96,8 +101,14 @@ class Profile < ApplicationRecord
     interests
   end
   
+  # counts total number of interests user has
   def count_interests
     interests_array.flatten.size
+  end
+  
+  # Creates array from min and max age
+  def age_range
+    (min_age..max_age).to_a
   end
   
   private
