@@ -27,6 +27,9 @@ class UsersController < ApplicationController
   # User profile page
   def show
     @profile = @user.profile
+    if @user != current_user
+      @matches = current_user.matches
+    end
   end
   
   # Corresponds to view/users/new.html.erb

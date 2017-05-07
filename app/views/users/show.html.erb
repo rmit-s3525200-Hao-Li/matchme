@@ -19,6 +19,9 @@
         <% unless @user.admin? %>
           <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>
         <% end %>
+        <% if @user != current_user %>
+          <h4><%= get_match_percent(@user, @matches) %>% match</h4>
+        <% end %>
       </div>
     </div>
   </div>
