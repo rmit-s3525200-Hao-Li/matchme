@@ -1,10 +1,7 @@
 class MatchesController < ApplicationController
   
   # Checks that user is logged in
-  before_action :logged_in_user, only: [:index, :new, :create, :update, :destroy]
-  
-  def index
-  end
+  before_action :logged_in_user, only: [:new, :create, :update, :destroy]
   
   def new
     @match = Match.new
