@@ -1,4 +1,7 @@
 class Match < ApplicationRecord
+  
+  has_many :users
+  
   validates :user_one_id, presence: true
   validates :user_two_id, presence: true
   

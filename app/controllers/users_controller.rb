@@ -1,20 +1,22 @@
 class UsersController < ApplicationController
   
+  before_action :set_user, only: [:show, :edit, :update, :matches]
+  
   # Checks that user is logged before they can access edit profile page
   # and users index page
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :matches]
   
   # Checks that user has created profile
-  before_action :user_has_profile, only: [:index, :show, :edit, :update]
+  before_action :user_has_profile, only: [:index, :show, :edit, :update, :matches]
   
   # Ensures users cannot access 'Edit Profile' page of other users
-  before_action :correct_user,   only: [:edit, :update]
+  before_action :correct_user,   only: [:edit, :update, :matches]
   
   # Ensures only admin can delete users
   before_action :admin_user,     only: :destroy
   
   # Admin doesn't have a profile
-  before_action :non_admin_user, only: :show
+  before_action :non_admin_user, only: [:show, :matches]
   
   # Corresponds to view/users/index.html.erb
   def index
@@ -24,7 +26,6 @@ class UsersController < ApplicationController
   # Corresponds to view/users/show.html.erb
   # User profile page
   def show
-    @user = User.find(params[:id])
     @profile = @user.profile
   end
   
@@ -49,14 +50,12 @@ class UsersController < ApplicationController
   # Corresponds to view/users/edit.html.erb
   # Edit profile page
   def edit
-    @user = User.find(params[:id])
     @profile = @user.profile
     # @selected = user_params[:profile][:gender]
   end
   
   # Patch method for updating profile
   def update
-    @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to @user
@@ -71,6 +70,12 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
   
+  def matches
+    @matches = @user.matches
+    @users = @user.match_users
+    @show_percent = true
+  end
+  
   private
 
     def user_params
@@ -81,6 +86,11 @@ class UsersController < ApplicationController
     end
     
     ### Before filters
+    
+    # Sets user
+    def set_user
+      @user = User.find(params[:id])
+    end
     
     # Confirms an admin user.
     def admin_user
@@ -106,4 +116,5 @@ class UsersController < ApplicationController
         redirect_to new_user_profiles_path(current_user) unless Profile.exists?(@profile)
       end
     end
+    
 end

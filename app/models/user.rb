@@ -1,5 +1,7 @@
 class User < ApplicationRecord
+  
   has_one :profile, dependent: :destroy
+  
   attr_accessor :remember_token
   before_save :downcase_email
   
@@ -41,9 +43,26 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
   
+  # Gets match users
+  def matches
+    Match.where("user_one_id = ? OR user_two_id = ?", self.id, self.id)
+  end
+  
+  def match_users
+    match_users = Array.new
+    self.matches.each do |m|
+      if m.user_one_id != self.id
+        match_users.push(m.user_one_id)
+      else
+        match_users.push(m.user_two_id)
+      end
+    end
+    User.find(match_users)
+  end
+  
   private
   
-    # Converts email to all lower-caes
+    # Converts email to all lower-case
     def downcase_email
       self.email.downcase!
     end

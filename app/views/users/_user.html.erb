@@ -2,19 +2,26 @@
   <div class="user">
       <div class="search-meta">
         <% if user.profile.picture? %>
-          <%= link_to '#', data: { toggle: "modal", target: ".bs-example-modal-lg" } do %>
+          <%= link_to user do %>
             <%= display_thumbnail(user.profile) %>
           <% end %>
         <% else %>
           <%= display_thumbnail(user.profile) %>
         <% end %>
-    <h4><%= link_to user.profile.name, user %></h4>
-    <p><%= "#{user.profile.age} • #{user.profile.gender}" %></p>
-    <p><%= "#{user.profile.city}, #{user.profile.country}" %></p>
-          <% if current_user.admin? && !current_user?(user) %>
-            <%= link_to "delete user", user, method: :delete,
-                                    data: { confirm: "Are you sure?" } %>
-          <% end %>
+        <h4><%= link_to user.profile.name, user %></h4>
+        <p><%= "#{user.profile.age} • #{user.profile.gender}" %></p>
+        <p><%= "#{user.profile.city}, #{user.profile.country}" %></p>
+        
+        <!-- Adds 'Delete' link if user is an admin -->
+        <% if current_user.admin? && !current_user?(user) %>
+          <%= link_to "delete user", user, method: :delete,
+                                  data: { confirm: "Are you sure?" } %>
+        <% end %>
+        
+        <!-- Adds match percent if on matches page -->
+        <% if @show_percent %>
+          <h4><%= get_match_percent(user, @matches) %>% match</h4>
+        <% end %>
       </div>
     </div>
 <% end %>

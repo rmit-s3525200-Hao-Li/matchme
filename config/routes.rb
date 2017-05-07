@@ -6,8 +6,12 @@ Rails.application.routes.draw do
   get    '/login',          to: 'sessions#new'
   post   '/login',          to: 'sessions#create'
   delete '/logout',         to: 'sessions#destroy'
+  
+  
   resources :users do
     resource :profiles, except: :show, path_names: { edit: "" }
+    member do
+      get 'matches'
+    end
   end
-  resources :matches
 end
