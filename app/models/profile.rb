@@ -14,26 +14,16 @@ class Profile < ApplicationRecord
   validates :first_name, presence: true, length: { maximum: 25 }
   validates :last_name, presence: true, length:  { maximum: 25 }
   
-  validates :user_id, presence: true
-  
-  validates :gender, presence: true
   validates :occupation, presence: true, length: {maximum: 50}
   validates :city, presence: true, length: {maximum: 60}
   validates :post_code, presence: true, length: {maximum: 20}
-  validates :country, presence: true
   validates :self_summary, length: {maximum: 800}
   validates :preferred_gender, presence: true
   validates :min_age, presence: true, numericality: { greater_than_or_equal_to: 18 }
   validates :max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age }
-  validates :date_of_birth, presence: true
-  validates :looking_for, presence: true
-  validates :edu_status, presence: true
-  validates :edu_type, presence: true
-  validates :religion, presence: true
-  validates :smoke, presence: true
-  validates :drink, presence: true
-  validates :drugs, presence: true
-  validates :diet, presence: true
+  validates :user_id, :gender, :date_of_birth, :country, :looking_for, 
+            :edu_status, :edu_type, :religion, :smoke, :drink, :drugs, 
+            :diet, presence: true
   
   # Custom validation methods
   validate :picture_size
@@ -111,8 +101,17 @@ class Profile < ApplicationRecord
     (min_age..max_age).to_a
   end
   
+  def gender_array
+    if self.preferred_gender == "both"
+      ["male", "female"]
+    else
+      [self.preferred_gender]
+    end
+  end
+  
   private
   
+    # Downcase occupation upon save
     def downcase_occupation
       self.occupation.downcase!
     end
@@ -124,19 +123,50 @@ class Profile < ApplicationRecord
       end
     end
     
+    # Minimum age validaiton
     def minimum_age
       if age < 18
         errors.add(:date_of_birth, "- You must be at least 18 to register")
       end
     end
     
+    # Create match objects
     def create_matches
-      users = User.all
+      # Checks for location match
+      profiles = match_location
+      
+      # Match by gender
+      profiles = match_gender(profiles)
+      
+      # Get users from ids
+      user_ids = profiles.pluck(:user_id)
+      users = User.find(user_ids)
+      
+      # Create matches
       users.each do |u|
-        # Check that user is not an admin or current user
-        unless u.id == self.user_id || u.admin?
-          Match.create!(user_one_id: self.user_id, user_two_id: u.id)
+        Match.create!(user_one_id: self.user_id, user_two_id: u.id)
+      end
+    end
+    
+    # Returns profiles either 15 or 50 miles away (or anywhere)
+    def match_location
+      if self.nearby = true && self.nearbys(15).any?
+        profiles = self.nearbys(15, {order: ""} )
+      else
+        profiles = self.nearbys(50, {order: ""} )
+        if !profiles.any?
+          profiles = Profile.where.not(user_id: self.user_id)
         end
+      end
+      profiles
+    end
+    
+    # Checks for gender match
+    def match_gender(profiles)
+      if preferred_gender != "both"
+        profiles.where("preferred_gender = ? OR preferred_gender = ?", self.gender, "both")
+      else
+        profiles.where("preferred_gender = ? OR preferred_gender = ?, gender = ?", self.gender, "both", self.preferred_gender)
       end
     end
     

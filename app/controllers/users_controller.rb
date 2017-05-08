@@ -67,12 +67,15 @@ class UsersController < ApplicationController
     end
   end
   
+  # Method for deleting a user
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
     redirect_to users_url
   end
   
+  # Corresponds to view/users/matches.html.erb
+  # User matches page
   def matches
     @matches = @user.matches
     @users = @user.match_users
