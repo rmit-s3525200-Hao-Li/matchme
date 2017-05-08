@@ -1,5 +1,7 @@
 class Match < ApplicationRecord
   
+  after_save :update_percent
+  
   has_many :users
   
   validates :user_one_id, presence: true
@@ -15,12 +17,13 @@ class Match < ApplicationRecord
     User.find(user_two_id).profile
   end
   
-  # Match percent based on interest and non-interest profile data
-  def percent
-    (match_interests.to_f + match_profile / 2).round
-  end
-  
   private
+  
+    # Match percent based on interest and non-interest profile data
+    def update_percent
+      p = (match_interests.to_f + match_profile / 2).round
+      self.update_column(:percent, p)
+    end
   
     # Match percent based interests attributes
     def match_interests

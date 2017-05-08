@@ -20,6 +20,6 @@ class MatchesController < ApplicationController
   private
   
     def match_params
-      params.require(:match).permit(:user_one_id, :user_two_id)
+      params.require(:match).permit(:user_one_id, :user_two_id, :percent)
     end
 end
