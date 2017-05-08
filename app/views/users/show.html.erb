@@ -19,7 +19,7 @@
         <% unless @user.admin? %>
           <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>
         <% end %>
-        <% if @user != current_user %>
+        <% if @user != current_user && has_match?(@user, @matches) %>
           <h3 class="pink-text"><%= get_match_percent(@user, @matches) %>% match</h3>
         <% end %>
       </div>

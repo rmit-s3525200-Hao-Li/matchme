@@ -4,16 +4,16 @@ class UsersController < ApplicationController
   
   # Checks that user is logged before they can access edit profile page
   # and users index page
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :matches]
+  before_action :logged_in_user, only: [:edit, :update, :destroy, :matches]
   
   # Checks that user has created profile
-  before_action :user_has_profile, only: [:index, :show, :edit, :update, :matches]
+  before_action :user_has_profile, only: [:show, :edit, :update, :matches]
   
   # Ensures users cannot access 'Edit Profile' page of other users
   before_action :correct_user,   only: [:edit, :update, :matches]
   
   # Ensures only admin can delete users
-  before_action :admin_user,     only: :destroy
+  before_action :admin_user,     only: [:index, :destroy]
   
   # Admin doesn't have a profile
   before_action :non_admin_user, only: [:show, :matches]

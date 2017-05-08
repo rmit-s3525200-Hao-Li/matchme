@@ -27,7 +27,7 @@
                     <li><%= link_to "USERS", users_path %></li>
                   <% else %>
                     <li>
-                      <%= link_to matches_user_path do %>
+                      <%= link_to matches_user_path(current_user) do %>
                        BROWSE MATCHES <i class="fa fa-users" aria-hidden="true"></i>
                       <% end %>
                     </li>
