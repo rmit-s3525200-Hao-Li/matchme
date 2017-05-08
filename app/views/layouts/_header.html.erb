@@ -19,14 +19,21 @@
 
         <section>
           
-          
           <!-- Nav Section -->
             <% if logged_in? %>
               <% if has_profile? || current_user.admin? %>
                 <ul class="button-ground radius right">
-                  <li><%= link_to "USERS", users_path %></li>
+                  <% if current_user.admin? %>
+                    <li><%= link_to "USERS", users_path %></li>
+                  <% else %>
+                    <li>
+                      <%= link_to matches_user_path do %>
+                       BROWSE MATCHES <i class="fa fa-users" aria-hidden="true"></i>
+                      <% end %>
+                    </li>
+                  <% end %>
                   <li class="has-dropdown">
-                    <a href="#"></i>ACCOUNT</a>
+                    <a href="#"><%= current_user.profile.name.upcase %> <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                     <ul class="dropdown">
                       <% unless current_user.admin? %>
                         <li><%= link_to "Profile", current_user %></li>
