@@ -22,6 +22,7 @@ gem 'font-awesome-sass',       '~> 4.7.0'
 gem 'pg',                      '0.20.0'
 gem 'geocoder',                '1.4.3'
 gem 'simple_form'
+gem 'json'
 
 group :development, :test do
   gem 'byebug',  '9.0.0', platform: :mri

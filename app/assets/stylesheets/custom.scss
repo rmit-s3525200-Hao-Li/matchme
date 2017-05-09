@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 $pink: #f00056;
 
@@ -61,15 +61,15 @@ $pink: #f00056;
   border:solid 2px #ffffff;
 } 
 
-/* USERS INDEX: ; */
+/* USERS INDEX */
 
 .user {
   display: inline-block;
   vertical-align: top;
   border: 1px solid #BFBFBF;
-  width: 30%;
-  margin: 5% 2%;
-  padding: 5%;
+  width: 25%;
+  margin: 2% 2%;
+  padding: 2%;
   text-align: center;
 }
 
@@ -79,10 +79,17 @@ $pink: #f00056;
  margin-left: auto;
  margin-right: auto;
 }
+
 .text-center {
  text-align: center;
 }
 
 .none-padding {
     padding: 0 !important;
+}
+
+/* PAGINATION */
+
+.pagination {
+  font-size: 1.5em;
 }

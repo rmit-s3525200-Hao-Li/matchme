@@ -15,7 +15,6 @@ class Profile < ApplicationRecord
   mount_uploader :picture, PictureUploader
   
   # Validations for required fields
-  # validates(:user_id, presence: true)
   validates :first_name, presence: true, length: { maximum: 25 }
   validates :last_name, presence: true, length:  { maximum: 25 }
   
@@ -87,7 +86,7 @@ class Profile < ApplicationRecord
     interests = Array.new
     attributes.each do |a|
       if !a.blank?
-        a.titleize
+        a.downcase
         interests.push(a.split(/\s*,\s*/))
       else
         interests.push([])
