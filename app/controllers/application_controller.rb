@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include MatchesHelper
   
+  require 'will_paginate/array'
+  
   private
     
     #Confirms a logged in user

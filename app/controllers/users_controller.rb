@@ -79,6 +79,7 @@ class UsersController < ApplicationController
   def matches
     @matches = @user.matches
     @users = @user.match_users
+    @users = @users.paginate(page: params[:page])
     @show_percent = true
   end
   
