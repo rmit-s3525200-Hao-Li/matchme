@@ -1,7 +1,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Raleway');
+
 $pink: #f00056;
+
+/* HEADER */
+
+.logo {
+  font-family: Raleway, sans-serif;
+  font-size: 1.6em;
+  line-height: 130%;
+  span {
+    display: block;
+    font-size: 2.4em;
+  }
+}
+
+/* ERRORS */
 
 .query_rule {color:#000;}
 
@@ -15,7 +31,7 @@ $pink: #f00056;
   box-sizing: border-box;
 }
 
-/* forms */
+/* HEADER */
 
 #error_explanation {
   color: red;
@@ -45,7 +61,7 @@ $pink: #f00056;
   border:solid 2px #ffffff;
 } 
 
-/* Users index */
+/* USERS INDEX: ; */
 
 .user {
   display: inline-block;

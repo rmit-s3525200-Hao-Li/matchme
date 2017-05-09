@@ -33,7 +33,7 @@
                     </li>
                   <% end %>
                   <li class="has-dropdown">
-                    <a href="#"><%= current_user.profile.name.upcase %> <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                    <a href="#">ACCOUNT <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                     <ul class="dropdown">
                       <% unless current_user.admin? %>
                         <li><%= link_to "Profile", current_user %></li>
@@ -62,8 +62,8 @@
       </h1>
      </div>
      <div class="three columns pull-four">
-    <h1 class="sweetfont">
-      Match Me
+    <h1 class="logo">
+      MATCH <span>ME</span>
     </h1>
     </div>
     
