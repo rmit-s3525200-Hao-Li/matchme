@@ -1,10 +1,15 @@
 class Profile < ApplicationRecord
+  include ActiveModel::Dirty
+  
   belongs_to :user
   
   before_save :downcase_occupation
   
   # Create matches for this user
   after_create :create_matches
+  
+  # Check if certain attributes were changed, and updates matches accordingly
+  after_update :check_changes
   
   # CarrierWave method for image uploading
   mount_uploader :picture, PictureUploader
@@ -109,6 +114,40 @@ class Profile < ApplicationRecord
     end
   end
   
+  # Check if location or gender attributes are updated
+  def location_gender_updated?
+    [:post_code, :preferred_gender, :gender].any? do |attribute|
+       __send__(:"#{attribute}_changed?")
+    end
+  end
+    
+  # Check if profile attributes that affect match percent are updated
+  def profile_updated?
+    [:occupation, :date_of_birth, :religion, :smoke, :drink, :drugs, 
+      :diet, :looking_for, :edu_status, :edu_type, :hobbies, :movies, 
+      :tv_shows, :books, :games, :sports].any? do |attribute|
+       __send__(:"#{attribute}_changed?")
+    end
+  end
+  
+  # Create match objects
+  def create_matches
+    # Checks for location match
+    profiles = match_location
+    
+    # Match by gender
+    profiles = match_gender(profiles)
+    
+    # Get users from ids
+    user_ids = profiles.pluck(:user_id)
+    users = User.find(user_ids)
+    
+    # Create matches
+    users.each do |u|
+      Match.create!(user_one_id: self.user_id, user_two_id: u.id)
+    end
+  end
+  
   private
   
     # Downcase occupation upon save
@@ -130,43 +169,38 @@ class Profile < ApplicationRecord
       end
     end
     
-    # Create match objects
-    def create_matches
-      # Checks for location match
-      profiles = match_location
-      
-      # Match by gender
-      profiles = match_gender(profiles)
-      
-      # Get users from ids
-      user_ids = profiles.pluck(:user_id)
-      users = User.find(user_ids)
-      
-      # Create matches
-      users.each do |u|
-        Match.create!(user_one_id: self.user_id, user_two_id: u.id)
-      end
-    end
-    
     # Returns profiles either 15 or 50 miles away (or anywhere)
     def match_location
       if self.nearby = true && self.nearbys(15).any?
         profiles = self.nearbys(15, {order: ""} )
       else
         profiles = self.nearbys(50, {order: ""} )
-        if !profiles.any?
-          profiles = Profile.where.not(user_id: self.user_id)
-        end
       end
       profiles
     end
     
     # Checks for gender match
     def match_gender(profiles)
+      profiles = profiles.where("preferred_gender = ? OR preferred_gender = ?", self.gender, "both")
       if preferred_gender != "both"
-        profiles.where("preferred_gender = ? OR preferred_gender = ?", self.gender, "both")
-      else
-        profiles.where("preferred_gender = ? OR preferred_gender = ?, gender = ?", self.gender, "both", self.preferred_gender)
+        profiles = profiles.where(gender: self.preferred_gender)
+      end
+      profiles
+    end
+    
+    # Check for changes and update matches accordingly
+    def check_changes
+      # Matches  need to be recreated 
+      # because they are filtered by location and gender
+      if self.location_gender_updated?
+        self.user.matches.destroy_all
+        create_matches
+      # Minor profile updates only require an update to
+      # match percent
+      elsif self.profile_updated?
+        self.user.matches.each do |m|
+          m.update_percent
+        end
       end
     end
     
