@@ -73,8 +73,8 @@ melbourne_users.each do |m|
   hobbies = hobbies_file.sample(rand(1..5)).join(", ")
   movies = movies_file.sample(rand(5..20)).join(", ")
   tv_shows = tv_shows_file.sample(rand(5..20)).join(", ")
-  books = books_file.sample(rand(1..20)).join(", ")
-  games = games_file.sample(rand(1..20)).join(", ")
+  books = books_file.sample(rand(1..10)).join(", ")
+  games = games_file.sample(rand(1..5)).join(", ")
   sports = sports_file.sample(rand(1..5)).join(", ")
   
   m.create_profile!(first_name: first_name, 
@@ -152,8 +152,8 @@ geelong_users.each do |g|
   hobbies = hobbies_file.sample(rand(1..5)).join(", ")
   movies = movies_file.sample(rand(5..20)).join(", ")
   tv_shows = tv_shows_file.sample(rand(5..20)).join(", ")
-  books = books_file.sample(rand(1..20)).join(", ")
-  games = games_file.sample(rand(1..20)).join(", ")
+  books = books_file.sample(rand(1..10)).join(", ")
+  games = games_file.sample(rand(1..5)).join(", ")
   sports = sports_file.sample(rand(1..5)).join(", ")
   
   g.create_profile!(first_name: first_name, 
@@ -229,10 +229,10 @@ sydney_users.each do |s|
   
   # Interests
   hobbies = hobbies_file.sample(rand(1..5)).join(", ")
-  movies = movies_file.sample(rand(5..20)).join(", ")
-  tv_shows = tv_shows_file.sample(rand(5..20)).join(", ")
-  books = books_file.sample(rand(1..20)).join(", ")
-  games = games_file.sample(rand(1..20)).join(", ")
+  movies = movies_file.sample(rand(5..15)).join(", ")
+  tv_shows = tv_shows_file.sample(rand(5..15)).join(", ")
+  books = books_file.sample(rand(1..10)).join(", ")
+  games = games_file.sample(rand(1..5)).join(", ")
   sports = sports_file.sample(rand(1..5)).join(", ")
   
   s.create_profile!(first_name: first_name, 
