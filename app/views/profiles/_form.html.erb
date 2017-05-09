@@ -1,176 +1,168 @@
 <%= simple_form_for @profile, url: user_profiles_url, defaults: { error: false } do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  
-  <style type="text/css">
-.divOver{
- background:#ffffff;
-border:solid 2px #ffffff;
-} 
-</style>
-
-
-
-
-<body>
-
-
-<div class="panel-group collapsed" id="accordion">
-   
-   <div class="panel panel-success">
-      <div class="panel-heading">
-         <h4 class="panel-title">
-            <div data-toggle="collapse" data-parent="#accordion"
-               href="#collapseOne" style="cursor:pointer">
-            &#8595;  What You're Looking For
-            </div>
-         </h4>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse">
-         <div class="panel-body">
-          <%= f.input :preferred_gender, collection: Choices['preferred_gender'], as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false, label: false %>
-          <div class = "row">
-          <div class="col-md-3">
-            <%= f.input :min_age, collection: 18..120 %>
+  <div class="panel-group collapsed" id="accordion">
+     
+     <div class="panel panel-success">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <div data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseOne" style="cursor:pointer">
+              &#8595;  What You're Looking For
+              </div>
+           </h4>
         </div>
-        <div class="col-md-3">
-          <%= f.input :max_age, collection: 18..120 %>
-        </div>
-        <div class="col-md-5">
-          <%= f.input :looking_for, collection: Choices['looking_for'], label: "For" %>
-        </div>
-        </div>
-          <%= f.input :nearby, hint: "Leave unchecked to be matched to users anywhere" %>
-         </div>
-      </div>
-   </div>
-   <div class="panel panel-info">
-      <div class="panel-heading">
-         <h4 class="panel-title">
-            <div data-toggle="collapse" data-parent="#accordion"
-               href="#collapseTwo" style="cursor:pointer">
-              &#8595; About You
-            </div>
-         </h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse">
-         <div class="panel-body">
-          
+        <div id="collapseOne" class="panel-collapse collapse">
+           <div class="panel-body">
+            <%= f.input :preferred_gender, collection: Choices['preferred_gender'], as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false, label: false %>
             <div class = "row">
-            <div class="col-md-6">
-                <%= f.input :first_name %>
+            <div class="col-md-3">
+              <%= f.input :min_age, collection: 18..120 %>
           </div>
-          <div class="col-md-6">
-                <%= f.input :last_name %>
+          <div class="col-md-3">
+            <%= f.input :max_age, collection: 18..120 %>
+          </div>
+          <div class="col-md-5">
+            <%= f.input :looking_for, collection: Choices['looking_for'], label: "For" %>
           </div>
           </div>
-          <div class = "row">
-          <div class="col-md-6">
-              <%= f.input :date_of_birth, start_year: Date.today.year - 120, end_year: Date.today.year - 17, default: Date.today %>
-          </div>
-          <div class="col-md-6">
-              <%= f.input :gender, collection: Choices['gender'], as: :radio_buttons,  item_label_class: "radio-inline", item_wrapper_tag: false %>
-          </div>
+            <%= f.input :nearby, hint: "Leave unchecked to be matched to users anywhere" %>
+           </div>
         </div>
-              <%= f.input :picture, label: 'Upload an image of yourself' %>
-         </div>
-      </div>
-   </div>
-   <div class="panel panel-success">
-      <div class="panel-heading">
-         <h4 class="panel-title">
-            <div data-toggle="collapse" data-parent="#accordion"
-               href="#collapseThree" style="cursor:pointer">
-              &#8595; Details
-            </div>
-         </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse">
-         <div class="panel-body">
-          
-  <div class = "row">
-    <div class="col-md-6">
-      <%= f.input :occupation %>
-    </div>
-    <div class="col-md-6">
-      <%= f.input :religion, collection: Choices['religion'] %>
-    </div>
-  </div>
-  <div class = "row">
-    <div class="col-md-6">
-      <%= f.input :smoke, collection: Choices['smoke'] %>
-    </div>
-    <div class="col-md-6">
-      <%= f.input :drink, collection: Choices['drink'] %>
-    </div>
-  </div>
-    <div class = "row">
-    <div class="col-md-6">
-      <%= f.input :edu_status, label: 'Education', collection: Choices['edu_status'] %>
-    </div>
-    <div class="col-md-6">
-      <%= f.input :edu_type, label: ' ', collection: Choices['edu_type'] %>
-    </div>
-  </div>
-  <%= f.input :self_summary %>
-         </div>
-      </div>
-   </div>
-   <div class="panel panel-info">
-      <div class="panel-heading">
-         <h4 class="panel-title">
-            <div data-toggle="collapse" data-parent="#accordion"
-               href="#collapseFour" style="cursor:pointer">
-              &#8595; Interests
-            </div>
-         </h4>
-      </div>
-      <div id="collapseFour" class="panel-collapse collapse">
-         <div class="panel-body">
-          <%= f.input :hobbies, placeholder: "3D printing, hiking, pottery, writing" %>
-          <%= f.input :movies, placeholder: "Pulp Fiction, The Godfather, Star Wars" %>
-          <%= f.input :tv_shows, placeholder: "Breaking Bad, The Wire, Rick and Morty, Game of Thrones" %>
-          <%= f.input :books, placeholder: "Rails Tutorial, The Great Gatsby, To Kill a Mockingbird" %>
-          <%= f.input :games, placeholder: "Legend of Zelda, World of Warcraft" %>
-          <%= f.input :sports, placeholder: "Football, baseball, cricket" %>
-         </div>
-      </div>
-   </div>
-    <div class="panel panel-success">
-      <div class="panel-heading">
-         <h4 class="panel-title">
-            <div data-toggle="collapse" data-parent="#accordion"
-               href="#collapseFive" style="cursor:pointer">
-             &#8595; Location
-            </div>
-         </h4>
-      </div>
-      <div id="collapseFive" class="panel-collapse collapse">
-         <div class="panel-body">
+     </div>
+     <div class="panel panel-info">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <div data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseTwo" style="cursor:pointer">
+                &#8595; About You
+              </div>
+           </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+           <div class="panel-body">
             
-  <div class = "row">
-    <div class="col-md-8">
-      <%= f.input :city %>
-    </div>
-    <div class="col-md-4">
-      <%= f.input :post_code %>
-    </div>
-  </div>
-  <div>
-  <%= f.input :country, priority: [ "Australia", "United States", "United Kingdom", "Canada", "New Zealand"], include_blank: true %>
-  </div>
-         </div>
+              <div class = "row">
+              <div class="col-md-6">
+                  <%= f.input :first_name %>
+            </div>
+            <div class="col-md-6">
+                  <%= f.input :last_name %>
+            </div>
+            </div>
+            <div class = "row">
+            <div class="col-md-7">
+                <%= f.input :date_of_birth, start_year: Date.today.year - 17, end_year: Date.today.year - 120, default: Date.today %>
+            </div>
+            <div class="col-md-4">
+                <%= f.input :gender, collection: Choices['gender'], as: :radio_buttons,  item_label_class: "radio-inline", item_wrapper_tag: false %>
+            </div>
+          </div>
+                <%= f.input :picture, label: 'Upload an image of yourself' %>
+           </div>
+        </div>
+     </div>
+     <div class="panel panel-success">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <div data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseThree" style="cursor:pointer">
+                &#8595; Details
+              </div>
+           </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+           <div class="panel-body">
+            
+    <div class = "row">
+      <div class="col-md-6">
+        <%= f.input :occupation %>
       </div>
-   </div>
-</div>
-<div class="center">
-     <%= f.button :submit, class: "btn-primary" %>
+      <div class="col-md-6">
+        <%= f.input :religion, collection: Choices['religion'] %>
+      </div>
+    </div>
+    <div class = "row">
+      <div class="col-md-6">
+        <%= f.input :smoke, collection: Choices['smoke'] %>
+      </div>
+      <div class="col-md-6">
+        <%= f.input :drink, collection: Choices['drink'] %>
+      </div>
+    </div>
+    <div class = "row">
+      <div class="col-md-6">
+        <%= f.input :drugs, collection: Choices['drugs'] %>
+      </div>
+      <div class="col-md-6">
+        <%= f.input :diet, collection: Choices['diet'] %>
+      </div>
+    </div>
+      <div class = "row">
+      <div class="col-md-6">
+        <%= f.input :edu_status, label: 'Education', collection: Choices['edu_status'] %>
+      </div>
+      <div class="col-md-6">
+        <%= f.input :edu_type, label: ' ', collection: Choices['edu_type'] %>
+      </div>
+    </div>
+    <%= f.input :self_summary %>
+           </div>
+        </div>
+     </div>
+     <div class="panel panel-info">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <div data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseFour" style="cursor:pointer">
+                &#8595; Interests
+              </div>
+           </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse">
+           <div class="panel-body">
+            <%= f.input :hobbies, placeholder: "3D printing, hiking, pottery, writing" %>
+            <%= f.input :movies, placeholder: "Pulp Fiction, The Godfather, Star Wars" %>
+            <%= f.input :tv_shows, placeholder: "Breaking Bad, The Wire, Rick and Morty, Game of Thrones" %>
+            <%= f.input :books, placeholder: "Rails Tutorial, The Great Gatsby, To Kill a Mockingbird" %>
+            <%= f.input :games, placeholder: "Legend of Zelda, World of Warcraft" %>
+            <%= f.input :sports, placeholder: "Football, baseball, cricket" %>
+           </div>
+        </div>
+     </div>
+      <div class="panel panel-success">
+        <div class="panel-heading">
+           <h4 class="panel-title">
+              <div data-toggle="collapse" data-parent="#accordion"
+                 href="#collapseFive" style="cursor:pointer">
+               &#8595; Location
+              </div>
+           </h4>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse">
+           <div class="panel-body">
+              
+    <div class = "row">
+      <div class="col-md-8">
+        <%= f.input :city %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :post_code %>
+      </div>
+    </div>
+    <div>
+    <%= f.input :country, priority: [ "Australia", "United States", "United Kingdom", "Canada", "New Zealand"], include_blank: true %>
+    </div>
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="center">
+       <%= f.button :submit, class: "btn-primary" %>
   </div>
 <% end %>
-</body>
 
 
 <script type="text/javascript">
-
    $(function () { $('#collapseOne').collapse('show')});
    $(function () { $('#collapseTwo').collapse('toggle')});
    $(function () { $('#collapseThree').collapse('show')});

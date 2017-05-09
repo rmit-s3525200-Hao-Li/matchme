@@ -45,7 +45,7 @@ class User < ApplicationRecord
   
   # Gets match users
   def matches
-    Match.where("user_one_id = ? OR user_two_id = ?", self.id, self.id)
+    Match.where("user_one_id = ? OR user_two_id = ?", self.id, self.id).order(percent: :desc)
   end
   
   def match_users
