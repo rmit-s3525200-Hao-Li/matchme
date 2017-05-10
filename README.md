@@ -2,6 +2,10 @@
 
 MatchMe is a simple dating application that matches users according to their values and beliefs.
 
+## What You'll Need
+- Ruby on Rails
+- PostgreSQL
+
 ## Getting Started
 
 1. Clone the repo and then install the needed gems:
