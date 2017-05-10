@@ -23,10 +23,11 @@ sudo apt-get update
 sudo apt-get install imagemagick --fix-missing
 ```
 
-4. Migrate the database:
+4. Migrate and seed the database:
 
 ```
 $ rails db:migrate
+$ rails db:seed
 ```
 
 5. Run the test suite:
