@@ -25,6 +25,7 @@ class Match < ApplicationRecord
   private
   
     # Match percent based interests attributes
+    # Highest possible result is 80
     def match_interests
       interests_one = profile_one.interests_array
       interests_two = profile_two.interests_array
@@ -34,17 +35,16 @@ class Match < ApplicationRecord
     end
     
     # match percent based non-interests attributes
+    # Highest possible total points is 120
     def match_profile
       points = 0
       points += 5 if profile_one.occupation == profile_two.occupation
-      points +=15 if profile_one.religion == profile_two.religion
-      points +=10 if profile_one.smoke == profile_two.smoke
-      points +=10 if profile_one.drink == profile_two.drink
-      points +=10 if profile_one.drugs == profile_two.drugs
-      points +=10 if profile_one.diet == profile_two.diet
-      points +=30 if profile_one.looking_for == profile_two.looking_for
+      points +=20 if profile_one.religion == profile_two.religion
+      points +=15 if profile_one.diet == profile_two.diet
+      points +=40 if profile_one.looking_for == profile_two.looking_for
       points += match_age
       points -= match_education
+      points -= match_substance_use
       if points < 0
         return 0
       else
@@ -52,7 +52,16 @@ class Match < ApplicationRecord
       end
     end
     
+     # Matches based on age preferences of both users
+    def match_age
+      points = 0
+      points += 20 if profile_one.age_range.include? profile_two.age
+      points += 20 if profile_two.age_range.include? profile_one.age
+      points
+    end
+    
     # Gets difference in education level
+    # Highest possible difference is 25
     def match_education
       if profile_one.edu_num >= profile_two.edu_num
         profile_one.edu_num - profile_two.edu_num
@@ -61,12 +70,30 @@ class Match < ApplicationRecord
       end
     end
     
-    # Matches based on age preferences of both users
-    def match_age
-      points = 0
-      points += 15 if profile_one.age_range.include? profile_two.age
-      points += 15 if profile_two.age_range.include? profile_one.age
-      points
+    # Compares substance use between users and returns difference
+    # Highest possible difference is 30
+    def match_substance_use
+      diff = 0
+      
+      if profile_one.drink_num >= profile_two.drink_num
+        diff += profile_one.drink_num - profile_two.drink_num
+      else
+        diff += profile_two.drink_num - profile_one.drink_num
+      end
+      
+      if profile_one.drugs_num >= profile_two.drugs_num
+        diff += profile_one.drugs_num - profile_two.drugs_num
+      else
+        diff += profile_two.drugs_num - profile_one.drugs_num
+      end
+      
+      if profile_one.smoke_num >= profile_two.smoke_num
+        diff += profile_one.smoke_num - profile_two.smoke_num
+      else
+        diff += profile_two.smoke_num - profile_one.smoke_num
+      end
+      
+      diff
     end
   
 end

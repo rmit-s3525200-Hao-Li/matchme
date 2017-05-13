@@ -68,6 +68,42 @@ class Profile < ApplicationRecord
     end
     num
   end
+  
+  # convert smoker status into numeric form
+  def smoke_num
+    num = 0
+    case smoke
+    when "sometimes"
+      num += 5
+    when "often"
+      num += 10
+    end
+    num
+  end
+  
+  # convert drink status into numeric form
+  def drink_num
+    num = 0
+    case drink
+    when "socially"
+      num += 5
+    when "often"
+      num += 10
+    end
+    num
+  end
+  
+  # convert drug use status into numeric form
+  def drugs_num
+    num = 0
+    case drugs
+    when "sometimes"
+      num += 5
+    when "often"
+      num += 10
+    end
+    num
+  end
 
   # return age
   def age(dob=self.date_of_birth)
