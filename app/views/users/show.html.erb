@@ -45,34 +45,39 @@
             </p>
           </div>
           <h5 class="accordion-title">Interests</h5>
-          <div class="accordion-content">
-            <% unless @profile.movies.blank? %>
-              <h6>Hobbies</h6>
-              <p><%= @profile.hobbies %></p>
-            <% end %>
-            <% unless @profile.movies.blank? %>
-              <h6>Movies</h6>
-              <p><%= @profile.movies %></p>
-            <% end %>
-            <% unless @profile.tv_shows.blank? %>
-              <h6>TV Shows</h6>
-              <p><%= @profile.tv_shows %></p>
-            <% end %>
-            <% unless @profile.books.blank? %>
-              <h6>Books</h6>
-              <p><%= @profile.books %></p>
-            <% end %>
-            <% unless @profile.games.blank? %>
-              <h6>Games</h6>
-              <p><%= @profile.games %></p>
-            <% end %>
-            <% unless @profile.sports.blank? %>
-              <h6>Sports</h6>
-              <p><%= @profile.sports %></p>
-            <% end %>
-          </div>
+            <div class="accordion-content">
+              <% if @profile.interests_array.all? { |a| a.empty? }%>
+                <p><%= @profile.name %> has not added any interests yet.</p>
+              <% else %>
+                <% unless @profile.movies.blank? %>
+                  <h6>Hobbies</h6>
+                  <p><%= @profile.hobbies %></p>
+                <% end %>
+                <% unless @profile.movies.blank? %>
+                  <h6>Movies</h6>
+                  <p><%= @profile.movies %></p>
+                <% end %>
+                <% unless @profile.tv_shows.blank? %>
+                  <h6>TV Shows</h6>
+                  <p><%= @profile.tv_shows %></p>
+                <% end %>
+                <% unless @profile.books.blank? %>
+                  <h6>Books</h6>
+                  <p><%= @profile.books %></p>
+                <% end %>
+                <% unless @profile.games.blank? %>
+                  <h6>Games</h6>
+                  <p><%= @profile.games %></p>
+                <% end %>
+                <% unless @profile.sports.blank? %>
+                  <h6>Sports</h6>
+                  <p><%= @profile.sports %></p>
+                <% end %>
+              <% end %>
+            </div>
         </div>
         <div class="four columns">
+          <div class="accordion-content">
           <h5 class="accordion-title">Profile</h5>
             <div>
               <dl class="text-align:left">
@@ -83,14 +88,20 @@
                 <% if !@profile.occupation.blank? %>
                   <p><strong>Occupation:</strong> <%= @profile.occupation %></p>
                 <% end %>
+                <% if !@profile.edu_status.blank? && !@profile.edu_type.blank? %>
+                  <p><strong>Education:</strong> <%= @profile.education %></p>
+                <% end %>
                 <% if !@profile.smoke.blank? %>
                   <p><strong>Smoke:</strong> <%= @profile.smoke %></p>
                 <% end %>
                 <% if !@profile.drink.blank? %>
                   <p><strong>Drink:</strong> <%= @profile.drink %></p>
                 <% end %>
-                <% if !@profile.edu_status.blank? && !@profile.edu_type.blank? %>
-                  <p><strong>Education:</strong> <%= @profile.education %></p>
+                <% if !@profile.drugs.blank? %>
+                  <p><strong>Drugs:</strong> <%= @profile.drugs %></p>
+                <% end %>
+                <% if !@profile.diet.blank? %>
+                  <p><strong>Diet:</strong> <%= @profile.diet %></p>
                 <% end %>
               </dl>
             </div>
@@ -115,9 +126,10 @@
                 </div>
               </div> <!-- left -->
             <% end%>
-        </div> <!-- four columns -->
-      </div> <!-- row -->
-    </div> <!-- main -->
+        </div> <!-- accordian-content -->
+      </div> <!-- four columns -->
+    </div> <!-- row -->
+  </div> <!-- main -->
   </section>
 <% end %> <!-- unless @user.admin? -->
   
