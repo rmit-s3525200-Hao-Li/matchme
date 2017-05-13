@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # Import json data
 # male-names.json and female-names.json downloaded from: https://github.com/AlessandroMinoccheri/human-names
 male_names_file = ActiveSupport::JSON.decode(File.read('db/json/male-names.json'))
@@ -296,7 +298,8 @@ john.create_profile!(first_name: "John",
                     movies: "The Avengers, The Dark Knight, Lord of the Rings",
                     tv_shows: "Firefly, Battlestar Galactica, The Expanse",
                     books: "The Hobbit, 1984, Dune, Ender's Game",
-                    picture: Rails.root.join("db/images/joe.jpeg").open)
+                    picture: Rails.root.join("db/images/joe.jpeg").open,
+                    self_summary: "In time, we all become that which we most hate. That explains how I became a plate of liver and onions.")
 
 # Naomi - Matches with John
 naomi = User.create!(email: "naomi@example.com",
@@ -328,7 +331,8 @@ naomi.create_profile!(first_name: "Naomi",
                     movies: "Whiplash, Pulp Ficiton, The Avengers",
                     tv_shows: "Firefly, Battlestar Galactica, The Expanse",
                     books: "The Hobbit, 1984, Dune, Ender's Game",
-                    picture: Rails.root.join("db/images/naomi.jpeg").open)
+                    picture: Rails.root.join("db/images/naomi.jpeg").open,
+                    self_summary: "I used to think I was indecisive, but now I’m not too sure.")
 
 # Jess - lower match for Joe than Naomi
 jess = User.create!(email: "jess@example.com",
@@ -360,7 +364,8 @@ jess.create_profile!(first_name: "Jess",
                     movies: "Fight Club, One Flew Over the Cuckoo's Nest, Casablanca, Interstellar",
                     tv_shows: "Planet Earth II, The Wire, Sherlock, One Punch Man",
                     books: "Catcher in the Rye, Them, No Logo, The Little Prince, Hyperspace",
-                    picture: Rails.root.join("db/images/jess.jpg").open)
+                    picture: Rails.root.join("db/images/jess.jpg").open,
+                    self_summary: "With me, boredom is always a thing of the past.")
 
 # Admin user
 User.create!(email: "admin@example.com",

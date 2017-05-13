@@ -16,5 +16,6 @@ module MatchMe
     # -- all .rb files in that directory are automatically loaded.
     config.assets.paths << Rails.root.join("app", "assets", "font")
     config.serve_static_assets = true
+    config.encoding = "utf-8"
   end
 end
