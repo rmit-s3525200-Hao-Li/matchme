@@ -18,12 +18,4 @@ module ApplicationHelper
     end
   end
   
-  # Display profile attributes
-  def display_attribute(key, attribute)
-    if !attribute.blank?
-      puts "<dt>#{key}</dt>"
-      puts "<dt>#{attribute}</dt>"
-    end
-  end
-  
 end
