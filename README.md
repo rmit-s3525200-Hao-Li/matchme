@@ -20,7 +20,7 @@ $ bundle install --without production
 $ sudo service postgresql start
 ```
 
-3. Install ImageMagick
+3. Install ImageMagick:
 
 ```
 sudo apt-get update
