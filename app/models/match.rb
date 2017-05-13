@@ -30,19 +30,19 @@ class Match < ApplicationRecord
       interests_two = profile_two.interests_array
       total_interests = profile_one.count_interests + profile_two.count_interests
       common_interests = interests_one.zip(interests_two).flat_map { |f, s| f & s }.count
-      ((common_interests.to_f / total_interests) * 100).round
+      ((common_interests.to_f / total_interests) * 80).round
     end
     
     # match percent based non-interests attributes
     def match_profile
       points = 0
       points += 5 if profile_one.occupation == profile_two.occupation
-      points +=10 if profile_one.religion == profile_two.religion
+      points +=15 if profile_one.religion == profile_two.religion
       points +=10 if profile_one.smoke == profile_two.smoke
       points +=10 if profile_one.drink == profile_two.drink
       points +=10 if profile_one.drugs == profile_two.drugs
       points +=10 if profile_one.diet == profile_two.diet
-      points +=25 if profile_one.looking_for == profile_two.looking_for
+      points +=30 if profile_one.looking_for == profile_two.looking_for
       points += match_age
       points -= match_education
       if points < 0
@@ -64,8 +64,8 @@ class Match < ApplicationRecord
     # Matches based on age preferences of both users
     def match_age
       points = 0
-      points += 10 if profile_one.age_range.include? profile_two.age
-      points += 10 if profile_two.age_range.include? profile_one.age
+      points += 15 if profile_one.age_range.include? profile_two.age
+      points += 15 if profile_two.age_range.include? profile_one.age
       points
     end
   
