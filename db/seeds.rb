@@ -2,22 +2,22 @@
 
 # Import json data
 # male-names.json and female-names.json downloaded from: https://github.com/AlessandroMinoccheri/human-names
-male_names_file = ActiveSupport::JSON.decode(File.read('db/json/male-names.json'))
-female_names_file = ActiveSupport::JSON.decode(File.read('db/json/female-names.json'))
-hobbies_file = ActiveSupport::JSON.decode(File.read('db/json/hobbies.json'))
-books_file = ActiveSupport::JSON.decode(File.read('db/json/books.json'))
-movies_file = ActiveSupport::JSON.decode(File.read('db/json/movies.json'))
-tv_shows_file = ActiveSupport::JSON.decode(File.read('db/json/tv-shows.json'))
-music_file = ActiveSupport::JSON.decode(File.read('db/json/music.json'))
-sports_file = ActiveSupport::JSON.decode(File.read('db/json/sports.json'))
-games_file = ActiveSupport::JSON.decode(File.read('db/json/games.json'))
+@male_names_file = ActiveSupport::JSON.decode(File.read('db/json/male-names.json'))
+@female_names_file = ActiveSupport::JSON.decode(File.read('db/json/female-names.json'))
+@hobbies_file = ActiveSupport::JSON.decode(File.read('db/json/hobbies.json'))
+@books_file = ActiveSupport::JSON.decode(File.read('db/json/books.json'))
+@movies_file = ActiveSupport::JSON.decode(File.read('db/json/movies.json'))
+@tv_shows_file = ActiveSupport::JSON.decode(File.read('db/json/tv-shows.json'))
+@music_file = ActiveSupport::JSON.decode(File.read('db/json/music.json'))
+@sports_file = ActiveSupport::JSON.decode(File.read('db/json/sports.json'))
+@games_file = ActiveSupport::JSON.decode(File.read('db/json/games.json'))
 
 # Password used for all users
 password = "foobar1"
 
 ###### RANDOMLY GENERATED USERS ######
 
-# Create 300 users
+# Create 200 users
 200.times do |n|
   email = "random-#{n+1}@example.com"
   User.create!(email: email,
@@ -25,143 +25,56 @@ password = "foobar1"
                 password_confirmation: password)
 end
 
-# Get users
-melbourne_users = User.where(id: 1..100)
-sydney_users = User.where(id: 101..200)
-
-# People in Melbourne
-melbourne_users.each do |m|
-  # Location
-  city = "Melbourne"
-  post_code = "3000"
-  country = "Australia"
-  
-  # Get name based on gender
-  gender = Choices['gender'].sample
-  if gender == "male"
-    first_name = male_names_file.sample
-  else
-    first_name = female_names_file.sample
-  end
-  
-  # Generate remaining profile attributes
-  last_name = Faker::Name.last_name
-  occupation = Faker::Company.profession
-  religion = Choices['religion'].sample
-  date_of_birth = Faker::Date.between(Date.new(1960, 1, 1), Date.new(1999, 1, 1))
-  smoke = Choices['smoke'].sample
-  drink = Choices['drink'].sample
-  drugs = Choices['drugs'].sample
-  diet = Choices['diet'].sample
-  looking_for = Choices['looking_for'].sample
-  preferred_gender = Choices['preferred_gender'].sample
-  nearby = [true, false].sample
-  edu_status = Choices['edu_status'].sample
-  edu_type = Choices['edu_type'].sample
-  self_summary = Faker::Hipster.paragraph
-  
-  ## Determine age range based on user age
-  now = Time.now.utc.to_date
-  age = now.year - date_of_birth.year - ((now.month > date_of_birth.month || 
-                  (now.month == date_of_birth.month && now.day >= date_of_birth.day)) ? 0 : 1)
-  if age > 22
-    min_age = age-5
-  else
-    min_age = age
-  end
-  max_age = age+10
-  
-  # Interests
-  hobbies = hobbies_file.sample(rand(1..5)).join(", ")
-  movies = movies_file.sample(rand(1..15)).join(", ")
-  tv_shows = tv_shows_file.sample(rand(1..15)).join(", ")
-  music = music_file.sample(rand(1..15)).join(", ")
-  books = books_file.sample(rand(1..15)).join(", ")
-  games = games_file.sample(rand(1..5)).join(", ")
-  sports = sports_file.sample(rand(1..5)).join(", ")
-  
-  m.create_profile!(first_name: first_name, 
-                    last_name: last_name,
-                    gender: gender,
-                    religion: religion,
-                    occupation: occupation,
-                    date_of_birth: date_of_birth,
-                    city: city,
-                    post_code: post_code,
-                    country: country,
-                    looking_for: looking_for,
-                    preferred_gender: preferred_gender,
-                    min_age: min_age,
-                    max_age: max_age,
-                    nearby: nearby,
-                    smoke: smoke,
-                    drink: drink,
-                    drugs: drugs,
-                    diet: diet,
-                    edu_status: edu_status,
-                    edu_type: edu_type,
-                    hobbies: hobbies,
-                    movies: movies,
-                    tv_shows: tv_shows,
-                    music: music,
-                    books: books,
-                    games: games,
-                    sports: sports,
-                    self_summary: self_summary)
-end
-
-# People in Sydney
-sydney_users.each do |s|
-  # Location
-  city = "Sydney"
-  post_code = "2000"
-  country = "Australia"
-  
-  # Get name based on gender
-  gender = Choices['gender'].sample
-  if gender == "male"
-    first_name = male_names_file.sample
-  else
-    first_name = female_names_file.sample
-  end
-  
-  # Generate remaining profile attributes
-  last_name = Faker::Name.last_name
-  occupation = Faker::Company.profession
-  religion = Choices['religion'].sample
-  date_of_birth = Faker::Date.between(Date.new(1960, 1, 1), Date.new(1999, 1, 1))
-  smoke = Choices['smoke'].sample
-  drink = Choices['drink'].sample
-  drugs = Choices['drugs'].sample
-  diet = Choices['diet'].sample
-  looking_for = Choices['looking_for'].sample
-  preferred_gender = Choices['preferred_gender'].sample
-  nearby = [true, false].sample
-  edu_status = Choices['edu_status'].sample
-  edu_type = Choices['edu_type'].sample
-  self_summary = Faker::Hipster.paragraph
-  
-  ## Determine age range based on user age
-  now = Time.now.utc.to_date
-  age = now.year - date_of_birth.year - ((now.month > date_of_birth.month || 
+# Profile generator method
+def generate_profiles(arr, city, post_code)
+  arr.each do |a|
+    # Get name based on gender
+    gender = Choices['gender'].sample
+    if gender == "male"
+      first_name = @male_names_file.sample
+    else
+      first_name = @female_names_file.sample
+    end
+    
+    ## Determine age range based on user age
+    date_of_birth = Faker::Date.between(Date.new(1960, 1, 1), Date.new(1999, 1, 1))
+    now = Time.now.utc.to_date
+    age = now.year - date_of_birth.year - ((now.month > date_of_birth.month || 
                     (now.month == date_of_birth.month && now.day >= date_of_birth.day)) ? 0 : 1)
-  if age > 22
-    min_age = age-5
-  else
-    min_age = age
-  end
-  max_age = age+10
-  
-  # Interests
-  hobbies = hobbies_file.sample(rand(1..5)).join(", ")
-  movies = movies_file.sample(rand(5..15)).join(", ")
-  tv_shows = tv_shows_file.sample(rand(5..15)).join(", ")
-  music = music_file.sample(rand(1..15)).join(", ")
-  books = books_file.sample(rand(1..10)).join(", ")
-  games = games_file.sample(rand(1..5)).join(", ")
-  sports = sports_file.sample(rand(1..5)).join(", ")
-  
-  s.create_profile!(first_name: first_name, 
+    if age > 22
+      min_age = age-5
+    else
+      min_age = age
+    end
+    max_age = age+10
+    
+    # Interests
+    hobbies = @hobbies_file.sample(rand(1..5)).join(", ")
+    movies = @movies_file.sample(rand(1..15)).join(", ")
+    tv_shows = @tv_shows_file.sample(rand(1..15)).join(", ")
+    music = @music_file.sample(rand(1..15)).join(", ")
+    books = @books_file.sample(rand(1..15)).join(", ")
+    games = @games_file.sample(rand(1..5)).join(", ")
+    sports = @sports_file.sample(rand(1..5)).join(", ")
+    
+    # Generate remaining profile attributes
+    country = "Australia"
+    last_name = Faker::Name.last_name
+    occupation = Faker::Company.profession
+    religion = Choices['religion'].sample
+    smoke = Choices['smoke'].sample
+    drink = Choices['drink'].sample
+    drugs = Choices['drugs'].sample
+    diet = Choices['diet'].sample
+    looking_for = Choices['looking_for'].sample
+    preferred_gender = Choices['preferred_gender'].sample
+    nearby = [true, false].sample
+    edu_status = Choices['edu_status'].sample
+    edu_type = Choices['edu_type'].sample
+    self_summary = Faker::Hipster.paragraph
+    
+    a.create_profile!(
+                    first_name: first_name, 
                     last_name: last_name,
                     gender: gender,
                     religion: religion,
@@ -189,11 +102,29 @@ sydney_users.each do |s|
                     games: games,
                     sports: sports,
                     self_summary: self_summary)
+  end
+  
 end
+
+# Decidely Melbourne users
+melbourne_users = User.where(id: 1..100)
+
+# Melbourne users will be matched to Hurtsbridge users if 'nearby' attribute is false
+hurstbridge_users = User.where(id: 101..150)
+
+# Melbourne users will not be matched to Sydney users
+# even if 'nearby' attribute is false
+sydney_users = User.where(id: 151..200)
+
+# Create profiles
+generate_profiles(melbourne_users, "Melbourne", "3000")
+generate_profiles(hurstbridge_users, "Hurstbridge", "3099")
+generate_profiles(sydney_users, "Sydney", "2000")
 
 ###### MANUALLY CREATED USERS ######
 
-# John user
+# John user - Matches to Naomi, lower match with Jess
+# Should match with Hurstbridge users
 john = User.create!(email: "john@example.com",
                     password: password,
                     password_confirmation: password)
@@ -212,7 +143,7 @@ john.create_profile!(first_name: "John",
                     preferred_gender: "female",
                     min_age: 22,
                     max_age: 32,
-                    nearby: true,
+                    nearby: false,
                     smoke: "not at all",
                     drink: "socially",
                     drugs: "never",
@@ -228,6 +159,7 @@ john.create_profile!(first_name: "John",
                     self_summary: "In time, we all become that which we most hate. That explains how I became a plate of liver and onions.")
 
 # Naomi - Matches with John
+# Should not match with Hurstbridge users
 naomi = User.create!(email: "naomi@example.com",
                     password: password,
                     password_confirmation: password)
@@ -273,14 +205,14 @@ jess.create_profile!(first_name: "Jess",
                     religion: "buddhist",
                     occupation: "accountant",
                     date_of_birth: Date.new(1989,1,1),
-                    city: "Melbourne",
-                    post_code: "3000",
+                    city: "Hurstbridge",
+                    post_code: "3099",
                     country: "Australia",
                     looking_for: "dating",
                     preferred_gender: "male",
                     min_age: 22,
                     max_age: 32,
-                    nearby: true,
+                    nearby: false,
                     smoke: "often",
                     drink: "not at all",
                     drugs: "sometimes",
