@@ -143,7 +143,7 @@ class Profile < ApplicationRecord
   
   # Check if location or gender attributes are updated
   def location_gender_updated?
-    [:post_code, :preferred_gender, :gender].any? do |attribute|
+    [:post_code, :preferred_gender, :gender, :nearby].any? do |attribute|
        __send__(:"#{attribute}_changed?")
     end
   end
