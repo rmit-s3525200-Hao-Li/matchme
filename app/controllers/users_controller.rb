@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   
   # Corresponds to view/users/index.html.erb
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.paginate(page: params[:page], per_page: 6)
   end
   
   # Corresponds to view/users/show.html.erb
