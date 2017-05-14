@@ -1,4 +1,3 @@
-<% # encoding: UTF-8 %>
 <%= provide(:title, @profile.name) %>
 <div class="inner page wide-style">
 
@@ -56,11 +55,11 @@
                 <% end %>
                 <% unless @profile.movies.blank? %>
                   <h6>Movies</h6>
-                  <p><%= @profile.movies.force_encoding("UTF-8") %></p>
+                  <p><%= @profile.movies %></p>
                 <% end %>
                 <% unless @profile.tv_shows.blank? %>
                   <h6>TV Shows</h6>
-                  <p><%= @profile.tv_shows.force_encoding("UTF-8") %></p>
+                  <p><%= @profile.tv_shows %></p>
                 <% end %>
                 <% unless @profile.music.blank? %>
                   <h6>Music</h6>
