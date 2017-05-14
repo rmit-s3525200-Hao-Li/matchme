@@ -55,11 +55,11 @@
                 <% end %>
                 <% unless @profile.movies.blank? %>
                   <h6>Movies</h6>
-                  <p><%= @profile.movies %></p>
+                  <p><%= @profile.movies.force_encoding("UTF-8") %></p>
                 <% end %>
                 <% unless @profile.tv_shows.blank? %>
                   <h6>TV Shows</h6>
-                  <p><%= @profile.tv_shows %></p>
+                  <p><%= @profile.tv_shows.force_encoding("UTF-8") %></p>
                 <% end %>
                 <% unless @profile.books.blank? %>
                   <h6>Books</h6>

@@ -71,9 +71,9 @@ melbourne_users.each do |m|
   
   # Interests
   hobbies = hobbies_file.sample(rand(1..5)).join(", ")
-  movies = movies_file.sample(rand(5..20)).join(", ")
-  tv_shows = tv_shows_file.sample(rand(5..20)).join(", ")
-  books = books_file.sample(rand(1..10)).join(", ")
+  movies = movies_file.sample(rand(1..15)).join(", ")
+  tv_shows = tv_shows_file.sample(rand(1..15)).join(", ")
+  books = books_file.sample(rand(1..15)).join(", ")
   games = games_file.sample(rand(1..5)).join(", ")
   sports = sports_file.sample(rand(1..5)).join(", ")
   
