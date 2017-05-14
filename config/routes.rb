@@ -19,4 +19,5 @@ Rails.application.routes.draw do
       get 'matches'
     end
   end
+  resources :relationships,       only: [:create, :destroy]
 end
