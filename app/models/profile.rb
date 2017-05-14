@@ -11,6 +11,9 @@ class Profile < ApplicationRecord
   # Check if certain attributes were changed, and updates matches accordingly
   after_update :check_changes
   
+  # Create name from first_name and last_name, for searching purposes
+  after_save :create_name
+  
   # CarrierWave method for image uploading
   mount_uploader :picture, PictureUploader
   
@@ -36,11 +39,6 @@ class Profile < ApplicationRecord
   # Geocoding to produce latitude and longitude
   geocoded_by :address
   after_validation :geocode
-  
-  # return string of first and last name
-  def name
-    "#{first_name} #{last_name}".titleize
-  end
   
   # turns education fields into single string
   def education
@@ -176,6 +174,12 @@ class Profile < ApplicationRecord
   end
   
   private
+  
+    # Create name
+    def create_name
+      name = "#{first_name} #{last_name}".titleize
+      self.update_column(:name, name)
+    end
   
     # Downcase occupation upon save
     def downcase_occupation

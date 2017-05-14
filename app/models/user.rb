@@ -60,6 +60,16 @@ class User < ApplicationRecord
     User.find(match_users)
   end
   
+  def self.search(search)
+    if search
+      profiles = Profile.where('lower(name) LIKE ?', "%#{search.downcase}%")
+      user_ids = profiles.pluck(:user_id)
+      self.find(user_ids)
+    else
+      self.all
+    end
+  end
+  
   private
   
     # Converts email to all lower-case
