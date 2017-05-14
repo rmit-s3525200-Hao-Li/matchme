@@ -88,6 +88,14 @@ $pink: #f00056;
     padding: 0 !important;
 }
 
+.search-form {
+  margin-bottom: 20px;
+  input[type="text"] {
+    display: inline;
+    width: 25%;
+  }
+}
+
 /* PAGINATION */
 
 .pagination {

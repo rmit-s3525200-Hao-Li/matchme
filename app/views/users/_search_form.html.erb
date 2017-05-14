@@ -1,6 +1,6 @@
-<%= form_tag users_path, method: 'get' do %>
-<p>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", name: nil %>
-</p>
-<% end %>
+<div class="search-form">
+  <%= form_tag users_path, method: 'get' do %>
+    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Jane Doe' %>
+    <%= submit_tag "Search", name: nil, class: 'btn btn-primary' %>
+  <% end %>
+</div>

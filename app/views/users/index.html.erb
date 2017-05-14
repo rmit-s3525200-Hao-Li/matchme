@@ -1,11 +1,10 @@
 <% provide(:title, 'Users') %>
 
-	<div id="main" class="search-result text-center">
+	<div id="main" class="search-result">
   	<div class="row">
-     <div class="twelve columns">
+     <div class="twelve columns text-center">
+       <h1>Users Index</h1>
        <%= render 'search_form' %>
-       <%= will_paginate(@users, :renderer => WillPaginate::ActionView::LinkRenderer) %>
-       <h1>Users Index</h1>   
        <%= render @users %>
        <%= will_paginate(@users, :renderer => WillPaginate::ActionView::LinkRenderer) %>
      </div> 
