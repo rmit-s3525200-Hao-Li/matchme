@@ -198,7 +198,7 @@ class Profile < ApplicationRecord
     
     # Returns profiles either 15 or 50 miles away (or anywhere)
     def match_location
-      if self.nearby = true && self.nearbys(15).any?
+      if self.nearby == true && self.nearbys(15).any?
         profiles = self.nearbys(15, {order: ""} )
       else
         profiles = self.nearbys(50, {order: ""} )
