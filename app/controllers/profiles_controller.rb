@@ -42,7 +42,7 @@ class ProfilesController < ApplicationController
     end
   
     def profile_params
-      params.require(:profile).permit(:first_name, :last_name, :gender, :date_of_birth, :occupation, :religion, :smoke, :drink, :drugs, :diet, :education, :self_summary, :hobbies, :movies, :tv_shows, :books, :games, :sports, :picture, :city, :post_code, :country, :looking_for, :preferred_gender, :nearby, :min_age, :max_age, :edu_status, :edu_type)
+      params.require(:profile).permit(:first_name, :last_name, :gender, :date_of_birth, :occupation, :religion, :smoke, :drink, :drugs, :diet, :education, :self_summary, :hobbies, :movies, :tv_shows, :music, :books, :games, :sports, :picture, :city, :post_code, :country, :looking_for, :preferred_gender, :nearby, :min_age, :max_age, :edu_status, :edu_type)
     end
     
     # Confirms the correct user.

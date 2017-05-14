@@ -10,7 +10,12 @@ class StaticPagesController < ApplicationController
   
     def redirect_logged_in_user
       if logged_in?
-        redirect_to matches_user_path(current_user)
+        if current_user.admin?
+          redirect_to users_path
+        else
+          redirect_to matches_user_path(current_user)
+        end
       end
     end
+    
 end

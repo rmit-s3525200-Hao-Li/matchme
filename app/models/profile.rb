@@ -118,7 +118,7 @@ class Profile < ApplicationRecord
   
   # takes all interests and creates a nested array
   def interests_array
-    attributes = [hobbies, movies, tv_shows, books, games, sports]
+    attributes = [hobbies, movies, music, tv_shows, books, games, sports]
     interests = Array.new
     attributes.each do |a|
       if !a.blank?
@@ -139,14 +139,6 @@ class Profile < ApplicationRecord
   # Creates array from min and max age
   def age_range
     (min_age..max_age).to_a
-  end
-  
-  def gender_array
-    if self.preferred_gender == "both"
-      ["male", "female"]
-    else
-      [self.preferred_gender]
-    end
   end
   
   # Check if location or gender attributes are updated
