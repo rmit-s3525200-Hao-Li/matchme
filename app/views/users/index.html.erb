@@ -3,13 +3,7 @@
 	<div id="main" class="search-result text-center">
   	<div class="row">
      <div class="twelve columns">
-       <!-- User search form -->
-       <%= form_tag users_path, method: 'get' do %>
-        <p>
-          <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "Search", name: nil %>
-        </p>
-       <% end %>
+       <%= render 'search_form' %>
        <%= will_paginate(@users, :renderer => WillPaginate::ActionView::LinkRenderer) %>
        <h1>Users Index</h1>   
        <%= render @users %>
