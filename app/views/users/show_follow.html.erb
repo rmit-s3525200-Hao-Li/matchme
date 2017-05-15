@@ -9,6 +9,9 @@
 	<div id="main">
   	<div class="row">
   	  <h5 class="accordion-title left"><%= @title %></h5>
+  	        <%= link_to(current_user) do %>
+            <button class="btn btn-sm btn-primary right">My profile</button>
+          <% end %>
   	    <div class = "text-center">
   	  <!-- People this user has liked -->
   	  <% if @users.any? %>

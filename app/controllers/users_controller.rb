@@ -85,14 +85,14 @@ class UsersController < ApplicationController
   
   def following
     @profile = @user.profile
-    @title = "Following"
+    @title = "Likes"
     @users = @user.following.paginate(page: params[:page], per_page: 6)
     render 'show_follow'
   end
 
   def followers
     @profile = @user.profile
-    @title = "Followers"
+    @title = "Liked By"
     @users = @user.followers.paginate(page: params[:page], per_page: 6)
     render 'show_follow'
   end

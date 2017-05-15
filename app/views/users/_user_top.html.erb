@@ -12,6 +12,9 @@
       </div>
       <div class="eight columns">
         <h2 class="sweetfont left"><%=@profile.name %> </h2>
+        <secction class="right">
+          <%= render 'follow_form' if logged_in? %>
+        </secction>
         <hr>
         <% unless @user.admin? %>
           <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>
@@ -19,11 +22,12 @@
         <% if @user != current_user && has_match?(@user, @matches) %>
           <h3 class="pink-text"><%= get_match_percent(@user, @matches) %>% match</h3>
           <% else %>
-          <section class="stats right">
+          <section class="stats">
             <%= render 'shared/stats' %>
           </section>
         <% end %>
-        <%= render 'follow_form' if logged_in? %>
+        
+       
       </div>
     </div>
   </div>
