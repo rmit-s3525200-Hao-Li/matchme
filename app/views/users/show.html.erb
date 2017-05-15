@@ -1,6 +1,5 @@
 <%= provide(:title, @profile.name) %>
 <div class="inner page wide-style">
-
 <section>
   <div id="profile">
     <div class="row">
@@ -34,9 +33,22 @@
 </section>
 
 <% unless @user.admin? %>
-  <section>
+
   	<div id="main">
+  	  
     	<div class="row">
+    	  <ul id="myTab" class="nav nav-tabs">
+    <li class="active">
+        <a href="#home" data-toggle="tab">
+            Self-summary
+        </a>
+    </li>
+    <li><a href="#likes" data-toggle="tab">Likes</a></li>
+    <li><a href="#liked-by" data-toggle="tab">Liked by</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade in active" id="home">
+      <section>
         <div class="eight columns">
           
           <h5 class="accordion-title">Self-summary</h5>
@@ -124,9 +136,18 @@
             <% end%>
         </div> <!-- four columns -->
       </div> <!-- row -->
+      <div class="tab-pane fade" id="likes">
+        <h1>Likes</h1>
+    </div>
+    <div class="tab-pane fade" id="liked-by">
+        <h1>Liked by</h1>
+    </div>
     </div> <!-- main -->
   </section>
 <% end %> <!-- unless @user.admin? -->
+  </div>
+</div>
+  
   
  
 
