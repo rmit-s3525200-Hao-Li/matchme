@@ -1,144 +1,23 @@
 <%= provide(:title, @profile.name) %>
 <div class="inner page wide-style">
 
-<section>
-  <div id="profile">
-    <div class="row">
-      <div class="four columns">
-      <% if @profile.picture? %>
-          <%= link_to '#', data: { toggle: "modal", target: ".bs-example-modal-lg" } do %>
-            <%= display_thumbnail(@profile) %>
-          <% end %>
-        <% else %>
-          <%= display_thumbnail(@profile) %>
-        <% end %>
-      </div>
-      <div class="eight columns">
-        <h2 class="sweetfont left"><%=@profile.name %> </h2>
-        <hr>
-        <% unless @user.admin? %>
-          <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>
-        <% end %>
-        <% if @user != current_user && has_match?(@user, @matches) %>
-          <h3 class="pink-text"><%= get_match_percent(@user, @matches) %>% match</h3>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- User profile pic, name, age, location-->
+<%= render 'user_top' %>
 
-<% unless @user.admin? %>
-  <section>
-  	<div id="main">
-    	<div class="row">
-        <div class="eight columns">
-          <h5 class="accordion-title">Self-summary</h5>
-          <div class="accordion-content">
-            <p>
-              <div>
-                <% if @profile.self_summary.blank? %>
-                  <p><%= @profile.name %> has not written a self-summary yet.</p>
-                <% else %>
-                  <p><%= @profile.self_summary %></p>
-                <% end %>
-              </div>
-            </p>
-          </div>
-          <h5 class="accordion-title">Interests</h5>
-            <div class="accordion-content">
-              <% if @profile.interests_array.all? { |a| a.empty? }%>
-                <p><%= @profile.name %> has not added any interests yet.</p>
-              <% else %>
-                <% unless @profile.movies.blank? %>
-                  <h6>Hobbies</h6>
-                  <p><%= @profile.hobbies %></p>
-                <% end %>
-                <% unless @profile.movies.blank? %>
-                  <h6>Movies</h6>
-                  <p><%= @profile.movies %></p>
-                <% end %>
-                <% unless @profile.tv_shows.blank? %>
-                  <h6>TV Shows</h6>
-                  <p><%= @profile.tv_shows %></p>
-                <% end %>
-                <% unless @profile.music.blank? %>
-                  <h6>Music</h6>
-                  <p><%= @profile.music %></p>
-                <% end %>
-                <% unless @profile.books.blank? %>
-                  <h6>Books</h6>
-                  <p><%= @profile.books %></p>
-                <% end %>
-                <% unless @profile.games.blank? %>
-                  <h6>Games</h6>
-                  <p><%= @profile.games %></p>
-                <% end %>
-                <% unless @profile.sports.blank? %>
-                  <h6>Sports</h6>
-                  <p><%= @profile.sports %></p>
-                <% end %>
-              <% end %>
-            </div>
-        </div>
-        <div class="four columns">
-          <div class="accordion-content">
-          <h5 class="accordion-title">Profile</h5>
-            <div>
-              <dl class="text-align:left">
-                <p><strong>Gender:</strong> <%= @profile.gender %></p>
-                <% if !@profile.religion.blank? %>
-                  <p><strong>Religion:</strong> <%= @profile.religion %></p>
-                <% end %>
-                <% if !@profile.occupation.blank? %>
-                  <p><strong>Occupation:</strong> <%= @profile.occupation %></p>
-                <% end %>
-                <% if !@profile.edu_status.blank? && !@profile.edu_type.blank? %>
-                  <p><strong>Education:</strong> <%= @profile.education %></p>
-                <% end %>
-                <% if !@profile.smoke.blank? %>
-                  <p><strong>Smoke:</strong> <%= @profile.smoke %></p>
-                <% end %>
-                <% if !@profile.drink.blank? %>
-                  <p><strong>Drink:</strong> <%= @profile.drink %></p>
-                <% end %>
-                <% if !@profile.drugs.blank? %>
-                  <p><strong>Drugs:</strong> <%= @profile.drugs %></p>
-                <% end %>
-                <% if !@profile.diet.blank? %>
-                  <p><strong>Diet:</strong> <%= @profile.diet %></p>
-                <% end %>
-              </dl>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-body none-padding">
-                <p>Looking for
-                <% if @profile.preferred_gender == "both" %>
-                  Both men and women
-                <% else %>
-                  <%= "a #{@profile.preferred_gender}" %>
-                <% end %>
-                <% if @profile.nearby == true %>near me,<% end %>
-                <%= " ages #{@profile.min_age} to #{@profile.max_age} for #{@profile.looking_for.downcase}." %></p>
-              </div>
-            </div>
-            <% if current_user?(@user) %>
-              <div class="left">
-                <div>
-                  <%= link_to(edit_user_profiles_path(current_user)) do %>
-                    <button class="btn btn-lg btn-primary">Edit profile</button>
-                  <% end %>
-                </div>
-              </div> <!-- left -->
-            <% end%>
-        </div> <!-- accordian-content -->
-      </div> <!-- four columns -->
+<section>
+	<div id="main">
+  	<div class="row">
+  	  <!-- User hobbies and interests -->
+  	  <%= render 'interests' %>
+  	  
+  	  <!-- User education, diet, religion, etc -->
+      <%= render 'profile' %>
     </div> <!-- row -->
   </div> <!-- main -->
-  </section>
-<% end %> <!-- unless @user.admin? -->
-  
- 
+</section>
 
+
+<!-- Profile picture Boostrap model (pop up) -->
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">

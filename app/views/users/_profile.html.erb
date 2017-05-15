@@ -1,0 +1,52 @@
+<div class="four columns">
+  <div class="accordion-content">
+    <h5 class="accordion-title">Profile</h5>
+    <div>
+      <dl class="text-align:left">
+        <p><strong>Gender:</strong> <%= @profile.gender %></p>
+        <% if !@profile.religion.blank? %>
+          <p><strong>Religion:</strong> <%= @profile.religion %></p>
+        <% end %>
+        <% if !@profile.occupation.blank? %>
+          <p><strong>Occupation:</strong> <%= @profile.occupation %></p>
+        <% end %>
+        <% if !@profile.edu_status.blank? && !@profile.edu_type.blank? %>
+          <p><strong>Education:</strong> <%= @profile.education %></p>
+        <% end %>
+        <% if !@profile.smoke.blank? %>
+          <p><strong>Smoke:</strong> <%= @profile.smoke %></p>
+        <% end %>
+        <% if !@profile.drink.blank? %>
+          <p><strong>Drink:</strong> <%= @profile.drink %></p>
+        <% end %>
+        <% if !@profile.drugs.blank? %>
+          <p><strong>Drugs:</strong> <%= @profile.drugs %></p>
+        <% end %>
+        <% if !@profile.diet.blank? %>
+          <p><strong>Diet:</strong> <%= @profile.diet %></p>
+        <% end %>
+      </dl>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body none-padding">
+        <p>Looking for
+        <% if @profile.preferred_gender == "both" %>
+          Both men and women
+        <% else %>
+          <%= "a #{@profile.preferred_gender}" %>
+        <% end %>
+        <% if @profile.nearby == true %>near me,<% end %>
+        <%= " ages #{@profile.min_age} to #{@profile.max_age} for #{@profile.looking_for.downcase}." %></p>
+      </div>
+    </div>
+    <% if current_user?(@user) %>
+      <div class="left">
+        <div>
+          <%= link_to(edit_user_profiles_path(current_user)) do %>
+            <button class="btn btn-lg btn-primary">Edit profile</button>
+          <% end %>
+        </div>
+      </div> <!-- left -->
+    <% end%>
+  </div> <!-- accordian-content -->
+</div> <!-- four columns -->

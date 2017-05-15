@@ -1,0 +1,51 @@
+<div class="eight columns">
+  <!-- Self Summary -->
+  <h5 class="accordion-title">Self-summary</h5>
+  <div class="accordion-content">
+    <p>
+      <div>
+        <% if @profile.self_summary.blank? %>
+          <p><%= @profile.name %> has not written a self-summary yet.</p>
+        <% else %>
+          <p><%= @profile.self_summary %></p>
+        <% end %>
+      </div>
+    </p>
+  </div>
+  <!-- Interests -->
+  <h5 class="accordion-title">Interests</h5>
+    <div class="accordion-content">
+      <% if @profile.interests_array.all? { |a| a.empty? }%>
+        <p><%= @profile.name %> has not added any interests yet.</p>
+      <% else %>
+        <% unless @profile.movies.blank? %>
+          <h6>Hobbies</h6>
+          <p><%= @profile.hobbies %></p>
+        <% end %>
+        <% unless @profile.movies.blank? %>
+          <h6>Movies</h6>
+          <p><%= @profile.movies %></p>
+        <% end %>
+        <% unless @profile.tv_shows.blank? %>
+          <h6>TV Shows</h6>
+          <p><%= @profile.tv_shows %></p>
+        <% end %>
+        <% unless @profile.music.blank? %>
+          <h6>Music</h6>
+          <p><%= @profile.music %></p>
+        <% end %>
+        <% unless @profile.books.blank? %>
+          <h6>Books</h6>
+          <p><%= @profile.books %></p>
+        <% end %>
+        <% unless @profile.games.blank? %>
+          <h6>Games</h6>
+          <p><%= @profile.games %></p>
+        <% end %>
+        <% unless @profile.sports.blank? %>
+          <h6>Sports</h6>
+          <p><%= @profile.sports %></p>
+        <% end %>
+      <% end %>
+    </div>
+</div>
