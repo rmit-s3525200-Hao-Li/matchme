@@ -15,7 +15,8 @@
       </div>
       <div class="eight columns">
         <h2 class="sweetfont left"><%=@profile.name %> </h2>
-      <section class="stats right">
+        
+        <section class="stats right">
         <%= render 'shared/stats' %>
       </section>
         <hr>
@@ -25,9 +26,9 @@
         <% if @user != current_user && has_match?(@user, @matches) %>
           <h3 class="pink-text"><%= get_match_percent(@user, @matches) %>% match</h3>
         <% end %>
+        <%= render 'follow_form' if logged_in? %>
       </div>
-      
-    
+       
     </div>
   </div>
 </section>
@@ -37,6 +38,7 @@
   	<div id="main">
     	<div class="row">
         <div class="eight columns">
+          
           <h5 class="accordion-title">Self-summary</h5>
           <div class="accordion-content">
             <p>
