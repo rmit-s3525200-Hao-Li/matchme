@@ -18,7 +18,12 @@
         <% end %>
         <% if @user != current_user && has_match?(@user, @matches) %>
           <h3 class="pink-text"><%= get_match_percent(@user, @matches) %>% match</h3>
+          <% else %>
+          <section class="stats right">
+            <%= render 'shared/stats' %>
+          </section>
         <% end %>
+        <%= render 'follow_form' if logged_in? %>
       </div>
     </div>
   </div>
