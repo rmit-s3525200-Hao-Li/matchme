@@ -15,6 +15,9 @@
       </div>
       <div class="eight columns">
         <h2 class="sweetfont left"><%=@profile.name %> </h2>
+        <section class="stats right">
+        <%= render 'shared/stats' %>
+      </section>
         <hr>
         <% unless @user.admin? %>
           <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>
@@ -22,15 +25,17 @@
         <% if @user != current_user && has_match?(@user, @matches) %>
           <h3 class="pink-text"><%= get_match_percent(@user, @matches) %>% match</h3>
         <% end %>
+         <%= render 'follow_form' if logged_in? %>
       </div>
     </div>
   </div>
 </section>
 
-<% unless @user.admin? %>
+
   <section>
   	<div id="main">
     	<div class="row">
+    
         <div class="eight columns">
           <h5 class="accordion-title">Self-summary</h5>
           <div class="accordion-content">
@@ -79,9 +84,9 @@
                 <% end %>
               <% end %>
             </div>
-        </div>
+        </div><!-- end eight columns -->
         <div class="four columns">
-          <div class="accordion-content">
+        
           <h5 class="accordion-title">Profile</h5>
             <div>
               <dl class="text-align:left">
@@ -124,53 +129,17 @@
             <% if current_user?(@user) %>
               <div class="left">
                 <div>
-                  <%= link_to(edit_user_profiles_path(current_user)) do %>
+                  
                     <button class="btn btn-lg btn-primary">Edit profile</button>
+                    <%= link_to(edit_user_profiles_path(current_user)) do %>
                   <% end %>
                 </div>
               </div> <!-- left -->
-            <% end%>
-        </div> <!-- four columns -->
-      </div> <!-- row -->
-      <div class="tab-pane fade" id="likes">
-        <h1>Likes</h1>
-    </div>
-    <div class="tab-pane fade" id="liked-by">
-        <h1>Liked by</h1>
-    </div>
+            <% end %>
+       
+     
     </div> <!-- main -->
   </section>
-<% end %> <!-- unless @user.admin? -->
-                <% end %>
-                <% if @profile.nearby == true %>near me,<% end %>
-                <%= " ages #{@profile.min_age} to #{@profile.max_age} for #{@profile.looking_for.downcase}." %></p>
-              </div>
-            </div>
-            <% if current_user?(@user) %>
-              <div class="left">
-                <div>
-                  <%= link_to(edit_user_profiles_path(current_user)) do %>
-                    <button class="btn btn-lg btn-primary">Edit profile</button>
-                  <% end %>
-                </div>
-              </div> <!-- left -->
-            <% end%>
-        </div> <!-- four columns -->
-      </div> <!-- row -->
-      <div class="tab-pane fade" id="likes">
-        <h1>Likes</h1>
-    </div>
-    <div class="tab-pane fade" id="liked-by">
-        <h1>Liked by</h1>
-    </div>
-    </div> <!-- main -->
-  </section>
-<% end %> <!-- unless @user.admin? -->
-  </div>
-</div>
-  
-  
- 
 
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
