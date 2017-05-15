@@ -1,11 +1,12 @@
 
 default: &default
   adapter: postgresql
-  encoding: SQL_ASCII
+  encoding: UTF8
   pool: 5
   username: ubuntu
   password: password
   host:     <%= ENV['IP'] %>
+  template: template0
 
 development:
   <<: *default

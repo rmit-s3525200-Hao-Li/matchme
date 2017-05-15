@@ -1,5 +1,6 @@
 <%= provide(:title, @profile.name) %>
 <div class="inner page wide-style">
+
 <section>
   <div id="profile">
     <div class="row">
@@ -14,10 +15,6 @@
       </div>
       <div class="eight columns">
         <h2 class="sweetfont left"><%=@profile.name %> </h2>
-        
-        <section class="stats right">
-        <%= render 'shared/stats' %>
-      </section>
         <hr>
         <% unless @user.admin? %>
           <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>
@@ -25,33 +22,16 @@
         <% if @user != current_user && has_match?(@user, @matches) %>
           <h3 class="pink-text"><%= get_match_percent(@user, @matches) %>% match</h3>
         <% end %>
-        <%= render 'follow_form' if logged_in? %>
       </div>
-       
     </div>
   </div>
 </section>
 
 <% unless @user.admin? %>
-
+  <section>
   	<div id="main">
-  	  
     	<div class="row">
-    	  <ul id="myTab" class="nav nav-tabs">
-    <li class="active">
-        <a href="#home" data-toggle="tab">
-            Self-summary
-        </a>
-    </li>
-    <% @user ||= current_user %>
-    <li><a href="#likes" data-toggle="tab">Likes(<%= @user.following.count %>)</a></li>
-    <li><a href="#liked-by" data-toggle="tab">Liked by(<%= @user.followers.count %>)</a></li>
-</ul>
-<div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade in active" id="home">
-      <section>
         <div class="eight columns">
-          
           <h5 class="accordion-title">Self-summary</h5>
           <div class="accordion-content">
             <p>
@@ -65,34 +45,43 @@
             </p>
           </div>
           <h5 class="accordion-title">Interests</h5>
-          <div class="accordion-content">
-            <% unless @profile.movies.blank? %>
-              <h6>Hobbies</h6>
-              <p><%= @profile.hobbies %></p>
-            <% end %>
-            <% unless @profile.movies.blank? %>
-              <h6>Movies</h6>
-              <p><%= @profile.movies %></p>
-            <% end %>
-            <% unless @profile.tv_shows.blank? %>
-              <h6>TV Shows</h6>
-              <p><%= @profile.tv_shows %></p>
-            <% end %>
-            <% unless @profile.books.blank? %>
-              <h6>Books</h6>
-              <p><%= @profile.books %></p>
-            <% end %>
-            <% unless @profile.games.blank? %>
-              <h6>Games</h6>
-              <p><%= @profile.games %></p>
-            <% end %>
-            <% unless @profile.sports.blank? %>
-              <h6>Sports</h6>
-              <p><%= @profile.sports %></p>
-            <% end %>
-          </div>
+            <div class="accordion-content">
+              <% if @profile.interests_array.all? { |a| a.empty? }%>
+                <p><%= @profile.name %> has not added any interests yet.</p>
+              <% else %>
+                <% unless @profile.movies.blank? %>
+                  <h6>Hobbies</h6>
+                  <p><%= @profile.hobbies %></p>
+                <% end %>
+                <% unless @profile.movies.blank? %>
+                  <h6>Movies</h6>
+                  <p><%= @profile.movies %></p>
+                <% end %>
+                <% unless @profile.tv_shows.blank? %>
+                  <h6>TV Shows</h6>
+                  <p><%= @profile.tv_shows %></p>
+                <% end %>
+                <% unless @profile.music.blank? %>
+                  <h6>Music</h6>
+                  <p><%= @profile.music %></p>
+                <% end %>
+                <% unless @profile.books.blank? %>
+                  <h6>Books</h6>
+                  <p><%= @profile.books %></p>
+                <% end %>
+                <% unless @profile.games.blank? %>
+                  <h6>Games</h6>
+                  <p><%= @profile.games %></p>
+                <% end %>
+                <% unless @profile.sports.blank? %>
+                  <h6>Sports</h6>
+                  <p><%= @profile.sports %></p>
+                <% end %>
+              <% end %>
+            </div>
         </div>
         <div class="four columns">
+          <div class="accordion-content">
           <h5 class="accordion-title">Profile</h5>
             <div>
               <dl class="text-align:left">
@@ -103,14 +92,20 @@
                 <% if !@profile.occupation.blank? %>
                   <p><strong>Occupation:</strong> <%= @profile.occupation %></p>
                 <% end %>
+                <% if !@profile.edu_status.blank? && !@profile.edu_type.blank? %>
+                  <p><strong>Education:</strong> <%= @profile.education %></p>
+                <% end %>
                 <% if !@profile.smoke.blank? %>
                   <p><strong>Smoke:</strong> <%= @profile.smoke %></p>
                 <% end %>
                 <% if !@profile.drink.blank? %>
                   <p><strong>Drink:</strong> <%= @profile.drink %></p>
                 <% end %>
-                <% if !@profile.edu_status.blank? && !@profile.edu_type.blank? %>
-                  <p><strong>Education:</strong> <%= @profile.education %></p>
+                <% if !@profile.drugs.blank? %>
+                  <p><strong>Drugs:</strong> <%= @profile.drugs %></p>
+                <% end %>
+                <% if !@profile.diet.blank? %>
+                  <p><strong>Diet:</strong> <%= @profile.diet %></p>
                 <% end %>
               </dl>
             </div>
@@ -121,6 +116,31 @@
                   Both men and women
                 <% else %>
                   <%= "a #{@profile.preferred_gender}" %>
+                <% end %>
+                <% if @profile.nearby == true %>near me,<% end %>
+                <%= " ages #{@profile.min_age} to #{@profile.max_age} for #{@profile.looking_for.downcase}." %></p>
+              </div>
+            </div>
+            <% if current_user?(@user) %>
+              <div class="left">
+                <div>
+                  <%= link_to(edit_user_profiles_path(current_user)) do %>
+                    <button class="btn btn-lg btn-primary">Edit profile</button>
+                  <% end %>
+                </div>
+              </div> <!-- left -->
+            <% end%>
+        </div> <!-- four columns -->
+      </div> <!-- row -->
+      <div class="tab-pane fade" id="likes">
+        <h1>Likes</h1>
+    </div>
+    <div class="tab-pane fade" id="liked-by">
+        <h1>Liked by</h1>
+    </div>
+    </div> <!-- main -->
+  </section>
+<% end %> <!-- unless @user.admin? -->
                 <% end %>
                 <% if @profile.nearby == true %>near me,<% end %>
                 <%= " ages #{@profile.min_age} to #{@profile.max_age} for #{@profile.looking_for.downcase}." %></p>

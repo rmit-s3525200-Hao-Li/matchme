@@ -388,6 +388,7 @@ DEPENDENCIES
   guard-minitest (= 2.4.4)
   jbuilder (= 2.4.1)
   jquery-rails (= 4.1.1)
+  json
   listen (= 3.0.8)
   mini_magick (= 4.5.1)
   minitest-reporters (= 1.1.9)

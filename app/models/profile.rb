@@ -11,11 +11,13 @@ class Profile < ApplicationRecord
   # Check if certain attributes were changed, and updates matches accordingly
   after_update :check_changes
   
+  # Create name from first_name and last_name, for searching purposes
+  after_save :create_name
+  
   # CarrierWave method for image uploading
   mount_uploader :picture, PictureUploader
   
   # Validations for required fields
-  # validates(:user_id, presence: true)
   validates :first_name, presence: true, length: { maximum: 25 }
   validates :last_name, presence: true, length:  { maximum: 25 }
   
@@ -37,11 +39,6 @@ class Profile < ApplicationRecord
   # Geocoding to produce latitude and longitude
   geocoded_by :address
   after_validation :geocode
-  
-  # return string of first and last name
-  def name
-    "#{first_name} #{last_name}".titleize
-  end
   
   # turns education fields into single string
   def education
@@ -69,6 +66,42 @@ class Profile < ApplicationRecord
     end
     num
   end
+  
+  # convert smoker status into numeric form
+  def smoke_num
+    num = 0
+    case smoke
+    when "sometimes"
+      num += 5
+    when "often"
+      num += 10
+    end
+    num
+  end
+  
+  # convert drink status into numeric form
+  def drink_num
+    num = 0
+    case drink
+    when "socially"
+      num += 5
+    when "often"
+      num += 10
+    end
+    num
+  end
+  
+  # convert drug use status into numeric form
+  def drugs_num
+    num = 0
+    case drugs
+    when "sometimes"
+      num += 5
+    when "often"
+      num += 10
+    end
+    num
+  end
 
   # return age
   def age(dob=self.date_of_birth)
@@ -83,11 +116,11 @@ class Profile < ApplicationRecord
   
   # takes all interests and creates a nested array
   def interests_array
-    attributes = [hobbies, movies, tv_shows, books, games, sports]
+    attributes = [hobbies, movies, music, tv_shows, books, games, sports]
     interests = Array.new
     attributes.each do |a|
       if !a.blank?
-        a.titleize
+        a.downcase
         interests.push(a.split(/\s*,\s*/))
       else
         interests.push([])
@@ -106,17 +139,9 @@ class Profile < ApplicationRecord
     (min_age..max_age).to_a
   end
   
-  def gender_array
-    if self.preferred_gender == "both"
-      ["male", "female"]
-    else
-      [self.preferred_gender]
-    end
-  end
-  
   # Check if location or gender attributes are updated
   def location_gender_updated?
-    [:post_code, :preferred_gender, :gender].any? do |attribute|
+    [:post_code, :preferred_gender, :gender, :nearby].any? do |attribute|
        __send__(:"#{attribute}_changed?")
     end
   end
@@ -150,6 +175,12 @@ class Profile < ApplicationRecord
   
   private
   
+    # Create name
+    def create_name
+      name = "#{first_name} #{last_name}".titleize
+      self.update_column(:name, name)
+    end
+  
     # Downcase occupation upon save
     def downcase_occupation
       self.occupation.downcase!
@@ -171,7 +202,7 @@ class Profile < ApplicationRecord
     
     # Returns profiles either 15 or 50 miles away (or anywhere)
     def match_location
-      if self.nearby = true && self.nearbys(15).any?
+      if self.nearby == true && self.nearbys(15).any?
         profiles = self.nearbys(15, {order: ""} )
       else
         profiles = self.nearbys(50, {order: ""} )

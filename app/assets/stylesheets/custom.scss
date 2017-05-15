@@ -3,6 +3,20 @@
 
 $pink: #f00056;
 
+/* HEADER */
+
+h1.logo {
+  font-family: Raleway, sans-serif !important;
+  font-size: 1.6em;
+  line-height: 130%;
+  span {
+    display: block;
+    font-size: 2.4em;
+  }
+}
+
+/* ERRORS */
+
 .query_rule {color:#000;}
 
 .debug_dump {
@@ -15,7 +29,7 @@ $pink: #f00056;
   box-sizing: border-box;
 }
 
-/* forms */
+/* HEADER */
 
 #error_explanation {
   color: red;
@@ -45,15 +59,15 @@ $pink: #f00056;
   border:solid 2px #ffffff;
 } 
 
-/* Users index */
+/* USERS INDEX */
 
 .user {
   display: inline-block;
   vertical-align: top;
   border: 1px solid #BFBFBF;
-  width: 30%;
-  margin: 5% 2%;
-  padding: 5%;
+  width: 25%;
+  margin: 2% 2%;
+  padding: 2%;
   text-align: center;
 }
 
@@ -63,10 +77,25 @@ $pink: #f00056;
  margin-left: auto;
  margin-right: auto;
 }
+
 .text-center {
  text-align: center;
 }
 
 .none-padding {
     padding: 0 !important;
+}
+
+.search-form {
+  margin-bottom: 20px;
+  input[type="text"] {
+    display: inline;
+    width: 25%;
+  }
+}
+
+/* PAGINATION */
+
+.pagination {
+  font-size: 1.5em;
 }

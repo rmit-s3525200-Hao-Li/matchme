@@ -25,7 +25,7 @@
             <%= f.input :looking_for, collection: Choices['looking_for'], label: "For" %>
           </div>
           </div>
-            <%= f.input :nearby, hint: "Leave unchecked to be matched to users anywhere" %>
+            <%= f.input :nearby, hint: "Check to be matched to users nearby" %>
            </div>
         </div>
      </div>
@@ -123,6 +123,7 @@
             <%= f.input :hobbies, placeholder: "3D printing, hiking, pottery, writing" %>
             <%= f.input :movies, placeholder: "Pulp Fiction, The Godfather, Star Wars" %>
             <%= f.input :tv_shows, placeholder: "Breaking Bad, The Wire, Rick and Morty, Game of Thrones" %>
+            <%= f.input :music, placeholder: "The Beatles, Miles Davis, Queen" %>
             <%= f.input :books, placeholder: "Rails Tutorial, The Great Gatsby, To Kill a Mockingbird" %>
             <%= f.input :games, placeholder: "Legend of Zelda, World of Warcraft" %>
             <%= f.input :sports, placeholder: "Football, baseball, cricket" %>

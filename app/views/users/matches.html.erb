@@ -1,14 +1,15 @@
 <% provide(:title, 'Matches') %>
 
-	<div id="main" class="search-result text-center">
-  	<div class="row">
+<div id="main" class="search-result text-center">
+  <div class="row">
      <div class="twelve columns">
-       <h1>Your Matches</h1>
+      <h3 class="pink-text">YOUR MATCHES</h3>
        <% if @users.any? %>
          <%= render @users %>
        <% else %>
          <h3>No matches where found near your location. :(</h3>
-       <% end %>
-     </div> 
-  	</div>
+     <% end %>
+     <%= will_paginate(@users, :renderer => WillPaginate::ActionView::LinkRenderer) %>
+    </div>
   </div>
+</div>
