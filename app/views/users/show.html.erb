@@ -61,6 +61,10 @@
                   <h6>TV Shows</h6>
                   <p><%= @profile.tv_shows %></p>
                 <% end %>
+                <% unless @profile.music.blank? %>
+                  <h6>Music</h6>
+                  <p><%= @profile.music %></p>
+                <% end %>
                 <% unless @profile.books.blank? %>
                   <h6>Books</h6>
                   <p><%= @profile.books %></p>

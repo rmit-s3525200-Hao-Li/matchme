@@ -9,18 +9,18 @@ class UsersController < ApplicationController
   # Checks that user has created profile
   before_action :user_has_profile, only: [:show, :edit, :update, :matches]
   
-  # Ensures users cannot access 'Edit Profile' page of other users
+  # Ensures users cannot edit others users or view their matches page
   before_action :correct_user,   only: [:edit, :update, :matches]
   
   # Ensures only admin can delete users
   before_action :admin_user,     only: [:index, :destroy]
   
-  # Admin doesn't have a profile
+  # Admin doesn't have a profile or matches
   before_action :non_admin_user, only: [:show, :matches]
   
   # Corresponds to view/users/index.html.erb
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.search(params[:search]).paginate(page: params[:page], per_page: 6)
   end
   
   # Corresponds to view/users/show.html.erb

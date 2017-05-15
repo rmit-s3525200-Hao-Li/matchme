@@ -1,14 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
 $pink: #f00056;
 
 /* HEADER */
 
-.logo {
-  font-family: Raleway, sans-serif;
+h1.logo {
+  font-family: Raleway, sans-serif !important;
   font-size: 1.6em;
   line-height: 130%;
   span {
@@ -86,6 +84,14 @@ $pink: #f00056;
 
 .none-padding {
     padding: 0 !important;
+}
+
+.search-form {
+  margin-bottom: 20px;
+  input[type="text"] {
+    display: inline;
+    width: 25%;
+  }
 }
 
 /* PAGINATION */
