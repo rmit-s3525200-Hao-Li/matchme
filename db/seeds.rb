@@ -231,3 +231,27 @@ User.create!(email: "admin@example.com",
             admin: true,
             password: password,
             password_confirmation: password)
+            
+# Create some likes between John and other users
+users = User.where(admin: false)
+user  = User.find(201)
+likes = users[2..50]
+likers = users[3..40]
+likes.each { |like| user.like(like) }
+likers.each { |liker| liker.like(user) }
+
+# Create some likes between Naomi and other users
+users = User.where(admin: false)
+user  = User.find(202)
+likes = users[51..100]
+likers = users[52..90]
+likes.each { |like| user.like(like) }
+likers.each { |liker| liker.like(user) }
+
+# Create some likes between Jess and other users
+users = User.where(admin: false)
+user  = User.find(203)
+likes = users[100..150]
+likers = users[100..140]
+likes.each { |like| user.like(like) }
+likers.each { |liker| liker.like(user) }
