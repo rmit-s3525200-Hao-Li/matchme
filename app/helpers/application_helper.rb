@@ -18,4 +18,18 @@ module ApplicationHelper
     end
   end
   
+  # Check if user has match
+  def has_match?(user, matches)
+    match = matches.find_by('user_one_id = ? OR user_two_id = ?', user.id, user.id)
+    !match.nil?
+  end
+  
+  # Get match percent
+  def get_match_percent(user, matches)
+    match = matches.find_by('user_one_id = ? OR user_two_id = ?', user.id, user.id)
+    if !match.nil?
+      match.percent
+    end
+  end
+  
 end
