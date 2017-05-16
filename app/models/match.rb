@@ -2,7 +2,8 @@ class Match < ApplicationRecord
   
   after_save :update_percent
   
-  has_many :users
+  has_one :user_one, class_name: "User"
+  has_one :user_two, class_name: "User"
   
   validates :user_one_id, :user_two_id, :percent, presence: true
   

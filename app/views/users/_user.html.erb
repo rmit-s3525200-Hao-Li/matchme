@@ -1,11 +1,7 @@
 <% if !user.admin? %>
   <div class="user">
       <div class="search-meta">
-        <% if user.profile.picture? %>
-          <%= link_to user do %>
-            <%= display_thumbnail(user.profile) %>
-          <% end %>
-        <% else %>
+        <%= link_to user do %>
           <%= display_thumbnail(user.profile) %>
         <% end %>
         <h4><%= link_to user.profile.name, user %></h4>
@@ -15,13 +11,14 @@
         <!-- Adds 'Delete' link if user is an admin -->
         <% if current_user.admin? && !current_user?(user) %>
           <%= link_to "delete user", user, method: :delete,
-                                  data: { confirm: "Are you sure?" } %>
+                      data: { confirm: "Are you sure you want to delete #{user.profile.name}?" } %>
         <% end %>
         
         <!-- Adds match percent if on matches page -->
         <% if @show_percent %>
           <h4><%= get_match_percent(user, @matches) %>% match</h4>
         <% end %>
+        
       </div>
     </div>
 <% end %>

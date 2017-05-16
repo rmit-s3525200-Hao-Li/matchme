@@ -1,0 +1,36 @@
+<%= provide(:title, @profile.name) %>
+
+<div class="inner page wide-style">
+
+<!-- User profile pic, name, age, location-->
+<%= render 'user_top' %>
+
+<section>
+	<div id="main">
+  	<div class="row">
+  	  <h5 class="accordion-title left"><%= @title %></h5>
+  	  <div class = "text-center">
+    	  <!-- People this user has liked -->
+    	  <% if @users.any? %>
+          <ul class="users follow">
+            <%= render @users %>
+          </ul>
+          <%= will_paginate(@users, :renderer => WillPaginate::ActionView::LinkRenderer) %>
+        <% end %>
+    </div> <!-- row -->
+  </div> <!-- main -->
+</section>
+
+<!-- Profile picture Boostrap model (pop up) -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <%= image_tag @profile.picture.url if @profile.picture? %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

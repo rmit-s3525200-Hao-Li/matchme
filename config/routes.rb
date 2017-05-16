@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
    resources :users do
     member do
-      get :following, :followers
+      get :likes, :likers
     end
   end
   
@@ -19,5 +19,5 @@ Rails.application.routes.draw do
       get 'matches'
     end
   end
-  resources :relationships,       only: [:create, :destroy]
+  resources :likeables,       only: [:create, :destroy]
 end

@@ -6,7 +6,11 @@
       <%= f.input :password, hint: "Must contain numbers and letters." %>
       <%= f.input :password_confirmation, label: "Confirm password" %>
     </div>
+<<<<<<< HEAD
   <%= f.button :submit, class: "btn btn-info btn-lg btn-block" %>
+=======
+  <%= f.submit yield(:button_text), class: 'btn btn-primary' %>
+>>>>>>> b96961a99767505e8d6509675a5cb27065cb70bc
 <% end %>
 
 <script type="text/javascript">

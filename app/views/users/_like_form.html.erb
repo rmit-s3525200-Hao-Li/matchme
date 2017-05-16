@@ -1,0 +1,7 @@
+<% unless current_user?(@user) %>
+  <% if current_user.likes?(@user) %>
+    <%= render 'unlike' %>
+  <% else %>
+    <%= render 'like' %>
+  <% end %>
+<% end %>
