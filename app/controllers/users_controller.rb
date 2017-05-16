@@ -134,7 +134,7 @@ class UsersController < ApplicationController
     def user_has_profile
       if !current_user.admin?
         @profile = current_user.profile
-        redirect_to new_user_profiles_path(current_user) unless Profile.exists?(@profile)
+        redirect_to new_user_profiles_path(current_user) unless !@profile.nil?
       end
     end
     
