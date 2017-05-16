@@ -10,6 +10,10 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
   end
   
+    test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
+  
   test "email addresses should be unique" do
     duplicate_user = @user.dup
     duplicate_user.email = @user.email.upcase
@@ -50,18 +54,16 @@ class UserTest < ActiveSupport::TestCase
     assert_equal mixed_case_email.downcase, @user.reload.email
   end
   
-    test "password should be present" do
-    @user.password = @user.password_confirmation = " " * 6
-    assert_not @user.valid?
-  end
+
   
   test "password should have numbers and letters" do
     @user.password = @user.password_confirmation = "a" * 6
     assert_not @user.valid?
   end
 
-  test "authenticated? should return false for a user with nil digest" do
-    assert_not @user.authenticated?('')
+    test "password should be present" do
+    @user.password = @user.password_confirmation = " " * 6
+    assert_not @user.valid?
   end
-  
+
 end
