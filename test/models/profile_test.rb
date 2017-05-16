@@ -7,7 +7,7 @@ class ProfileTest < ActiveSupport::TestCase
   end
   
   test "should be valid" do
-    assert @profile.valid?
+    assert @user.valid?
   end
 
   test "user id should be present" do

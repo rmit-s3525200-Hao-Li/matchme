@@ -1,35 +1,24 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  
-  def setup
+   def setup
     @user = users(:matt)
   end
+
+ 
 
   test "should be valid" do
     assert @user.valid?
   end
   
-  # test "first and last names should be present" do
-  #   @user.first_name = "     "
-  #   @user.last_name = "     "
-  #   assert_not @user.valid?
-  # end
+ 
   
   test "email should be present" do
     @user.email = "     "
     assert_not @user.valid?
   end
   
-  # test "first name should not be too long" do
-  #   @user.first_name = "a" * 26
-  #   assert_not @user.valid?
-  # end
-  
-  # test "last name should not be too long" do
-  #   @user.last_name = "a" * 26
-  #   assert_not @user.valid?
-  # end
+
 
   test "email should not be too long" do
     @user.email = "a" * 244 + "@example.com"
@@ -81,11 +70,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-  # test "user that is younger than 18 is not valid" do
-  #   now = Time.now.utc.to_date
-  #   @user.date_of_birth = Date.new(now.year - 18, now.mon, now.mday - 1)
-  #   assert_not @user.valid?
-  # end
+ 
 
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?('')

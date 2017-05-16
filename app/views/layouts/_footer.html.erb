@@ -6,14 +6,7 @@
       <div class="three columns section">
         <h5><i class="icon-heart"></i> About us</h5>
         <p>Lorem ipsum dolor sit amet, has an nullam sadipscing ullamcorper, nisl graeci minimum usu no, ne est erat deseruisse vituperata.</p>
-        <p><i class="icon-envelope"></i> &nbsp;<a href="tel:1234567890">info@example.com</a><br>&nbsp;<i class="icon-mobile-phone icon-large"></i> &nbsp;&nbsp;(123) 456-7890</p>
-        <p class="footer-social-icons">Stay in touch:<br>
-          <a href="#" class="has-tip tip-bottom" data-width="210" title="Follow us on Twitter"><i class="icon-twitter-sign icon-2x"></i></a>
-          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on Facebook"><i class="icon-facebook-sign icon-2x"></i></a>
-          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on Google+"><i class="icon-google-plus-sign icon-2x"></i></a>
-          <a href="#" class="has-tip tip-bottom" data-width="210" title="Pin us on Pinterest"><i class="icon-pinterest-sign icon-2x"></i></a>
-          <a href="#" class="has-tip tip-bottom" data-width="210" title="Find us on LinkedIn"><i class="icon-linkedin-sign icon-2x"></i></a>
-        </p>
+        <p><i class="icon-envelope"></i> &nbsp;<%= mail_to 'info@example.com' %><br>(123) 456-7890</p>
       </div>
       <!--end about us-->
 
@@ -22,11 +15,8 @@
         <h5>Useful links</h5>
         <ul class="no-bullet">
           <li><i class="icon-angle-right"></i> <a href="#">Terms and Conditions</a></li>
-          <li><i class="icon-angle-right"></i> <a href="#">About</a></li>
           <li><i class="icon-angle-right"></i> <a href="#">Support</a></li>
           <li><i class="icon-angle-right"></i> <a href="#">FAQ</a></li>
-          <li><i class="icon-angle-right"></i> <a href="#">Safety</a></li>
-          <li><i class="icon-angle-right"></i> <a href="#">Match Questions</a></li>
           <li><i class="icon-angle-right"></i> <a href="#">Privacy Policy</a></li>
         </ul>
       </div>
@@ -52,14 +42,6 @@
               <% end %>
           	</span>
             <p>Ut enim ad minim veniam, quis nostrud. <a href="#">read more</a></p>
-          </li>
-          <li>
-          	<span class="avatar">
-          	  <%= link_to("#") do %>
-                <%= image_tag("quote/user_quote_02.jpg") %>
-              <% end %>
-          	</span>
-            <p>Duis aute irure dolor in reprehenderit in voluptate. <a href="#">read more</a></p>
           </li>
         </ul>
       </div>
