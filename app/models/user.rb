@@ -6,16 +6,25 @@ class User < ApplicationRecord
   before_save :downcase_email
   
   has_many :active_likeables, class_name:  "Likeable",
-                                  foreign_key: "liker_id",
-                                  dependent:   :destroy
+                              foreign_key: "liker_id",
+                              dependent:   :destroy
                                   
   has_many :likes, through: :active_likeables, source: :liked 
   
   has_many :passive_likeables, class_name:  "Likeable",
-                                   foreign_key: "liked_id",
-                                   dependent:   :destroy
+                               foreign_key: "liked_id",
+                               dependent:   :destroy
                                    
-   has_many :likers, through: :passive_likeables, source: :liker   
+  has_many :likers, through: :passive_likeables, source: :liker
+   
+  has_many :active_matches, class_name: "Match",
+                            foreign_key: "user_one_id",
+                            dependent: :destroy
+                            
+  has_many :passive_matches, class_name: "Match",
+                              foreign_key: "user_two_id",
+                              dependent: :destroy
+   
    
   # Validates email
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
