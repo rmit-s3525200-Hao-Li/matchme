@@ -3,14 +3,14 @@
 <div class="stats">
   <%= link_to likes_user_path(@user), class: "btn btn-info" do %>
     Likes
-    <strong id="following" class="stat">
+    <strong class="stat">
       <%= "(#{@user.likes.count})" %>
     </strong>
   <% end %>
 
   <%= link_to likers_user_path(@user), class: "btn btn-info" do %>
     Liked by
-    <strong id="followers" class="stat">
+    <strong class="stat">
       <%= "(#{@user.likers.count})" %>
     </strong>
   <% end %>
