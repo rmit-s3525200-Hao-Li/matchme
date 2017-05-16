@@ -1,7 +1,6 @@
 <%= simple_form_for @profile, url: user_profiles_url, defaults: { error: false } do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div >
-		
 		<section>
 		    <div>
 		        <div class="collapse-card">
@@ -152,30 +151,30 @@
 		            </div>
 		            <div class="collapse-card__body">
 		              <div class = "row">
-      <div class="col-md-8">
-        <%= f.input :city %>
-      </div>
-      <div class="col-md-4">
-        <%= f.input :post_code %>
-      </div>
-    </div>
-    <div>
-    <%= f.input :country, priority: [ "Australia", "United States", "United Kingdom", "Canada", "New Zealand"], include_blank: true %>
-    </div>
-    <div class="collapse-card__close_handler mt1 align-right mouse-pointer">
+                    <div class="col-md-8">
+                      <%= f.input :city %>
+                    </div>
+                    <div class="col-md-4">
+                      <%= f.input :post_code %>
+                    </div>
+                  </div>
+                  <div>
+                    <%= f.input :country, priority: [ "Australia", "United States", "United Kingdom", "Canada", "New Zealand"], include_blank: true %>
+                  </div>
+                      <div class="collapse-card__close_handler mt1 align-right mouse-pointer">
 		                    Show less <i class="fa fa-chevron-up"></i>
-		                </div>
-		              </div>
+		                  </div>
+		            </div>
 		        </div>
 		    </div>
 		</section>
 		
-	</div>
-  
-  <div class="center">
-       <%= f.button :submit, class: "btn-primary" %>
-  </div>
-<% end %>
+    </div>
+      <div class="center">
+         <%= f.button :submit, class: "btn-primary" %>
+        <% end %>
+      </div>
+     
 
 
 <script src="js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
