@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  before_action :set_user, only: [:show, :edit, :update, :matches]
+  before_action :set_user, only: [:show, :edit, :update, :matches, :following, :followers]
   
   # Checks that user is logged before they can access edit profile page
   # and users index page
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   before_action :user_has_profile, only: [:show, :edit, :update, :matches]
   
   # Ensures users cannot edit others users or view their matches page
-  before_action :correct_user,   only: [:edit, :update, :matches]
+  before_action :correct_user,   only: [:edit, :update, :matches, :following, :followers]
   
   # Ensures only admin can delete users
   before_action :admin_user,     only: [:index, :destroy]
@@ -82,6 +82,23 @@ class UsersController < ApplicationController
     @users = @users.paginate(page: params[:page], per_page: 6)
     @show_percent = true
   end
+  
+  def following
+    @profile = @user.profile
+    @title = "Likes"
+    @users = @user.following.paginate(page: params[:page], per_page: 6)
+    @show_return = true
+    render 'show_follow'
+  end
+
+  def followers
+    @profile = @user.profile
+    @title = "Liked By"
+    @users = @user.followers.paginate(page: params[:page], per_page: 6)
+    @show_return = true
+    render 'show_follow'
+  end
+
   
   private
 

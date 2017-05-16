@@ -1,4 +1,5 @@
 <%= provide(:title, @profile.name) %>
+
 <div class="inner page wide-style">
 
 <!-- User profile pic, name, age, location-->
@@ -7,11 +8,15 @@
 <section>
 	<div id="main">
   	<div class="row">
-  	  <!-- User hobbies and interests -->
-  	  <%= render 'interests' %>
-  	  
-  	  <!-- User education, diet, religion, etc -->
-      <%= render 'profile' %>
+  	  <h5 class="accordion-title left"><%= @title %></h5>
+  	    <div class = "text-center">
+  	  <!-- People this user has liked -->
+  	  <% if @users.any? %>
+      <ul class="users follow">
+          <%= render @users %>
+        </ul>
+        <%= will_paginate(@users, :renderer => WillPaginate::ActionView::LinkRenderer) %>
+      <% end %>
     </div> <!-- row -->
   </div> <!-- main -->
 </section>

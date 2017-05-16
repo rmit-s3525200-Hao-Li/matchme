@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   post   '/login',          to: 'sessions#create'
   delete '/logout',         to: 'sessions#destroy'
   
+   resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   
   resources :users do
     resource :profiles, except: :show, path_names: { edit: "" }
@@ -14,4 +19,5 @@ Rails.application.routes.draw do
       get 'matches'
     end
   end
+  resources :relationships,       only: [:create, :destroy]
 end
