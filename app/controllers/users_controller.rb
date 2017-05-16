@@ -103,10 +103,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(
-        :email, :password, :password_confirmation,
-        profile_attributes: [:user_id, :first_name, :last_name, :gender, :date_of_birth, :occupation, :religion, :smoke, :drink, :self_summary, :movies, :tv_shows, :books, :games, :sports, :picture, :city, :post_code, :country, :looking_for, :preferred_gender, :nearby, :min_age, :max_age, :edu_status, :edu_type]
-        )
+      params.require(:user).permit(:email, :password, :password_confirmation)
     end
     
     ### Before filters
