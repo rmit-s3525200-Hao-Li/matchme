@@ -12,21 +12,21 @@
       </div>
       <div class="eight columns">
         <h2 class="sweetfont left"><%=@profile.name %> </h2>
-        <secction class="right">
-          <%= render 'follow_form' if logged_in? %>
-        </secction>
+        <section class="right">
+          <%= render 'like_form' %>
+        </section>
         <hr>
-        <% unless @user.admin? %>
-          <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>
-        <% end %>
+        <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>
         <% if @user != current_user && has_match?(@user, @matches) %>
           <h3 class="pink-text"><%= get_match_percent(@user, @matches) %>% match</h3>
-          <% else %>
+        <% else %>
           <section class="stats">
             <%= render 'shared/stats' %>
             <br/>
             <% if @show_return %>
-              <%= link_to "Return to profile", @user %>
+              <%= link_to @user do %>
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Return to profile
+              <% end %>
             <% end %>
           </section>
         <% end %>
