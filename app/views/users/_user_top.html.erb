@@ -18,8 +18,11 @@
         <hr>
         <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>
         <!-- Show match percent if not own profile (and exists) -->
-        <% if @user != current_user && has_match?(@user, @matches) %>
-          <h3 class="pink-text"><%= get_match_percent(@user, @matches) %>% match</h3>
+        
+        <% if @user != current_user %>
+          <% if has_match?(@user, @matches) %>
+            <h3 class="pink-text"><%= get_match_percent(@user, @matches) %>% match</h3>
+          <% end %>
         <% else %>
           <!-- Else show likes and likers -->
           <section class="stats">
@@ -34,7 +37,6 @@
           </section>
         <% end %>
         
-       
       </div>
     </div>
   </div>
