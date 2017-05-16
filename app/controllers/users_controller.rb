@@ -60,7 +60,7 @@ class UsersController < ApplicationController
   # Patch method for updating profile
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Account settings updated"
       redirect_to @user
     else
       render 'edit'
