@@ -5,8 +5,6 @@ class UserTest < ActiveSupport::TestCase
     @user = users(:matt)
   end
 
- 
-
   test "should be valid" do
     assert @user.valid?
   end
