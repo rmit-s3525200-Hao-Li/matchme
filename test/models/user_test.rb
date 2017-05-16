@@ -5,6 +5,8 @@ class UserTest < ActiveSupport::TestCase
     @user = users(:matt)
   end
 
+ 
+
   test "should be valid" do
     assert @user.valid?
   end
@@ -74,4 +76,3 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?('')
   end
 end
-
