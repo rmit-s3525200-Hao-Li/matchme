@@ -64,7 +64,7 @@ module SessionsHelper
   # Checks if user has a profile
   def has_profile?
     profile = current_user.profile
-    Profile.exists?(profile)
+    !profile.nil?
   end
   
 end
