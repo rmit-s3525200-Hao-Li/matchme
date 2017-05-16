@@ -17,11 +17,15 @@
         </ul>
         <%= will_paginate(@users, :renderer => WillPaginate::ActionView::LinkRenderer) %>
       <% end %>
-
+      <div style="width: 66px;position: fixed;bottom: 20px;right: 25px;font-size: 0;line-height: 0;z-index: 100;">
+        <%= link_to(current_user) do %>
+            <button class="btn btn-sm btn-primary">Edit profile</button>
+          <% end %>  
+      </div>
     </div> <!-- row -->
   </div> <!-- main -->
 </section>
-  
+
 <!-- Profile picture Boostrap model (pop up) -->
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">

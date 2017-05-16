@@ -87,6 +87,7 @@ class UsersController < ApplicationController
     @profile = @user.profile
     @title = "Likes"
     @users = @user.following.paginate(page: params[:page], per_page: 6)
+    @show_return = true
     render 'show_follow'
   end
 
@@ -94,6 +95,7 @@ class UsersController < ApplicationController
     @profile = @user.profile
     @title = "Liked By"
     @users = @user.followers.paginate(page: params[:page], per_page: 6)
+    @show_return = true
     render 'show_follow'
   end
 

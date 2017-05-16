@@ -24,6 +24,9 @@
           <% else %>
           <section class="stats">
             <%= render 'shared/stats' %>
+            <% if @show_return %>
+              <%= link_to "Return to profile", @user %>
+            <% end %>
           </section>
         <% end %>
         
