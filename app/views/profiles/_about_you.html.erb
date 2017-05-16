@@ -1,0 +1,30 @@
+<div class="collapse-card">
+  <div class="collapse-card__heading">
+    <h4 class="collapse-card__title">
+      <i class="fa fa-pencil-square-o fa-2x fa-fw" aria-hidden="true"></i>
+        About You
+    </h4>
+  </div>
+  <div class="collapse-card__body">
+    <div class = "row">
+      <div class="col-md-6">
+          <%= f.input :first_name %>
+      </div>
+      <div class="col-md-6">
+          <%= f.input :last_name %>
+      </div>
+    </div>
+    <div class = "row">
+      <div class="col-md-7">
+        <%= f.input :date_of_birth, start_year: Date.today.year - 17, end_year: Date.today.year - 120, default: Date.today %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :gender, collection: Choices['gender'], as: :radio_buttons,  item_label_class: "radio-inline", item_wrapper_tag: false %>
+      </div>
+    </div>
+    <%= f.input :picture, label: 'Upload an image of yourself' %>
+    <div class="collapse-card__close_handler mt1 align-right mouse-pointer">
+        Show less <i class="fa fa-chevron-up"></i>
+    </div>
+  </div>
+</div>

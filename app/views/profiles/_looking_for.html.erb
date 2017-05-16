@@ -1,0 +1,26 @@
+<div class="collapse-card">
+  <div class="collapse-card__heading">
+      <h4 class="collapse-card__title">
+          <i class="fa fa-pencil-square-o fa-2x fa-fw" aria-hidden="true"></i>
+          What You're Looking For
+      </h4>
+  </div>
+  <div class="collapse-card__body">
+     <%= f.input :preferred_gender, collection: Choices['preferred_gender'], as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false, label: false %>
+    <div class = "row">
+      <div class="col-md-3">
+        <%= f.input :min_age, collection: 18..120 %>
+      </div>
+        <div class="col-md-3">
+          <%= f.input :max_age, collection: 18..120 %>
+        </div>
+        <div class="col-md-5">
+          <%= f.input :looking_for, collection: Choices['looking_for'], label: "For" %>
+        </div>
+    </div>
+    <%= f.input :nearby, hint: "Check to be matched to users nearby" %>
+       <div class="collapse-card__close_handler mt1 align-right mouse-pointer">
+          Show less <i class="fa fa-chevron-up"></i>
+    </div>
+  </div>
+</div>

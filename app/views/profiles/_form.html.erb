@@ -1,179 +1,21 @@
 <%= simple_form_for @profile, url: user_profiles_url, defaults: { error: false } do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div >
+  <div>
 		<section>
-		    <div>
-		        <div class="collapse-card">
-		            <div class="collapse-card__heading">
-		                <h4 class="collapse-card__title">
-		                    <i class="fa fa-pencil-square-o fa-2x fa-fw" aria-hidden="true"></i>
-		                    What You're Looking For
-		                </h4>
-		            </div>
-		            <div class="collapse-card__body">
-		               <%= f.input :preferred_gender, collection: Choices['preferred_gender'], as: :radio_buttons, item_label_class: "radio-inline", item_wrapper_tag: false, label: false %>
-                  <div class = "row">
-                  <div class="col-md-3">
-                    <%= f.input :min_age, collection: 18..120 %>
-                  </div>
-                    <div class="col-md-3">
-                      <%= f.input :max_age, collection: 18..120 %>
-                    </div>
-                    <div class="col-md-5">
-                      <%= f.input :looking_for, collection: Choices['looking_for'], label: "For" %>
-                    </div>
-                    </div>
-                      <%= f.input :nearby, hint: "Check to be matched to users nearby" %>
-          		           <div class="collapse-card__close_handler mt1 align-right mouse-pointer">
-          		              Show less <i class="fa fa-chevron-up"></i>
-          	            </div>
-		              </div>
-		        </div>
-		        <div class="collapse-card">
-		            <div class="collapse-card__heading">
-		                <h4 class="collapse-card__title">
-		                    <i class="fa fa-pencil-square-o fa-2x fa-fw" aria-hidden="true"></i>
-		                    About You
-		                </h4>
-		            </div>
-		            <div class="collapse-card__body">
-		                <div class = "row">
-              <div class="col-md-6">
-                  <%= f.input :first_name %>
-            </div>
-            <div class="col-md-6">
-                  <%= f.input :last_name %>
-            </div>
-            </div>
-            <div class = "row">
-            <div class="col-md-7">
-                <%= f.input :date_of_birth, start_year: Date.today.year - 17, end_year: Date.today.year - 120, default: Date.today %>
-            </div>
-            <div class="col-md-4">
-                <%= f.input :gender, collection: Choices['gender'], as: :radio_buttons,  item_label_class: "radio-inline", item_wrapper_tag: false %>
-            </div>
-          </div>
-                <%= f.input :picture, label: 'Upload an image of yourself' %>
-		                <div class="collapse-card__close_handler mt1 align-right mouse-pointer">
-		                    Show less <i class="fa fa-chevron-up"></i>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="collapse-card">
-		            <div class="collapse-card__heading">
-		                <h4 class="collapse-card__title">
-		                   <i class="fa fa-pencil-square-o fa-2x fa-fw" aria-hidden="true"></i>
-		                    Details
-		                </h4>
-		            </div>
-		            <div class="collapse-card__body">
-		                <div class = "row">
-                      <div class="col-md-6">
-                        <%= f.input :occupation %>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.input :religion, collection: Choices['religion'] %>
-                      </div>
-                    </div>
-                    <div class = "row">
-                      <div class="col-md-6">
-                        <%= f.input :smoke, collection: Choices['smoke'] %>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.input :drink, collection: Choices['drink'] %>
-                      </div>
-                    </div>
-                    <div class = "row">
-                      <div class="col-md-6">
-                        <%= f.input :drugs, collection: Choices['drugs'] %>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.input :diet, collection: Choices['diet'] %>
-                      </div>
-                    </div>
-                      <div class = "row">
-                      <div class="col-md-6">
-                        <%= f.input :edu_status, label: 'Education', collection: Choices['edu_status'] %>
-                      </div>
-                      <div class="col-md-6">
-                        <%= f.input :edu_type, label: ' ', collection: Choices['edu_type'] %>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <%= f.input :self_summary %>
-                    </div>
-    
-		                <div class="collapse-card__close_handler mt1 align-right mouse-pointer">
-		                    Show less <i class="fa fa-chevron-up"></i>
-		                </div>
-		            </div>
-		        </div>
-		         <div class="collapse-card">
-		            <div class="collapse-card__heading">
-		                <h4 class="collapse-card__title">
-		                    <i class="fa fa-pencil-square-o fa-2x fa-fw" aria-hidden="true"></i>
-		                    Interests
-		                </h4>
-		            </div>
-		            <div class="collapse-card__body">
-		                <div class="col-md-12"> 
-		                <%= f.input :hobbies, placeholder: "3D printing, hiking, pottery, writing" %>
-		                </div>
-		                <div class="col-md-12">
-                    <%= f.input :movies, placeholder: "Pulp Fiction, The Godfather, Star Wars" %>
-                    </div>
-                    <div class="col-md-12">
-                    <%= f.input :tv_shows, placeholder: "Breaking Bad, The Wire, Rick and Morty, Game of Thrones" %>
-                    </div>
-                    <div class="col-md-12">
-                    <%= f.input :music, placeholder: "The Beatles, Miles Davis, Queen" %>
-                    </div>
-                    <div class="col-md-12">
-                    <%= f.input :books, placeholder: "Rails Tutorial, The Great Gatsby, To Kill a Mockingbird" %>
-                    </div>
-                    <div class="col-md-12">
-                    <%= f.input :games, placeholder: "Legend of Zelda, World of Warcraft" %>
-                    </div>
-                    <div class="col-md-12">
-                    <%= f.input :sports, placeholder: "Football, baseball, cricket" %>
-                    </div>
-		                <div class="collapse-card__close_handler mt1 align-right mouse-pointer">
-		                    Show less <i class="fa fa-chevron-up"></i>
-		                </div>
-		            </div>
-		        </div>
-		        <div class="collapse-card">
-		            <div class="collapse-card__heading">
-		                <h4 class="collapse-card__title">
-		                    <i class="fa fa-pencil-square-o fa-2x fa-fw" aria-hidden="true"></i>
-		                    Location
-		                </h4>
-		            </div>
-		            <div class="collapse-card__body">
-		              <div class = "row">
-                    <div class="col-md-8">
-                      <%= f.input :city %>
-                    </div>
-                    <div class="col-md-4">
-                      <%= f.input :post_code %>
-                    </div>
-                  </div>
-                  <div>
-                    <%= f.input :country, priority: [ "Australia", "United States", "United Kingdom", "Canada", "New Zealand"], include_blank: true %>
-                  </div>
-                      <div class="collapse-card__close_handler mt1 align-right mouse-pointer">
-		                    Show less <i class="fa fa-chevron-up"></i>
-		                  </div>
-		            </div>
-		        </div>
-		    </div>
+	    <div>
+        <%= render 'looking_for', f: f %>
+        <%= render 'about_you', f: f %>
+        <%= render 'details', f: f %>
+        <%= render 'interests', f: f %>
+        <%= render 'location', f: f %>
+	    </div>
 		</section>
 		
-    </div>
-      <div class="center">
-         <%= f.button :submit, class: "btn-info" %>
-        <% end %>
-      </div>
+  </div>
+  <div class="center">
+     <%= f.button :submit, class: "btn-info" %>
+  </div>
+<% end %>
      
 
 

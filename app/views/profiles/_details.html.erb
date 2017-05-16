@@ -1,0 +1,49 @@
+<div class="collapse-card">
+  <div class="collapse-card__heading">
+      <h4 class="collapse-card__title">
+         <i class="fa fa-pencil-square-o fa-2x fa-fw" aria-hidden="true"></i>
+          Details
+      </h4>
+  </div>
+  <div class="collapse-card__body">
+      <div class = "row">
+        <div class="col-md-6">
+          <%= f.input :occupation %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :religion, collection: Choices['religion'] %>
+        </div>
+      </div>
+      <div class = "row">
+        <div class="col-md-6">
+          <%= f.input :smoke, collection: Choices['smoke'] %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :drink, collection: Choices['drink'] %>
+        </div>
+      </div>
+      <div class = "row">
+        <div class="col-md-6">
+          <%= f.input :drugs, collection: Choices['drugs'] %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :diet, collection: Choices['diet'] %>
+        </div>
+      </div>
+        <div class = "row">
+        <div class="col-md-6">
+          <%= f.input :edu_status, label: 'Education', collection: Choices['edu_status'] %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :edu_type, label: ' ', collection: Choices['edu_type'] %>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <%= f.input :self_summary %>
+      </div>
+
+      <div class="collapse-card__close_handler mt1 align-right mouse-pointer">
+          Show less <i class="fa fa-chevron-up"></i>
+      </div>
+  </div>
+</div>
