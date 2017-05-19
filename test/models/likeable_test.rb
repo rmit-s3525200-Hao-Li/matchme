@@ -8,6 +8,5 @@ class LikeableTest < ActiveSupport::TestCase
   
   test "should be valid" do
     assert @like_id.valid?
-
-  end
-end
+ end
+  
