@@ -15,6 +15,8 @@ class ProfileTest < ActiveSupport::TestCase
   end
   
   test "first_name should be present" do
+     @profile.first_name = "     "
+    assert_not @profile.valid?
   end
   
   test "first_name shouldn't be more than 25 characters" do
