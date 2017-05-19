@@ -9,5 +9,10 @@ class MatchTest < ActiveSupport::TestCase
   test "should be valid" do
     assert @match.valid?
   end
+  
+  test "user_one_id should be present" do
+    @match.user_one_id = nil
+    assert_not @match.valid?
+  end
 
 end
