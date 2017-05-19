@@ -14,5 +14,9 @@ class MatchTest < ActiveSupport::TestCase
     @match.user_one_id = nil
     assert_not @match.valid?
   end
+    test "user_two_id should be present" do
+    @match.user_two_id = nil
+    assert_not @match.valid?
+  end
 
 end
