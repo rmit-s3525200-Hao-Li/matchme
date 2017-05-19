@@ -39,11 +39,5 @@ class ProfileTest < ActiveSupport::TestCase
   test "occupation should be saved in lower-case" do
   end
   
-  test "name should be a titleized string of first_name and last_name" do
-    @profile.first_name = "xieyang"
-    @profile.last_name = "wu"
-    @profile.save
-    assert_equal "Xieyang Wu", @profile.reload.name
-  end
   
 end
