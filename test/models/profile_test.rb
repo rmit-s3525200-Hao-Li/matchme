@@ -35,18 +35,22 @@ class ProfileTest < ActiveSupport::TestCase
   end
   
   test "occupation should be present" do
-     @profile.occupation = "     "
+    @profile.occupation = "     "
     assert_not @profile.valid?
   end
   
   test "occupation shouldn't be too long" do
-     @profile.occupation = "a"*51
+    @profile.occupation = "a"*51
     assert_not @profile.valid?
   end
   
-  test "occupation should be saved in lower-case" do
-   
+   test "occupation should be saved in lower-case" do
+    mixed_case_occuption = "SALeMaN"
+    @profile.occupation = mixed_case_occuption
+    @profile.save
+    assert_equal mixed_case_occuption.downcase, @profile.reload.occupation
   end
+  
   
   test "name should be a titleized string of first_name and last_name" do
     @profile.first_name = "xieyang"
