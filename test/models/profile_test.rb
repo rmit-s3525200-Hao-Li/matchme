@@ -45,6 +45,7 @@ class ProfileTest < ActiveSupport::TestCase
   end
   
   test "occupation should be saved in lower-case" do
+   
   end
   
   test "name should be a titleized string of first_name and last_name" do
