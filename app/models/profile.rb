@@ -25,7 +25,7 @@ class Profile < ApplicationRecord
   validates :city, presence: true, length: {maximum: 60}
   validates :post_code, presence: true, length: {maximum: 20}
   validates :self_summary, length: {maximum: 800}
-  validates :preferred_gender, presence: true
+  validates :preferred_gender, length: {minimum: 4, maximum: 6}, presence: true
   validates :min_age, presence: true, numericality: { greater_than_or_equal_to: 18 }
   validates :max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age }
   validates :user_id, :gender, :date_of_birth, :country, :looking_for, 
