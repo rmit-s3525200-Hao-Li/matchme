@@ -15,12 +15,12 @@ class ProfileTest < ActiveSupport::TestCase
   end
   
   test "first_name should be present" do
-     @profile.first_name = "     "
+    @profile.first_name = "     "
     assert_not @profile.valid?
   end
   
   test "first_name shouldn't be more than 25 characters" do
-     @profile.first_name = "a" * 26 
+    @profile.first_name = "a" * 26 
     assert_not @profile.valid?
   end
   
@@ -30,6 +30,8 @@ class ProfileTest < ActiveSupport::TestCase
   end
   
   test "last_name shouldn't be more than 25 characters" do
+    @profile.first_name = "a" * 26 
+    assert_not @profile.valid?
   end
   
   test "occupation should be present" do
