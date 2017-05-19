@@ -14,5 +14,10 @@ class LikeableTest < ActiveSupport::TestCase
     @likeable.liker_id = nil
     assert_not @likeable.valid?
   end
+  
+  test "liked_id should be present" do
+    @likeable.liked_id = nil
+    assert_not @likeable.valid?
+  end
 end
   
