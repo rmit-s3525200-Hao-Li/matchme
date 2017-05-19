@@ -35,6 +35,8 @@ class ProfileTest < ActiveSupport::TestCase
   end
   
   test "occupation should be present" do
+     @profile.occupation = "     "
+    assert_not @profile.valid?
   end
   
   test "occupation shouldn't be too long" do
