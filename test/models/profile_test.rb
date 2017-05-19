@@ -40,6 +40,8 @@ class ProfileTest < ActiveSupport::TestCase
   end
   
   test "occupation shouldn't be too long" do
+     @profile.occupation = "a"*51
+    assert_not @profile.valid?
   end
   
   test "occupation should be saved in lower-case" do
