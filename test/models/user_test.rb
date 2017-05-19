@@ -10,7 +10,7 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
   end
   
-    test "authenticated? should return false for a user with nil digest" do
+  test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?('')
   end
   
@@ -61,7 +61,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-    test "password should be present" do
+  test "password should be present" do
     @user.password = @user.password_confirmation = " " * 6
     assert_not @user.valid?
   end
