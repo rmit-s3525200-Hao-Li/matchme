@@ -25,7 +25,7 @@ class ProfileTest < ActiveSupport::TestCase
   end
   
   test "last_name should be present" do
-       @profile.last_name = "     "
+    @profile.last_name = "     "
     assert_not @profile.valid?
   end
   
