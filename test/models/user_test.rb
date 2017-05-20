@@ -10,8 +10,9 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
   end
   
-    test "authenticated? should return false for a user with nil digest" do
-    assert_not @user.authenticated?('')
+  test "email should be present" do
+    @user.email = "     "
+    assert_not @user.valid?
   end
   
   test "email addresses should be unique" do
@@ -21,9 +22,11 @@ class UserTest < ActiveSupport::TestCase
     assert_not duplicate_user.valid?
   end
   
-  test "email should be present" do
-    @user.email = "     "
-    assert_not @user.valid?
+  test "email addresses should be saved as lower-case" do
+    mixed_case_email = "MatT@ExAMPle.CoM"
+    @user.email = mixed_case_email
+    @user.save
+    assert_equal mixed_case_email.downcase, @user.reload.email
   end
   
   test "email should not be too long" do
@@ -47,23 +50,18 @@ class UserTest < ActiveSupport::TestCase
     end
   end
   
-  test "email addresses should be saved as lower-case" do
-    mixed_case_email = "MatT@ExAMPle.CoM"
-    @user.email = mixed_case_email
-    @user.save
-    assert_equal mixed_case_email.downcase, @user.reload.email
+  test "password should be present" do
+    @user.password = @user.password_confirmation = " " * 6
+    assert_not @user.valid?
   end
-  
-
   
   test "password should have numbers and letters" do
     @user.password = @user.password_confirmation = "a" * 6
     assert_not @user.valid?
   end
 
-    test "password should be present" do
-    @user.password = @user.password_confirmation = " " * 6
-    assert_not @user.valid?
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
   end
-
+  
 end
