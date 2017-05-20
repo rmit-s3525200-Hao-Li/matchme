@@ -44,7 +44,7 @@ class ProfileTest < ActiveSupport::TestCase
     assert_not @profile.valid?
   end
   
-   test "occupation should be saved in lower-case" do
+  test "occupation should be saved in lower-case" do
     mixed_case_occuption = "SALeMaN"
     @profile.occupation = mixed_case_occuption
     @profile.save
