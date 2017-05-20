@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ProfileTest < ActiveSupport::TestCase
+
   def setup
     @profile = profiles(:matt_profile)
   end
