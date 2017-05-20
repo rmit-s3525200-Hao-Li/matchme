@@ -16,9 +16,8 @@
           <li class="toggle-topbar"><a href="#"><i class="icon-reorder"></i></a></li>
           <!-- End Toggle Button Mobile -->
         </ul>
-
+        
         <section>
-          
           <!-- Nav Section -->
             <% if logged_in? %>
               <% if has_profile? || current_user.admin? %>
@@ -28,7 +27,7 @@
                   <% else %>
                     <li>
                       <%= link_to matches_user_path(current_user) do %>
-                       BROWSE MATCHES <i class="fa fa-users" aria-hidden="true"></i>
+                      MATCH <i class="fa fa-users" aria-hidden="true"></i>
                       <% end %>
                     </li>
                   <% end %>

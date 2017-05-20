@@ -13,7 +13,12 @@
       <div class="eight columns">
         <h2 class="sweetfont left"><%=@profile.name %> </h2>
         <section class="right">
-          <%= render 'like_form' %>
+          <% if current_user.admin? %>
+          <%= button_to "Delete", @user, :class => "btn btn-danger", :method => :delete,
+            data: { confirm: "Are you sure you want to delete #{@user.profile.name}" } %>
+          <% else %>
+            <%= render 'like_form' %>
+          <% end %>
         </section>
         <hr>
         <h6 class="subheader"><%= "#{@profile.age} • #{@profile.city}, #{@profile.country}" %></h6>

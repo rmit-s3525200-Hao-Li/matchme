@@ -2,8 +2,11 @@ require 'test_helper'
 
 class ProfileTest < ActiveSupport::TestCase
   def setup
-    @user = users(:matt)
     @profile = profiles(:matt_profile)
+  end
+  
+  test "should be valid" do
+    assert @profile.valid?
   end
   
   test "user id should be present" do
@@ -11,8 +14,49 @@ class ProfileTest < ActiveSupport::TestCase
     assert_not @profile.valid?
   end
   
-  test "should be valid" do
-    assert @user.valid?
+  test "first_name should be present" do
+    @profile.first_name = "     "
+    assert_not @profile.valid?
+  end
+  
+  test "first_name shouldn't be more than 25 characters" do
+    @profile.first_name = "a" * 26 
+    assert_not @profile.valid?
+  end
+  
+  test "last_name should be present" do
+    @profile.last_name = "     "
+    assert_not @profile.valid?
+  end
+  
+  test "last_name shouldn't be more than 25 characters" do
+    @profile.first_name = "a" * 26 
+    assert_not @profile.valid?
+  end
+  
+  test "occupation should be present" do
+    @profile.occupation = "     "
+    assert_not @profile.valid?
+  end
+  
+  test "occupation shouldn't be too long" do
+    @profile.occupation = "a"*51
+    assert_not @profile.valid?
+  end
+  
+   test "occupation should be saved in lower-case" do
+    mixed_case_occuption = "SALeMaN"
+    @profile.occupation = mixed_case_occuption
+    @profile.save
+    assert_equal mixed_case_occuption.downcase, @profile.reload.occupation
+  end
+  
+  
+  test "name should be a titleized string of first_name and last_name" do
+    @profile.first_name = "xieyang"
+    @profile.last_name = "wu"
+    @profile.save
+    assert_equal "Xieyang Wu", @profile.reload.name
   end
   
 end
