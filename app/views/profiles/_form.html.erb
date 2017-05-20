@@ -1,22 +1,23 @@
-<%= simple_form_for @profile, url: user_profiles_url, defaults: { error: false } do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <div>
-		<section>
-	    <div>
-        <%= render 'looking_for', f: f %>
-        <%= render 'about_you', f: f %>
-        <%= render 'details', f: f %>
-        <%= render 'interests', f: f %>
-        <%= render 'location', f: f %>
-	    </div>
-		</section>
-		
+<section> 
+  <div class="row">
+    <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <h3 class="pink-text text-center"><i class="fa fa-id-card-o" aria-hidden="true"></i> <%= yield(:page_title) %></h3>
+        <%= simple_form_for @profile, url: user_profiles_url, defaults: { error: false } do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+          <%= render 'looking_for', f: f %>
+          <%= render 'about_you', f: f %>
+          <%= render 'details', f: f %>
+          <%= render 'interests', f: f %>
+          <%= render 'location', f: f %>
+          <div class="center">
+             <%= f.button :submit, class: "btn-info btn-lg" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-md-1"></div>
   </div>
-  <div class="center">
-     <%= f.button :submit, class: "btn-info" %>
-  </div>
-<% end %>
-     
+</section> 
 
 
 <script src="js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
