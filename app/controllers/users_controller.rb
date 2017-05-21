@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   # and users index page
   before_action :logged_in_user, only: [:show, :edit, :update, :destroy, :matches]
   
-  # Checks that is is not logged in before they can access the create account page
-  before_action :not_logged_in, only: :new
+  # Checks that is is not logged in before they can create an account
+  before_action :not_logged_in, only: [:new, :create]
   
   # Checks that user has created profile
   before_action :user_has_profile, only: [:show, :edit, :update, :matches]
