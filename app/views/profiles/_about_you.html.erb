@@ -15,10 +15,10 @@
       </div>
     </div>
     <div class = "row">
-      <div class="col-md-7">
+      <div class="col-md-6">
         <%= f.input :date_of_birth, start_year: Date.today.year - 17, end_year: Date.today.year - 120, default: Date.today %>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
         <%= f.input :gender, collection: Choices['gender'], as: :radio_buttons,  item_label_class: "radio-inline", item_wrapper_tag: false %>
       </div>
     </div>
