@@ -1,10 +1,7 @@
 class ProfilesController < ApplicationController
   
   # User cannot edit or create profiles on behalf of other users
-  before_action :correct_user,   only: [:new, :create, :edit, :update]
-  
-  # User must be logged in
-  before_action :logged_in_user
+  before_action :correct_user
   
   # Find user in database
   before_action :get_user
