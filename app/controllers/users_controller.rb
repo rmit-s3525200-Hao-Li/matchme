@@ -2,9 +2,8 @@ class UsersController < ApplicationController
   
   before_action :set_user, only: [:show, :edit, :update, :matches, :likes, :likers]
   
-  # Checks that user is logged before they can access edit profile page
-  # and users index page
-  before_action :logged_in_user, only: [:show, :edit, :update, :destroy, :matches]
+  # Checks that user is logged in before they view profiles 
+  before_action :logged_in_user, only: :show
   
   # Checks that is is not logged in before they can create an account
   before_action :not_logged_in, only: [:new, :create]
