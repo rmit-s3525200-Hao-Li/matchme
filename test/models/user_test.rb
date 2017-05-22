@@ -4,6 +4,7 @@ class UserTest < ActiveSupport::TestCase
   
   def setup
     @user = users(:matt)
+    @other_user = users(:jess)
   end
     
   test "should be valid" do
@@ -62,6 +63,90 @@ class UserTest < ActiveSupport::TestCase
 
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?('')
+  end
+  
+  test "associated profile should be destroyed" do 
+    @user.save
+    @user.create_profile!(first_name: 'Matt',
+                                last_name: 'Smith',
+                                gender: 'male',
+                                occupation: 'salesman',
+                                preferred_gender: 'male',
+                                religion: 'other',
+                                city: 'Sydney',
+                                post_code: '2000',
+                                country: 'Australia',
+                                date_of_birth: Date.new(1991, 12, 3),
+                                min_age: 23,
+                                max_age: 35,
+                                looking_for: 'dating',
+                                smoke: 'not at all',
+                                drink: 'socially',
+                                drugs: 'never',
+                                diet: 'vegan',
+                                edu_status: 'completed',
+                                edu_type: 'high school',
+                                nearby: true)
+    assert_difference 'Profile.count', -1 do
+      @user.destroy
+    end
+  end
+  
+  test "associated likes should be destroyed" do
+    @user.save
+    @user.like(@other_user)
+    assert_difference 'Likeable.count', -1 do
+      @user.destroy
+    end
+  end
+  
+  test "associated match users plus matches should be destroyed" do
+    @user.save
+    @other_user.save
+    @user.create_profile!(first_name: 'Matt',
+                                last_name: 'Smith',
+                                gender: 'male',
+                                occupation: 'salesman',
+                                preferred_gender: 'female',
+                                religion: 'other',
+                                city: 'Sydney',
+                                post_code: '2000',
+                                country: 'Australia',
+                                date_of_birth: Date.new(1991, 12, 3),
+                                min_age: 23,
+                                max_age: 35,
+                                looking_for: 'dating',
+                                smoke: 'not at all',
+                                drink: 'socially',
+                                drugs: 'never',
+                                diet: 'vegan',
+                                edu_status: 'completed',
+                                edu_type: 'high school',
+                                nearby: true)
+    @other_user.create_profile!(first_name: 'Jess',
+                                last_name: 'Sagan',
+                                gender: 'female',
+                                occupation: 'salesman',
+                                preferred_gender: 'male',
+                                religion: 'other',
+                                city: 'Sydney',
+                                post_code: '2000',
+                                country: 'Australia',
+                                date_of_birth: Date.new(1991, 12, 3),
+                                min_age: 23,
+                                max_age: 35,
+                                looking_for: 'dating',
+                                smoke: 'not at all',
+                                drink: 'socially',
+                                drugs: 'never',
+                                diet: 'vegan',
+                                edu_status: 'completed',
+                                edu_type: 'high school',
+                                nearby: true)
+    assert @user.match_users.any?
+    assert_difference 'Match.count', -1 do
+      @user.destroy
+    end
   end
   
 end
