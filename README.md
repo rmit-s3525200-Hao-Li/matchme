@@ -1,6 +1,6 @@
 # MatchMe
 
-MatchMe is a simple dating application that matches users according to their values and beliefs.
+MatchMe is a simple dating application that matches users according to their profile data.
 
 ## View application
 [Launch app](https://matchmeplease.herokuapp.com/)
