@@ -21,11 +21,8 @@ matt_profile:
   diet: vegan
   edu_status: completed
   edu_type: high school
-  movies: Pulp Fiction, Titanic, Oldboy
-  music: The Others
-  tv_shows: Breaking Bad, Silicon Valley, Rick and Morty
-  books: The Great Gatsby, Catcher in the Rye
-  games: League of Legends, Minecraft, Legend of Zelda
-  sports: cricket, baseball
+  movies: Pulp Fiction, Titanic
+  music: Tame Impala
+  tv_shows: Silicon Valley
   nearby: true
   user: matt
