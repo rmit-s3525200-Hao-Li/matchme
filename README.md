@@ -2,6 +2,17 @@
 
 MatchMe is a simple dating application that matches users according to their values and beliefs.
 
+## Heroku
+[Launch app](https://matchmeplease.herokuapp.com/)
+
+### User login
+Email: john@example.com
+Password: foobar1
+
+### Admin login
+Email: admin@example.com
+Password: foobar1
+
 ## What You'll Need
 - Ruby on Rails
 - PostgreSQL
