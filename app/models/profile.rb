@@ -18,19 +18,25 @@ class Profile < ApplicationRecord
   mount_uploader :picture, PictureUploader
   
   # Validations for required fields
-  validates :first_name, presence: true, length: { maximum: 25 }
-  validates :last_name, presence: true, length:  { maximum: 25 }
-  
-  validates :occupation, presence: true, length: {maximum: 50}
-  validates :city, presence: true, length: {maximum: 60}
-  validates :post_code, presence: true, length: {maximum: 20}
-  validates :self_summary, length: {maximum: 800}
-  validates :preferred_gender, length: {minimum: 4, maximum: 6}, presence: true
+  validates :first_name, presence: true, length: { maximum: 25, message: "cannot be more than 25 characters" }
+  validates :last_name, presence: true, length:  { maximum: 25, message: "cannot be more than 25 characters" }
+  validates :occupation, presence: true, length: { maximum: 25, message: "cannot be more than 25 characters" }
+  validates :city, presence: true, length: { maximum: 60, message: "cannot be more than 60 characters" }
+  validates :post_code, presence: true, length: { maximum: 20, message: "cannot be more than 20 characters" }
+  validates :self_summary, length: { maximum: 800, message: "cannot be more than 800 characters" }
+  validates :preferred_gender, presence: true, inclusion: { in: Choices['preferred_gender'], message: "is invalid" }
+  validates :gender, presence: true, inclusion: { in: Choices['gender'], message: "is invalid" }
+  validates :looking_for, presence: true, inclusion: { in: Choices['looking_for'], message: "is invalid" }
+  validates :edu_status, presence: true, inclusion: { in: Choices['edu_status'], message: "is invalid" }
+  validates :edu_type, presence: true, inclusion: { in: Choices['edu_type'], message: "is invalid" }
+  validates :smoke, presence: true, inclusion: { in: Choices['smoke'], message: "status is invalid" }
+  validates :drink, presence: true, inclusion: { in: Choices['drink'], message: "status is invalid" }
+  validates :drugs, presence: true, inclusion: { in: Choices['drugs'], message: "status is invalid" }
+  validates :diet, presence: true, inclusion: { in: Choices['diet'], message: "is invalid" }
+  validates :religion, presence: true, inclusion: { in: Choices['religion'], message: "is invalid" }
   validates :min_age, presence: true, numericality: { greater_than_or_equal_to: 18 }
-  validates :max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age }
-  validates :user_id, :gender, :date_of_birth, :country, :looking_for, 
-            :edu_status, :edu_type, :religion, :smoke, :drink, :drugs, 
-            :diet, presence: true
+  validates :max_age, presence: true, numericality: { greater_than_or_equal_to: :min_age, message: "must be greater than or equal to min age" }
+  validates :user_id, :date_of_birth, :country, presence: true
   
   # Custom validation methods
   validate :picture_size
