@@ -2,7 +2,7 @@
 
 MatchMe is a simple dating application that matches users according to their values and beliefs.
 
-## Heroku
+## View application
 [Launch app](https://matchmeplease.herokuapp.com/)
 
 ### Demo logins
