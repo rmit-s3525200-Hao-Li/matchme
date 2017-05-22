@@ -94,8 +94,7 @@ class UserTest < ActiveSupport::TestCase
   
   test "associated likes should be destroyed" do
     @user.save
-    @user.like(@other_user)
-    assert_difference 'Likeable.count', -1 do
+    assert_difference 'Likeable.count', -2 do
       @user.destroy
     end
   end
