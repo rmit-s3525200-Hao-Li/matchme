@@ -6,7 +6,7 @@ matt_profile:
   gender: male
   occupation: salesman
   preferred_gender: male
-  religion: Other
+  religion: other
   city: Sydney
   post_code: <%= '2000' %>
   country: Australia
@@ -15,7 +15,7 @@ matt_profile:
   min_age: 23
   max_age: 35
   looking_for: dating
-  smoke: never
+  smoke: sometimes
   drink: socially
   drugs: never
   diet: vegan
