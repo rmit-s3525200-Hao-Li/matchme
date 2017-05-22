@@ -6,12 +6,12 @@ MatchMe is a simple dating application that matches users according to their val
 [Launch app](https://matchmeplease.herokuapp.com/)
 
 ### User login
-Email: john@example.com
-Password: foobar1
+- Email: john@example.com
+- Password: foobar1
 
 ### Admin login
-Email: admin@example.com
-Password: foobar1
+- Email: admin@example.com
+- Password: foobar1
 
 ## What You'll Need
 - Ruby on Rails
