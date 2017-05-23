@@ -65,28 +65,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?('')
   end
   
-  test "associated profile should be destroyed" do 
-    @user.save
-    @user.create_profile!(first_name: 'Matt',
-                                last_name: 'Smith',
-                                gender: 'male',
-                                occupation: 'salesman',
-                                preferred_gender: 'male',
-                                religion: 'other',
-                                city: 'Sydney',
-                                post_code: '2000',
-                                country: 'Australia',
-                                date_of_birth: Date.new(1991, 12, 3),
-                                min_age: 23,
-                                max_age: 35,
-                                looking_for: 'dating',
-                                smoke: 'not at all',
-                                drink: 'socially',
-                                drugs: 'never',
-                                diet: 'vegan',
-                                edu_status: 'completed',
-                                edu_type: 'high school',
-                                nearby: true)
+  test "associated profile should be destroyed" do
     assert_difference 'Profile.count', -1 do
       @user.destroy
     end
@@ -100,48 +79,7 @@ class UserTest < ActiveSupport::TestCase
   end
   
   test "associated match users plus matches should be destroyed" do
-    @user.save
-    @other_user.save
-    @user.create_profile!(first_name: 'Matt',
-                                last_name: 'Smith',
-                                gender: 'male',
-                                occupation: 'salesman',
-                                preferred_gender: 'female',
-                                religion: 'other',
-                                city: 'Sydney',
-                                post_code: '2000',
-                                country: 'Australia',
-                                date_of_birth: Date.new(1991, 12, 3),
-                                min_age: 23,
-                                max_age: 35,
-                                looking_for: 'dating',
-                                smoke: 'not at all',
-                                drink: 'socially',
-                                drugs: 'never',
-                                diet: 'vegan',
-                                edu_status: 'completed',
-                                edu_type: 'high school',
-                                nearby: true)
-    @other_user.create_profile!(first_name: 'Jess',
-                                last_name: 'Sagan',
-                                gender: 'female',
-                                occupation: 'salesman',
-                                preferred_gender: 'male',
-                                religion: 'other',
-                                city: 'Sydney',
-                                post_code: '2000',
-                                country: 'Australia',
-                                date_of_birth: Date.new(1991, 12, 3),
-                                min_age: 23,
-                                max_age: 35,
-                                looking_for: 'dating',
-                                smoke: 'not at all',
-                                drink: 'socially',
-                                drugs: 'never',
-                                diet: 'vegan',
-                                edu_status: 'completed',
-                                edu_type: 'high school',
-                                nearby: true)
+    Match.create!(user_one_id: @user.id, user_two_id: @other_user.id)
     assert @user.match_users.any?
     assert_difference 'Match.count', -1 do
       @user.destroy
