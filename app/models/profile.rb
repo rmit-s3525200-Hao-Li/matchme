@@ -240,5 +240,11 @@ class Profile < ApplicationRecord
         end
       end
     end
-    
+       # Count males and females
+  def self.total_males
+    where(gender: 'male').count
+  end
+  def self.total_females
+    where(gender: 'female').count
+  end 
 end

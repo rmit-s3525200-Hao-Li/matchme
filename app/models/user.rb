@@ -111,4 +111,5 @@ class User < ApplicationRecord
       self.email.downcase!
     end
 
+
 end
