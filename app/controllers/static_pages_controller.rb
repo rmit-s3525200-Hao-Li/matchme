@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   
-  before_action :redirect_logged_in_user
+  before_action :redirect_logged_in_user, only: :home
   
   def home
     @user = User.new
