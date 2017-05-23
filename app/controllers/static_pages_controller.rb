@@ -6,6 +6,10 @@ class StaticPagesController < ApplicationController
     @user = User.new
   end
   
+  def show
+    render template: "static_pages/#{params[:page]}"
+  end
+  
   private
   
     def redirect_logged_in_user
