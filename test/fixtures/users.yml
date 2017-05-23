@@ -7,6 +7,10 @@ jess:
   email: jess@example.com
   password_digest: <%= User.digest('foobar1') %>
   
+declan:
+  email: declan@example.com
+  password_digest: <%= User.digest('foobar1') %>
+  
 admin:
   email: admin@example.com
   password_digest: <%= User.digest('foobar1') %>

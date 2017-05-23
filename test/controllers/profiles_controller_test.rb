@@ -4,14 +4,14 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
   
   def setup
     @user = users(:matt)
-    @other_user = users(:jess)
+    @other_user = users(:declan)
     @admin = users(:admin)
     @profile = profiles(:matt_profile)
   end
   
   test "should get new" do
-    log_in_as(@user)
-    get new_user_profiles_path(@user)
+    log_in_as(@other_user)
+    get new_user_profiles_path(@other_user)
     assert_response :success
   end
   
