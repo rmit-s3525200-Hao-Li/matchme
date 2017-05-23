@@ -190,18 +190,6 @@ small { font-size: 84%; line-height: inherit; }
 
 
 
-/* -----------------------------------------
-   04. Video Section
------------------------------------------ */
-
-iframe { border: none; }
-#markerPoint {}
-#video { display: none; margin-bottom: 40px; background: #000; box-shadow: 0 0  10px #777; }
-#video .central { position: relative; background: image-url("loading_dark.gif") center center no-repeat; }
-#video .central a#videoClose { position: absolute; right: 40px; bottom: 43px; width: 34px; height: 34px; z-index: 9999; }
-
-
-
 
 
 /* -----------------------------------------
@@ -231,37 +219,6 @@ iframe { border: none; }
     transform: scale(1.1); -ms-transform: scale(1.1);
     filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=-0, M21=0, M22=1); }
 		
-/* Small fix for IE8 */
-.lt-ie9 #feature-text a.imagelink .read,
-.lt-ie9 #feature-text a.imagelink:hover .read { display: none; }
-
-
-
-
-/* -----------------------------------------
-   06. Testimonials
------------------------------------------ */
-
-.testimonials-carousel { margin-bottom: 10px; padding-top: 10px;  position: relative; min-height: 140px; }
-.testimonials-carousel li { text-align: center; padding: 0; background: none; list-style: none; }
-.quote-content { margin: 14px; font-size: 17px; line-height: 1.6; font-style: italic; }
-.quote-author { margin-top: 12px; font-size: 11px; }
-.author-description { color: #aaa; }
-
-
-
-
-
-/* -----------------------------------------
-   07. Support & Newsletter
------------------------------------------ */
-
-#support { background: #eaeaea image-url("patterns/gray_pattern.gif"); padding-top: 40px; padding-bottom: 20px; border-top: 10px solid #fafafa; }
-#newsletter-form #result {}
-
-
-
-
 
 /* -----------------------------------------
    08. Footer
@@ -271,16 +228,7 @@ iframe { border: none; }
 #footer h5 { color: #777; margin-bottom: 20px; }
 #footer hr { border: solid #333; border-width: 1px 0 0; }
 #footer .section { margin-bottom: 10px; }
-
-/*** Social Icons ***/
-.footer-social-icons a { color: #777; float: left; display: inline-block; margin-right: 5px; }
-
-/*** Twitter Feed ***/
-.twitter-article {}
-.twitter-text {}
-.tweetprofilelink { margin-right: 5px; }
-.tweet-time a { padding: 1px 4px 2px; font-size: 11px; text-align: center; text-decoration: none; line-height: 1; white-space: nowrap; display: inline; position: relative; bottom: 1px; color: #9a9a9a; background: #333;
-		-webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+#footer p {color: #d9d9d9;}
 
 /*** Latest Blog ***/
 .latest-blog li { list-style: none; display: inline-block; width: 100%; margin-bottom: 10px; }
@@ -292,11 +240,6 @@ border-radius: 100%; -moz-border-radius: 100%; -webkit-border-radius: 100%; }
 		border: 3px solid #f00056; }
 .latest-blog img { width: 50px; height: 50px; display: block;
 border-radius: 100%; -moz-border-radius: 100%; -webkit-border-radius: 100%; }
-
-/*** Newsletter Form ***/
-#result { font-weight: bold; }
-
-
 
 
 
