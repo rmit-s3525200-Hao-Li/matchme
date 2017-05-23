@@ -85,6 +85,7 @@ class UsersController < ApplicationController
     @show_percent = true
   end
   
+  # Shows users liked by user
   def likes
     @profile = @user.profile
     @title = "Likes"
@@ -93,6 +94,7 @@ class UsersController < ApplicationController
     render 'show_like'
   end
 
+  # Shows users that have liked user
   def likers
     @profile = @user.profile
     @title = "Liked By"
