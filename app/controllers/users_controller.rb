@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :matches, :likes, :likers]
   
   # Checks that user is logged in before they view profiles 
-  before_action :logged_in_user, only: :show
+  before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy, :matches, :likes, :likers]
   
   # Checks that is is not logged in before they can create an account
   before_action :not_logged_in, only: [:new, :create]

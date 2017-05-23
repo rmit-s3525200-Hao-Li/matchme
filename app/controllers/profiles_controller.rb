@@ -9,6 +9,9 @@ class ProfilesController < ApplicationController
   # Admin doesn't have a profile
   before_action :non_admin_user, only: [:new, :create, :edit, :update]
   
+  # User that already has a profile doesn't need another one
+  before_action :has_no_profile, only: [:new, :create]
+  
   def new
     @profile = @user.build_profile
   end
@@ -59,6 +62,11 @@ class ProfilesController < ApplicationController
     def non_admin_user
       @user = User.find(params[:user_id])
       redirect_to(root_url) unless !@user.admin?
+    end
+    
+    def has_no_profile
+      @user = User.find(params[:user_id])
+      redirect_to(@user) unless @user.profile.nil?
     end
   
 end
