@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
     # Confirms a logged out user
     def not_logged_in
       unless !logged_in?
+        flash[:warning] = "You are already logged in!"
         redirect_to root_url
       end
     end
