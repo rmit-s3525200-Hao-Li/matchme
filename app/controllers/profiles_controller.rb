@@ -74,7 +74,7 @@ class ProfilesController < ApplicationController
     def has_no_profile
       @user = User.find(params[:user_id])
       unless @user.profile.nil?
-        flash[:danger] = "You already have a profile!"
+        flash[:warning] = "You already have a profile!"
         redirect_to(@user)
       end
     end

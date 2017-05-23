@@ -138,7 +138,7 @@ class UsersController < ApplicationController
     def non_admin_user
       @user = User.find(params[:id])
       unless !@user.admin?
-        flash[:danger] = "No such page exists"
+        flash[:warning] = "No such page exists"
         redirect_to(root_url)
       end
     end
