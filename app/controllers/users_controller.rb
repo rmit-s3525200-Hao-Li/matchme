@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: [:index, :destroy]
   
   # Admin doesn't have a profile or matches
-  before_action :non_admin_user, only: [:show, :matches]
+  before_action :non_admin_user, only: [:show, :matches, :likes, :likers]
   
   # Corresponds to view/users/index.html.erb
   def index
@@ -119,19 +119,28 @@ class UsersController < ApplicationController
     
     # Confirms an admin user.
     def admin_user
-      redirect_to(root_url) unless current_user.admin?
+      unless current_user.admin?
+        flash[:danger] = "You are not authorized to view that page"
+        redirect_to(root_url)
+      end
     end
     
     # Confirms the correct user.
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      unless current_user?(@user)
+        flash[:danger] = "You are not authorized to view that page"
+        redirect_to(root_url)
+      end
     end
     
     # Confirms non admin user.
     def non_admin_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless !@user.admin?
+      unless !@user.admin?
+        flash[:danger] = "No such page exists"
+        redirect_to(root_url)
+      end
     end
 
     #Confirms profile has been created
