@@ -3,11 +3,24 @@ class StaticPagesController < ApplicationController
   before_action :redirect_logged_in_user, only: :home
   
   def home
-    @user = User.new
+  end
+  
+  def terms
+  end
+  
+  def faq
+  end
+  
+  def support
+  end
+  
+  def privacy
   end
   
   def show
+    @singlepage = Singlepage.new
     render template: "static_pages/#{params[:page]}"
+    
   end
   
   private
