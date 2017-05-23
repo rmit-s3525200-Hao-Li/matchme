@@ -117,3 +117,20 @@ h1.logo {
 .mouse-pointer {
     cursor: pointer;
 }
+
+/* FOOTER */
+
+.hoverable {
+    cursor:default;
+    color:#000;
+    text-decoration:none;
+}
+.hoverable .hover {
+    display:none;
+}
+.hoverable:hover .normal {
+    display:none;
+}
+.hoverable:hover .hover {
+    display:inline;  /* CHANGE IF FOR BLOCK ELEMENTS */
+}
