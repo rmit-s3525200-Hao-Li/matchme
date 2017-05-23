@@ -17,11 +17,6 @@ class StaticPagesController < ApplicationController
   def privacy
   end
   
-  def show
-    @singlepage = Singlepage.new
-    render template: "static_pages/#{params[:page]}"
-    
-  end
   
   private
   
