@@ -1,6 +1,9 @@
 class ProfilesController < ApplicationController
   
-  before_action :correct_user,   only: [:new, :create, :edit, :update]
+  # User cannot edit or create profiles on behalf of other users
+  before_action :correct_user
+  
+  # Find user in database
   before_action :get_user
   
   # Admin doesn't have a profile
@@ -37,6 +40,7 @@ class ProfilesController < ApplicationController
   
   private
   
+    # Finds user
     def get_user
       @user = User.find(params[:user_id])
     end

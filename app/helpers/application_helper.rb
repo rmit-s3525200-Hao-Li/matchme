@@ -10,9 +10,9 @@ module ApplicationHelper
   end
   
   # Displays default thumbnail unless user has uploaded picture
-  def display_thumbnail(user)
-    unless user.picture.nil?
-      image_tag(user.picture.thumb.url)
+  def display_thumbnail(profile)
+    unless profile.picture.nil?
+      image_tag(profile.picture.thumb.url)
     else
       image_tag(default_url)
     end

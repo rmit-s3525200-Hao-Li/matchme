@@ -1,9 +1,7 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  liker_id: 1
-  liked_id: 2
+  liker: matt
+  liked: jess
 
 two:
-  liker_id: 2
-  liked_id: 1
+  liker: jess
+  liked: matt
