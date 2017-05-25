@@ -15,3 +15,7 @@ admin:
   email: admin@example.com
   password_digest: <%= User.digest('foobar1') %>
   admin: true
+  
+xieyang:
+  email: xieyang@example.com
+  password_digest: <%= User.digest('foobar1') %>
