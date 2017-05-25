@@ -30,9 +30,9 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_url
   end
   
-  test "should redirect destroy when not logged in" do
-    assert_no_difference 'User.count' do
-      delete logout_url
+  test "should redirect likeables when not logged in" do
+   assert_no_difference 'Likeable.count' do
+      post likeables_path
     end
     assert_redirected_to signin_url
   end
