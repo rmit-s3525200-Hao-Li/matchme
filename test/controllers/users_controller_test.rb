@@ -17,4 +17,10 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get edit_user_profiles_path(@user)
     assert_response :success
   end
+  
+  test "should not get wrong user for edit" do
+    log_in_as(@user)
+    get edit_user_profiles_path(@other_user)
+    assert_redirected_to root_url
+  end
 end
