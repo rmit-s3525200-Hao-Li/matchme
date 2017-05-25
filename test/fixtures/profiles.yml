@@ -5,8 +5,8 @@ matt_profile:
   last_name: Smith
   gender: male
   occupation: salesman
-  preferred_gender: male
-  religion: Other
+  preferred_gender: female
+  religion: other
   city: Sydney
   post_code: <%= '2000' %>
   country: Australia
@@ -15,17 +15,41 @@ matt_profile:
   min_age: 23
   max_age: 35
   looking_for: dating
-  smoke: never
+  smoke: sometimes
   drink: socially
   drugs: never
   diet: vegan
   edu_status: completed
   edu_type: high school
-  movies: Pulp Fiction, Titanic, Oldboy
-  music: The Others
-  tv_shows: Breaking Bad, Silicon Valley, Rick and Morty
-  books: The Great Gatsby, Catcher in the Rye
-  games: League of Legends, Minecraft, Legend of Zelda
-  sports: cricket, baseball
+  movies: Pulp Fiction, Titanic
+  music: Tame Impala
+  tv_shows: Silicon Valley
   nearby: true
   user: matt
+  
+jess_profile:
+  first_name: Jess
+  last_name: Doe
+  gender: female
+  occupation: salesman
+  preferred_gender: male
+  religion: other
+  city: Sydney
+  post_code: <%= '2000' %>
+  country: Australia
+  self_summary: blah
+  date_of_birth: 1991-12-3
+  min_age: 23
+  max_age: 35
+  looking_for: dating
+  smoke: sometimes
+  drink: socially
+  drugs: never
+  diet: vegan
+  edu_status: completed
+  edu_type: high school
+  movies: Pulp Fiction, Titanic
+  music: Tame Impala
+  tv_shows: Silicon Valley
+  nearby: true
+  user: jess

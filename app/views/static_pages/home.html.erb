@@ -8,7 +8,7 @@
       <div class="twelve columns">
         <h1 class="section-title">It all starts with a Date</h1>
         <p class="lead">Looking to find people you share more in common with? You've come to the right place.
-        <br />There are <strong>12345</strong> active users on MatchMe today. <strong>Join us today and find your match!</strong></p>
+        <br />There are <strong><%= User.count %></strong> active users on MatchMe today. <strong>Join us today and find your match!</strong></p>
 
         <% if !logged_in? %>
           <!--Take action-->

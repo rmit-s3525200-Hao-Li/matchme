@@ -14,10 +14,10 @@
       <div class="three columns section">
         <h5>Useful links</h5>
         <ul class="no-bullet">
-          <li><i class="icon-angle-right"></i> <a href="#">Terms and Conditions</a></li>
-          <li><i class="icon-angle-right"></i> <a href="#">Support</a></li>
-          <li><i class="icon-angle-right"></i> <a href="#">FAQ</a></li>
-          <li><i class="icon-angle-right"></i> <a href="#">Privacy Policy</a></li>
+          <li><i class="icon-angle-right"></i> <%= link_to "Terms", terms_path %></li>
+          <li><i class="icon-angle-right"></i> <%= link_to "Support", support_path %></li>
+          <li><i class="icon-angle-right"></i> <%= link_to 'FAQ', faq_path %></li>
+          <li><i class="icon-angle-right"></i> <%= link_to 'Privacy', privacy_path %></li>
         </ul>
       </div>
       <!--end useful links-->
@@ -33,23 +33,25 @@
           </li>
           <li>
 
-            <p>Ut enim ad minim veniam, quis nostrud.</p>
+            <p>There are <b><%= User.count %></b> users online</p>
           </li>
         </ul>
       </div>
       <!--end latest from blog-->
 
-      <!--Dating & Relationship Advice-->
+      <!--Social media link-->
+      <!--Icon: fontawesome.io-->
       <div class="three columns section">
-        <h5>Relationship Advice</h5>
+        <h5>Social media</h5>
         <ul class="no-bullet">
-          <li><i class="icon-angle-right"></i> <a href="#">Dating Advice</a></li>
-          <li><i class="icon-angle-right"></i> <a href="#">Online Dating Advice</a></li>
-          <li><i class="icon-angle-right"></i> <a href="#">Relationship Advice</a></li>
-          <li><i class="icon-angle-right"></i> <a href="#">Single Life</a></li>
+        <li><i class="icon-angle-right"></i>  <a href="https://www.youtube.com/user/rmitmedia" class="hoverable"><span class="normal">Youtube</span><span class="hover"><i class="fa fa-youtube" aria-hidden="true"></i>Youtube</span></a> </li>
+        <li><i class="icon-angle-right"></i>  <a href="https://twitter.com/RMIT" class="hoverable"><span class="normal">Twitter</span><span class="hover"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</span></a></li>
+        <li><i class="icon-angle-right"></i>  <a href="https://www.facebook.com/RMITuniversity/" class="hoverable"><span class="normal">Facebook</span><span class="hover"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</span></a></li>
+        <li><i class="icon-angle-right"></i>  <a href="https://www.instagram.com/rmituniversit" class="hoverable"><span class="normal">Instagram</span><span class="hover"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</span></a> </li>
+        <li><i class="icon-angle-right"></i>  <a href="https://web.skype.com/" class="hoverable"><span class="normal">Skype</span><span class="hover"><i class="fa fa-skype" aria-hidden="true"></i>Skype</span></a></li>
         </ul>
       </div>
-      <!--Dating & Relationship Advice-->
+      <!-- End Social media-->
 
       <div class="twelve columns">
         <hr>

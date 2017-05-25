@@ -33,7 +33,8 @@ class User < ApplicationRecord
   # Validates password
   VALID_PASSWORD_REGEX = /(?=.*[a-zA-Z])(?=.*[0-9]).{6,}/
   has_secure_password
-  validates :password, presence: true, format: { with: VALID_PASSWORD_REGEX }, allow_nil: true
+  validates :password, presence: true, format: { with: VALID_PASSWORD_REGEX, 
+                          message: "must be at least 6 characters long and contain both letters and numbers" }, allow_nil: true
   
   # Returns the hash digest of the given string.
   def User.digest(string)
@@ -109,5 +110,6 @@ class User < ApplicationRecord
     def downcase_email
       self.email.downcase!
     end
+
 
 end

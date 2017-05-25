@@ -2,9 +2,11 @@ class UsersController < ApplicationController
   
   before_action :set_user, only: [:show, :edit, :update, :matches, :likes, :likers]
   
-  # Checks that user is logged before they can access edit profile page
-  # and users index page
-  before_action :logged_in_user, only: [:show, :edit, :update, :destroy, :matches]
+  # Checks that user is logged in before they view profiles 
+  before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy, :matches, :likes, :likers]
+  
+  # Checks that is is not logged in before they can create an account
+  before_action :not_logged_in, only: [:new, :create]
   
   # Checks that user has created profile
   before_action :user_has_profile, only: [:show, :edit, :update, :matches]
@@ -16,7 +18,7 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: [:index, :destroy]
   
   # Admin doesn't have a profile or matches
-  before_action :non_admin_user, only: [:show, :matches]
+  before_action :non_admin_user, only: [:show, :matches, :likes, :likers]
   
   # Corresponds to view/users/index.html.erb
   def index
@@ -83,6 +85,7 @@ class UsersController < ApplicationController
     @show_percent = true
   end
   
+  # Shows users liked by user
   def likes
     @profile = @user.profile
     @title = "Likes"
@@ -91,6 +94,7 @@ class UsersController < ApplicationController
     render 'show_like'
   end
 
+  # Shows users that have liked user
   def likers
     @profile = @user.profile
     @title = "Liked By"
@@ -115,19 +119,28 @@ class UsersController < ApplicationController
     
     # Confirms an admin user.
     def admin_user
-      redirect_to(root_url) unless current_user.admin?
+      unless current_user.admin?
+        flash[:danger] = "You are not authorized to view that page"
+        redirect_to(root_url)
+      end
     end
     
     # Confirms the correct user.
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      unless current_user?(@user)
+        flash[:danger] = "You are not authorized to view that page"
+        redirect_to(root_url)
+      end
     end
     
     # Confirms non admin user.
     def non_admin_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless !@user.admin?
+      unless !@user.admin?
+        flash[:warning] = "No such page exists"
+        redirect_to(root_url)
+      end
     end
 
     #Confirms profile has been created

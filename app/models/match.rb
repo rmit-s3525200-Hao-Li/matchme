@@ -31,6 +31,7 @@ class Match < ApplicationRecord
       interests_one = profile_one.interests_array
       interests_two = profile_two.interests_array
       total_interests = profile_one.count_interests + profile_two.count_interests
+      return 0 if total_interests == 0
       common_interests = interests_one.zip(interests_two).flat_map { |f, s| f & s }.count
       ((common_interests.to_f / total_interests) * 80).round
     end

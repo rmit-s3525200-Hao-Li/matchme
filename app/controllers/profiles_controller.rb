@@ -1,10 +1,16 @@
 class ProfilesController < ApplicationController
   
-  before_action :correct_user,   only: [:new, :create, :edit, :update]
+  # User cannot edit or create profiles on behalf of other users
+  before_action :correct_user
+  
+  # Find user in database
   before_action :get_user
   
   # Admin doesn't have a profile
   before_action :non_admin_user, only: [:new, :create, :edit, :update]
+  
+  # User that already has a profile doesn't need another one
+  before_action :has_no_profile, only: [:new, :create]
   
   def new
     @profile = @user.build_profile
@@ -37,6 +43,7 @@ class ProfilesController < ApplicationController
   
   private
   
+    # Finds user
     def get_user
       @user = User.find(params[:user_id])
     end
@@ -48,13 +55,28 @@ class ProfilesController < ApplicationController
     # Confirms the correct user.
     def correct_user
       @user = User.find(params[:user_id])
-      redirect_to(root_url) unless current_user?(@user)
+      unless current_user?(@user)
+        flash[:danger] = "You are not authorized to view that page"
+        redirect_to(root_url)
+      end
     end
     
     # Confirms non admin user.
     def non_admin_user
       @user = User.find(params[:user_id])
-      redirect_to(root_url) unless !@user.admin?
+      unless !@user.admin?
+        flash[:danger] = "You cannot access that page"
+        redirect_to(root_url)
+      end
+    end
+    
+    # Checks whether or not a user already has a profile
+    def has_no_profile
+      @user = User.find(params[:user_id])
+      unless @user.profile.nil?
+        flash[:warning] = "You already have a profile!"
+        redirect_to(@user)
+      end
     end
   
 end
