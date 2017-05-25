@@ -23,4 +23,18 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get edit_user_profiles_path(@other_user)
     assert_redirected_to root_url
   end
+  
+  test "should redirect edit when logged in as wrong user" do
+    log_in_as(@other_user)
+    get edit_user_profiles_path(@user)
+    assert_redirected_to root_url
+  end
+  
+  test "should redirect destroy when not logged in" do
+    assert_no_difference 'User.count' do
+      delete logout_url
+    end
+    assert_redirected_to signin_url
+  end
+  
 end
