@@ -24,12 +24,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_url
   end
   
-  test "should redirect edit when logged in as wrong user" do
-    log_in_as(@other_user)
-    get edit_user_profiles_path(@user)
-    assert_redirected_to root_url
-  end
-  
   test "should redirect likeables when not logged in" do
    assert_no_difference 'Likeable.count' do
       post likeables_path
