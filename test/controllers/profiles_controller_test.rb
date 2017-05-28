@@ -15,15 +15,24 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
   
+  test "should update" do
+    log_in_as(@user)
+    new_name = "test"
+    patch edit_user_profiles_path(@user), params: { profile: { first_name: new_name } }
+    assert_equal new_name, @user.profile.reload.first_name
+  end
+  
   test "shouldn't get new if wrong user" do
     log_in_as(@user)
     get new_user_profiles_path(@other_user)
+    assert_not flash.empty?
     assert_redirected_to root_url
   end
   
   test "shouldn't get new if admin" do
     log_in_as(@admin)
     get new_user_profiles_path(@admin)
+    assert_not flash.empty?
     assert_redirected_to root_url
   end
   
@@ -55,6 +64,7 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
                               }
                             }
     end
+    assert_not flash.empty?
     assert_redirected_to root_url
   end
   
@@ -86,6 +96,7 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
                               }
                             }
     end
+    assert_not flash.empty?
     assert_redirected_to root_url
   end
   
@@ -98,24 +109,28 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
   test "shouldn't get edit if wrong user" do
     log_in_as(@user)
     get edit_user_profiles_path(@other_user)
+    assert_not flash.empty?
     assert_redirected_to root_url
   end
   
   test "shouldn't get edit if admin" do
     log_in_as(@admin)
     get edit_user_profiles_path(@admin)
+    assert_not flash.empty?
     assert_redirected_to root_url
   end
   
   test "should redirect update if wrong user" do
     log_in_as(@user)
-    patch edit_user_profiles_path(@other_user)
+    patch edit_user_profiles_path(@other_user), params: { profile: { first_name: "test" } }
+    assert_not flash.empty?
     assert_redirected_to root_url
   end
   
   test "should redirect update if admin" do
     log_in_as(@admin)
-    patch edit_user_profiles_path(@admin)
+    patch edit_user_profiles_path(@admin), params: { profile: { first_name: "test" } }
+    assert_not flash.empty?
     assert_redirected_to root_url
   end
 
