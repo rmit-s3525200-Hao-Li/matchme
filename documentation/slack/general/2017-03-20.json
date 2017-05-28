@@ -1,0 +1,290 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Homy said by Wednesday he expects us to have finished all learning and research.",
+        "ts": "1489993536.884224"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "He says \"One of your responsibility in Programming project, is using technologies that you are already good at it or you can pick it up and start with lowest cost and fast.\"",
+        "ts": "1489993562.886274"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "So we better learn quick, or reduce our scope.",
+        "ts": "1489993575.887255"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'm going to ask if we can use AWS for free.",
+        "ts": "1489993618.890700"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "It's free for 12 months on small-medium plan for everyone.",
+        "ts": "1489993670.894846"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ohh ok",
+        "ts": "1489993693.896630"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I made my account more than 12 months ago though i think, back when i did web servers.",
+        "ts": "1489993721.899100"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "But i guess we only need one account anyway.",
+        "ts": "1489993729.899838"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Yes",
+        "ts": "1489994000.921027"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> <@U4F33615G> Since you guys know more about AWS I'll put down in the project charter that you're in charge of that. What would your \"title\" be? AWS developer?",
+        "ts": "1489997831.290939"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Or AWS engineer? AWS solutions architect?",
+        "ts": "1489997893.297874"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'll put AWS engineer actually.",
+        "ts": "1489998013.312120"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I think solutions architect involves more.",
+        "ts": "1489998022.313431"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Thanks",
+        "ts": "1489998224.337981"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "ok",
+        "ts": "1489998400.360197"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I think we should assign someone to the role of Risk Manager. Yes? No?",
+        "ts": "1490004055.235837"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'm project leader right? What should I put as the reason? Cause idk it just happened.",
+        "ts": "1490007085.743027"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok I think I finished the project charter. I want to sent it off ASAP so can you guys just look over it really quick?",
+        "ts": "1490007754.854211"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "I can play the role of risk manager. ",
+        "ts": "1490012266.544760"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "ok i'll put that in charter",
+        "ts": "1490014053.852665"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "So guys can you look over the project charter and tell me if there's anything i should change or fix?",
+        "ts": "1490058219.553161"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I think like a \"user, view likes, view users who like you\" need more time to finish. <@U4K11P9MH> is it complicate to delete an account in database?",
+        "ts": "1490060749.806514"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "should be easy and can done this function in short time. but I’m not sure what it like in database",
+        "ts": "1490060809.812871"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "it's easy",
+        "ts": "1490060887.820667"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "idk i was putting a schedule to aim for. the extra time left over can be like a buffer",
+        "ts": "1490060913.823107"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "because it's hard to predict how long things will take",
+        "ts": "1490060922.824027"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "i can distribute buffer time throughout, rather than have it at the end",
+        "ts": "1490061043.835874"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "we're doing scrum though so we don't have to follow the schedule laid out to a T",
+        "ts": "1490061081.839446"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "how about this time-line?\n1.Log in\/out, registration\n2. profile page and edit profile(info, pic,delete account)\n3&amp;4 search, view matches\n5&amp;6. likes, view likes, view users who like you \n7. testing and debugging",
+        "ts": "1490061185.849719"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "btw, Project Governance is great",
+        "ts": "1490061224.853639"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "we'd be testing and debugging as we go",
+        "ts": "1490062317.960907"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "ok i can change it.",
+        "ts": "1490062326.961700"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'll change it tonight since I'm in the middle of something rn and send it to Homy. He'll probably have suggestions for how we can improve it.",
+        "ts": "1490062413.969975"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": ":+1:",
+        "ts": "1490063004.027453"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> Have you finished the wireframes?",
+        "ts": "1490076315.122318"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If we're going to do homepage, login and registration next week we need to show Homy the wireframes for all of these tomorrow.",
+        "ts": "1490076360.126184"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Yes",
+        "ts": "1490076402.129524"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "So if you did these you need to add them to trello.",
+        "ts": "1490076468.134866"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I uploaded them on google drive ",
+        "ts": "1490076532.139932"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok just make sure you update your trello cards too",
+        "ts": "1490076550.141177"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Let me fix them",
+        "ts": "1490076613.146018"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "The wireframes are still the old ones.. I needed them simplified remember? Wireframes should only have stuff we're going to implement during the sprint. So with the login, you need to remove \"Login with Facebook\".",
+        "ts": "1490076621.146767"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I'll make it simple, So take other stuff off and only keep basic stuff right?",
+        "ts": "1490076754.157746"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Yeah just get rid of \"login with fb\" and \"forget password\" link since we're not doing that functionality during the next sprint. With homepage, does it reflect the template you plan on using? You would want to make a version of homepage for logged in users as well.",
+        "ts": "1490076898.169360"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I think it's important to define core goals vs stretch goals.",
+        "ts": "1490077319.204210"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "So i'll make a document relating to it.",
+        "ts": "1490077332.205208"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "For those who don't know, Core goals are the stuff that we have to do. They're indispensable because without them, the entire purpose of the site woudn't work.",
+        "ts": "1490077380.209131"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Stretch goals are the extra stuff that we can do, but only if we feel like we have time.",
+        "ts": "1490077396.210311"
+    }
+]

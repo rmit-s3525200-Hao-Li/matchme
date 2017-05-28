@@ -1,0 +1,169 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I think with registration, we'll do basic user registration field to start. So email, password, first name, last name, city, state, post code, country, occupation, date of birth, and self-summary.",
+        "ts": "1490080724.502731"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "We'll at in the match questions part when we start working on the matching functionality later.",
+        "ts": "1490080820.511033"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "*add",
+        "ts": "1490080849.513543"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Oh and registration would include preferred gender and age range too. of course. I'll just add this in as a checklist on the trello card.",
+        "ts": "1490080887.517584"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> Are you busy rn?",
+        "ts": "1490081445.576024"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "just finished the class",
+        "ts": "1490082482.689634"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "You mind doing the user story for logout?",
+        "ts": "1490082511.693013"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Needs to be done by tomorrow",
+        "ts": "1490082526.694822"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "ok I will do it now",
+        "ts": "1490082564.699130"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "our site when user click logout then go back to login page or home page?..or doesn't matter?",
+        "ts": "1490083410.802175"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Homepage",
+        "ts": "1490083448.806827"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "k",
+        "ts": "1490083494.812449"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Btw did everyone get the coursera thing ok?",
+        "ts": "1490083915.866659"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Another function I think we can add is the ability to view other people's Match answers and compare it to ours. So when you go to their profile, you click a link that says \"See questions\". There you see their answer to questions in comparison to yours.",
+        "ts": "1490094259.659351"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4ECJHCC9|jasmine> uploaded a file: <https:\/\/pp1sem12017.slack.com\/files\/jasmine\/F4N06BL1L\/pasted_image_at_2017_03_21_10_04_pm.png|Pasted image at 2017-03-21, 10:04 PM>",
+        "file": {
+            "id": "F4N06BL1L",
+            "created": 1490094265,
+            "timestamp": 1490094265,
+            "name": "Pasted image at 2017_03_21 10_04 PM.png",
+            "title": "Pasted image at 2017-03-21, 10:04 PM",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U4ECJHCC9",
+            "editable": false,
+            "size": 14166,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4N06BL1L\/pasted_image_at_2017_03_21_10_04_pm.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4N06BL1L\/download\/pasted_image_at_2017_03_21_10_04_pm.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4N06BL1L-d6bba229af\/pasted_image_at_2017_03_21_10_04_pm_64.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4N06BL1L-d6bba229af\/pasted_image_at_2017_03_21_10_04_pm_80.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4N06BL1L-d6bba229af\/pasted_image_at_2017_03_21_10_04_pm_360.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360_w": 360,
+            "thumb_360_h": 156,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4N06BL1L-d6bba229af\/pasted_image_at_2017_03_21_10_04_pm_480.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_480_w": 480,
+            "thumb_480_h": 208,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4N06BL1L-d6bba229af\/pasted_image_at_2017_03_21_10_04_pm_160.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "image_exif_rotation": 1,
+            "original_w": 525,
+            "original_h": 227,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/jasmine\/F4N06BL1L\/pasted_image_at_2017_03_21_10_04_pm.png",
+            "permalink_public": "https:\/\/slack-files.com\/T4ECJHC8Z-F4N06BL1L-3084ff80a9",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U4ECJHCC9",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "jasmine",
+        "bot_id": null,
+        "ts": "1490094266.660591"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> you coming?",
+        "ts": "1490132511.170575"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I will do project charter tomorrow and send it to him. Today I have to do an assignment for another class. We did well today! :slightly_smiling_face:",
+        "ts": "1490141836.678911"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Cheers lol!:yum:",
+        "ts": "1490142027.702103"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> I think you should maybe contact your bank about the C9 issue. I'm worried that if you develop locally, there will be conflicts with the way the app is configured.",
+        "ts": "1490144233.945730"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "k",
+        "ts": "1490147268.262327"
+    }
+]

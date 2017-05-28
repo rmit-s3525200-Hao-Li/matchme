@@ -1,0 +1,108 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "How is everyone going w\/ their part?",
+        "ts": "1490949385.121159"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i set up the dev environment in server through passenger+Nginx but got some problem.",
+        "ts": "1490953564.898212"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "when i clone the app from github should i change some config file to make it work?",
+        "ts": "1490953605.905809"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "yeah, database.yml",
+        "ts": "1490954896.139734"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "i think you need to add a different password to the production block",
+        "ts": "1490954944.148034"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "but i'm not sure",
+        "ts": "1490954949.148686"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "the database is called matchme btw",
+        "ts": "1490955001.157418"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "in the development environment, the username is ubuntu, and the password is match1",
+        "ts": "1490955034.163015"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "There might also be some gems you have to add. That would be in the Gemfile",
+        "ts": "1490955133.179565"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "When you add new gems, make sure you run `bundle install` after. And `bundle update` if errors appear after bundle install.",
+        "ts": "1490955167.185316"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "k",
+        "ts": "1490955180.187294"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i will try",
+        "ts": "1490955182.187760"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "This tutorial has rails and postgresql: <https:\/\/www.sitepoint.com\/deploy-your-rails-app-to-aws\/>",
+        "attachments": [
+            {
+                "service_name": "SitePoint",
+                "title": "Deploy Your Rails App to AWS — SitePoint",
+                "title_link": "https:\/\/www.sitepoint.com\/deploy-your-rails-app-to-aws\/",
+                "text": "Devdatta Kane walks through how to deploy a Rails application to Amazon Web Services (AWS). This is a step-by-step tutorial to show what's involved.",
+                "fallback": "SitePoint: Deploy Your Rails App to AWS — SitePoint",
+                "thumb_url": "https:\/\/www.sitepoint.com\/wp-content\/themes\/sitepoint\/assets\/images\/icon.ruby.png",
+                "ts": 1440079254,
+                "from_url": "https:\/\/www.sitepoint.com\/deploy-your-rails-app-to-aws\/",
+                "thumb_width": 710,
+                "thumb_height": 710,
+                "service_icon": "https:\/\/www.sitepoint.com\/wp-content\/themes\/sitepoint\/assets\/images\/apple-touch-icon-57x57-precomposed.png",
+                "id": 1
+            }
+        ],
+        "ts": "1490955252.199122"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "k",
+        "ts": "1490955346.215077"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "@xieyang How are you going? You're using lean testing right?",
+        "ts": "1491020726.973102"
+    }
+]

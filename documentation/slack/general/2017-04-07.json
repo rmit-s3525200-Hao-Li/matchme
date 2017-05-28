@@ -1,0 +1,205 @@
+[
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "I have class at 5'30, so I will waiting for you with a big problem which is testing in ror jasmine.:yum:",
+        "ts": "1491548516.824174"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2> don't worry about tests for match questions and answers.",
+        "ts": "1491556746.176425"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "we're not going to do them this sprint",
+        "ts": "1491556762.179264"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "OK",
+        "ts": "1491556876.200127"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Have a good weekend ",
+        "ts": "1491559036.592520"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4ECJHCC9|jasmine> uploaded a file: <https:\/\/pp1sem12017.slack.com\/files\/jasmine\/F4VV2FT5Z\/pasted_image_at_2017_04_07_08_48_pm.png|@haotian>",
+        "file": {
+            "id": "F4VV2FT5Z",
+            "created": 1491562136,
+            "timestamp": 1491562136,
+            "name": "Pasted image at 2017_04_07 08_48 PM.png",
+            "title": "@haotian",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U4ECJHCC9",
+            "editable": false,
+            "size": 20710,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4VV2FT5Z\/pasted_image_at_2017_04_07_08_48_pm.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4VV2FT5Z\/download\/pasted_image_at_2017_04_07_08_48_pm.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4VV2FT5Z-16f4656ab0\/pasted_image_at_2017_04_07_08_48_pm_64.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4VV2FT5Z-16f4656ab0\/pasted_image_at_2017_04_07_08_48_pm_80.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4VV2FT5Z-16f4656ab0\/pasted_image_at_2017_04_07_08_48_pm_360.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360_w": 259,
+            "thumb_360_h": 360,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4VV2FT5Z-16f4656ab0\/pasted_image_at_2017_04_07_08_48_pm_160.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "image_exif_rotation": 1,
+            "original_w": 338,
+            "original_h": 470,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/jasmine\/F4VV2FT5Z\/pasted_image_at_2017_04_07_08_48_pm.png",
+            "permalink_public": "https:\/\/slack-files.com\/T4ECJHC8Z-F4VV2FT5Z-63617ae897",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U4ECJHCC9",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "jasmine",
+        "bot_id": null,
+        "ts": "1491562137.098978"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Awesome",
+        "ts": "1491562166.103315"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Why yours 56mb\/512mb",
+        "ts": "1491562194.107461"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Actually I hadn't started the server.. Now it's 150MB \/ 512MB",
+        "ts": "1491562248.115683"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "See after you using some functions",
+        "ts": "1491562283.120895"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "hmmm 312\/512mb. so that's a problem?",
+        "ts": "1491562390.136203"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "We can stay using on it now, and see how it goes when we add more features, I'm just worried about if it's not enough resources.",
+        "ts": "1491562478.149189"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I've contributed 88,000 lines of code :joy: <https:\/\/github.com\/ellisjas\/matchme\/graphs\/contributors>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "ellisjas\/matchme",
+                "title_link": "https:\/\/github.com\/ellisjas\/matchme\/graphs\/contributors",
+                "text": "matchme - A matchmaking site being built using RoR.",
+                "fallback": "GitHub: ellisjas\/matchme",
+                "from_url": "https:\/\/github.com\/ellisjas\/matchme\/graphs\/contributors",
+                "thumb_url": "https:\/\/avatars3.githubusercontent.com\/u\/22196200?v=3&s=400",
+                "thumb_width": 250,
+                "thumb_height": 250,
+                "service_icon": "https:\/\/a.slack-edge.com\/bfaba\/img\/unfurl_icons\/github.png",
+                "id": 1
+            }
+        ],
+        "ts": "1491565436.584843"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "just finished one tutorial... ",
+        "ts": "1491588657.620522"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "88000? that's awesome,",
+        "ts": "1491588676.625407"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Btw, can I separate my code from it? I don't have contribution display on github now, because I upload my work to google drive, I did modify template and add many jQuery effect and modified lots of CSS in the first before I uploaded all code to google drive. Its now all mixed with your code lol, I think all front, like template, CSS and JS, I did many jQuery effect when I upload the code.\n\nBut of course exclude bootstrap part, it's front but it's your work, and it contributes lots of lines of code as well.",
+        "ts": "1491589116.742005"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "You need to use github, not google drive.",
+        "ts": "1491619037.088509"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "We can explain this to homy before we submit.",
+        "ts": "1491619066.089608"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Jeez why were you up so late?",
+        "ts": "1491619077.089999"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I only have 88,000 lines of contribution cause of your template lol. We need to delete a lot of it actually.",
+        "ts": "1491619176.093545"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "lol, I was using my github repository before, and I added everyone, I didn't know that you are using your repository.",
+        "ts": "1491619202.094548"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "can you push your changes?",
+        "ts": "1491629750.447556"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> Some problems came up with your changes. You changed the home link to users path. And when you made it so users can delete their own account, you made it so admin couldn't delete users anymore. These were all easy fixes but make sure you're not affecting things when you make changes..",
+        "ts": "1491630027.454590"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "ok next time i will test on local and push without problem",
+        "ts": "1491631162.484829"
+    }
+]

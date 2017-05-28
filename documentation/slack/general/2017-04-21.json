@@ -1,0 +1,8 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If you have questions ask me on here. I just don't think there's much to cover that wasn't covered in the last meeting anyway. I have created a new model called 'profile' which contained all the user information. the user model will now only contain email, password, and admin. I will push when I'm done. I have to modify pretty much the whole application because of this change. This and another assignment are taking up a lot of my time, but I'm always on here if you need help.",
+        "ts": "1492758933.631334"
+    }
+]

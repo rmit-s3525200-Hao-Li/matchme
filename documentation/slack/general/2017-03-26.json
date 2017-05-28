@@ -1,0 +1,98 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I finished user modelling and I'm working on registration now.",
+        "ts": "1490512852.946561"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok finished basic registration. Doesn't have image upload or geocoding yet. Working on login now.",
+        "ts": "1490520767.163411"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Finished basic login. <https:\/\/matchme-ellisjas.c9users.io\/>",
+        "ts": "1490521831.195167"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'll show you guys tomorrow.",
+        "ts": "1490521850.195683"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Also we really need a better response rate on here it's like I'm just talking to myself at this point.",
+        "ts": "1490522047.201122"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Ok",
+        "ts": "1490572754.357868"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Sorry I wasn't check my phone yesterday, I was doing an assignment with a group of another course.",
+        "ts": "1490575026.482674"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "That's ok. I finished the functions so now we just need to do layout.",
+        "ts": "1490575214.493396"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Awesome, great job!",
+        "ts": "1490575254.495823"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Yes but I didn't use MongoDB. I kept running into problems with it. :weary: Sorry..",
+        "ts": "1490575398.504074"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "We would be using PostgreSQL in production. I know most dating sites use relational db anyway. I think they also use a lot of data caching to improve performance.",
+        "ts": "1490575488.509378"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "it s ok  later we can discuss this",
+        "ts": "1490575568.514556"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Anyone want a coffee?",
+        "ts": "1490585282.212547"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "no thx",
+        "ts": "1490586194.277246"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Omg this rain",
+        "ts": "1490586987.333462"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I'm in Carlton library now, coming",
+        "ts": "1490587009.334980"
+    }
+]

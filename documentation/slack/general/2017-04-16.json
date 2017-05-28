@@ -1,0 +1,29 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<http:\/\/stackoverflow.com\/questions\/31910560\/allow-admin-to-activate-or-deactivate-users-rails>",
+        "attachments": [
+            {
+                "title": "Allow admin to activate or deactivate users-- Rails",
+                "title_link": "http:\/\/stackoverflow.com\/questions\/31910560\/allow-admin-to-activate-or-deactivate-users-rails",
+                "text": "I've managed to make an app that works only to sign up and to log in. Currently, I'm allowing users by mail account activation (following this tutorial: <https:\/\/www.railstutorial.org\/book\/>",
+                "fallback": "Allow admin to activate or deactivate users-- Rails",
+                "thumb_url": "https:\/\/cdn.sstatic.net\/Sites\/stackoverflow\/img\/apple-touch-icon@2.png?v=73d79a89bded",
+                "from_url": "http:\/\/stackoverflow.com\/questions\/31910560\/allow-admin-to-activate-or-deactivate-users-rails",
+                "thumb_width": 316,
+                "thumb_height": 316,
+                "service_icon": "https:\/\/cdn.sstatic.net\/Sites\/stackoverflow\/img\/favicon.ico?v=4f32ecc8f43d",
+                "service_name": "stackoverflow.com",
+                "id": 1
+            }
+        ],
+        "ts": "1492326160.441008"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> Don't forget to download slack into your phone. I made a trello board for RAD assignment 2, but we dont have to be as strict with it. It's just to help us keep track of our tasks.",
+        "ts": "1492338919.759861"
+    }
+]

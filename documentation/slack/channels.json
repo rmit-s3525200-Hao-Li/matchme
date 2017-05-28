@@ -1,0 +1,97 @@
+[
+    {
+        "id": "C4F41VA9H",
+        "name": "development",
+        "created": "1488940734",
+        "creator": "U4ECJHCC9",
+        "is_archived": false,
+        "is_general": false,
+        "members": [
+            "U4F33615G",
+            "U4F6F54ER",
+            "U4FP56WS2"
+        ],
+        "topic": {
+            "value": "",
+            "creator": "",
+            "last_set": "0"
+        },
+        "purpose": {
+            "value": "Anything development related. Includes testing, debugging, etc.",
+            "creator": "U4ECJHCC9",
+            "last_set": "1488940735"
+        }
+    },
+    {
+        "id": "C4F62A598",
+        "name": "documentation",
+        "created": "1488940693",
+        "creator": "U4ECJHCC9",
+        "is_archived": false,
+        "is_general": false,
+        "members": [
+            "U4F33615G",
+            "U4F6F54ER",
+            "U4FP56WS2"
+        ],
+        "topic": {
+            "value": "",
+            "creator": "",
+            "last_set": "0"
+        },
+        "purpose": {
+            "value": "Another documentation related goes here.",
+            "creator": "U4ECJHCC9",
+            "last_set": "1488940694"
+        }
+    },
+    {
+        "id": "C4FP354PQ",
+        "name": "general",
+        "created": "1488924334",
+        "creator": "U4ECJHCC9",
+        "is_archived": false,
+        "is_general": true,
+        "members": [
+            "U4ECJHCC9",
+            "U4F33615G",
+            "U4F6F54ER",
+            "U4FP56WS2",
+            "U4K11P9MH"
+        ],
+        "topic": {
+            "value": "Company-wide announcements and work-based matters",
+            "creator": "",
+            "last_set": "0"
+        },
+        "purpose": {
+            "value": "This channel is for team-wide communication and announcements. All team members are in this channel.",
+            "creator": "",
+            "last_set": "0"
+        }
+    },
+    {
+        "id": "C4FPDTEP9",
+        "name": "random",
+        "created": "1488924334",
+        "creator": "U4ECJHCC9",
+        "is_archived": false,
+        "is_general": false,
+        "members": [
+            "U4ECJHCC9",
+            "U4F33615G",
+            "U4FP56WS2",
+            "U4K11P9MH"
+        ],
+        "topic": {
+            "value": "Non-work banter and water cooler conversation",
+            "creator": "",
+            "last_set": "0"
+        },
+        "purpose": {
+            "value": "A place for non-work-related flimflam, faffing, hodge-podge or jibber-jabber you'd prefer to keep out of more focused work-related channels.",
+            "creator": "",
+            "last_set": "0"
+        }
+    }
+]

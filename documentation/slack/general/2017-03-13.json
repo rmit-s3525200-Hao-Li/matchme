@@ -1,0 +1,38 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I spent half the day trying to get MongoDB to work on Cloud9. Finally got it to run. Phew! :sweat_smile:",
+        "ts": "1489397546.542213"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I think we can use it instead of SQLite. It seems pretty straight forward so far..",
+        "ts": "1489397583.548507"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "That's amazing jasmine, I'm practicing ruby and other course these few days",
+        "ts": "1489452895.171053"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Is it hard to implement on the server?",
+        "ts": "1489452912.172807"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I mean MogoDB",
+        "ts": "1489452920.173789"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "On Cloud9 it was a bit of a pain because when it generates the app for you it configures it for SQLite, so you have to undo that. I figured it out though. I haven't tried pushing it to Heroku but I think it should be fine. I'll try today.",
+        "ts": "1489456505.544353"
+    }
+]

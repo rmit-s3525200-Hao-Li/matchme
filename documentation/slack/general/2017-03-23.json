@@ -1,0 +1,92 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> Did it work?",
+        "ts": "1490327043.992064"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok so this week who wants to do user story, and who wants to test cases? <@U4F33615G> I was thinking you can continue to do templates.",
+        "ts": "1490333048.450070"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "finally i m in...i think it should be university's internet problem",
+        "ts": "1490334752.575346"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "<mailto:lihao.915@gmail.com|lihao.915@gmail.com>   here is my C9 email address",
+        "ts": "1490334897.586052"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "Set me to the user story 6 and 7 in trello i can do that",
+        "ts": "1490337270.774119"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Almost finish ",
+        "ts": "1490337294.776066"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> ok. just make sure you use the right template",
+        "ts": "1490337417.786342"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> With homepage, login, and registration I'm going to do functionality first, then you can add layout around it when I'm done. Is that ok?",
+        "ts": "1490337629.803044"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I think it's two different things",
+        "ts": "1490337743.812145"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2> I added you to test cases",
+        "ts": "1490337745.812336"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "What do you mean?",
+        "ts": "1490337754.813077"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "You can replace the frame of the front page any time. ",
+        "ts": "1490337770.814444"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I'll just add frame, image, CSS and so, I'll not write any functionality code, so it will not affect any functionality code.",
+        "ts": "1490337806.817395"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "And it's basic frame, we will add more on it later anyway",
+        "ts": "1490337847.820586"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "ok. you learned about embedded ruby files right?",
+        "ts": "1490337878.822974"
+    }
+]

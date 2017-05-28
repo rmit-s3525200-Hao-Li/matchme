@@ -1,0 +1,111 @@
+[
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4K11P9MH|haoli> uploaded a file: <https:\/\/pp1sem12017.slack.com\/files\/haoli\/F4NJVAU2K\/wechatimg94.png|WechatIMG94.png> and commented: My friend told me Cloud9 cannot register....he choose web programming and he got a email like this ...must be have invitation....",
+        "file": {
+            "id": "F4NJVAU2K",
+            "created": 1490179173,
+            "timestamp": 1490179173,
+            "name": "WechatIMG94.png",
+            "title": "WechatIMG94.png",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U4K11P9MH",
+            "editable": false,
+            "size": 43558,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4NJVAU2K\/wechatimg94.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4NJVAU2K\/download\/wechatimg94.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4NJVAU2K-b8f16d78b0\/wechatimg94_64.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4NJVAU2K-b8f16d78b0\/wechatimg94_80.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4NJVAU2K-b8f16d78b0\/wechatimg94_360.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360_w": 360,
+            "thumb_360_h": 115,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4NJVAU2K-b8f16d78b0\/wechatimg94_480.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_480_w": 480,
+            "thumb_480_h": 153,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4NJVAU2K-b8f16d78b0\/wechatimg94_160.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "image_exif_rotation": 1,
+            "original_w": 638,
+            "original_h": 204,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/haoli\/F4NJVAU2K\/wechatimg94.png",
+            "permalink_public": "https:\/\/slack-files.com\/T4ECJHC8Z-F4NJVAU2K-2933cbd280",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 1,
+            "initial_comment": {
+                "id": "Fc4MTWSVHQ",
+                "created": 1490179173,
+                "timestamp": 1490179173,
+                "user": "U4K11P9MH",
+                "is_intro": true,
+                "comment": "My friend told me Cloud9 cannot register....he choose web programming and he got a email like this ...must be have invitation...."
+            }
+        },
+        "user": "U4K11P9MH",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "haoli",
+        "bot_id": null,
+        "ts": "1490179174.926420"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I didn't sign up for C9 with my student email... used my personal email.",
+        "ts": "1490185436.977907"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Have you tried that?",
+        "ts": "1490185454.981053"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I just made another account with a different email. I can just give you credentials.",
+        "ts": "1490185643.016232"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Give me your personal email and I can change the email for this account to that.",
+        "ts": "1490185681.023144"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "It has my credit card info in it so don't do anything w\/ the account that costs money. I have no money in my bank account rn anyways, lol.",
+        "ts": "1490185823.049155"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "wait  why you can create account...i will try again...if still cannot then use your account...",
+        "ts": "1490185963.074860"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "just make sure you use personal email, not student",
+        "ts": "1490186552.187089"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "k",
+        "ts": "1490188237.551409"
+    }
+]

@@ -1,0 +1,84 @@
+[
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I made a new branch called cleaner but I haven’t submit it yet, I need to check the new layout and make sure it works",
+        "ts": "1493104441.762474"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I’m in RMIT now so I will submit it after I double checked it.",
+        "ts": "1493104464.765701"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "also I think I made it run on aws now, once I confim some detail thing, then we don’t need to worry about the speed of it and limitation heroku.",
+        "ts": "1493104552.778086"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Haha, i am ok <@U4ECJHCC9> ",
+        "ts": "1493107507.248565"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If you made it work on aws can you show me before tomorrow?",
+        "ts": "1493107562.258300"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> The app would need to be configured for S3. Please do this is in a seperate branch.. right now s3 is configured for heroku and it works.",
+        "edited": {
+            "user": "U4ECJHCC9",
+            "ts": "1493113884.000000"
+        },
+        "ts": "1493113867.433549"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I got js to work in Heroku: <https:\/\/matchmeplease.herokuapp.com\/>",
+        "ts": "1493114414.533679"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> are you going to delete unused js and css files?",
+        "ts": "1493114535.557124"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "remember you have three tasks for this assignment that need to be done by tomorrow... don't get too distracted by aws.",
+        "ts": "1493114572.563822"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Can everyone take the time to look at trello. There are a TON of tasks that aren't marked as complete. What's going on?",
+        "ts": "1493114663.580424"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i m doing the user story update",
+        "ts": "1493114797.604576"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> ok. and don't forget users index still needs thumbnails.",
+        "ts": "1493114816.607976"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "On the way..",
+        "ts": "1493160147.256589"
+    }
+]

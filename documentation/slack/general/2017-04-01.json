@@ -1,0 +1,26 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'm thinking maybe we can get rid of the orientation field. It's already pretty much implied when they specify what gender they're looking for.",
+        "ts": "1491041480.658832"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If anyone needs help please bring it up now. Don't wait till monday.",
+        "ts": "1491107978.394886"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Wow the geocoder gem will make filtering users by location super easy",
+        "ts": "1491113802.538152"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "It's just one simple method call to produce a list of nearby users: `user.nearbys`. So easy! :slightly_smiling_face:",
+        "ts": "1491113858.539375"
+    }
+]

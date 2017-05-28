@@ -1,0 +1,50 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "So from what I gathered from Homy today here's how he wants us to do the assignment:",
+        "ts": "1489730489.749964"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "1. Give him one user story, plus template and test case to go with it each week.",
+        "ts": "1489730513.751806"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "2. He approves it, or gives us pointers on how to improve our plan.",
+        "ts": "1489730528.752902"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "3. We then implement it and then show him the result of our implementation the following week, along with another user story\/template\/test case for the next function we plan to tackle.",
+        "ts": "1489730566.756160"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "So this week I think we can focus on implementing login. <@U4F33615G> do the wireframe for login, and homepage too since we need to get that out of the way. <@U4FP56WS2> just do test cases for login. Invalid login, valid login, login with remembering, login without remembering.",
+        "ts": "1489730919.783977"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Done home, register&amp;blog in already, will send two version to the trello tonight",
+        "ts": "1489730987.789137"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Blog in- login",
+        "ts": "1489730998.789956"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": ":thinking_face:ok captain !",
+        "ts": "1489733434.982857"
+    }
+]

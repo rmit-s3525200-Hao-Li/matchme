@@ -1,0 +1,20 @@
+[
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Guys do we have a room booked? If not I have this whole table in Carlton library",
+        "ts": "1494218899.071696"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Didn't book a location in time. See you there.",
+        "ts": "1494218946.074790"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "To undo last commit\ngit reset --hard (commit-ID)\ngit push origin HEAD --force",
+        "ts": "1494223766.443495"
+    }
+]

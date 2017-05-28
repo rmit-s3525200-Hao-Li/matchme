@@ -1,0 +1,14 @@
+[
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "ok",
+        "ts": "1490351668.777978"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Just so you guys know I'm doing user modelling right now. I'm having a bit of trouble though because I'm used to using Active Record, not MongoDB. So it's taking me a bit longer than it normally would because I'm learning as I go along.",
+        "ts": "1490421917.606430"
+    }
+]

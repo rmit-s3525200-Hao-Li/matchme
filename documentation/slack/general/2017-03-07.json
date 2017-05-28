@@ -1,0 +1,420 @@
+[
+    {
+        "user": "U4ECJHCC9",
+        "text": "<@U4ECJHCC9|jasmine> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1488924334.541261"
+    },
+    {
+        "user": "U4F33615G",
+        "text": "<@U4F33615G|steven> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1488924418.546954"
+    },
+    {
+        "user": "U4FP56WS2",
+        "text": "<@U4FP56WS2|xieyangwu> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1488924561.556270"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "hi",
+        "ts": "1488924666.563224"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "hi",
+        "ts": "1488924670.563477"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Test",
+        "ts": "1488924813.572878"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "We can use this site to make the diagrams: <https:\/\/www.lucidchart.com\/>",
+        "attachments": [
+            {
+                "title": "Lucidchart",
+                "title_link": "https:\/\/www.lucidchart.com\/",
+                "text": "Diagrams made easy.",
+                "fallback": "Lucidchart",
+                "from_url": "https:\/\/www.lucidchart.com\/",
+                "service_icon": "https:\/\/www.lucidchart.com\/favicon.ico",
+                "service_name": "lucidchart.com",
+                "id": 1
+            }
+        ],
+        "ts": "1488924844.574988"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Great idea",
+        "ts": "1488924863.576274"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "sure",
+        "ts": "1488924877.577212"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "lol",
+        "ts": "1488924880.577348"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Made a user story template we can use: <https:\/\/drive.google.com\/open?id=0B4L8XU7k56GpWTYzZlBmUHF4SWc>",
+        "ts": "1488925522.616437"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4ECJHCC9|jasmine> shared a file: <https:\/\/pp1sem12017.slack.com\/files\/jasmine\/F4FPDQE5U\/template.docx|Template.docx>",
+        "file": {
+            "id": "F4FPDQE5U",
+            "created": 1488925545,
+            "timestamp": 1488925545,
+            "name": "Template.docx",
+            "title": "Template.docx",
+            "mimetype": "application\/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "filetype": "docx",
+            "pretty_type": "Word Document",
+            "user": "U4ECJHCC9",
+            "editable": false,
+            "size": 12969,
+            "mode": "external",
+            "is_external": true,
+            "external_type": "gdrive",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/drive.google.com\/open?id=0B4L8XU7k56GpWTYzZlBmUHF4SWc",
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/jasmine\/F4FPDQE5U\/template.docx",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0,
+            "has_rich_preview": false
+        },
+        "user": "U4ECJHCC9",
+        "upload": false,
+        "display_as_bot": false,
+        "username": "jasmine",
+        "bot_id": null,
+        "ts": "1488925545.617859"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "test",
+        "ts": "1488927471.736425"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Dating site we can try to do a basic copy of: <https:\/\/www.okcupid.com\/>",
+        "attachments": [
+            {
+                "service_name": "OkCupid | Free Online Dating",
+                "title": "Free Online Dating | OkCupid",
+                "title_link": "https:\/\/www.okcupid.com\/",
+                "text": "OkCupid is the best dating site on Earth, with apps for iOS and Android. Start meeting people today!",
+                "fallback": "OkCupid | Free Online Dating: Free Online Dating | OkCupid",
+                "thumb_url": "http:\/\/cdn.okccdn.com\/media\/img\/template\/icon\/icon_1024x1024.png",
+                "from_url": "https:\/\/www.okcupid.com\/",
+                "thumb_width": 1024,
+                "thumb_height": 1024,
+                "service_icon": "https:\/\/cdn.okccdn.com\/media\/img\/template\/icon\/okc48.png",
+                "id": 1
+            }
+        ],
+        "ts": "1488927650.747723"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<http:\/\/www.pearsonmurphy.com.au\/>",
+        "attachments": [
+            {
+                "title": "Pearson &amp; Murphy's",
+                "title_link": "http:\/\/www.pearsonmurphy.com.au\/",
+                "text": "Pearson &amp; Murphy's",
+                "fallback": "Pearson &amp; Murphy's",
+                "from_url": "http:\/\/www.pearsonmurphy.com.au\/",
+                "service_name": "pearsonmurphy.com.au",
+                "id": 1
+            }
+        ],
+        "ts": "1488928660.798269"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<https:\/\/medium.com\/@ellis.jas48\/what-to-do-if-you-get-stuck-while-coding-8e773e177ba6#.oy9xaakrr>",
+        "attachments": [
+            {
+                "service_name": "Medium",
+                "title": "What to do if you get stuck while coding",
+                "title_link": "https:\/\/medium.com\/@ellis.jas48\/what-to-do-if-you-get-stuck-while-coding-8e773e177ba6#.oy9xaakrr",
+                "text": "When I first started to learn programming, I relied heavily on others if I got stuck. The fact that coders need to be largely independent…",
+                "fallback": "Medium: What to do if you get stuck while coding",
+                "fields": [
+                    {
+                        "title": "Reading time",
+                        "value": "2 min read",
+                        "short": true
+                    }
+                ],
+                "ts": 1488361826,
+                "from_url": "https:\/\/medium.com\/@ellis.jas48\/what-to-do-if-you-get-stuck-while-coding-8e773e177ba6#.oy9xaakrr",
+                "service_icon": "https:\/\/cdn-images-1.medium.com\/fit\/c\/152\/152\/1*W0nmth_X8nFKjn6BZ388UQ.png",
+                "id": 1
+            }
+        ],
+        "ts": "1488928973.813533"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Next weeks meeting: Thursday 11:30 - 1:30 PM, location: 008.05.025",
+        "ts": "1488929298.829351"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Tools and Websites: \nFile share: Google Drive\nProject Planning: <https:\/\/trello.com>\nDiagram <https:\/\/www.lucidchart.com>\nGithub: <https:\/\/github.com\/xuhaotian\/pp1>\nTesting &amp; Debugging <https:\/\/leantesting.com\/>\nGroup chatting: <https:\/\/pp1sem12017.slack.com>",
+        "attachments": [
+            {
+                "title": "Trello",
+                "title_link": "https:\/\/trello.com",
+                "text": "Infinitely flexible. Incredibly easy to use. Great mobile apps. It's free. Trello keeps track of everything, from the big picture to the minute details.",
+                "fallback": "Trello",
+                "image_url": "https:\/\/d2k1ftgv7pobq7.cloudfront.net\/meta\/p\/res\/images\/fb4de993e22034b76539da073ea8d35c\/home-hero.png",
+                "from_url": "https:\/\/trello.com",
+                "image_width": 449,
+                "image_height": 250,
+                "image_bytes": 856998,
+                "service_icon": "https:\/\/trello.com\/favicon.ico",
+                "service_name": "trello.com",
+                "id": 1
+            },
+            {
+                "title": "Lucidchart",
+                "title_link": "https:\/\/www.lucidchart.com",
+                "text": "Diagrams made easy.",
+                "fallback": "Lucidchart",
+                "from_url": "https:\/\/www.lucidchart.com",
+                "service_icon": "https:\/\/www.lucidchart.com\/favicon.ico",
+                "service_name": "lucidchart.com",
+                "id": 2
+            },
+            {
+                "service_name": "Lean Testing",
+                "title": "Lean Testing | Simple tools for complex software projects",
+                "title_link": "https:\/\/leantesting.com\/",
+                "text": "Lean Testing is a free bug tracker and test case management software for high performance development teams",
+                "fallback": "Lean Testing: Lean Testing | Simple tools for complex software projects",
+                "from_url": "https:\/\/leantesting.com\/",
+                "id": 3
+            }
+        ],
+        "ts": "1488931749.937507"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Anything else?",
+        "ts": "1488931752.937634"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4F33615G|steven> uploaded a file: <https:\/\/pp1sem12017.slack.com\/files\/steven\/F4F2VAD5Z\/pasted_image_at_2017_03_08_11_27_am.png|timetable>",
+        "file": {
+            "id": "F4F2VAD5Z",
+            "created": 1488932879,
+            "timestamp": 1488932879,
+            "name": "Pasted image at 2017_03_08 11_27 AM.png",
+            "title": "timetable",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U4F33615G",
+            "editable": false,
+            "size": 85621,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4F2VAD5Z\/pasted_image_at_2017_03_08_11_27_am.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4F2VAD5Z\/download\/pasted_image_at_2017_03_08_11_27_am.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4F2VAD5Z-339941ccf6\/pasted_image_at_2017_03_08_11_27_am_64.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4F2VAD5Z-339941ccf6\/pasted_image_at_2017_03_08_11_27_am_80.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4F2VAD5Z-339941ccf6\/pasted_image_at_2017_03_08_11_27_am_360.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360_w": 360,
+            "thumb_360_h": 283,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4F2VAD5Z-339941ccf6\/pasted_image_at_2017_03_08_11_27_am_480.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_480_w": 480,
+            "thumb_480_h": 378,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4F2VAD5Z-339941ccf6\/pasted_image_at_2017_03_08_11_27_am_160.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4F2VAD5Z-339941ccf6\/pasted_image_at_2017_03_08_11_27_am_720.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720_w": 720,
+            "thumb_720_h": 566,
+            "image_exif_rotation": 1,
+            "original_w": 754,
+            "original_h": 593,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/steven\/F4F2VAD5Z\/pasted_image_at_2017_03_08_11_27_am.png",
+            "permalink_public": "https:\/\/slack-files.com\/T4ECJHC8Z-F4F2VAD5Z-6ae5b71857",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U4F33615G",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "steven",
+        "bot_id": null,
+        "ts": "1488932882.985593"
+    },
+    {
+        "user": "U4F6F54ER",
+        "inviter": "U4ECJHCC9",
+        "text": "<@U4F6F54ER|trello> has joined the channel",
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1488935765.095574"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I think everyone should subscribe to the Blocked, Needs Debugging, and QA lists on Trello for both boards. That way you'll get a notification when someone needs help or review.",
+        "ts": "1488942162.274715"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I'll do join when I get back to home ",
+        "ts": "1488942209.275909"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": ":+1:",
+        "ts": "1488942311.278352"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4ECJHCC9|jasmine> shared a file: <https:\/\/pp1sem12017.slack.com\/files\/jasmine\/F4FSQNR47\/2|2. Basic sign up>",
+        "file": {
+            "id": "F4FSQNR47",
+            "created": 1488943226,
+            "timestamp": 1488943226,
+            "name": "2",
+            "title": "2. Basic sign up",
+            "mimetype": "application\/vnd.google-apps.document",
+            "filetype": "gdoc",
+            "pretty_type": "GDocs Document",
+            "user": "U4ECJHCC9",
+            "editable": false,
+            "size": 1235,
+            "mode": "external",
+            "is_external": true,
+            "external_type": "gdrive",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/docs.google.com\/a\/student.rmit.edu.au\/document\/d\/1j-q4fSehTUHv8djimzLdo61hKB17pnipSvQ1JaiJu4s\/edit?usp=drive_web",
+            "thumb_64": "https:\/\/slack.com\/img\/files\/gdoc_64.v.png",
+            "thumb_360": "https:\/\/slack.com\/img\/files\/gdoc_360.v.png",
+            "thumb_360_w": 360,
+            "thumb_360_h": 167,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/jasmine\/F4FSQNR47\/2",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0,
+            "has_rich_preview": false
+        },
+        "user": "U4ECJHCC9",
+        "upload": false,
+        "display_as_bot": false,
+        "username": "jasmine",
+        "bot_id": null,
+        "ts": "1488943226.300019"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Finished the user story. :eyes:",
+        "ts": "1488943232.300160"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'll try to do class diagram next but I'll probs need help with that",
+        "ts": "1488943254.300639"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Btw not to be anal but you guys should have avatars on both Slack and Trello, and use the same one for both sites. Less confusing that way.",
+        "ts": "1488944122.319788"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Oh and download this onto your phone if you haven't already.",
+        "ts": "1488944466.326865"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<https:\/\/www.lucidchart.com\/invitations\/accept\/805b8400-0086-49be-b2eb-110c2c1d1d03>",
+        "ts": "1488957058.603227"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "That's how the class diagram looks so far. The matchmaking classes are sparse because I've never done this before so I wasn't sure.",
+        "ts": "1488957091.603949"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Any feedback is welcome.",
+        "ts": "1488957827.620571"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I don't think the github thing worked. Shouldn't I see the repo on my profile?",
+        "ts": "1488958112.627557"
+    }
+]

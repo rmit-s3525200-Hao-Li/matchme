@@ -1,0 +1,30 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2> It doesn't look like the testing suite on <http:\/\/leantesting.com|leantesting.com> is up to date.",
+        "ts": "1493444902.577240"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "And the tests need to be wayy more specific. They need to be detailed. Rather than \"invalid registration\", you need to test all the ways it can be invalid.",
+        "edited": {
+            "user": "U4ECJHCC9",
+            "ts": "1493444978.000000"
+        },
+        "ts": "1493444956.578733"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Btw everyone I updated trello",
+        "ts": "1493444985.579592"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "And does anyone know about object diagrams?",
+        "ts": "1493445169.585001"
+    }
+]

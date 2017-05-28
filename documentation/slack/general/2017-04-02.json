@@ -1,0 +1,398 @@
+[
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4K11P9MH|haoli> uploaded a file: <https:\/\/pp1sem12017.slack.com\/files\/haoli\/F4TTNRZJT\/screen_shot_2017-04-02_at_18.32.19.png|Screen Shot 2017-04-02 at 18.32.19.png>",
+        "file": {
+            "id": "F4TTNRZJT",
+            "created": 1491122106,
+            "timestamp": 1491122106,
+            "name": "Screen Shot 2017-04-02 at 18.32.19.png",
+            "title": "Screen Shot 2017-04-02 at 18.32.19.png",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U4K11P9MH",
+            "editable": false,
+            "size": 130142,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4TTNRZJT\/screen_shot_2017-04-02_at_18.32.19.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4TTNRZJT\/download\/screen_shot_2017-04-02_at_18.32.19.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4TTNRZJT-230e34f920\/screen_shot_2017-04-02_at_18.32.19_64.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4TTNRZJT-230e34f920\/screen_shot_2017-04-02_at_18.32.19_80.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4TTNRZJT-230e34f920\/screen_shot_2017-04-02_at_18.32.19_360.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360_w": 360,
+            "thumb_360_h": 168,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4TTNRZJT-230e34f920\/screen_shot_2017-04-02_at_18.32.19_480.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_480_w": 480,
+            "thumb_480_h": 225,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4TTNRZJT-230e34f920\/screen_shot_2017-04-02_at_18.32.19_160.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4TTNRZJT-230e34f920\/screen_shot_2017-04-02_at_18.32.19_720.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720_w": 720,
+            "thumb_720_h": 337,
+            "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4TTNRZJT-230e34f920\/screen_shot_2017-04-02_at_18.32.19_800.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_800_w": 800,
+            "thumb_800_h": 374,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4TTNRZJT-230e34f920\/screen_shot_2017-04-02_at_18.32.19_960.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_960_w": 960,
+            "thumb_960_h": 449,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4TTNRZJT-230e34f920\/screen_shot_2017-04-02_at_18.32.19_1024.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_1024_w": 1024,
+            "thumb_1024_h": 479,
+            "image_exif_rotation": 1,
+            "original_w": 2120,
+            "original_h": 992,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/haoli\/F4TTNRZJT\/screen_shot_2017-04-02_at_18.32.19.png",
+            "permalink_public": "https:\/\/slack-files.com\/T4ECJHC8Z-F4TTNRZJT-b38edbea7b",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U4K11P9MH",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "haoli",
+        "bot_id": null,
+        "ts": "1491122110.768920"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4K11P9MH|haoli> uploaded a file: <https:\/\/pp1sem12017.slack.com\/files\/haoli\/F4T5AAX99\/screen_shot_2017-04-02_at_18.34.26.png|Screen Shot 2017-04-02 at 18.34.26.png>",
+        "file": {
+            "id": "F4T5AAX99",
+            "created": 1491122118,
+            "timestamp": 1491122118,
+            "name": "Screen Shot 2017-04-02 at 18.34.26.png",
+            "title": "Screen Shot 2017-04-02 at 18.34.26.png",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U4K11P9MH",
+            "editable": false,
+            "size": 1553796,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4T5AAX99\/screen_shot_2017-04-02_at_18.34.26.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4T5AAX99\/download\/screen_shot_2017-04-02_at_18.34.26.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T5AAX99-1247dbdbef\/screen_shot_2017-04-02_at_18.34.26_64.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T5AAX99-1247dbdbef\/screen_shot_2017-04-02_at_18.34.26_80.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T5AAX99-1247dbdbef\/screen_shot_2017-04-02_at_18.34.26_360.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360_w": 360,
+            "thumb_360_h": 152,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T5AAX99-1247dbdbef\/screen_shot_2017-04-02_at_18.34.26_480.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_480_w": 480,
+            "thumb_480_h": 202,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T5AAX99-1247dbdbef\/screen_shot_2017-04-02_at_18.34.26_160.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T5AAX99-1247dbdbef\/screen_shot_2017-04-02_at_18.34.26_720.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720_w": 720,
+            "thumb_720_h": 303,
+            "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T5AAX99-1247dbdbef\/screen_shot_2017-04-02_at_18.34.26_800.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_800_w": 800,
+            "thumb_800_h": 337,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T5AAX99-1247dbdbef\/screen_shot_2017-04-02_at_18.34.26_960.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_960_w": 960,
+            "thumb_960_h": 404,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T5AAX99-1247dbdbef\/screen_shot_2017-04-02_at_18.34.26_1024.png?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_1024_w": 1024,
+            "thumb_1024_h": 431,
+            "image_exif_rotation": 1,
+            "original_w": 1772,
+            "original_h": 746,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/haoli\/F4T5AAX99\/screen_shot_2017-04-02_at_18.34.26.png",
+            "permalink_public": "https:\/\/slack-files.com\/T4ECJHC8Z-F4T5AAX99-b4fdecaddc",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U4K11P9MH",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "haoli",
+        "bot_id": null,
+        "ts": "1491122121.769305"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i clone app from github  but it doesn t work in my C9 workspace or AWS server  i m working on it...T T",
+        "ts": "1491122149.769979"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "you started the local server and postgres?",
+        "ts": "1491122637.783721"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "`bundle install` first",
+        "ts": "1491122676.784790"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "then `sudo service postgresql start`",
+        "ts": "1491122689.785150"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "`rails db:migrate`",
+        "ts": "1491122700.785487"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "then in a separate terminal: `rails server -b $IP -p $PORT`",
+        "ts": "1491122729.786432"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "then you can open it",
+        "ts": "1491122736.786675"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "ok i try",
+        "ts": "1491123091.797217"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'll try too, in case i forgot any steps",
+        "ts": "1491123435.807231"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "sorry you also need to set up postgres db locally. will add those steps to readme file soon",
+        "ts": "1491123842.823464"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "yep  i m working on these yml files. if still not work, i will deploy a empty ROR app  into server and just change the file which we have changed.",
+        "ts": "1491123940.826594"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "ok i know what to do",
+        "ts": "1491125098.860837"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "i'll add it to readme file then push",
+        "ts": "1491125112.861329"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "i pushed to master. readme file has info now on setting up postgres db. i also changed the database.yml file",
+        "ts": "1491126277.895121"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "k",
+        "ts": "1491126539.903302"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "hang on forgot one more step in readme relating to password. one sec",
+        "ts": "1491126719.908492"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "done",
+        "ts": "1491127314.927522"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> how'd you go?",
+        "ts": "1491132804.098915"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'm omw",
+        "ts": "1491180050.270710"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": " Omfg our meeting isn't until 3???",
+        "ts": "1491180582.301078"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Lol",
+        "ts": "1491180585.301246"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Our meeting at 3 pm?",
+        "ts": "1491182428.426270"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Now I am doing put code in test package in rail",
+        "ts": "1491182493.431066"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "So funny , I just follow charter 3-7",
+        "ts": "1491182536.434037"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Yea. Pretty straight forward.",
+        "ts": "1491183001.467636"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "For some reason I thought the meeting was at 10:30, lol",
+        "ts": "1491183024.469502"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "You need more relax !",
+        "ts": "1491183205.482380"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": ":yum:",
+        "ts": "1491183212.482870"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4FP56WS2|xieyangwu> uploaded a file: <https:\/\/pp1sem12017.slack.com\/files\/xieyangwu\/F4T9W5FJ7\/image_uploaded_from_ios.jpg|Image uploaded from iOS>",
+        "file": {
+            "id": "F4T9W5FJ7",
+            "created": 1491193853,
+            "timestamp": 1491193853,
+            "name": "Image uploaded from iOS.jpg",
+            "title": "Image uploaded from iOS",
+            "mimetype": "image\/jpeg",
+            "filetype": "jpg",
+            "pretty_type": "JPEG",
+            "user": "U4FP56WS2",
+            "editable": false,
+            "size": 2788684,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4T9W5FJ7\/image_uploaded_from_ios.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4T9W5FJ7\/download\/image_uploaded_from_ios.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T9W5FJ7-1d75b0dd94\/image_uploaded_from_ios_64.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T9W5FJ7-1d75b0dd94\/image_uploaded_from_ios_80.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T9W5FJ7-1d75b0dd94\/image_uploaded_from_ios_360.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360_w": 270,
+            "thumb_360_h": 360,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T9W5FJ7-1d75b0dd94\/image_uploaded_from_ios_480.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_480_w": 360,
+            "thumb_480_h": 480,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T9W5FJ7-1d75b0dd94\/image_uploaded_from_ios_160.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T9W5FJ7-1d75b0dd94\/image_uploaded_from_ios_720.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720_w": 540,
+            "thumb_720_h": 720,
+            "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T9W5FJ7-1d75b0dd94\/image_uploaded_from_ios_800.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_800_w": 600,
+            "thumb_800_h": 800,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T9W5FJ7-1d75b0dd94\/image_uploaded_from_ios_960.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_960_w": 720,
+            "thumb_960_h": 960,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4T9W5FJ7-1d75b0dd94\/image_uploaded_from_ios_1024.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_1024_w": 768,
+            "thumb_1024_h": 1024,
+            "image_exif_rotation": 1,
+            "original_w": 3024,
+            "original_h": 4032,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/xieyangwu\/F4T9W5FJ7\/image_uploaded_from_ios.jpg",
+            "permalink_public": "https:\/\/slack-files.com\/T4ECJHC8Z-F4T9W5FJ7-3392c8f586",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U4FP56WS2",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "xieyangwu",
+        "bot_id": null,
+        "upload_reply_to": "69DF6B5B-8851-4516-A272-BD41F5290454",
+        "ts": "1491193857.244267"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "This is testing for limit name and email.length ,  I did right way ?",
+        "ts": "1491194018.255266"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<https:\/\/www.youtube.com\/watch?v=JTE2Fn_sCZs>",
+        "attachments": [
+            {
+                "service_name": "YouTube",
+                "service_url": "https:\/\/www.youtube.com\/",
+                "title": "GIT: Working with Branches",
+                "title_link": "https:\/\/www.youtube.com\/watch?v=JTE2Fn_sCZs",
+                "author_name": "Codemy School",
+                "author_link": "https:\/\/www.youtube.com\/user\/codemynet",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/JTE2Fn_sCZs\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "fallback": "YouTube Video: GIT: Working with Branches",
+                "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/JTE2Fn_sCZs?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 225,
+                "from_url": "https:\/\/www.youtube.com\/watch?v=JTE2Fn_sCZs",
+                "service_icon": "https:\/\/a.slack-edge.com\/2089\/img\/unfurl_icons\/youtube.png",
+                "id": 1
+            }
+        ],
+        "ts": "1491202308.931397"
+    }
+]

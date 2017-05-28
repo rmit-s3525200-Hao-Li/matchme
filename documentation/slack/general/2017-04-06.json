@@ -1,0 +1,146 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Homy said not to worry and that he will help us with the algorithm part.",
+        "ts": "1491469739.671945"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Wow ! So 4'30 where to meet u?",
+        "ts": "1491526631.846036"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "idk i dont have a room book. i'll message you on wechat or on here when i find a spot.",
+        "ts": "1491526682.851217"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Hi guys, can we meet around 5 instead? I really need to go get something to eat first, I have the access of student zone, we can go to here to meet.",
+        "ts": "1491540439.082539"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok. Where's that?",
+        "ts": "1491540737.104829"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Nearby Carlton library, 15–21 Earl Street\nCarlton VIC 3053",
+        "ts": "1491540844.112871"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'll be late sorry. See you soon.",
+        "ts": "1491547660.721510"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Take your time",
+        "ts": "1491547692.725083"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Just in front of Carlton library ",
+        "ts": "1491547702.726333"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i m having dinner.  So 5pm. Where?",
+        "ts": "1491547702.726352"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I'm already in room",
+        "ts": "1491547708.726979"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4F33615G|steven> uploaded a file: <https:\/\/pp1sem12017.slack.com\/files\/steven\/F4WKES0VD\/image_uploaded_from_ios.jpg|Image uploaded from iOS>",
+        "file": {
+            "id": "F4WKES0VD",
+            "created": 1491547739,
+            "timestamp": 1491547739,
+            "name": "Image uploaded from iOS.jpg",
+            "title": "Image uploaded from iOS",
+            "mimetype": "image\/jpeg",
+            "filetype": "jpg",
+            "pretty_type": "JPEG",
+            "user": "U4F33615G",
+            "editable": false,
+            "size": 131295,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4WKES0VD\/image_uploaded_from_ios.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4WKES0VD\/download\/image_uploaded_from_ios.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4WKES0VD-eb7272d2f9\/image_uploaded_from_ios_64.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4WKES0VD-eb7272d2f9\/image_uploaded_from_ios_80.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4WKES0VD-eb7272d2f9\/image_uploaded_from_ios_360.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360_w": 203,
+            "thumb_360_h": 360,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4WKES0VD-eb7272d2f9\/image_uploaded_from_ios_480.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_480_w": 270,
+            "thumb_480_h": 480,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4WKES0VD-eb7272d2f9\/image_uploaded_from_ios_160.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4WKES0VD-eb7272d2f9\/image_uploaded_from_ios_720.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720_w": 405,
+            "thumb_720_h": 720,
+            "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4WKES0VD-eb7272d2f9\/image_uploaded_from_ios_800.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_800_w": 450,
+            "thumb_800_h": 800,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4WKES0VD-eb7272d2f9\/image_uploaded_from_ios_960.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_960_w": 540,
+            "thumb_960_h": 960,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4WKES0VD-eb7272d2f9\/image_uploaded_from_ios_1024.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_1024_w": 576,
+            "thumb_1024_h": 1024,
+            "image_exif_rotation": 1,
+            "original_w": 621,
+            "original_h": 1104,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/steven\/F4WKES0VD\/image_uploaded_from_ios.jpg",
+            "permalink_public": "https:\/\/slack-files.com\/T4ECJHC8Z-F4WKES0VD-bc73af117f",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U4F33615G",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "steven",
+        "bot_id": null,
+        "upload_reply_to": "A1259363-8B19-4A5F-800A-20BFC97642FC",
+        "ts": "1491547741.730704"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I'm going to buy some coffee, anyone want a coffee?",
+        "ts": "1491548069.768309"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Im good, thnx",
+        "ts": "1491548253.789429"
+    }
+]

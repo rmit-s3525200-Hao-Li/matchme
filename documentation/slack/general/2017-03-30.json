@@ -1,0 +1,38 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I can't make the meeting on the 10th of April. Going to a funeral. Reschedule to Thursday?",
+        "ts": "1490881405.179342"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "I am sorry to hear that ,are u ok? As for meeting time is not important ,Thursday of course! ",
+        "ts": "1490929443.997647"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Yeah i'm ok. It was my grandma. It's wasn't unexpected.",
+        "ts": "1490935773.514502"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "my condolences.",
+        "ts": "1490937163.620120"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I finished configuring the app for postgresql",
+        "ts": "1490943113.159596"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "pull from the master branch into your local repos then run `bundle install` and `rake db:setup`",
+        "ts": "1490943154.164122"
+    }
+]

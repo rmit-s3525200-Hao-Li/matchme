@@ -1,0 +1,46 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "OKAY EVERYONE:  I pushed a big change to the master branch. I changed around a lot of the application, because Homy wanted me to seperate login info from user profile. So now we have two models: User (email, password, password_confirmation, admin), and Profile (first_name, last_name, gender, etc). I also added interests to Profile. Profile and user have seperate forms. <@U4F33615G> I completely changed the form not because I didn't like what you did, but because I had to separate it out and put in different fields. It doesn't look too great right now but if you have time later you can change it a bit. <@U4FP56WS2> You have a big task now: fix the failing errors. They're failing because the db has changed. We also need tests for Profile model.",
+        "edited": {
+            "user": "U4ECJHCC9",
+            "ts": "1493020393.000000"
+        },
+        "ts": "1493019886.174805"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Don't forget to run the following: `bundle install`, `rails db:migrate`, `rails db:migrate:reset`, `rails db:seed`",
+        "edited": {
+            "user": "U4ECJHCC9",
+            "ts": "1493020351.000000"
+        },
+        "ts": "1493020317.242670"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Cool",
+        "ts": "1493022779.661211"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If anyone notices any bugs, add them to bug report list on trello.",
+        "ts": "1493024559.992319"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok tomorrow is Wednesday. Everyone tell me how they're doing with their part.",
+        "ts": "1493098799.174051"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2> I updated Trello. You have a lot to do. Is it too much? Is anyone else willing to write some tests?",
+        "ts": "1493099136.200774"
+    }
+]

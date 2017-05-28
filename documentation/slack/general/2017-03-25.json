@@ -1,0 +1,20 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Tbh I'm thinking we should just use Active Record because it's easier and faster. And for the match queries we can maybe use a lot of data caching.",
+        "ts": "1490428176.790430"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I read about how some dating sites use relational databases and just cache all the match data is that the matching system barely touches the db. Not sure how that works but I can tell you I'd have login and registration done by now if we were using SQLite and PostgreSQL. The problem I'm running into rn is setting up the test files to use Mongo. There's really not much information online about using Rails and mongo. Or at least free information. I see a lot of courses you have to pay for, and most don't even have the information we need. :confused:",
+        "ts": "1490428318.794952"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Guys?",
+        "ts": "1490495304.483133"
+    }
+]

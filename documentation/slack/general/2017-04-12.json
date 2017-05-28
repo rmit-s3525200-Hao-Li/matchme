@@ -1,0 +1,24 @@
+[
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "no problem",
+        "ts": "1491987432.312960"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2>  it's ok. we can meet earlier we just won't have a room until 4:30.",
+        "edited": {
+            "user": "U4ECJHCC9",
+            "ts": "1491994230.000000"
+        },
+        "ts": "1491994215.506990"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "OK",
+        "ts": "1491998550.176170"
+    }
+]

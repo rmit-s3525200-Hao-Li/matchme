@@ -1,0 +1,407 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2> Not sure about putting in 'user is not a robot' for precondition. I'm not going to put in that robot check thing because idk how. One important precondition though is that the user is not already logged in.",
+        "ts": "1489742136.053911"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "good reason.i just want put a click button at the end of resignation like 'I am a robot ! No\/yes\" ",
+        "ts": "1489743598.304782"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "I will add the user is not already logged in ,that is important precondition ",
+        "ts": "1489743761.334054"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "You mean you'll add the functionality for checking if people are robots? That's outside of scope for now. Not necessary.",
+        "ts": "1489743865.353299"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Yeah I agree with u,",
+        "ts": "1489744140.401472"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "<https:\/\/www.google.com\/recaptcha\/intro\/invisible.html>",
+        "ts": "1489744206.412758"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "We just want to be careful to avoid scope creep.",
+        "ts": "1489744246.419930"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Focus should be on main user functions. We can add bells and whistles later.",
+        "ts": "1489744268.423753"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Btw I'm trying to do project charter now. I'm not sure who to put down as stakeholders aside from us and Homy?",
+        "ts": "1489744377.443064"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Should be Homy, because he mentioned that's he will ask every group to add some functions&amp;challenges, and each group have to decide to do so or to convince him, so I think he will be both client and supervisor. ",
+        "ts": "1489744609.484089"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I know but the implications seems to be that there are more than one stakeholders. Homy is just one.",
+        "ts": "1489744706.500647"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Hmm, how many stakeholders we should have?",
+        "ts": "1489744776.512989"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Cool, less more. Just focus on main user functions:grinning: ",
+        "ts": "1489744994.552606"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Idk. I'm putting down Homy and the development team (us).",
+        "ts": "1489745145.580166"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "We need to define our roles within the project.",
+        "ts": "1489745349.614648"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "We're all developers. <@U4F33615G> I'm also putting you down as front-end developer",
+        "ts": "1489745366.617563"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2> You can also be test analyst? Or do you have something else in mind? What are your strengths?",
+        "ts": "1489745601.656947"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok I think we should do Project Charter as a team. When are people free Monday?",
+        "ts": "1489745847.698274"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I can meet anytime after 2:30 PM.",
+        "ts": "1489745905.707675"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Or before 12:30 PM",
+        "ts": "1489745913.709184"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Test analyst is ok",
+        "ts": "1489745955.715995"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "After 11.30pm before17.30pm ,I can meet anytime ",
+        "ts": "1489746015.726435"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "you mean 11:30AM?",
+        "ts": "1489746141.747953"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "In the Ruby on Rails,I just a freshman- today I do the chapter 3 in c9 , maybe I can do do the mechanical work",
+        "ts": "1489746195.756992"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Yeah 11.30am",
+        "ts": "1489746211.759812"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "The time you decide to see it! I am ok!",
+        "ts": "1489746326.779773"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok I'm just waiting to hear from the others.",
+        "ts": "1489746397.791670"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Actually it's okay. We'll just continue to talk it through on here.",
+        "ts": "1489746740.849198"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I'll be available after 3PM",
+        "ts": "1489747164.919824"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "I'm adopting myself if I can handle front-end work.",
+        "ts": "1489747256.935779"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Am I the only one doing front-end?",
+        "ts": "1489747276.939054"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "It depends. We don't have to follow our roles exactly as it's laid out in the charter.",
+        "ts": "1489747325.947299"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i will do the front end too",
+        "ts": "1489747348.951134"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok. What's your experience with that?",
+        "ts": "1489747378.955904"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "Monday I am available ",
+        "ts": "1489747380.956210"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "When monday?",
+        "ts": "1489747406.960712"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "I saw you want do project charter together ",
+        "ts": "1489747460.969370"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "So. All day available for me ",
+        "ts": "1489747479.972377"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Alright so it looks like 3PM would be the best time on monday",
+        "ts": "1489747527.980454"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "Last semester cloud computing my team used Node.js for back end and I know Django so maybe back end also can help but I need learn ROR first ",
+        "ts": "1489747622.996615"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "So for this project I m flexible XD",
+        "ts": "1489747661.003387"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Yeah that's good. ROR is about as easy as Django and Node.js I think. So how about we meet at the Vine cafe at 3PM Monday. Vine is the cafe on level 2 in building 80. Usually lots of seating there.",
+        "ts": "1489747944.050954"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "I m ok",
+        "ts": "1489747997.059944"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "internet in building 80 is lagging as well, but better than library anyway",
+        "ts": "1489748014.062849"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I emailed Homy with questions about project charter and he actually got back to me! He explained the stakeholders thing so it's all good now I think. But I was thinking we should meet Monday anyway. That can be our new meeting time maybe? It makes more sense to have our meeting before the tutorial, not after.",
+        "ts": "1489799180.785175"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I got mongoDB to work on heroku!! :grin:",
+        "ts": "1489806268.102400"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": ":confetti_ball:",
+        "ts": "1489806500.111456"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Btw I was thinking we should come up w\/ a better name for our website. Cause I was thinking we can borrow from OkCupid but idk if we should do an exact copy or clone. We can make it our own.",
+        "ts": "1489808379.179218"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Here's some names I've thought of so far:",
+        "ts": "1489808423.180803"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "- eMatch",
+        "ts": "1489808431.181109"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "- matchmakr",
+        "ts": "1489808438.181399"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "- eHearts",
+        "ts": "1489808446.181679"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "- MatchMe",
+        "ts": "1489808452.181907"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Here is our repo: <https:\/\/github.com\/ellisjas\/dating-site>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "ellisjas\/dating-site",
+                "title_link": "https:\/\/github.com\/ellisjas\/dating-site",
+                "text": "dating-site - Dating site made for the capstone programming project at RMIT University.",
+                "fallback": "GitHub: ellisjas\/dating-site",
+                "from_url": "https:\/\/github.com\/ellisjas\/dating-site",
+                "thumb_url": "https:\/\/avatars3.githubusercontent.com\/u\/22196200?v=3&s=400",
+                "thumb_width": 250,
+                "thumb_height": 250,
+                "service_icon": "https:\/\/a.slack-edge.com\/bfaba\/img\/unfurl_icons\/github.png",
+                "id": 1
+            }
+        ],
+        "ts": "1489810622.258655"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "You can clone it into your C9 workspace",
+        "ts": "1489810639.259245"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "But always be sure to not push to master unless someone's looked over your work first. Always do your development on your own branches, never master branch.",
+        "ts": "1489810678.260632"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Our Heroku. Not much there at the moment: <https:\/\/stormy-dusk-23559.herokuapp.com\/>",
+        "ts": "1489811405.284870"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2> Can you try to finish login test cases by Monday? I want to implement login asap so we have something to show Homy on Wednesday.",
+        "ts": "1489811783.296850"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2> By wednesday we would also need all test cases for registration.",
+        "ts": "1489811804.297429"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> Need those wireframes for login and homepage asap. Registration wireframe should be finished by Wednesday.",
+        "ts": "1489811894.300008"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> Btw I was thinking we need to combine 'Answer Match Questions' and 'Registration' into one. I don't want users to be successfully registered until after the complete the match questions, so it'll be part of it.",
+        "ts": "1489811968.302237"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "*they",
+        "ts": "1489811979.302650"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> Sorry what's your student number again?",
+        "ts": "1489814479.382404"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> Nevermind I got.",
+        "ts": "1489814639.387047"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "OK",
+        "ts": "1489815257.404959"
+    }
+]

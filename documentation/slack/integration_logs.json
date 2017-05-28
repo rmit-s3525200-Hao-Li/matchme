@@ -1,0 +1,20 @@
+[
+    {
+        "user_id": "U4ECJHCC9",
+        "user_name": "jasmine",
+        "date": "1488927458",
+        "change_type": "added",
+        "app_type": "Trello",
+        "app_id": "A074YH40Z",
+        "scope": "identify,bot,commands,team:read,users:read,users:read.email"
+    },
+    {
+        "user_id": 0,
+        "user_name": "slack",
+        "date": "1488924334",
+        "change_type": "added",
+        "service_id": "151036015507",
+        "service_type": "Google Drive",
+        "scope": "files:write:user"
+    }
+]

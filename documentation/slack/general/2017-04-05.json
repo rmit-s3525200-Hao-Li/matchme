@@ -1,0 +1,62 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'm learning image uploading now. It's not that hard. :grin:",
+        "ts": "1491382386.912425"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok using Heroku with s3 is easy",
+        "ts": "1491389333.182675"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "User profile pic will be no problem",
+        "ts": "1491389353.185722"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i will try to use that function on view profile layout on tomorrow meeting",
+        "ts": "1491390426.359274"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "It's not in the app yet. Was just practicing. Btw I've been looking at matching algorithms and I'm not really getting how to apply them to our app?? Did you do algorithms and analysis?",
+        "ts": "1491396512.408970"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I looked at Cosine Similarity. They always involve comparing numbers, or points in a graph. But idk how to turn a user object into a number or a vector.",
+        "ts": "1491396568.421406"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i asked my friend, he has some idea about algorithm used in website, he told me basic idea is that forget SQL query and use ruby to catch the data from database in search function i think binary search is enough for our website  but this just idea.. i need talk more to my friend in order to know how to achieve...",
+        "ts": "1491397083.536576"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i think make data to graph are pretty complicate... graph is data structure to store data.. and binary search just a algorithm for \"search\"  a method to traversal data and find the target data.",
+        "ts": "1491397283.586712"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Hey so I'll be there in 10 min. Anyone want coffee or tea?",
+        "ts": "1491438526.219094"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "np  thx",
+        "ts": "1491438928.263374"
+    }
+]

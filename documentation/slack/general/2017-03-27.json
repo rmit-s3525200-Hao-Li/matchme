@@ -1,0 +1,235 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Can someone send me the assignment spec file?",
+        "ts": "1490599321.393025"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "you go google drive and find shared with me  Andy Song shared the spec file with us",
+        "ts": "1490601821.765778"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4K11P9MH|haoli> uploaded a file: <https:\/\/pp1sem12017.slack.com\/files\/haoli\/F4PCR5KJ5\/project_flow_chart_-_page_1.jpeg|Project flow chart - Page 1.jpeg>",
+        "file": {
+            "id": "F4PCR5KJ5",
+            "created": 1490615041,
+            "timestamp": 1490615041,
+            "name": "Project flow chart - Page 1.jpeg",
+            "title": "Project flow chart - Page 1.jpeg",
+            "mimetype": "image\/jpeg",
+            "filetype": "jpg",
+            "pretty_type": "JPEG",
+            "user": "U4K11P9MH",
+            "editable": false,
+            "size": 116642,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4PCR5KJ5\/project_flow_chart_-_page_1.jpeg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4PCR5KJ5\/download\/project_flow_chart_-_page_1.jpeg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4PCR5KJ5-8a0e6ff234\/project_flow_chart_-_page_1_64.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4PCR5KJ5-8a0e6ff234\/project_flow_chart_-_page_1_80.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4PCR5KJ5-8a0e6ff234\/project_flow_chart_-_page_1_360.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360_w": 278,
+            "thumb_360_h": 360,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4PCR5KJ5-8a0e6ff234\/project_flow_chart_-_page_1_480.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_480_w": 371,
+            "thumb_480_h": 480,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4PCR5KJ5-8a0e6ff234\/project_flow_chart_-_page_1_160.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4PCR5KJ5-8a0e6ff234\/project_flow_chart_-_page_1_720.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720_w": 556,
+            "thumb_720_h": 720,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4PCR5KJ5-8a0e6ff234\/project_flow_chart_-_page_1_960.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_960_w": 742,
+            "thumb_960_h": 960,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4PCR5KJ5-8a0e6ff234\/project_flow_chart_-_page_1_1024.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_1024_w": 791,
+            "thumb_1024_h": 1024,
+            "image_exif_rotation": 1,
+            "original_w": 1360,
+            "original_h": 1760,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/haoli\/F4PCR5KJ5\/project_flow_chart_-_page_1.jpeg",
+            "permalink_public": "https:\/\/slack-files.com\/T4ECJHC8Z-F4PCR5KJ5-44473cf954",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 0
+        },
+        "user": "U4K11P9MH",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "haoli",
+        "bot_id": null,
+        "ts": "1490615045.008671"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "Is this flowchart correct? i just want to clear the step of our website. After sin up answer the questions , user also can change the match questions' answer? <@U4ECJHCC9>",
+        "ts": "1490615161.026277"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "yes we can put that in too.",
+        "ts": "1490615599.091631"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "in this user flow, would they be viewing one match at a time, like on tinder?",
+        "ts": "1490615615.094165"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "cause i was thinking more like a page of users who match.",
+        "ts": "1490615630.096346"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i think cannot be like tinder..because we are website..and that is app. We'd better like okcupid matched user show on page base on the....(match rate?) lol i don't know..",
+        "ts": "1490616219.191976"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "Hey captain..why we use PostgreSQL...Why not MySQL?  <@U4ECJHCC9>",
+        "ts": "1490675946.625493"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Why?",
+        "ts": "1490676135.640324"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Rails apps are preconfigured to use PostgreSQL in production.",
+        "ts": "1490676193.644676"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "there are less tutorial about PostgreSQL on AWS...",
+        "ts": "1490676208.645880"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "You can't figure it out?",
+        "ts": "1490676251.649147"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "i am trying to...",
+        "ts": "1490676288.652017"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If you need time to figure it out we can tell homy.",
+        "ts": "1490676314.654110"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "ya  i think this week maybe use SQLlite in ROR   i need more time to deploy the PostgreSQL",
+        "ts": "1490676370.658846"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok. No worries",
+        "ts": "1490676393.660547"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "nvr use it before...  i am always use MySQL...they have different deploy method",
+        "ts": "1490676401.661185"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "You can also post questions to stack overflow if you get stuck.",
+        "ts": "1490676494.668064"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "k",
+        "ts": "1490676528.670598"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Where do you guys want to meet? NAS?",
+        "ts": "1490678128.795925"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'm in 010.07 near elevators",
+        "ts": "1490679502.904273"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<https:\/\/github.com\/ellisjas\/matchme>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "ellisjas\/matchme",
+                "title_link": "https:\/\/github.com\/ellisjas\/matchme",
+                "text": "Contribute to matchme development by creating an account on GitHub.",
+                "fallback": "GitHub: ellisjas\/matchme",
+                "from_url": "https:\/\/github.com\/ellisjas\/matchme",
+                "thumb_url": "https:\/\/avatars3.githubusercontent.com\/u\/22196200?v=3&s=400",
+                "thumb_width": 250,
+                "thumb_height": 250,
+                "service_icon": "https:\/\/a.slack-edge.com\/bfaba\/img\/unfurl_icons\/github.png",
+                "id": 1
+            }
+        ],
+        "ts": "1490681493.076156"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<https:\/\/matchme-ellisjas.c9users.io>",
+        "ts": "1490681989.121916"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> i got the server to run again. i don't think we should all use the same workspace anymore. it was making things weird on c9.",
+        "ts": "1490682645.187968"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> btw it doesn't have the styling anymore",
+        "ts": "1490682869.211320"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> rails was loading all css files. that's why when you renamed it it was still on the webpage.",
+        "ts": "1490683367.262824"
+    }
+]

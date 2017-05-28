@@ -1,0 +1,152 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> Why is half the stuff in show.html.erb commented out? Can I delete it?",
+        "ts": "1491880962.654367"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Can everyone tell me what they've done so far?",
+        "ts": "1491882875.809772"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "two pages done but i want you check first then i push..",
+        "ts": "1491883858.889300"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "no, you can t delete it, because that place is for \"picture\"    after user upload picture, the picture should be show in page at somewhere.",
+        "ts": "1491883945.895991"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Yeah but for now I'm only going to make it so users can upload one image, not multipe.",
+        "ts": "1491884121.909893"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "*multiple",
+        "ts": "1491884129.910541"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I finished image upload functionality btw.",
+        "ts": "1491884147.912146"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "And just so you know, you didn't have to put any of the head info in that file. each html file only needs the stuff you'd put in the body tag.",
+        "ts": "1491884188.915456"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "so it didn't need all the js stuff at the bottom either",
+        "ts": "1491884204.916564"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "have you tried deploying to heroku?",
+        "ts": "1491884217.917485"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": " I done most of thing on trello, just a layout left will continue do it tonight, I think I commit already but not sure, Im in uni, all stuff on my laptop so I'll commit more later on.",
+        "ts": "1491884508.940424"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Me and Hao have been study until 1AM everyday since last Friday in RMIT lab, we study rails together and doing peer programming. Hopefully we can use rails more familiar than before asap.",
+        "ts": "1491884738.958636"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Wow really? That's awesome! Get some rest tonight though.",
+        "ts": "1491886092.065129"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Doesn't look like you've pushed to git",
+        "ts": "1491886117.067058"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Make sure you run `git pull` before you push so that you're up to date",
+        "ts": "1491886134.068387"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "It's really important that you do this before tomorrow..",
+        "ts": "1491887252.160317"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2> I'm working on the tests now.",
+        "ts": "1491888429.256660"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4K11P9MH> I'll deploy the app to heroku.",
+        "ts": "1491889140.315352"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "ok i have assignment to due by tomorrow 11.59pm, thx for help me and i will fix our project problem like database design and create, ER diagram after tomorrow.",
+        "ts": "1491890061.393234"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "What about account deactivation?",
+        "ts": "1491890803.465212"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Get far with that?",
+        "ts": "1491890810.465874"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> I think maybe what you can do is a pull request. These seem to be commonly used in the industry.",
+        "ts": "1491890835.468223"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "let me know if you're having issues with git",
+        "ts": "1491890880.472596"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Haha, good job jasmine! I am sick , but I will finish my task before tonight!",
+        "ts": "1491891020.486149"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": ":yum::yum::yum:",
+        "ts": "1491891029.487188"
+    }
+]

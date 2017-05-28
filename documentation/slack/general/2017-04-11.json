@@ -1,0 +1,432 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2>  you need to keep in mind that the user data for our application is not the same as in rails tutorial. so with user edit test, you were testing for changing the field \"name\". We don't have that, instead we have \"first_name\" and \"last_name\". you just need to be mindful of that sort of thing.",
+        "edited": {
+            "user": "U4ECJHCC9",
+            "ts": "1491896742.000000"
+        },
+        "ts": "1491896726.220769"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Cool, learn something.",
+        "ts": "1491897743.395324"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok I fixed the tests, none are failing now.",
+        "ts": "1491897849.413618"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "My tests were failing because of a silly mistake I made. I was putting in the wrong password in the tests. Fixture had a different password. That's why none of the login tests were working, lol.",
+        "ts": "1491897970.434141"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Just realised I forgot to put in a default image in case user doesn't upload anything. Doing that now.",
+        "ts": "1491898184.471050"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U4FP56WS2|xieyangwu> uploaded a file: <https:\/\/pp1sem12017.slack.com\/files\/xieyangwu\/F4Y4ZTW6S\/image_uploaded_from_ios.jpg|Image uploaded from iOS> and commented: You are ready great! Cool",
+        "file": {
+            "id": "F4Y4ZTW6S",
+            "created": 1491898724,
+            "timestamp": 1491898724,
+            "name": "Image uploaded from iOS.jpg",
+            "title": "Image uploaded from iOS",
+            "mimetype": "image\/jpeg",
+            "filetype": "jpg",
+            "pretty_type": "JPEG",
+            "user": "U4FP56WS2",
+            "editable": false,
+            "size": 2870376,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4Y4ZTW6S\/image_uploaded_from_ios.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T4ECJHC8Z-F4Y4ZTW6S\/download\/image_uploaded_from_ios.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4Y4ZTW6S-4cd4e1bd0d\/image_uploaded_from_ios_64.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4Y4ZTW6S-4cd4e1bd0d\/image_uploaded_from_ios_80.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4Y4ZTW6S-4cd4e1bd0d\/image_uploaded_from_ios_360.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_360_w": 270,
+            "thumb_360_h": 360,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4Y4ZTW6S-4cd4e1bd0d\/image_uploaded_from_ios_480.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_480_w": 360,
+            "thumb_480_h": 480,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4Y4ZTW6S-4cd4e1bd0d\/image_uploaded_from_ios_160.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4Y4ZTW6S-4cd4e1bd0d\/image_uploaded_from_ios_720.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_720_w": 540,
+            "thumb_720_h": 720,
+            "thumb_800": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4Y4ZTW6S-4cd4e1bd0d\/image_uploaded_from_ios_800.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_800_w": 800,
+            "thumb_800_h": 1067,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4Y4ZTW6S-4cd4e1bd0d\/image_uploaded_from_ios_960.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_960_w": 720,
+            "thumb_960_h": 960,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T4ECJHC8Z-F4Y4ZTW6S-4cd4e1bd0d\/image_uploaded_from_ios_1024.jpg?t=xoxe-150426590305-189119335492-189165383413-d03a55bf00",
+            "thumb_1024_w": 768,
+            "thumb_1024_h": 1024,
+            "image_exif_rotation": 1,
+            "original_w": 4032,
+            "original_h": 3024,
+            "permalink": "https:\/\/pp1sem12017.slack.com\/files\/xieyangwu\/F4Y4ZTW6S\/image_uploaded_from_ios.jpg",
+            "permalink_public": "https:\/\/slack-files.com\/T4ECJHC8Z-F4Y4ZTW6S-4614a21366",
+            "channels": [
+                "C4FP354PQ"
+            ],
+            "groups": [],
+            "ims": [],
+            "comments_count": 1,
+            "initial_comment": {
+                "id": "Fc4WPV3Y65",
+                "created": 1491898724,
+                "timestamp": 1491898724,
+                "user": "U4FP56WS2",
+                "is_intro": true,
+                "comment": "You are ready great! Cool"
+            }
+        },
+        "user": "U4FP56WS2",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "xieyangwu",
+        "bot_id": null,
+        "upload_reply_to": "28079496-7D8C-477B-B86A-F63F86BA5FD4",
+        "ts": "1491898724.567449"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": ":blush:",
+        "ts": "1491900533.905756"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I got image upload to work on heroku with S3. There are some problems with the asset pipeline though. Not sure why. Will try to have it fixed before tomorrow. <@U4F33615G> I messaged you. Going to push to git soon?",
+        "ts": "1491905001.756652"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "<@U4ECJHCC9> the delete user function has not work",
+        "ts": "1491907576.176029"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "And where is account deactivation ,also not ",
+        "ts": "1491907605.180669"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "I (git pull) the new version ",
+        "ts": "1491908050.247505"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "delete user function shouldn't work because homy didn't like that one",
+        "ts": "1491908062.249436"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "we're replacing it with account deactivation. hao is doing that part.",
+        "ts": "1491908078.252042"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "admin should still be about to delete user though",
+        "ts": "1491908094.254296"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "But I can not find the function in the code",
+        "ts": "1491908100.255158"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "what function?",
+        "ts": "1491908113.257146"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Account deactivation",
+        "ts": "1491908125.259267"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Yeah. Hao is doing that part. He hasn't finished yet.",
+        "ts": "1491908136.261035"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "........",
+        "ts": "1491908144.262313"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I think he's doing it now. You should message him if you want to know how it's going.",
+        "ts": "1491908180.267773"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "And where is \"admin delete user\" function ",
+        "ts": "1491908248.278390"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Also can not find codes in mvc",
+        "ts": "1491908366.297516"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "it's in the users controller",
+        "ts": "1491908421.306900"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "def destroy",
+        "ts": "1491908425.307737"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I will seed database with an admin now actually so you don't have to create one",
+        "ts": "1491908445.311558"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Ok I find them",
+        "ts": "1491908489.319022"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "i just fixed the redirect and will seed db. i'll let you know when i'm done",
+        "ts": "1491908511.322674"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok db has been seeded.",
+        "ts": "1491909793.520152"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "After you do git pull run `rails db:migrate:reset` then `rails db:seed`",
+        "ts": "1491909839.527151"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Then you can login as <mailto:admin@example.com|admin@example.com>",
+        "ts": "1491909852.529124"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Password: foobar1",
+        "ts": "1491909856.529766"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4FP56WS2>  have you done admin tests?",
+        "edited": {
+            "user": "U4ECJHCC9",
+            "ts": "1491911235.000000"
+        },
+        "ts": "1491911219.739302"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If we present as is Homy will tell us off again....",
+        "ts": "1491911256.745145"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "This account can not log in",
+        "ts": "1491912323.922217"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "I saw the db –&gt;user.create , but I can not user the admin account in website",
+        "ts": "1491912592.967190"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "It works for me",
+        "ts": "1491912608.969918"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "you did `rails db:seed`?",
+        "ts": "1491912619.971607"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Yes",
+        "ts": "1491912644.976178"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "can you post your seeds.rb file?",
+        "ts": "1491912658.978518"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "don't take a picture",
+        "ts": "1491912702.986073"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Cool , the function is ok",
+        "ts": "1491912714.988144"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "it works?",
+        "ts": "1491912723.989644"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Yes",
+        "ts": "1491912728.990499"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": ":+1:",
+        "ts": "1491912748.994148"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "I have done non-Admin test",
+        "ts": "1491915000.424208"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "And account deactivation I will wait for the function code done",
+        "ts": "1491915110.448252"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "ok but i need you to test to make sure non-admin can't delete other users by typing in a URL.",
+        "ts": "1491917964.172495"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "it's not enough to check that they can't see the link. cause hackers will always try to experiment by typing in URLs without relying on links. ya know?",
+        "ts": "1491918003.183382"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "but you can do that next time. for now get some sleep.",
+        "ts": "1491918018.187835"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "OK",
+        "ts": "1491918318.274008"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Be there in 5",
+        "ts": "1491950122.096354"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<@U4F33615G> You coming?",
+        "ts": "1491952893.493028"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Where should we meet during the holidays? I can't book any of the rooms cause RMIT will be closed.",
+        "ts": "1491960361.339128"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "...anywhere in the City....",
+        "ts": "1491961676.467949"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "We can go to Docklands library maybe? It's not far and it's less crowded than the city or the state library. This would just be for the meeting on the 16th.",
+        "ts": "1491962036.503504"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "For the 19th I made a booking in room 080.08.008 from 5-7PM.",
+        "ts": "1491962127.512833"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "And for the 21st I made a booking in 080.09.015 from 4:30 - 8:30 PM.",
+        "ts": "1491962200.520191"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I wanted to book earlier in the day for both but the rooms were taken. Let me know if those times are a problem.",
+        "ts": "1491962264.526444"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "21st I have class which is from 5'30-7'30, others is fine ",
+        "ts": "1491973246.461116"
+    }
+]

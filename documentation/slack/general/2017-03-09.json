@@ -1,0 +1,116 @@
+[
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "guys do we need a logo? i know this is the thing we need to do later, but i have a friend who is a professional designer, he told me he can help me to design for free but before april.",
+        "ts": "1489061266.396489"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "yeah go for it",
+        "ts": "1489065951.844864"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "should be vector",
+        "ts": "1489065971.847308"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Homy didn't show. :expressionless:",
+        "ts": "1489110763.741579"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'll send him an email but we probably won't know our scope till wednesday",
+        "ts": "1489110793.743828"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": ":joy:",
+        "ts": "1489113530.935250"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Hi guys, I know this guy who is looking for a group, he was in Friday group but he changes to Wednesday finally, he was in my group last year and he got 2.8 on GPA. ",
+        "ts": "1489115300.049442"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Awesome!",
+        "ts": "1489117376.173124"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Homy did turn up after btw, he was just late.",
+        "ts": "1489117405.174482"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "He said using front-end templates is fine.",
+        "ts": "1489117433.176149"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "And he'll tell us scope Wendesday. He said he'll probably have another team member for us by then.",
+        "ts": "1489117495.179924"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "And for how we do the data: SQL lite is fine if we have less than 100 users, otherwise we'd want to use something like MongoDB.",
+        "ts": "1489117560.183412"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Probably the same guy",
+        "ts": "1489117587.184906"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "That guy knows MongoDB, he have this course this semester. Anyway I will ask him the n",
+        "ts": "1489117651.188266"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Yep sounds good. How're you guys going learning rails btw?",
+        "ts": "1489117712.191482"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "trying toy app now",
+        "ts": "1489117768.195305"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Real?sounds good.",
+        "ts": "1489117811.197625"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Yeah, it's pretty straightforward. I think the guy who wrote it explains it well",
+        "ts": "1489117815.197783"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "But let me know if you have any questions",
+        "ts": "1489117843.199347"
+    }
+]

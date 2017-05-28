@@ -1,0 +1,32 @@
+[
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Anyone want coffee?",
+        "ts": "1492585269.197959"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Yea.",
+        "ts": "1492585290.201189"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Soy latte, 2 sugars",
+        "ts": "1492585304.203119"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Cool",
+        "ts": "1492585314.204390"
+    },
+    {
+        "type": "message",
+        "user": "U4F33615G",
+        "text": "Cool",
+        "ts": "1492585314.204395"
+    }
+]

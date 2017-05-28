@@ -1,0 +1,44 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I think everything looks good. Only bug I haven't fixed is the one for country_select. Can't figure that one out. We can fix it later.",
+        "ts": "1494942718.845031"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I'll push to heroku now.",
+        "ts": "1494942727.848003"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "<https:\/\/matchmeplease.herokuapp.com>",
+        "ts": "1494944342.374072"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "cool",
+        "ts": "1494974524.046286"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Sorry guys. I'm on the way.",
+        "ts": "1494974738.080044"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "Dw,homey maybe on the way too",
+        "ts": "1494974829.094660"
+    },
+    {
+        "type": "message",
+        "user": "U4FP56WS2",
+        "text": "He is coming now..",
+        "ts": "1494974904.105985"
+    }
+]

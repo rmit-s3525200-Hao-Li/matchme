@@ -1,0 +1,92 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Guys take a look at this page: <https:\/\/github.com\/ellisjas\/matchme\/graphs\/contributors>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "ellisjas\/matchme",
+                "title_link": "https:\/\/github.com\/ellisjas\/matchme\/graphs\/contributors",
+                "text": "matchme - A matchmaking site being built using RoR.",
+                "fallback": "GitHub: ellisjas\/matchme",
+                "from_url": "https:\/\/github.com\/ellisjas\/matchme\/graphs\/contributors",
+                "thumb_url": "https:\/\/avatars3.githubusercontent.com\/u\/22196200?v=3&s=400",
+                "thumb_width": 250,
+                "thumb_height": 250,
+                "service_icon": "https:\/\/fst.slack-edge.com\/bfaba\/img\/unfurl_icons\/github.png",
+                "id": 1
+            }
+        ],
+        "ts": "1494674985.366974"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If your number of commits are low, it's not going to look good for you when we submit",
+        "ts": "1494674998.367400"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "This week is your last change to get your commit levels up.",
+        "ts": "1494675011.368000"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "When you work on something, do lots of little commits. Don't just do one commit after you make a ton of changes.",
+        "ts": "1494675040.369117"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Wow I just realised we don't even have an interests section for music. Umm.. I'll just throw that in tomorrow lol.",
+        "ts": "1494680472.566842"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If you notice any bugs please report on them here: <https:\/\/github.com\/ellisjas\/matchme\/issues>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "ellisjas\/matchme",
+                "title_link": "https:\/\/github.com\/ellisjas\/matchme\/issues",
+                "text": "matchme - A matchmaking site being built using RoR.",
+                "fallback": "GitHub: ellisjas\/matchme",
+                "from_url": "https:\/\/github.com\/ellisjas\/matchme\/issues",
+                "thumb_url": "https:\/\/avatars3.githubusercontent.com\/u\/22196200?v=3&s=400",
+                "thumb_width": 250,
+                "thumb_height": 250,
+                "service_icon": "https:\/\/fst.slack-edge.com\/bfaba\/img\/unfurl_icons\/github.png",
+                "id": 1
+            }
+        ],
+        "ts": "1494686024.807463"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "And post about it here ASAP",
+        "ts": "1494686033.807851"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "We need to try and fix any and all of them before we submit on Wednesday.",
+        "ts": "1494686048.808561"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Btw I just want to emphasize that we're completing the application this Wednesday. So this is the one week where we really shouldn't put off our tasks until Tuesday evening. Everything needs to be complete come Wednesday morning.",
+        "ts": "1494730675.594949"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Heads up: I just added music to interests.",
+        "ts": "1494738360.814862"
+    }
+]

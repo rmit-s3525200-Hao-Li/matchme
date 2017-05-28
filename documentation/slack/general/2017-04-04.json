@@ -1,0 +1,50 @@
+[
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Nope not yet. You want to work on that together?",
+        "ts": "1491289600.225290"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Is anything now going to be done by tomorrow?",
+        "ts": "1491290698.379583"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Guys looking at Trello more than half the tasks are still sitting in the sprint backlog. I need to know what's going prior to Wednesday.",
+        "ts": "1491296012.318371"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If you've completed anything, mark it as complete and movie it to Week 6.",
+        "ts": "1491296034.322828"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "If it's not complete and won't be finished in time for tomorrow. you need to tell Homy BEFORE WEDNESDAY.",
+        "ts": "1491296066.328964"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "I did user profile, but no styling",
+        "ts": "1491300166.102421"
+    },
+    {
+        "type": "message",
+        "user": "U4K11P9MH",
+        "text": "just finished the delete account. hope i can get  up on time tomorrow....",
+        "ts": "1491321510.259431"
+    },
+    {
+        "type": "message",
+        "user": "U4ECJHCC9",
+        "text": "Ok so from here on out we're using Heroku, not AWS",
+        "ts": "1491363447.674692"
+    }
+]
