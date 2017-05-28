@@ -23,6 +23,7 @@ class UsersController < ApplicationController
   # Corresponds to view/users/index.html.erb
   def index
     @users = User.search(params[:search]).paginate(page: params[:page], per_page: 6)
+    @hide_image = true
   end
   
   # Corresponds to view/users/show.html.erb
